@@ -45,6 +45,24 @@ python3 scraper/scrape.py "https://example.com" --mode dynamic
 python3 scraper/scrape.py "https://example.com" --mode dynamic --wait-selector ".content-loaded"
 ```
 
+## Crawl an Entire Site
+```bash
+# Crawl a site starting from a URL, following all internal links
+python3 scraper/crawl_site.py "https://example.com"
+
+# Limit to 20 pages
+python3 scraper/crawl_site.py "https://example.com" --max-pages 20
+
+# Limit crawl depth (how many clicks from the start page)
+python3 scraper/crawl_site.py "https://example.com" --max-depth 3
+
+# Crawl with stealth mode and save results
+python3 scraper/crawl_site.py "https://example.com" --mode stealth --output site_data.json
+
+# Extract just text from every page
+python3 scraper/crawl_site.py "https://example.com" --extract text --max-pages 100
+```
+
 ## Bulk / Sitemap Scraping
 ```bash
 # Scrape multiple URLs
@@ -64,6 +82,9 @@ python3 scraper/bulk_scrape.py --sitemap "https://example.com/sitemap.xml" --lim
 All commands accept `--output filename.json` to write results to a file instead of stdout.
 
 ## Tips
+- Use `crawl_site.py` to scrape an entire site automatically (follows internal links)
+- Use `bulk_scrape.py` when you already have specific URLs or a sitemap
+- Use `scrape.py` for a single page
 - Use `--mode basic` for most sites (fastest)
 - Use `--mode stealth` if a site blocks basic requests
 - Use `--mode dynamic` for JavaScript-heavy SPAs or sites with Cloudflare protection
