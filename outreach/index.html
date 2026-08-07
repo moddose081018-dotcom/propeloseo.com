@@ -127,44 +127,39 @@
             line-height: 1.6;
         }
 
-        /* URL Input */
-        .hero-input-wrap {
-            max-width: 540px;
-            margin: 0 auto 16px;
+        /* Hero CTA */
+        .hero-cta-group {
             display: flex;
-            border-radius: var(--radius-md);
-            overflow: hidden;
-            box-shadow: 0 4px 24px var(--action-glow), 0 1px 3px rgba(0,0,0,0.08);
-            border: 2px solid var(--action);
-            background: var(--bg);
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
         }
-        .hero-input-wrap input {
-            flex: 1;
-            padding: 16px 20px;
-            font-size: 16px;
-            border: none;
-            outline: none;
-            font-family: inherit;
-            background: transparent;
-            color: var(--text);
-            min-width: 0;
-        }
-        .hero-input-wrap input::placeholder { color: #94a3b8; }
-        .hero-input-wrap button {
-            padding: 16px 32px;
+        .hero-book-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 18px 48px;
             background: var(--action);
             color: white;
-            font-size: 15px;
+            font-size: 17px;
             font-weight: 700;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 24px var(--action-glow), 0 1px 3px rgba(0,0,0,0.08);
             border: none;
             cursor: pointer;
             font-family: inherit;
-            white-space: nowrap;
-            transition: background 0.2s;
         }
-        .hero-input-wrap button:hover { background: var(--action-hover); }
-        .hero-note { font-size: 13px; color: var(--muted); margin-bottom: 8px; }
-        .hero-credits {
+        .hero-book-btn:hover {
+            background: var(--action-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(99,102,241,0.25);
+            text-decoration: none;
+        }
+        .hero-book-btn svg { flex-shrink: 0; }
+        .hero-note { font-size: 13px; color: var(--muted); margin-bottom: 0; }
+        .hero-note-green {
             font-size: 13px;
             color: var(--green);
             font-weight: 600;
@@ -464,8 +459,7 @@
             .hero { padding: 48px 0 40px; }
             .hero h1 { font-size: 28px; }
             .hero-sub { font-size: 16px; }
-            .hero-input-wrap { flex-direction: column; }
-            .hero-input-wrap input { border-bottom: 1px solid var(--border); }
+            .hero-book-btn { padding: 16px 36px; font-size: 15px; }
             .stats-bar { grid-template-columns: 1fr; }
             .stat { border-right: none; border-bottom: 1px solid var(--border); }
             .stat:last-child { border-bottom: none; }
@@ -498,7 +492,7 @@
                 <a href="/outreach/">Outreach</a>
                 <a href="/about/">About</a>
                 <a href="/Contact/">Contact</a>
-                <a href="/outreach/" class="nav-cta">Get Started</a>
+                <a href="https://cal.com/propeloseo/strategy-call" class="nav-cta" target="_blank" rel="noopener">Book a Call</a>
             </nav>
         </div>
     </header>
@@ -511,13 +505,15 @@
                 AI-Powered Outreach Agent
             </div>
             <h1>Cold outreach on <span class="highlight">autopilot.</span></h1>
-            <p class="hero-sub">Paste your domain. Our AI agents research your market, find ideal prospects, write personalized emails, and book meetings while you sleep.</p>
-            <form class="hero-input-wrap" onsubmit="return false;">
-                <input type="url" placeholder="Enter your website URL" aria-label="Your website URL" required>
-                <button type="submit">Launch Outreach</button>
-            </form>
-            <p class="hero-note">From URL to first outreach in under 2 minutes.</p>
-            <p class="hero-credits">$50 in free credits to start. No credit card required.</p>
+            <p class="hero-sub">Our AI agents research your market, find ideal prospects, write personalized emails, and book meetings — while you sleep.</p>
+            <div class="hero-cta-group">
+                <a href="https://cal.com/propeloseo/strategy-call" class="hero-book-btn" target="_blank" rel="noopener">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    Book a Free Strategy Call
+                </a>
+                <p class="hero-note">30-minute call. No commitment. We'll map your outreach strategy live.</p>
+                <p class="hero-note-green">Limited spots available this week</p>
+            </div>
 
             <div class="agent-row">
                 <div class="agent-pill">
@@ -756,7 +752,7 @@
                     <li><span class="pricing-check">&#10003;</span> API access included</li>
                     <li><span class="pricing-check">&#10003;</span> Daily budget caps you control</li>
                 </ul>
-                <a href="#" class="cta-button" style="display: block; text-align: center;">Start Free</a>
+                <a href="https://cal.com/propeloseo/strategy-call" class="cta-button" style="display: block; text-align: center;" target="_blank" rel="noopener">Book Your Strategy Call</a>
             </div>
         </div>
     </section>
@@ -806,10 +802,10 @@
     <!-- Final CTA -->
     <section class="cta-section">
         <div class="page">
-            <h2>Your next customer is already in our database.</h2>
-            <p>Paste your URL. Let seven AI agents build your outbound pipeline. First 1,600+ emails are free.</p>
-            <a href="#" class="cta-button">Launch Your Outreach</a>
-            <p class="cta-note">$50 free credits. No credit card. Cancel anytime.</p>
+            <h2>Your next customer is one call away.</h2>
+            <p>Book a free 30-minute strategy call. We'll map your ideal outreach pipeline and show you exactly how it works.</p>
+            <a href="https://cal.com/propeloseo/strategy-call" class="cta-button" target="_blank" rel="noopener">Book a Free Strategy Call</a>
+            <p class="cta-note">No commitment. No pitch. Just a roadmap for your outbound growth.</p>
         </div>
     </section>
 
