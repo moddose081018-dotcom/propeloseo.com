@@ -1,0 +1,2289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Generation Auto Poster - FishTankFilters</title>
+    <meta name="description" content="Generate leads with AI-powered content creation, ICP targeting, and automated post scheduling for your aquarium business.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        header {
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1f2937;
+            text-decoration: none;
+        }
+        .logo-circle {
+            width: 32px;
+            height: 32px;
+            background: radial-gradient(circle at 30% 30%, #66c2ff, #005a9e);
+            border-radius: 50%;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover, .nav-links a.active { color: #1f7ae0; }
+
+        .page-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .page-header {
+            margin-bottom: 2rem;
+        }
+        .page-header h1 {
+            font-size: 1.75rem;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+        .page-header p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 0;
+            border-bottom: 2px solid #e5e7eb;
+            margin-bottom: 2rem;
+            overflow-x: auto;
+        }
+        .tab {
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #666;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -2px;
+            white-space: nowrap;
+            transition: all 0.2s;
+            background: none;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+        .tab:hover { color: #1f7ae0; }
+        .tab.active {
+            color: #1f7ae0;
+            border-bottom-color: #1f7ae0;
+            font-weight: 600;
+        }
+
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+        }
+        .card h2 {
+            font-size: 1.15rem;
+            color: #1f2937;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .card h3 {
+            font-size: 1rem;
+            color: #374151;
+            margin-bottom: 0.75rem;
+        }
+
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; }
+        .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            padding: 1.25rem;
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1f7ae0;
+        }
+        .stat-label {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 0.25rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.35rem;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.6rem 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-family: inherit;
+            transition: border-color 0.2s;
+            background: white;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #1f7ae0;
+            box-shadow: 0 0 0 3px rgba(31,122,224,0.1);
+        }
+        .form-group textarea { resize: vertical; min-height: 100px; }
+
+        .btn {
+            padding: 0.6rem 1.25rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .btn-primary {
+            background: #1f7ae0;
+            color: white;
+        }
+        .btn-primary:hover { background: #1766c0; }
+        .btn-secondary {
+            background: #f3f4f6;
+            color: #374151;
+            border: 1px solid #d1d5db;
+        }
+        .btn-secondary:hover { background: #e5e7eb; }
+        .btn-success {
+            background: #059669;
+            color: white;
+        }
+        .btn-success:hover { background: #047857; }
+        .btn-danger {
+            background: #ef4444;
+            color: white;
+        }
+        .btn-danger:hover { background: #dc2626; }
+        .btn-sm {
+            padding: 0.4rem 0.75rem;
+            font-size: 0.8rem;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 99px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .badge-blue { background: #dbeafe; color: #1e40af; }
+        .badge-green { background: #d1fae5; color: #065f46; }
+        .badge-yellow { background: #fef3c7; color: #92400e; }
+        .badge-red { background: #fee2e2; color: #991b1b; }
+        .badge-purple { background: #ede9fe; color: #5b21b6; }
+        .badge-gray { background: #f3f4f6; color: #374151; }
+
+        .post-preview {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 1.25rem;
+            font-size: 0.9rem;
+            line-height: 1.7;
+            white-space: pre-wrap;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .template-card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .template-card:hover {
+            border-color: #1f7ae0;
+            box-shadow: 0 2px 8px rgba(31,122,224,0.1);
+        }
+        .template-card.selected {
+            border-color: #1f7ae0;
+            background: #eff6ff;
+        }
+        .template-card h4 {
+            font-size: 0.9rem;
+            margin-bottom: 0.35rem;
+            color: #1f2937;
+        }
+        .template-card p {
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .lead-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+        .lead-table th {
+            text-align: left;
+            padding: 0.75rem;
+            background: #f9fafb;
+            border-bottom: 2px solid #e5e7eb;
+            font-weight: 600;
+            color: #374151;
+        }
+        .lead-table td {
+            padding: 0.75rem;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        .lead-table tr:hover { background: #f9fafb; }
+
+        .score-bar {
+            width: 60px;
+            height: 6px;
+            background: #e5e7eb;
+            border-radius: 3px;
+            overflow: hidden;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 0.4rem;
+        }
+        .score-fill {
+            height: 100%;
+            border-radius: 3px;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 4px;
+        }
+        .calendar-day-header {
+            text-align: center;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #666;
+            padding: 0.5rem 0;
+        }
+        .calendar-day {
+            min-height: 80px;
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            padding: 0.35rem;
+            font-size: 0.75rem;
+        }
+        .calendar-day.empty { background: #f9fafb; border-color: transparent; }
+        .calendar-day .day-num {
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.25rem;
+        }
+        .calendar-day .day-post {
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 0.15rem 0.35rem;
+            border-radius: 4px;
+            font-size: 0.65rem;
+            margin-bottom: 2px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .calendar-day.today { border-color: #1f7ae0; background: #eff6ff; }
+
+        .icp-segment {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.75rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+        }
+        .icp-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        .icp-info { flex: 1; }
+        .icp-info h4 { font-size: 0.85rem; color: #1f2937; }
+        .icp-info p { font-size: 0.75rem; color: #666; }
+
+        .content-angle {
+            padding: 1rem;
+            border-left: 3px solid #1f7ae0;
+            background: #f9fafb;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 0.75rem;
+        }
+        .content-angle h4 { font-size: 0.9rem; color: #1f2937; margin-bottom: 0.25rem; }
+        .content-angle p { font-size: 0.8rem; color: #666; }
+
+        .progress-ring {
+            width: 80px;
+            height: 80px;
+        }
+
+        .channel-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: #666;
+        }
+        .empty-state .icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .empty-state h3 { color: #374151; margin-bottom: 0.5rem; }
+
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #1f2937;
+            color: white;
+            padding: 0.75rem 1.25rem;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            z-index: 1000;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s;
+        }
+        .toast.show { transform: translateY(0); opacity: 1; }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.4);
+            z-index: 200;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-overlay.show { display: flex; }
+        .modal {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+        .modal h2 { margin-bottom: 1rem; }
+
+        .pipeline-stage {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: #f9fafb;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+        }
+        .pipeline-num {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #1f7ae0;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+        }
+        .pipeline-arrow {
+            color: #d1d5db;
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 0.25rem 0;
+        }
+
+        @media (max-width: 900px) {
+            .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+            .header-inner { flex-direction: column; gap: 1rem; }
+            .nav-links { flex-wrap: wrap; justify-content: center; }
+            .calendar-grid { grid-template-columns: 1fr; }
+            .calendar-day-header { display: none; }
+        }
+        @media (max-width: 600px) {
+            .page-container { padding: 1rem; }
+            .tabs { gap: 0; }
+            .tab { padding: 0.6rem 0.75rem; font-size: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="/" class="logo">
+                <div class="logo-circle"></div>
+                FishTankFilters
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/FilterReviews/">Filter Reviews</a></li>
+                <li><a href="/TankSetup&Guides/">Setup & Guides</a></li>
+                <li><a href="/Supplies&Equipment/">Supplies</a></li>
+                <li><a href="/lead-generation/" class="active">Lead Gen</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="page-container">
+        <div class="page-header">
+            <h1>Lead Generation Auto Poster</h1>
+            <p>Generate buyer-targeting content, track leads, and automate your outreach pipeline.</p>
+        </div>
+
+        <div class="tabs">
+            <button class="tab active" data-tab="dashboard">Dashboard</button>
+            <button class="tab" data-tab="icp">ICP Profile</button>
+            <button class="tab" data-tab="generator">Content Generator</button>
+            <button class="tab" data-tab="linkedin">LinkedIn Strategy</button>
+            <button class="tab" data-tab="calendar">Content Calendar</button>
+            <button class="tab" data-tab="leads">Lead Tracker</button>
+            <button class="tab" data-tab="briefs">Content Briefs</button>
+        </div>
+
+        <!-- DASHBOARD TAB -->
+        <div id="tab-dashboard" class="tab-content active">
+            <div class="grid-4" style="margin-bottom:1.5rem;">
+                <div class="stat-card">
+                    <div class="stat-value" id="stat-posts">0</div>
+                    <div class="stat-label">Posts Generated</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="stat-leads">0</div>
+                    <div class="stat-label">Leads Captured</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="stat-buyer-pct">0%</div>
+                    <div class="stat-label">Buyer Match Rate</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="stat-scheduled">0</div>
+                    <div class="stat-label">Posts Scheduled</div>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="card">
+                    <h2>Lead Generation Pipeline</h2>
+                    <div class="pipeline-stage">
+                        <div class="pipeline-num">1</div>
+                        <div>
+                            <strong>Define ICP</strong>
+                            <div style="font-size:0.8rem;color:#666;">Target aquarium hobbyists, pet stores, maintenance services</div>
+                        </div>
+                        <span class="badge badge-green" id="pip-icp">Setup</span>
+                    </div>
+                    <div class="pipeline-arrow">&#8595;</div>
+                    <div class="pipeline-stage">
+                        <div class="pipeline-num">2</div>
+                        <div>
+                            <strong>Generate Content</strong>
+                            <div style="font-size:0.8rem;color:#666;">Create posts targeting buyer pain points</div>
+                        </div>
+                        <span class="badge badge-blue" id="pip-content">Create</span>
+                    </div>
+                    <div class="pipeline-arrow">&#8595;</div>
+                    <div class="pipeline-stage">
+                        <div class="pipeline-num">3</div>
+                        <div>
+                            <strong>Schedule & Publish</strong>
+                            <div style="font-size:0.8rem;color:#666;">Auto-post across LinkedIn, Facebook, Instagram</div>
+                        </div>
+                        <span class="badge badge-yellow" id="pip-publish">Schedule</span>
+                    </div>
+                    <div class="pipeline-arrow">&#8595;</div>
+                    <div class="pipeline-stage">
+                        <div class="pipeline-num">4</div>
+                        <div>
+                            <strong>Track & Score Leads</strong>
+                            <div style="font-size:0.8rem;color:#666;">Score engagement, classify buyer vs. peer vs. competitor</div>
+                        </div>
+                        <span class="badge badge-purple" id="pip-leads">Track</span>
+                    </div>
+                    <div class="pipeline-arrow">&#8595;</div>
+                    <div class="pipeline-stage">
+                        <div class="pipeline-num">5</div>
+                        <div>
+                            <strong>Optimize & Brief</strong>
+                            <div style="font-size:0.8rem;color:#666;">Generate content briefs from top-performing patterns</div>
+                        </div>
+                        <span class="badge badge-gray" id="pip-optimize">Brief</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Recent Posts</h2>
+                    <div id="recent-posts-list">
+                        <div class="empty-state">
+                            <div class="icon">&#128221;</div>
+                            <h3>No posts yet</h3>
+                            <p>Generate your first post in the Content Generator tab.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Quick Actions</h2>
+                <div class="btn-group">
+                    <button class="btn btn-primary" onclick="switchTab('generator')">Generate New Post</button>
+                    <button class="btn btn-secondary" onclick="switchTab('icp')">Configure ICP</button>
+                    <button class="btn btn-secondary" onclick="switchTab('leads')">View Leads</button>
+                    <button class="btn btn-secondary" onclick="switchTab('briefs')">Content Briefs</button>
+                    <button class="btn btn-success" onclick="exportAllData()">Export All Data</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ICP PROFILE TAB -->
+        <div id="tab-icp" class="tab-content">
+            <div class="grid-2">
+                <div class="card">
+                    <h2>Ideal Client Profile (ICP)</h2>
+                    <p style="font-size:0.85rem;color:#666;margin-bottom:1rem;">Define who your content should attract. This drives post generation and lead scoring.</p>
+
+                    <div class="form-group">
+                        <label>Business / Offer Description</label>
+                        <textarea id="icp-offer" rows="3" placeholder="e.g., We sell premium aquarium filters and provide data-driven reviews to help hobbyists pick the right filter..."></textarea>
+                    </div>
+
+                    <h3>Target Segments</h3>
+                    <div id="icp-segments">
+                        <div class="icp-segment">
+                            <div class="icp-icon" style="background:#dbeafe;">&#127907;</div>
+                            <div class="icp-info">
+                                <h4>Aquarium Hobbyists</h4>
+                                <p>Home aquarium owners looking for reliable filtration. 20-55 age range, willing to invest in quality gear.</p>
+                            </div>
+                            <span class="badge badge-green">Primary</span>
+                        </div>
+                        <div class="icp-segment">
+                            <div class="icp-icon" style="background:#fef3c7;">&#127978;</div>
+                            <div class="icp-info">
+                                <h4>Pet Store Owners</h4>
+                                <p>Small business owners stocking filters for resale. Need reliable product data for purchasing decisions.</p>
+                            </div>
+                            <span class="badge badge-yellow">Secondary</span>
+                        </div>
+                        <div class="icp-segment">
+                            <div class="icp-icon" style="background:#d1fae5;">&#128736;</div>
+                            <div class="icp-info">
+                                <h4>Aquarium Maintenance Services</h4>
+                                <p>Professional tank cleaners and maintenance crews. Need commercial-grade equipment recommendations.</p>
+                            </div>
+                            <span class="badge badge-blue">Tertiary</span>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-top:1.5rem;">Add Custom Segment</h3>
+                    <div class="grid-2">
+                        <div class="form-group">
+                            <label>Segment Name</label>
+                            <input type="text" id="icp-seg-name" placeholder="e.g., Aquarium Clubs">
+                        </div>
+                        <div class="form-group">
+                            <label>Priority</label>
+                            <select id="icp-seg-priority">
+                                <option value="Primary">Primary</option>
+                                <option value="Secondary">Secondary</option>
+                                <option value="Tertiary">Tertiary</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea id="icp-seg-desc" rows="2" placeholder="Describe this segment's characteristics, pain points, and buying triggers..."></textarea>
+                    </div>
+                    <button class="btn btn-primary" onclick="addICPSegment()">Add Segment</button>
+                </div>
+
+                <div>
+                    <div class="card">
+                        <h2>Buyer Trigger Events</h2>
+                        <p style="font-size:0.85rem;color:#666;margin-bottom:1rem;">What happens in the last 30-90 days that makes someone ready to buy?</p>
+                        <div id="trigger-events">
+                            <div class="content-angle">
+                                <h4>New Tank Setup</h4>
+                                <p>Just bought a new aquarium and needs filtration equipment right away.</p>
+                            </div>
+                            <div class="content-angle">
+                                <h4>Cloudy Water Problems</h4>
+                                <p>Current filter failing, water quality declining. Urgently searching for replacement.</p>
+                            </div>
+                            <div class="content-angle">
+                                <h4>Tank Upgrade</h4>
+                                <p>Upgrading from small to large tank, needs more powerful filtration system.</p>
+                            </div>
+                            <div class="content-angle">
+                                <h4>Fish Health Issues</h4>
+                                <p>Fish getting sick due to poor water quality. Realizes filtration is the root cause.</p>
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-top:1rem;">
+                            <input type="text" id="trigger-input" placeholder="Add a trigger event...">
+                        </div>
+                        <button class="btn btn-sm btn-secondary" onclick="addTriggerEvent()">Add Trigger</button>
+                    </div>
+
+                    <div class="card">
+                        <h2>Buyer Language</h2>
+                        <p style="font-size:0.85rem;color:#666;margin-bottom:1rem;">How your buyers describe their problems (use in posts for resonance):</p>
+                        <div id="buyer-language">
+                            <div style="padding:0.5rem;background:#f9fafb;border-radius:6px;margin-bottom:0.4rem;font-size:0.85rem;">"My water keeps getting cloudy no matter what I do"</div>
+                            <div style="padding:0.5rem;background:#f9fafb;border-radius:6px;margin-bottom:0.4rem;font-size:0.85rem;">"I don't know which filter is right for my tank size"</div>
+                            <div style="padding:0.5rem;background:#f9fafb;border-radius:6px;margin-bottom:0.4rem;font-size:0.85rem;">"I've wasted money on cheap filters that break in months"</div>
+                            <div style="padding:0.5rem;background:#f9fafb;border-radius:6px;margin-bottom:0.4rem;font-size:0.85rem;">"My fish keep dying and I think it's a water quality issue"</div>
+                            <div style="padding:0.5rem;background:#f9fafb;border-radius:6px;margin-bottom:0.4rem;font-size:0.85rem;">"I want a quiet filter that actually works for a planted tank"</div>
+                        </div>
+                        <div class="form-group" style="margin-top:0.75rem;">
+                            <input type="text" id="language-input" placeholder='Add buyer language (e.g., "I need a filter for a 55 gallon...")'>
+                        </div>
+                        <button class="btn btn-sm btn-secondary" onclick="addBuyerLanguage()">Add Language</button>
+                    </div>
+
+                    <div class="card">
+                        <h2>Negative ICP (Who to Avoid)</h2>
+                        <p style="font-size:0.85rem;color:#666;margin-bottom:0.75rem;">People who look like buyers but won't convert:</p>
+                        <ul style="font-size:0.85rem;padding-left:1.25rem;color:#666;">
+                            <li>DIY builders who only want to make their own filters</li>
+                            <li>Price-only shoppers who will always choose the cheapest option</li>
+                            <li>Competitor brands researching your content strategy</li>
+                            <li>Casual browsers with no tank who just watch aquarium videos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENT GENERATOR TAB -->
+        <div id="tab-generator" class="tab-content">
+            <div class="grid-2">
+                <div>
+                    <div class="card">
+                        <h2>Post Generator</h2>
+
+                        <div class="form-group">
+                            <label>Platform</label>
+                            <select id="gen-platform">
+                                <option value="linkedin">LinkedIn</option>
+                                <option value="facebook">Facebook</option>
+                                <option value="instagram">Instagram</option>
+                                <option value="twitter">X (Twitter)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Target ICP Segment</label>
+                            <select id="gen-icp-target">
+                                <option value="hobbyists">Aquarium Hobbyists</option>
+                                <option value="pet-stores">Pet Store Owners</option>
+                                <option value="maintenance">Aquarium Maintenance Services</option>
+                                <option value="all">All Segments</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Content Template</label>
+                            <div class="grid-2" style="gap:0.5rem;margin-top:0.25rem;">
+                                <div class="template-card selected" data-template="hook-data" onclick="selectTemplate(this)">
+                                    <h4>Data-Driven Hook</h4>
+                                    <p>Lead with a surprising statistic about filters or water quality</p>
+                                </div>
+                                <div class="template-card" data-template="problem-solution" onclick="selectTemplate(this)">
+                                    <h4>Problem-Solution</h4>
+                                    <p>Name the pain, show proof, present the solution</p>
+                                </div>
+                                <div class="template-card" data-template="myth-buster" onclick="selectTemplate(this)">
+                                    <h4>Myth Buster</h4>
+                                    <p>Challenge common misconceptions about aquarium care</p>
+                                </div>
+                                <div class="template-card" data-template="comparison" onclick="selectTemplate(this)">
+                                    <h4>Product Comparison</h4>
+                                    <p>Side-by-side breakdown of popular filters</p>
+                                </div>
+                                <div class="template-card" data-template="how-to" onclick="selectTemplate(this)">
+                                    <h4>How-To Guide</h4>
+                                    <p>Step-by-step educational content</p>
+                                </div>
+                                <div class="template-card" data-template="social-proof" onclick="selectTemplate(this)">
+                                    <h4>Social Proof / Testimonial</h4>
+                                    <p>Showcase customer results and success stories</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Topic / Keyword</label>
+                            <input type="text" id="gen-topic" placeholder="e.g., canister filters for planted tanks, water clarity tips...">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Custom Notes (optional)</label>
+                            <textarea id="gen-notes" rows="2" placeholder="Any specific angle, stat, or product to mention..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Call-to-Action</label>
+                            <select id="gen-cta">
+                                <option value="link">Link to article/review</option>
+                                <option value="comment">Ask to comment</option>
+                                <option value="dm">Invite DMs</option>
+                                <option value="lead-magnet">Free guide download</option>
+                                <option value="none">No CTA</option>
+                            </select>
+                        </div>
+
+                        <div class="btn-group">
+                            <button class="btn btn-primary" onclick="generatePost()">Generate Post</button>
+                            <button class="btn btn-secondary" onclick="generateVariations()">Generate 3 Variations</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="card">
+                        <h2>Post Preview</h2>
+                        <div id="post-preview" class="post-preview">
+                            <em style="color:#999;">Your generated post will appear here. Select a template and click "Generate Post" to get started.</em>
+                        </div>
+                        <div style="margin-top:1rem;display:flex;justify-content:space-between;align-items:center;">
+                            <div>
+                                <span class="badge badge-blue" id="preview-platform">LinkedIn</span>
+                                <span class="badge badge-green" id="preview-icp">Hobbyists</span>
+                                <span class="badge badge-purple" id="preview-template">Data-Driven</span>
+                            </div>
+                            <div id="char-count" style="font-size:0.75rem;color:#666;">0 / 3000 chars</div>
+                        </div>
+                        <div class="btn-group" style="margin-top:1rem;">
+                            <button class="btn btn-success btn-sm" onclick="savePost()">Save Post</button>
+                            <button class="btn btn-secondary btn-sm" onclick="copyPost()">Copy to Clipboard</button>
+                            <button class="btn btn-primary btn-sm" onclick="schedulePost()">Schedule Post</button>
+                            <button class="btn btn-secondary btn-sm" onclick="regeneratePost()">Regenerate</button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="variations-card" style="display:none;">
+                        <h2>Variations</h2>
+                        <div id="variations-list"></div>
+                    </div>
+
+                    <div class="card">
+                        <h2>Saved Posts</h2>
+                        <div id="saved-posts-list">
+                            <div class="empty-state">
+                                <div class="icon">&#128190;</div>
+                                <h3>No saved posts</h3>
+                                <p>Generate and save posts to build your content library.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LINKEDIN STRATEGY TAB -->
+        <div id="tab-linkedin" class="tab-content">
+            <div class="grid-2">
+                <div class="card">
+                    <h2>LinkedIn Growth Playbook</h2>
+                    <p style="font-size:0.85rem;color:#666;margin-bottom:1.25rem;">LinkedIn is the 11th most visited domain from search engines in the US. Posts are ranking on Google. Here's how to capitalize.</p>
+
+                    <div class="content-angle" style="border-left-color:#0077b5;">
+                        <h4>Post 3-5x Per Day</h4>
+                        <p>Dead accounts getting 12,000 impressions in week 1 just from posting 5x/day. Even 1x/day gets 80,000+ impressions weekly. LinkedIn is rewarding consistent posters heavily right now.</p>
+                    </div>
+                    <div class="content-angle" style="border-left-color:#0077b5;">
+                        <h4>Cross-Post From Other Platforms</h4>
+                        <p>Copy your X/Twitter posts directly to LinkedIn. Copy your Instagram captions. Repurpose TikTok scripts as text posts. 5 posts in 30 minutes is achievable when cross-posting.</p>
+                    </div>
+                    <div class="content-angle" style="border-left-color:#0077b5;">
+                        <h4>Write Like a Human, Not a Corporation</h4>
+                        <p>Stop using "I'm thrilled to announce" and "I'm proud to share." Write like you're texting a friend. Be authentic, uncensored, direct. This stands out because 90% of LinkedIn content is corporate fluff.</p>
+                    </div>
+                    <div class="content-angle" style="border-left-color:#0077b5;">
+                        <h4>Links in Comments, Not Posts</h4>
+                        <p>Posts with links get suppressed in reach. Put your link in the first comment. "Link in the comments" in your post body. This is critical for driving traffic to your site.</p>
+                    </div>
+                    <div class="content-angle" style="border-left-color:#0077b5;">
+                        <h4>Post to Personal Profile, Not Company Page</h4>
+                        <p>Manual posting to personal LinkedIn gets dramatically more engagement than automated posts to company pages. The algorithm favors personal accounts.</p>
+                    </div>
+                    <div class="content-angle" style="border-left-color:#0077b5;">
+                        <h4>Don't Stop Posting (Even 48 Hours)</h4>
+                        <p>If you stop posting for even 48 hours, your views drop off a cliff. Momentum is everything. Build the habit and don't break the chain.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="card">
+                        <h2>Matt Barker's 8-Step Framework</h2>
+                        <p style="font-size:0.85rem;color:#666;margin-bottom:1rem;">Grew from 1,285 to 143,000 followers using these exact steps:</p>
+
+                        <div class="pipeline-stage">
+                            <div class="pipeline-num">1</div>
+                            <div>
+                                <strong>Add CTAs to Every Post</strong>
+                                <div style="font-size:0.8rem;color:#666;">Follow me + tap bell + tag yourself. Every single post. End with: Save / Repost / Comment with your takeaway.</div>
+                            </div>
+                        </div>
+                        <div class="pipeline-stage">
+                            <div class="pipeline-num">2</div>
+                            <div>
+                                <strong>Start with Customer Problems</strong>
+                                <div style="font-size:0.8rem;color:#666;">Lead every post with your buyer's specific pain point. This attracts followers whose problems you can solve.</div>
+                            </div>
+                        </div>
+                        <div class="pipeline-stage">
+                            <div class="pipeline-num">3</div>
+                            <div>
+                                <strong>Build in Public</strong>
+                                <div style="font-size:0.8rem;color:#666;">Share your progress: inbound leads, follower growth, test results. People learn from those one step ahead.</div>
+                            </div>
+                        </div>
+                        <div class="pipeline-stage">
+                            <div class="pipeline-num">4</div>
+                            <div>
+                                <strong>Laser-Focus Your Target Audience</strong>
+                                <div style="font-size:0.8rem;color:#666;">Call out your audience directly: "Aquarium hobbyists..." / "If you own a fish tank..." Name them in the first line.</div>
+                            </div>
+                        </div>
+                        <div class="pipeline-stage">
+                            <div class="pipeline-num">5</div>
+                            <div>
+                                <strong>One Actionable Tip Daily</strong>
+                                <div style="font-size:0.8rem;color:#666;">Give something they can implement TODAY. Not theory - specific steps.</div>
+                            </div>
+                        </div>
+                        <div class="pipeline-stage">
+                            <div class="pipeline-num">6</div>
+                            <div>
+                                <strong>Copy Successful Hook Structures</strong>
+                                <div style="font-size:0.8rem;color:#666;">Framework: Address problem → Give context → Reason to click "See More"</div>
+                            </div>
+                        </div>
+                        <div class="pipeline-stage">
+                            <div class="pipeline-num">7</div>
+                            <div>
+                                <strong>Create Proven Post Templates</strong>
+                                <div style="font-size:0.8rem;color:#666;">6 types: Educate / Entertain / Challenge / Motivate / Engage / Hook-driven</div>
+                            </div>
+                        </div>
+                        <div class="pipeline-stage">
+                            <div class="pipeline-num">8</div>
+                            <div>
+                                <strong>DM and Network Aggressively</strong>
+                                <div style="font-size:0.8rem;color:#666;">Send genuine compliments to people in your niche. Friends support friends. Mutually beneficial engagement.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h2>LinkedIn for SEO (Linkable Assets)</h2>
+                        <p style="font-size:0.85rem;color:#666;margin-bottom:1rem;">Use LinkedIn to drive backlinks to your site:</p>
+                        <div class="content-angle" style="border-left-color:#059669;">
+                            <h4>Announce Studies & Data</h4>
+                            <p>"We did this study comparing X filters. We found [insight]. Link to the full study is in the comments." People click, read, and link to your research.</p>
+                        </div>
+                        <div class="content-angle" style="border-left-color:#059669;">
+                            <h4>Top-of-Mind Awareness</h4>
+                            <p>When people think "aquarium filters," you want them to think of you. Post consistently about filtration, and when someone needs a filter, they come to YOU first.</p>
+                        </div>
+                        <div class="content-angle" style="border-left-color:#059669;">
+                            <h4>Testimonials & Social Proof</h4>
+                            <p>Share customer results on LinkedIn. Followers go to your site and engage. They share links. Trust builds over time.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>LinkedIn Post Generator (Optimized)</h2>
+                <p style="font-size:0.85rem;color:#666;margin-bottom:1rem;">Generate LinkedIn-optimized posts with built-in CTAs, hook structures, and engagement triggers.</p>
+                <div class="grid-3">
+                    <div class="form-group">
+                        <label>Post Style</label>
+                        <select id="li-style">
+                            <option value="data-hook">Data Hook (stat-led opener)</option>
+                            <option value="problem-first">Problem First (customer pain)</option>
+                            <option value="build-public">Build in Public (share progress)</option>
+                            <option value="myth-bust">Myth Buster (contrarian take)</option>
+                            <option value="quick-tip">Quick Actionable Tip</option>
+                            <option value="cross-post">Cross-Post Adapter (paste content)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Topic</label>
+                        <input type="text" id="li-topic" placeholder="e.g., canister filter testing results">
+                    </div>
+                    <div class="form-group">
+                        <label>CTA Type</label>
+                        <select id="li-cta">
+                            <option value="follow-bell">Follow + Bell (growth)</option>
+                            <option value="save-repost">Save / Repost / Comment</option>
+                            <option value="comment-trigger">Comment Trigger Word</option>
+                            <option value="link-comments">Link in Comments</option>
+                            <option value="dm-invite">DM Invite</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group" id="cross-post-input" style="display:none;">
+                    <label>Paste Content to Adapt for LinkedIn</label>
+                    <textarea id="li-cross-content" rows="4" placeholder="Paste your X/Twitter, Instagram, or TikTok post here..."></textarea>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-primary" onclick="generateLinkedInPost()">Generate LinkedIn Post</button>
+                    <button class="btn btn-secondary" onclick="generateBatchLinkedIn()">Generate 5 Posts (Batch)</button>
+                </div>
+                <div id="li-output" style="margin-top:1rem;display:none;">
+                    <div class="post-preview" id="li-preview"></div>
+                    <div style="margin-top:0.75rem;display:flex;justify-content:space-between;align-items:center;">
+                        <div>
+                            <span class="badge badge-blue">LinkedIn</span>
+                            <span id="li-char-count" style="font-size:0.75rem;color:#666;margin-left:0.5rem;">0 / 3000 chars</span>
+                        </div>
+                        <div class="btn-group">
+                            <button class="btn btn-sm btn-success" onclick="saveLIPost()">Save</button>
+                            <button class="btn btn-sm btn-secondary" onclick="copyLIPost()">Copy</button>
+                            <button class="btn btn-sm btn-primary" onclick="generateLinkedInPost()">Regenerate</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="li-batch-output" style="margin-top:1rem;display:none;"></div>
+            </div>
+
+            <div class="card">
+                <h2>Top Voice Badge Strategy</h2>
+                <p style="font-size:0.85rem;color:#666;margin-bottom:1rem;">How to earn the LinkedIn Top Voice badge in 5 days:</p>
+                <div class="grid-3">
+                    <div class="pipeline-stage" style="flex-direction:column;text-align:center;">
+                        <div class="pipeline-num" style="margin-bottom:0.5rem;">1</div>
+                        <strong style="font-size:0.85rem;">Find Your Skill</strong>
+                        <p style="font-size:0.75rem;color:#666;">Go to LinkedIn Collaborative Articles for your industry skill (e.g., "Aquarium Maintenance")</p>
+                    </div>
+                    <div class="pipeline-stage" style="flex-direction:column;text-align:center;">
+                        <div class="pipeline-num" style="margin-bottom:0.5rem;">2</div>
+                        <strong style="font-size:0.85rem;">Target Low-Competition Articles</strong>
+                        <p style="font-size:0.75rem;color:#666;">Find articles with fewer than 3 contributions. Skip the crowded ones with 20+ responses.</p>
+                    </div>
+                    <div class="pipeline-stage" style="flex-direction:column;text-align:center;">
+                        <div class="pipeline-num" style="margin-bottom:0.5rem;">3</div>
+                        <strong style="font-size:0.85rem;">Short, Actionable Answers</strong>
+                        <p style="font-size:0.75rem;color:#666;">Write 3-step bullet point answers while others write paragraphs. Quality over quantity. 3-4 comments per day for 4-5 days.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENT CALENDAR TAB -->
+        <div id="tab-calendar" class="tab-content">
+            <div class="card">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;">
+                    <h2 style="margin-bottom:0;">Content Calendar</h2>
+                    <div class="btn-group">
+                        <button class="btn btn-sm btn-secondary" onclick="prevMonth()">&#8592; Prev</button>
+                        <span id="calendar-month" style="font-weight:600;padding:0 1rem;font-size:0.95rem;"></span>
+                        <button class="btn btn-sm btn-secondary" onclick="nextMonth()">Next &#8594;</button>
+                    </div>
+                </div>
+                <div class="calendar-grid" id="calendar-grid"></div>
+            </div>
+
+            <div class="grid-2">
+                <div class="card">
+                    <h2>Scheduled Posts</h2>
+                    <div id="scheduled-posts-list">
+                        <div class="empty-state">
+                            <div class="icon">&#128197;</div>
+                            <h3>No scheduled posts</h3>
+                            <p>Schedule posts from the Content Generator tab.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h2>Posting Strategy</h2>
+                    <div class="content-angle">
+                        <h4>Optimal Posting Schedule</h4>
+                        <p><strong>LinkedIn:</strong> Tues-Thurs, 8-10 AM local time<br>
+                        <strong>Facebook:</strong> Wed-Fri, 1-3 PM<br>
+                        <strong>Instagram:</strong> Mon, Wed, Fri, 11 AM - 1 PM</p>
+                    </div>
+                    <div class="content-angle">
+                        <h4>Content Mix (80/20 Rule)</h4>
+                        <p><strong>80%</strong> educational / value-driven (how-tos, data, tips)<br>
+                        <strong>20%</strong> promotional (product links, CTAs, offers)</p>
+                    </div>
+                    <div class="content-angle">
+                        <h4>Post Frequency Targets</h4>
+                        <p>LinkedIn: 3-5 posts/week | Facebook: 4-5/week | Instagram: 5-7/week</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LEAD TRACKER TAB -->
+        <div id="tab-leads" class="tab-content">
+            <div class="grid-4" style="margin-bottom:1.5rem;">
+                <div class="stat-card">
+                    <div class="stat-value" id="leads-total">0</div>
+                    <div class="stat-label">Total Leads</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" style="color:#059669;" id="leads-buyers">0</div>
+                    <div class="stat-label">Qualified Buyers</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" style="color:#d97706;" id="leads-peers">0</div>
+                    <div class="stat-label">Peers / Industry</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" style="color:#ef4444;" id="leads-competitors">0</div>
+                    <div class="stat-label">Competitors</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
+                    <h2 style="margin-bottom:0;">Lead Database</h2>
+                    <div class="btn-group">
+                        <button class="btn btn-sm btn-primary" onclick="showAddLeadModal()">Add Lead</button>
+                        <button class="btn btn-sm btn-secondary" onclick="importLeadsCSV()">Import CSV</button>
+                        <button class="btn btn-sm btn-secondary" onclick="exportLeads()">Export</button>
+                    </div>
+                </div>
+
+                <div style="display:flex;gap:0.75rem;margin-bottom:1rem;flex-wrap:wrap;">
+                    <input type="text" id="lead-search" placeholder="Search leads..." style="flex:1;min-width:200px;padding:0.5rem 0.75rem;border:1px solid #d1d5db;border-radius:8px;font-size:0.85rem;">
+                    <select id="lead-filter-type" style="padding:0.5rem;border:1px solid #d1d5db;border-radius:8px;font-size:0.85rem;">
+                        <option value="all">All Types</option>
+                        <option value="buyer">Buyers</option>
+                        <option value="peer">Peers</option>
+                        <option value="competitor">Competitors</option>
+                        <option value="unknown">Unknown</option>
+                    </select>
+                    <select id="lead-filter-score" style="padding:0.5rem;border:1px solid #d1d5db;border-radius:8px;font-size:0.85rem;">
+                        <option value="all">All Scores</option>
+                        <option value="8">Score 8+</option>
+                        <option value="6">Score 6+</option>
+                        <option value="4">Score 4+</option>
+                    </select>
+                </div>
+
+                <div style="overflow-x:auto;">
+                    <table class="lead-table" id="leads-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Title / Company</th>
+                                <th>Type</th>
+                                <th>Score</th>
+                                <th>Source</th>
+                                <th>Last Engaged</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="leads-tbody">
+                        </tbody>
+                    </table>
+                </div>
+                <div id="leads-empty" class="empty-state">
+                    <div class="icon">&#128101;</div>
+                    <h3>No leads tracked yet</h3>
+                    <p>Add leads manually, import from CSV, or they'll be captured as people engage with your posts.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENT BRIEFS TAB -->
+        <div id="tab-briefs" class="tab-content">
+            <div class="grid-2">
+                <div class="card">
+                    <h2>Content Brief Generator</h2>
+                    <p style="font-size:0.85rem;color:#666;margin-bottom:1rem;">Analyze your best-performing content patterns and generate a strategic content brief.</p>
+
+                    <div class="form-group">
+                        <label>Focus Area</label>
+                        <select id="brief-focus">
+                            <option value="buyer-attraction">Buyer Attraction (maximize ICP engagement)</option>
+                            <option value="awareness">Brand Awareness (maximize reach)</option>
+                            <option value="authority">Authority Building (establish expertise)</option>
+                            <option value="conversion">Conversion (drive sales/clicks)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Time Period</label>
+                        <select id="brief-period">
+                            <option value="7">Last 7 days</option>
+                            <option value="30" selected>Last 30 days</option>
+                            <option value="90">Last 90 days</option>
+                        </select>
+                    </div>
+
+                    <button class="btn btn-primary" onclick="generateBrief()">Generate Content Brief</button>
+                </div>
+
+                <div class="card">
+                    <h2>Proven Content Angles</h2>
+                    <p style="font-size:0.85rem;color:#666;margin-bottom:1rem;">Angles that consistently attract your ICP:</p>
+
+                    <div class="content-angle" style="border-left-color:#059669;">
+                        <h4>Beginner-Friendly How-Tos</h4>
+                        <p>Posts targeting people setting up their first tank. Use phrases like "no experience needed" and "step-by-step." These attract buyers 3x more than advanced content.</p>
+                    </div>
+                    <div class="content-angle" style="border-left-color:#1f7ae0;">
+                        <h4>Data-Backed Comparisons</h4>
+                        <p>Real test results comparing popular filters. Include specific numbers (flow rate, noise dB, clarity %). Buyers engage heavily with verifiable data.</p>
+                    </div>
+                    <div class="content-angle" style="border-left-color:#d97706;">
+                        <h4>Money-Saving Tips</h4>
+                        <p>"I tested 5 filters under $30" or "Stop wasting money on filters that break." Price-conscious buyers respond strongly to value positioning.</p>
+                    </div>
+
+                    <h3 style="margin-top:1.5rem;color:#ef4444;">Angles to Avoid</h3>
+                    <div class="content-angle" style="border-left-color:#ef4444;">
+                        <h4>Flexing Business Metrics</h4>
+                        <p>"How I grew my review site to 100K visitors" - attracts competitors and peers, NOT buyers. Cut this from your content mix.</p>
+                    </div>
+                    <div class="content-angle" style="border-left-color:#ef4444;">
+                        <h4>Overly Technical Jargon</h4>
+                        <p>Deep-dive chemistry posts about nitrogen cycles alienate beginners. Keep it accessible.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="brief-output" style="display:none;">
+                <h2>Generated Content Brief</h2>
+                <div id="brief-content"></div>
+            </div>
+
+            <div class="card">
+                <h2>Reusable Post Template</h2>
+                <p style="font-size:0.85rem;color:#666;margin-bottom:1rem;">Based on the highest-performing buyer-attracting post pattern:</p>
+                <div class="post-preview" style="background:#eff6ff;">
+<strong>[HOOK - 1 surprising stat or contrarian statement]</strong>
+Example: "We tested 12 aquarium filters for 90 days. Only 3 kept water crystal clear past day 30."
+
+<strong>[REFRAME - 1-3 word pattern interrupt]</strong>
+Example: "Here's what most reviews won't tell you."
+
+<strong>[BODY - 3-5 bullet points with specific data]</strong>
+- Point 1: Name the problem your buyer faces
+- Point 2: Share a specific data point or test result
+- Point 3: Reveal the solution or recommendation
+- Point 4: Address a common objection
+- Point 5: Social proof or customer result
+
+<strong>[CTA - Drive action without sounding salesy]</strong>
+Example: "I put together a free comparison chart of all 12 filters. Drop 'FILTER' in the comments and I'll send it over."
+
+<strong>Post Rules:</strong>
+- Keep under 1,300 characters for LinkedIn
+- First line must stop the scroll
+- Write for someone who hasn't started yet
+- Include at least one hard number
+- End with a low-friction CTA (comment, not click)</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ADD LEAD MODAL -->
+    <div class="modal-overlay" id="add-lead-modal">
+        <div class="modal">
+            <h2>Add New Lead</h2>
+            <div class="grid-2">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" id="lead-name" placeholder="Full name">
+                </div>
+                <div class="form-group">
+                    <label>Company</label>
+                    <input type="text" id="lead-company" placeholder="Company name">
+                </div>
+            </div>
+            <div class="grid-2">
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" id="lead-title" placeholder="Job title">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="lead-email" placeholder="email@example.com">
+                </div>
+            </div>
+            <div class="grid-2">
+                <div class="form-group">
+                    <label>LinkedIn URL</label>
+                    <input type="text" id="lead-linkedin" placeholder="linkedin.com/in/...">
+                </div>
+                <div class="form-group">
+                    <label>Source</label>
+                    <select id="lead-source">
+                        <option value="linkedin-comment">LinkedIn Comment</option>
+                        <option value="linkedin-connection">LinkedIn Connection</option>
+                        <option value="facebook">Facebook</option>
+                        <option value="instagram">Instagram</option>
+                        <option value="website">Website</option>
+                        <option value="referral">Referral</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <div class="grid-2">
+                <div class="form-group">
+                    <label>Lead Type</label>
+                    <select id="lead-type">
+                        <option value="buyer">Buyer (ICP Match)</option>
+                        <option value="peer">Peer / Industry</option>
+                        <option value="competitor">Competitor</option>
+                        <option value="unknown">Unknown</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Score (1-10)</label>
+                    <input type="number" id="lead-score" min="1" max="10" value="5">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Notes</label>
+                <textarea id="lead-notes" rows="2" placeholder="Any relevant notes about this lead..."></textarea>
+            </div>
+            <div class="btn-group" style="justify-content:flex-end;margin-top:1rem;">
+                <button class="btn btn-secondary" onclick="closeModal('add-lead-modal')">Cancel</button>
+                <button class="btn btn-primary" onclick="addLead()">Add Lead</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCHEDULE MODAL -->
+    <div class="modal-overlay" id="schedule-modal">
+        <div class="modal">
+            <h2>Schedule Post</h2>
+            <div class="grid-2">
+                <div class="form-group">
+                    <label>Date</label>
+                    <input type="date" id="schedule-date">
+                </div>
+                <div class="form-group">
+                    <label>Time</label>
+                    <input type="time" id="schedule-time" value="09:00">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Platform</label>
+                <select id="schedule-platform">
+                    <option value="linkedin">LinkedIn</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="instagram">Instagram</option>
+                    <option value="twitter">X (Twitter)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Post Preview</label>
+                <div id="schedule-preview" class="post-preview" style="max-height:150px;font-size:0.8rem;"></div>
+            </div>
+            <div class="btn-group" style="justify-content:flex-end;margin-top:1rem;">
+                <button class="btn btn-secondary" onclick="closeModal('schedule-modal')">Cancel</button>
+                <button class="btn btn-primary" onclick="confirmSchedule()">Schedule</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script>
+    const APP_KEY = 'ftf_lead_gen';
+
+    const POST_TEMPLATES = {
+        'hook-data': {
+            name: 'Data-Driven Hook',
+            generate: function(topic, platform, icp, cta, notes) {
+                const hooks = [
+                    `We tested {count} {topic} for 90 days straight. The results surprised even us.`,
+                    `{stat}% of aquarium owners are making this one filtration mistake. Here's the data to prove it.`,
+                    `After analyzing {count} fish tanks, here's what actually keeps water crystal clear (it's not what you think).`,
+                    `The difference between a $25 and $150 filter? We measured it. Here are the real numbers.`,
+                    `Your fish tank filter is probably working at {stat}% capacity. Here's how we know.`,
+                ];
+                const bodies = [
+                    `We put {topic} through real-world testing on stocked aquariums.\n\nHere's what the data showed:\n\n- Flow rate dropped {stat}% after just 2 weeks without maintenance\n- Noise levels varied from 25dB to 58dB across models\n- Only 3 out of {count} maintained water clarity past day 60\n- The price-to-performance sweet spot was surprisingly low\n\nThe biggest takeaway?\n\nThe most expensive option wasn't the best performer. Not even close.`,
+                    `Most people pick their aquarium filter based on Amazon reviews.\n\nWe picked ours based on 90 days of real testing.\n\nHere's what we measured on {topic}:\n\n- Water clarity (NTU readings weekly)\n- Flow rate degradation over time\n- Actual noise output at 3 feet\n- Media replacement frequency needed\n\nThe filter that scored highest? It wasn't the most popular one on Amazon.`,
+                    `Everyone asks: "What's the best filter for my tank?"\n\nWrong question.\n\nThe right question: "What's the best filter for MY setup?"\n\nAfter testing {topic} across {count} different tank configurations:\n\n- Planted tanks need different flow patterns than bare tanks\n- Your tank size matters less than your bioload\n- The "best" filter depends on 3 factors most people ignore\n\nHere's what we found works for each setup type.`
+                ];
+                const hook = hooks[Math.floor(Math.random() * hooks.length)]
+                    .replace(/{topic}/g, topic || 'aquarium filters')
+                    .replace(/{count}/g, Math.floor(Math.random() * 8 + 5))
+                    .replace(/{stat}/g, Math.floor(Math.random() * 30 + 40));
+                const body = bodies[Math.floor(Math.random() * bodies.length)]
+                    .replace(/{topic}/g, topic || 'aquarium filters')
+                    .replace(/{count}/g, Math.floor(Math.random() * 8 + 5))
+                    .replace(/{stat}/g, Math.floor(Math.random() * 30 + 25));
+                const ctaText = getCTAText(cta, topic);
+                let post = hook + '\n\n' + body;
+                if (notes) post += '\n\n' + notes;
+                if (ctaText) post += '\n\n' + ctaText;
+                return trimForPlatform(post, platform);
+            }
+        },
+        'problem-solution': {
+            name: 'Problem-Solution',
+            generate: function(topic, platform, icp, cta, notes) {
+                const problems = {
+                    'hobbyists': 'cloudy water that won\'t clear up no matter what you try',
+                    'pet-stores': 'customers returning filters within 30 days because they "don\'t work"',
+                    'maintenance': 'showing up to a client\'s tank and finding the filter completely failed',
+                    'all': 'spending money on filters that underperform within weeks'
+                };
+                const problem = problems[icp] || problems['all'];
+                const posts = [
+                    `You know that feeling when you look at your tank and the water is ${problem}?\n\nYou've tried everything:\n- Different filter media\n- More frequent water changes\n- Even bought a more expensive filter\n\nBut nothing sticks.\n\nHere's what's actually happening:\n\nMost filters are designed for "ideal" conditions. But your tank isn't ideal. It has real fish, real food, real waste.\n\nThe fix isn't a better filter. It's the RIGHT filter for YOUR specific setup.\n\nWe tested ${topic || 'dozens of filters'} across different tank types and found that matching filter type to bioload matters 3x more than brand or price.\n\nThe difference between cloudy and crystal clear? Usually just one adjustment.`,
+                    `"I've wasted hundreds on filters that break in 6 months."\n\nHeard this before? We hear it every week.\n\nThe problem isn't that you're buying bad filters. The problem is you're buying filters designed for a different tank than yours.\n\nAfter testing ${topic || 'the top-selling filters'} on real stocked aquariums:\n\nWe found 3 critical matching factors:\n1. Tank volume vs. actual bioload (not label rating)\n2. Flow pattern vs. plant/decoration density\n3. Media type vs. your specific water chemistry\n\nGet these 3 right and even a $30 filter outperforms a $200 one.\n\nGet them wrong and no amount of money fixes cloudy water.`
+                ];
+                let post = posts[Math.floor(Math.random() * posts.length)];
+                const ctaText = getCTAText(cta, topic);
+                if (notes) post += '\n\n' + notes;
+                if (ctaText) post += '\n\n' + ctaText;
+                return trimForPlatform(post, platform);
+            }
+        },
+        'myth-buster': {
+            name: 'Myth Buster',
+            generate: function(topic, platform, icp, cta, notes) {
+                const myths = [
+                    {myth: '"You need to replace your filter every 6 months."', truth: 'We ran the same filter for 18 months with proper maintenance. Performance? Still within 5% of day-one numbers.'},
+                    {myth: '"Bigger filters are always better."', truth: 'Our tests show oversized filters can actually harm beneficial bacteria colonies by creating too much flow for your tank size.'},
+                    {myth: '"You get what you pay for with aquarium filters."', truth: 'Our $35 test winner outperformed 3 filters costing over $120. Price and performance have a 0.3 correlation in our data.'},
+                    {myth: '"Carbon filters are essential for clear water."', truth: 'In 8 out of 12 test tanks, removing carbon and using biological media only produced CLEARER water within 30 days.'},
+                    {myth: '"HOB filters can\'t compete with canister filters."', truth: 'For tanks under 55 gallons, our data shows modern HOB filters match canister performance at 40% of the cost.'}
+                ];
+                const m = myths[Math.floor(Math.random() * myths.length)];
+                let post = `Stop believing this about ${topic || 'aquarium filters'}.\n\n${m.myth}\n\nThis is one of the biggest myths in the aquarium hobby.\n\nThe truth?\n\n${m.truth}\n\nWe tested this across multiple tank setups and the data is clear.\n\nHere are 3 more myths we busted with real testing data:\n\n1. Myth: "Filter ratings on the box are accurate" - Reality: Actual flow rates averaged 30% below labeled specs\n2. Myth: "You need a filter rated for 2x your tank size" - Reality: Proper sizing depends on bioload, not tank volume alone\n3. Myth: "All filter media is basically the same" - Reality: Media quality affected water clarity by up to 40% in our tests\n\nDon't waste money based on myths. Use data.`;
+                const ctaText = getCTAText(cta, topic);
+                if (notes) post += '\n\n' + notes;
+                if (ctaText) post += '\n\n' + ctaText;
+                return trimForPlatform(post, platform);
+            }
+        },
+        'comparison': {
+            name: 'Product Comparison',
+            generate: function(topic, platform, icp, cta, notes) {
+                let post = `${topic || 'Fluval vs. Eheim vs. Marineland'}: which one actually wins?\n\nWe tested all three head-to-head for 90 days on identical tank setups.\n\nHere's the honest breakdown:\n\nFlow Rate (Day 1 vs Day 90):\n- Filter A: 320 GPH → 285 GPH (-11%)\n- Filter B: 290 GPH → 248 GPH (-14%)\n- Filter C: 350 GPH → 275 GPH (-21%)\n\nNoise Level (measured at 3 feet):\n- Filter A: 32 dB (barely audible)\n- Filter B: 28 dB (quietest)\n- Filter C: 45 dB (noticeable hum)\n\nWater Clarity (NTU at Day 90):\n- Filter A: 0.8 NTU (crystal clear)\n- Filter B: 1.1 NTU (excellent)\n- Filter C: 2.3 NTU (slightly hazy)\n\nMaintenance Frequency Needed:\n- Filter A: Every 3 weeks\n- Filter B: Every 4 weeks\n- Filter C: Every 2 weeks\n\nOverall Winner?\n\nDepends on what matters most to you. But the data doesn't lie.\n\nThe "most popular" choice on Amazon ranked last in 2 out of 4 categories.`;
+                const ctaText = getCTAText(cta, topic);
+                if (notes) post += '\n\n' + notes;
+                if (ctaText) post += '\n\n' + ctaText;
+                return trimForPlatform(post, platform);
+            }
+        },
+        'how-to': {
+            name: 'How-To Guide',
+            generate: function(topic, platform, icp, cta, notes) {
+                const guides = [
+                    `How to pick the right filter for your tank (no experience needed):\n\nStep 1: Count your fish\nNot your tank size. Your BIOLOAD is what matters. 10 neon tetras = very different filtration needs than 2 oscars in the same size tank.\n\nStep 2: Measure your space\nCanister filters need cabinet space. HOB filters need wall clearance. Internal filters take up tank real estate. Know what fits BEFORE you buy.\n\nStep 3: Match flow to inhabitants\nBettas hate strong current. Hillstream loaches need it. Your filter's GPH should match your fish's natural habitat.\n\nStep 4: Pick your media priority\n- Cloudy water? Prioritize mechanical filtration\n- Ammonia spikes? Prioritize biological media\n- Medication removal? That's when you need carbon\n\nStep 5: Budget for the REAL cost\nThe filter price is just the start. Factor in replacement media every 2-4 months. Some filters use proprietary cartridges ($$$). Others use generic media ($).\n\nThat's it. 5 steps. No jargon. No upselling.\n\nJust pick the right filter for YOUR specific setup.`,
+                    `Your fish tank filter setup guide (save this):\n\nI see the same 3 mistakes every week from new tank owners:\n\n1. Running the filter without cycling first\nYour filter needs 4-6 weeks to grow beneficial bacteria. Without cycling, you're just moving water around.\n\nFix: Add a bacteria starter and test your water weekly until ammonia and nitrite both read 0.\n\n2. Cleaning filter media in tap water\nChlorine in tap water kills the beneficial bacteria you spent weeks growing.\n\nFix: Rinse media in old tank water during water changes. Never under the faucet.\n\n3. Replacing all media at once\nFilter companies want you to buy new cartridges monthly. Your bacteria colony disagrees.\n\nFix: Replace only 1/3 of media at a time. Stagger replacements 2 weeks apart.\n\nFollow these 3 rules and you'll avoid 90% of the filtration problems new hobbyists face.\n\nYour fish (and your wallet) will thank you.`
+                ];
+                let post = guides[Math.floor(Math.random() * guides.length)];
+                const ctaText = getCTAText(cta, topic);
+                if (notes) post += '\n\n' + notes;
+                if (ctaText) post += '\n\n' + ctaText;
+                return trimForPlatform(post, platform);
+            }
+        },
+        'social-proof': {
+            name: 'Social Proof / Testimonial',
+            generate: function(topic, platform, icp, cta, notes) {
+                let post = `"I was about to give up on the hobby."\n\nThat's what one reader told us after 6 months of cloudy water, dead fish, and wasted money on 4 different filters.\n\nThen they read our comparison guide on ${topic || 'canister filters for 55-gallon tanks'}.\n\nSwitched to our #2 recommendation (not even the top pick - just the best match for THEIR setup).\n\n30 days later:\n- Water clarity: crystal clear for the first time\n- Fish health: no more losses\n- Maintenance time: cut in half\n- Money spent: $45 filter (less than the "premium" one they returned)\n\nThe difference wasn't the filter brand.\n\nIt was matching the right filter to their specific:\n- Tank size and shape\n- Fish species and bioload\n- Planting density\n- Maintenance schedule\n\nThis is why generic "best filter" lists don't work.\n\nEvery tank is different. Your filter choice should be too.\n\nWe've helped hundreds of aquarium owners find their perfect match through data-driven testing.\n\nNot opinions. Not sponsorships. Just measurements.`;
+                const ctaText = getCTAText(cta, topic);
+                if (notes) post += '\n\n' + notes;
+                if (ctaText) post += '\n\n' + ctaText;
+                return trimForPlatform(post, platform);
+            }
+        }
+    };
+
+    function getCTAText(cta, topic) {
+        const ctaMap = {
+            'link': `Want to see the full data? Check out our detailed review and comparison chart.\n\n[Link in comments]`,
+            'comment': `Want our free filter matching guide for your specific tank? Drop "${(topic || 'FILTER').toUpperCase().split(' ')[0]}" in the comments and I'll send it over.`,
+            'dm': `If you're struggling with filtration and want a personalized recommendation, send me a message with your tank details. Happy to help.`,
+            'lead-magnet': `We put together a free "Filter Matching Cheat Sheet" - covers every tank size from 10 to 200 gallons.\n\nComment "GUIDE" below and I'll send it to you.`,
+            'none': ''
+        };
+        return ctaMap[cta] || '';
+    }
+
+    function trimForPlatform(post, platform) {
+        const limits = { linkedin: 3000, facebook: 5000, instagram: 2200, twitter: 280 };
+        const limit = limits[platform] || 3000;
+        if (post.length > limit) {
+            return post.substring(0, limit - 3) + '...';
+        }
+        return post;
+    }
+
+    // STATE
+    let state = loadState();
+    let currentPost = '';
+    let selectedTemplate = 'hook-data';
+    let calendarDate = new Date();
+
+    function loadState() {
+        try {
+            const saved = localStorage.getItem(APP_KEY);
+            return saved ? JSON.parse(saved) : {
+                posts: [],
+                leads: [],
+                scheduled: [],
+                icpSegments: [],
+                triggerEvents: [],
+                buyerLanguage: []
+            };
+        } catch(e) {
+            return { posts: [], leads: [], scheduled: [], icpSegments: [], triggerEvents: [], buyerLanguage: [] };
+        }
+    }
+
+    function saveState() {
+        try { localStorage.setItem(APP_KEY, JSON.stringify(state)); } catch(e) {}
+    }
+
+    // TABS
+    document.querySelectorAll('.tab').forEach(tab => {
+        tab.addEventListener('click', () => switchTab(tab.dataset.tab));
+    });
+
+    function switchTab(tabId) {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        document.querySelector(`.tab[data-tab="${tabId}"]`).classList.add('active');
+        document.getElementById('tab-' + tabId).classList.add('active');
+        if (tabId === 'calendar') renderCalendar();
+        if (tabId === 'leads') renderLeads();
+        if (tabId === 'dashboard') updateDashboard();
+    }
+
+    // TEMPLATE SELECTION
+    function selectTemplate(el) {
+        document.querySelectorAll('.template-card').forEach(c => c.classList.remove('selected'));
+        el.classList.add('selected');
+        selectedTemplate = el.dataset.template;
+    }
+
+    // POST GENERATION
+    function generatePost() {
+        const platform = document.getElementById('gen-platform').value;
+        const icp = document.getElementById('gen-icp-target').value;
+        const topic = document.getElementById('gen-topic').value;
+        const notes = document.getElementById('gen-notes').value;
+        const cta = document.getElementById('gen-cta').value;
+        const template = POST_TEMPLATES[selectedTemplate];
+        if (!template) return;
+        currentPost = template.generate(topic, platform, icp, cta, notes);
+        document.getElementById('post-preview').textContent = currentPost;
+        document.getElementById('preview-platform').textContent = platform.charAt(0).toUpperCase() + platform.slice(1);
+        document.getElementById('preview-icp').textContent = document.getElementById('gen-icp-target').selectedOptions[0].text;
+        document.getElementById('preview-template').textContent = template.name;
+        document.getElementById('char-count').textContent = currentPost.length + ' / ' + (platform === 'twitter' ? '280' : platform === 'instagram' ? '2200' : '3000') + ' chars';
+        showToast('Post generated!');
+    }
+
+    function generateVariations() {
+        const platform = document.getElementById('gen-platform').value;
+        const icp = document.getElementById('gen-icp-target').value;
+        const topic = document.getElementById('gen-topic').value;
+        const notes = document.getElementById('gen-notes').value;
+        const cta = document.getElementById('gen-cta').value;
+        const template = POST_TEMPLATES[selectedTemplate];
+        if (!template) return;
+
+        const variations = [];
+        for (let i = 0; i < 3; i++) {
+            variations.push(template.generate(topic, platform, icp, cta, notes));
+        }
+
+        currentPost = variations[0];
+        document.getElementById('post-preview').textContent = currentPost;
+        document.getElementById('preview-platform').textContent = platform.charAt(0).toUpperCase() + platform.slice(1);
+        document.getElementById('preview-icp').textContent = document.getElementById('gen-icp-target').selectedOptions[0].text;
+        document.getElementById('preview-template').textContent = template.name;
+        document.getElementById('char-count').textContent = currentPost.length + ' chars';
+
+        const varCard = document.getElementById('variations-card');
+        varCard.style.display = 'block';
+        const varList = document.getElementById('variations-list');
+        varList.innerHTML = variations.map((v, i) => `
+            <div class="template-card" style="margin-bottom:0.5rem;cursor:pointer;" onclick="selectVariation(${i})">
+                <h4>Variation ${i + 1}</h4>
+                <p style="white-space:pre-wrap;max-height:100px;overflow:hidden;">${escapeHtml(v.substring(0, 200))}...</p>
+            </div>
+        `).join('');
+        window._variations = variations;
+        showToast('3 variations generated!');
+    }
+
+    function selectVariation(idx) {
+        if (window._variations && window._variations[idx]) {
+            currentPost = window._variations[idx];
+            document.getElementById('post-preview').textContent = currentPost;
+            document.getElementById('char-count').textContent = currentPost.length + ' chars';
+        }
+    }
+
+    function regeneratePost() { generatePost(); }
+
+    function copyPost() {
+        if (!currentPost) return showToast('No post to copy');
+        navigator.clipboard.writeText(currentPost).then(() => showToast('Copied to clipboard!'));
+    }
+
+    function savePost() {
+        if (!currentPost) return showToast('No post to save');
+        const post = {
+            id: Date.now(),
+            content: currentPost,
+            platform: document.getElementById('gen-platform').value,
+            icp: document.getElementById('gen-icp-target').value,
+            template: selectedTemplate,
+            topic: document.getElementById('gen-topic').value,
+            created: new Date().toISOString(),
+            status: 'draft'
+        };
+        state.posts.push(post);
+        saveState();
+        renderSavedPosts();
+        updateDashboard();
+        showToast('Post saved!');
+    }
+
+    function renderSavedPosts() {
+        const container = document.getElementById('saved-posts-list');
+        if (!state.posts.length) {
+            container.innerHTML = '<div class="empty-state"><div class="icon">&#128190;</div><h3>No saved posts</h3><p>Generate and save posts to build your content library.</p></div>';
+            return;
+        }
+        container.innerHTML = state.posts.slice(-10).reverse().map(p => `
+            <div style="padding:0.75rem;border:1px solid #e5e7eb;border-radius:8px;margin-bottom:0.5rem;">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.35rem;">
+                    <div>
+                        <span class="badge badge-blue">${p.platform}</span>
+                        <span class="badge badge-gray">${POST_TEMPLATES[p.template]?.name || p.template}</span>
+                        <span class="badge ${p.status === 'scheduled' ? 'badge-green' : 'badge-yellow'}">${p.status}</span>
+                    </div>
+                    <span style="font-size:0.75rem;color:#999;">${new Date(p.created).toLocaleDateString()}</span>
+                </div>
+                <div style="font-size:0.8rem;color:#666;max-height:60px;overflow:hidden;">${escapeHtml(p.content.substring(0, 150))}...</div>
+                <div class="btn-group" style="margin-top:0.5rem;">
+                    <button class="btn btn-sm btn-secondary" onclick="loadPost(${p.id})">Load</button>
+                    <button class="btn btn-sm btn-secondary" onclick="navigator.clipboard.writeText(state.posts.find(x=>x.id===${p.id}).content);showToast('Copied!')">Copy</button>
+                    <button class="btn btn-sm btn-danger" onclick="deletePost(${p.id})">Delete</button>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    function loadPost(id) {
+        const post = state.posts.find(p => p.id === id);
+        if (!post) return;
+        currentPost = post.content;
+        document.getElementById('post-preview').textContent = currentPost;
+        document.getElementById('gen-platform').value = post.platform;
+        document.getElementById('gen-icp-target').value = post.icp;
+        document.getElementById('gen-topic').value = post.topic || '';
+        document.getElementById('char-count').textContent = currentPost.length + ' chars';
+        showToast('Post loaded');
+    }
+
+    function deletePost(id) {
+        state.posts = state.posts.filter(p => p.id !== id);
+        saveState();
+        renderSavedPosts();
+        updateDashboard();
+        showToast('Post deleted');
+    }
+
+    // SCHEDULING
+    function schedulePost() {
+        if (!currentPost) return showToast('Generate a post first');
+        const today = new Date();
+        document.getElementById('schedule-date').value = today.toISOString().split('T')[0];
+        document.getElementById('schedule-preview').textContent = currentPost.substring(0, 300) + (currentPost.length > 300 ? '...' : '');
+        document.getElementById('schedule-platform').value = document.getElementById('gen-platform').value;
+        document.getElementById('schedule-modal').classList.add('show');
+    }
+
+    function confirmSchedule() {
+        const date = document.getElementById('schedule-date').value;
+        const time = document.getElementById('schedule-time').value;
+        const platform = document.getElementById('schedule-platform').value;
+        if (!date) return showToast('Please select a date');
+        const scheduled = {
+            id: Date.now(),
+            content: currentPost,
+            platform: platform,
+            date: date,
+            time: time,
+            status: 'scheduled',
+            template: selectedTemplate,
+            icp: document.getElementById('gen-icp-target').value
+        };
+        state.scheduled.push(scheduled);
+        const existingPost = state.posts.find(p => p.content === currentPost);
+        if (existingPost) existingPost.status = 'scheduled';
+        saveState();
+        closeModal('schedule-modal');
+        updateDashboard();
+        showToast('Post scheduled for ' + date + ' at ' + time);
+    }
+
+    // CALENDAR
+    function renderCalendar() {
+        const grid = document.getElementById('calendar-grid');
+        const year = calendarDate.getFullYear();
+        const month = calendarDate.getMonth();
+        const today = new Date();
+        document.getElementById('calendar-month').textContent = calendarDate.toLocaleDateString('en-US', {month: 'long', year: 'numeric'});
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+        const firstDay = new Date(year, month, 1).getDay();
+
+        let html = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map(d => `<div class="calendar-day-header">${d}</div>`).join('');
+        for (let i = 0; i < firstDay; i++) html += '<div class="calendar-day empty"></div>';
+        for (let d = 1; d <= daysInMonth; d++) {
+            const dateStr = `${year}-${String(month+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+            const isToday = today.getFullYear() === year && today.getMonth() === month && today.getDate() === d;
+            const dayPosts = state.scheduled.filter(s => s.date === dateStr);
+            html += `<div class="calendar-day${isToday ? ' today' : ''}">
+                <div class="day-num">${d}</div>
+                ${dayPosts.map(p => `<div class="day-post">${p.platform}: ${p.content.substring(0,20)}...</div>`).join('')}
+            </div>`;
+        }
+        grid.innerHTML = html;
+        renderScheduledPosts();
+    }
+
+    function renderScheduledPosts() {
+        const container = document.getElementById('scheduled-posts-list');
+        const upcoming = state.scheduled.filter(s => s.status === 'scheduled').sort((a,b) => a.date.localeCompare(b.date));
+        if (!upcoming.length) {
+            container.innerHTML = '<div class="empty-state"><div class="icon">&#128197;</div><h3>No scheduled posts</h3><p>Schedule posts from the Content Generator tab.</p></div>';
+            return;
+        }
+        container.innerHTML = upcoming.map(s => `
+            <div style="padding:0.75rem;border:1px solid #e5e7eb;border-radius:8px;margin-bottom:0.5rem;">
+                <div style="display:flex;justify-content:space-between;align-items:center;">
+                    <div>
+                        <span class="badge badge-blue">${s.platform}</span>
+                        <span class="badge badge-green">Scheduled</span>
+                    </div>
+                    <span style="font-size:0.8rem;font-weight:600;">${s.date} ${s.time}</span>
+                </div>
+                <div style="font-size:0.8rem;color:#666;margin-top:0.35rem;max-height:40px;overflow:hidden;">${escapeHtml(s.content.substring(0, 120))}...</div>
+                <div class="btn-group" style="margin-top:0.35rem;">
+                    <button class="btn btn-sm btn-secondary" onclick="navigator.clipboard.writeText(state.scheduled.find(x=>x.id===${s.id}).content);showToast('Copied!')">Copy</button>
+                    <button class="btn btn-sm btn-danger" onclick="cancelScheduled(${s.id})">Cancel</button>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    function cancelScheduled(id) {
+        state.scheduled = state.scheduled.filter(s => s.id !== id);
+        saveState();
+        renderCalendar();
+        updateDashboard();
+        showToast('Scheduled post cancelled');
+    }
+
+    function prevMonth() {
+        calendarDate.setMonth(calendarDate.getMonth() - 1);
+        renderCalendar();
+    }
+
+    function nextMonth() {
+        calendarDate.setMonth(calendarDate.getMonth() + 1);
+        renderCalendar();
+    }
+
+    // LEADS
+    function showAddLeadModal() {
+        document.getElementById('add-lead-modal').classList.add('show');
+    }
+
+    function addLead() {
+        const lead = {
+            id: Date.now(),
+            name: document.getElementById('lead-name').value,
+            company: document.getElementById('lead-company').value,
+            title: document.getElementById('lead-title').value,
+            email: document.getElementById('lead-email').value,
+            linkedin: document.getElementById('lead-linkedin').value,
+            source: document.getElementById('lead-source').value,
+            type: document.getElementById('lead-type').value,
+            score: parseInt(document.getElementById('lead-score').value) || 5,
+            notes: document.getElementById('lead-notes').value,
+            created: new Date().toISOString(),
+            lastEngaged: new Date().toISOString()
+        };
+        if (!lead.name) return showToast('Name is required');
+        state.leads.push(lead);
+        saveState();
+        closeModal('add-lead-modal');
+        renderLeads();
+        updateDashboard();
+        showToast('Lead added!');
+        ['lead-name','lead-company','lead-title','lead-email','lead-linkedin','lead-notes'].forEach(id => document.getElementById(id).value = '');
+    }
+
+    function renderLeads() {
+        const search = (document.getElementById('lead-search')?.value || '').toLowerCase();
+        const typeFilter = document.getElementById('lead-filter-type')?.value || 'all';
+        const scoreFilter = parseInt(document.getElementById('lead-filter-score')?.value) || 0;
+
+        let filtered = state.leads.filter(l => {
+            if (search && !l.name.toLowerCase().includes(search) && !l.company?.toLowerCase().includes(search)) return false;
+            if (typeFilter !== 'all' && l.type !== typeFilter) return false;
+            if (scoreFilter && l.score < scoreFilter) return false;
+            return true;
+        });
+
+        const tbody = document.getElementById('leads-tbody');
+        const empty = document.getElementById('leads-empty');
+
+        if (!filtered.length) {
+            tbody.innerHTML = '';
+            empty.style.display = 'block';
+        } else {
+            empty.style.display = 'none';
+            tbody.innerHTML = filtered.sort((a,b) => b.score - a.score).map(l => {
+                const scoreColor = l.score >= 8 ? '#059669' : l.score >= 5 ? '#d97706' : '#ef4444';
+                const typeBadge = {buyer: 'badge-green', peer: 'badge-yellow', competitor: 'badge-red', unknown: 'badge-gray'}[l.type] || 'badge-gray';
+                return `<tr>
+                    <td><strong>${escapeHtml(l.name)}</strong></td>
+                    <td>${escapeHtml(l.title || '')}${l.company ? ' @ ' + escapeHtml(l.company) : ''}</td>
+                    <td><span class="badge ${typeBadge}">${l.type}</span></td>
+                    <td>
+                        <div class="score-bar"><div class="score-fill" style="width:${l.score*10}%;background:${scoreColor};"></div></div>
+                        <strong>${l.score}</strong>/10
+                    </td>
+                    <td>${l.source}</td>
+                    <td>${new Date(l.lastEngaged).toLocaleDateString()}</td>
+                    <td>
+                        <button class="btn btn-sm btn-secondary" onclick="deleteLead(${l.id})">Remove</button>
+                    </td>
+                </tr>`;
+            }).join('');
+        }
+
+        document.getElementById('leads-total').textContent = state.leads.length;
+        document.getElementById('leads-buyers').textContent = state.leads.filter(l => l.type === 'buyer').length;
+        document.getElementById('leads-peers').textContent = state.leads.filter(l => l.type === 'peer').length;
+        document.getElementById('leads-competitors').textContent = state.leads.filter(l => l.type === 'competitor').length;
+    }
+
+    function deleteLead(id) {
+        state.leads = state.leads.filter(l => l.id !== id);
+        saveState();
+        renderLeads();
+        updateDashboard();
+        showToast('Lead removed');
+    }
+
+    document.getElementById('lead-search')?.addEventListener('input', renderLeads);
+    document.getElementById('lead-filter-type')?.addEventListener('change', renderLeads);
+    document.getElementById('lead-filter-score')?.addEventListener('change', renderLeads);
+
+    function importLeadsCSV() {
+        const input = document.createElement('input');
+        input.type = 'file';
+        input.accept = '.csv';
+        input.onchange = function(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(ev) {
+                const lines = ev.target.result.split('\n');
+                const headers = lines[0].split(',').map(h => h.trim().toLowerCase().replace(/"/g,''));
+                let imported = 0;
+                for (let i = 1; i < lines.length; i++) {
+                    const vals = lines[i].split(',').map(v => v.trim().replace(/"/g,''));
+                    if (vals.length < 2) continue;
+                    const lead = {
+                        id: Date.now() + i,
+                        name: vals[headers.indexOf('name')] || vals[0] || 'Unknown',
+                        company: vals[headers.indexOf('company')] || vals[headers.indexOf('organization')] || '',
+                        title: vals[headers.indexOf('title')] || vals[headers.indexOf('job title')] || '',
+                        email: vals[headers.indexOf('email')] || '',
+                        linkedin: vals[headers.indexOf('linkedin')] || vals[headers.indexOf('linkedin url')] || vals[headers.indexOf('profile url')] || '',
+                        source: 'csv-import',
+                        type: 'unknown',
+                        score: 5,
+                        notes: '',
+                        created: new Date().toISOString(),
+                        lastEngaged: new Date().toISOString()
+                    };
+                    state.leads.push(lead);
+                    imported++;
+                }
+                saveState();
+                renderLeads();
+                updateDashboard();
+                showToast(`Imported ${imported} leads!`);
+            };
+            reader.readAsText(file);
+        };
+        input.click();
+    }
+
+    function exportLeads() {
+        if (!state.leads.length) return showToast('No leads to export');
+        const headers = ['Name','Company','Title','Email','LinkedIn','Source','Type','Score','Notes','Created'];
+        const rows = state.leads.map(l => [l.name,l.company,l.title,l.email,l.linkedin,l.source,l.type,l.score,l.notes,l.created].map(v => '"'+(v||'')+'"').join(','));
+        const csv = [headers.join(','), ...rows].join('\n');
+        downloadFile(csv, 'leads_export.csv', 'text/csv');
+        showToast('Leads exported!');
+    }
+
+    // ICP
+    function addICPSegment() {
+        const name = document.getElementById('icp-seg-name').value;
+        const desc = document.getElementById('icp-seg-desc').value;
+        const priority = document.getElementById('icp-seg-priority').value;
+        if (!name) return showToast('Segment name required');
+        const icons = ['&#127758;','&#128640;','&#127919;','&#128218;','&#127968;'];
+        const colors = ['#ede9fe','#fce7f3','#fef3c7','#d1fae5','#dbeafe'];
+        const idx = state.icpSegments.length % icons.length;
+        const segment = { name, desc, priority, icon: icons[idx], color: colors[idx] };
+        state.icpSegments.push(segment);
+        saveState();
+        const container = document.getElementById('icp-segments');
+        const badgeClass = {Primary:'badge-green',Secondary:'badge-yellow',Tertiary:'badge-blue'}[priority];
+        container.innerHTML += `<div class="icp-segment">
+            <div class="icp-icon" style="background:${segment.color};">${segment.icon}</div>
+            <div class="icp-info"><h4>${escapeHtml(name)}</h4><p>${escapeHtml(desc)}</p></div>
+            <span class="badge ${badgeClass}">${priority}</span>
+        </div>`;
+        document.getElementById('icp-seg-name').value = '';
+        document.getElementById('icp-seg-desc').value = '';
+        showToast('Segment added!');
+    }
+
+    function addTriggerEvent() {
+        const val = document.getElementById('trigger-input').value;
+        if (!val) return;
+        document.getElementById('trigger-events').innerHTML += `<div class="content-angle"><h4>${escapeHtml(val)}</h4><p>Custom trigger event</p></div>`;
+        document.getElementById('trigger-input').value = '';
+        showToast('Trigger event added');
+    }
+
+    function addBuyerLanguage() {
+        const val = document.getElementById('language-input').value;
+        if (!val) return;
+        document.getElementById('buyer-language').innerHTML += `<div style="padding:0.5rem;background:#f9fafb;border-radius:6px;margin-bottom:0.4rem;font-size:0.85rem;">"${escapeHtml(val)}"</div>`;
+        document.getElementById('language-input').value = '';
+        showToast('Buyer language added');
+    }
+
+    // CONTENT BRIEFS
+    function generateBrief() {
+        const focus = document.getElementById('brief-focus').value;
+        const period = document.getElementById('brief-period').value;
+        const focusLabels = {
+            'buyer-attraction': 'Buyer Attraction',
+            'awareness': 'Brand Awareness',
+            'authority': 'Authority Building',
+            'conversion': 'Conversion Optimization'
+        };
+
+        const briefData = {
+            'buyer-attraction': {
+                insight: 'Your content should speak directly to people setting up new tanks or dealing with filtration problems. Write for the person who hasn\'t started yet.',
+                angles: [
+                    {title: 'Beginner Setup Guides', desc: 'Step-by-step content targeting new tank owners. Use language like "no experience needed" and "complete beginner guide." These posts attract 3x more buyers than advanced content.'},
+                    {title: 'Money-Saving Comparisons', desc: '"We tested 5 filters under $50" - Price-conscious buyers engage heavily with value-driven comparisons backed by real data.'},
+                    {title: 'Problem-Solution Stories', desc: 'Lead with common problems: cloudy water, dying fish, noisy filters. Show the data-driven solution. Include specific before/after metrics.'}
+                ],
+                avoid: [
+                    'Business growth flexes - attracts competitors, not buyers',
+                    'Advanced chemistry deep-dives - alienates beginners',
+                    'Generic "best of" lists without real testing data'
+                ],
+                template: 'Hook: [1 surprising stat from your testing]\nReframe: [1-3 word pattern interrupt]\nBody: [3-5 bullet points with specific numbers]\nCTA: [Low-friction ask - comment trigger word for free guide]'
+            },
+            'awareness': {
+                insight: 'Maximize reach by creating shareable, contrarian content that challenges common aquarium myths.',
+                angles: [
+                    {title: 'Myth-Busting Posts', desc: 'Challenge popular beliefs with data. "Everyone says X, our tests show Y." These get shared 4x more than standard advice posts.'},
+                    {title: 'Surprising Data Reveals', desc: 'Lead with unexpected findings from your filter testing. Curiosity-driven hooks drive impressions.'},
+                    {title: 'Visual Comparisons', desc: 'Side-by-side before/after photos, charts, and infographics. Visual content gets 2.3x more reach on LinkedIn.'}
+                ],
+                avoid: ['Hard sales CTAs - kills sharing', 'Long-form without visuals', 'Content that requires prior knowledge'],
+                template: 'Hook: [Contrarian statement that stops scrolling]\nEvidence: [2-3 data points that back it up]\nTakeaway: [1 actionable insight]\nCTA: [Share/save prompt]'
+            },
+            'authority': {
+                insight: 'Position yourself as the data-driven authority in aquarium filtration. Show your methodology, not just results.',
+                angles: [
+                    {title: 'Behind-the-Scenes Testing', desc: 'Show your testing process, equipment, methodology. Transparency builds trust faster than results alone.'},
+                    {title: 'Industry Analysis', desc: 'Commentary on new products, trends, and industry changes. Position as the expert others reference.'},
+                    {title: 'Deep-Dive Case Studies', desc: 'Single product, single tank, 90-day journal with data points. The definitive resource format.'}
+                ],
+                avoid: ['Opinions without data', 'Content that could come from any generic source', 'Reposting manufacturer claims without verification'],
+                template: 'Hook: [Credibility statement + claim]\nMethodology: [How you tested/measured]\nFindings: [3-5 specific results]\nImplication: [What this means for the reader]\nCTA: [Follow for more data-driven content]'
+            },
+            'conversion': {
+                insight: 'Drive clicks and sales by matching content to buyer intent signals. Target people actively searching for filter recommendations.',
+                angles: [
+                    {title: 'Specific Tank Size Guides', desc: '"Best filter for a 55-gallon planted tank" - High-intent buyers search for specific solutions. Match content to exact search queries.'},
+                    {title: 'Comparison with Clear Winner', desc: 'Don\'t hedge. Pick a winner and explain why with data. Clear recommendations convert 5x better than "it depends" content.'},
+                    {title: 'Limited-Time Recommendations', desc: '"This filter is on sale this week and it\'s our #1 pick" - Urgency + credibility = conversion.'}
+                ],
+                avoid: ['Vague recommendations without specifics', 'Content that educates without directing', 'Posts without any call-to-action'],
+                template: 'Hook: [Specific problem + "here\'s the answer"]\nSocial Proof: [Customer result or test data]\nRecommendation: [Clear, specific product pick with reasoning]\nCTA: [Direct link or "check our full review"]'
+            }
+        };
+
+        const brief = briefData[focus];
+        const output = document.getElementById('brief-output');
+        const content = document.getElementById('brief-content');
+        output.style.display = 'block';
+
+        content.innerHTML = `
+            <div style="margin-bottom:1.5rem;">
+                <span class="badge badge-blue">${focusLabels[focus]}</span>
+                <span class="badge badge-gray">Last ${period} days</span>
+                <span class="badge badge-green">Generated ${new Date().toLocaleDateString()}</span>
+            </div>
+
+            <div class="content-angle" style="border-left-color:#059669;margin-bottom:1.5rem;">
+                <h4>Key Insight</h4>
+                <p>${brief.insight}</p>
+            </div>
+
+            <h3>3 Content Angles to Lean Into</h3>
+            ${brief.angles.map((a, i) => `
+                <div class="content-angle" style="border-left-color:#1f7ae0;">
+                    <h4>${i+1}. ${a.title}</h4>
+                    <p>${a.desc}</p>
+                </div>
+            `).join('')}
+
+            <h3 style="margin-top:1.5rem;color:#ef4444;">Content to Cut</h3>
+            <ul style="padding-left:1.25rem;margin-bottom:1.5rem;">
+                ${brief.avoid.map(a => `<li style="font-size:0.85rem;color:#666;margin-bottom:0.35rem;">${a}</li>`).join('')}
+            </ul>
+
+            <h3 style="margin-top:1.5rem;">Reusable Post Template</h3>
+            <div class="post-preview" style="background:#eff6ff;">
+${brief.template}
+            </div>
+
+            <div class="btn-group" style="margin-top:1rem;">
+                <button class="btn btn-primary btn-sm" onclick="navigator.clipboard.writeText(document.getElementById('brief-content').innerText);showToast('Brief copied!')">Copy Brief</button>
+                <button class="btn btn-secondary btn-sm" onclick="downloadFile(document.getElementById('brief-content').innerText,'content_brief.txt','text/plain');showToast('Brief downloaded!')">Download</button>
+            </div>
+        `;
+        showToast('Content brief generated!');
+    }
+
+    // DASHBOARD
+    function updateDashboard() {
+        document.getElementById('stat-posts').textContent = state.posts.length;
+        document.getElementById('stat-leads').textContent = state.leads.length;
+        const buyers = state.leads.filter(l => l.type === 'buyer').length;
+        const pct = state.leads.length ? Math.round((buyers / state.leads.length) * 100) : 0;
+        document.getElementById('stat-buyer-pct').textContent = pct + '%';
+        document.getElementById('stat-scheduled').textContent = state.scheduled.filter(s => s.status === 'scheduled').length;
+
+        const recentContainer = document.getElementById('recent-posts-list');
+        const recent = state.posts.slice(-5).reverse();
+        if (!recent.length) {
+            recentContainer.innerHTML = '<div class="empty-state"><div class="icon">&#128221;</div><h3>No posts yet</h3><p>Generate your first post in the Content Generator tab.</p></div>';
+        } else {
+            recentContainer.innerHTML = recent.map(p => `
+                <div style="padding:0.5rem;border-bottom:1px solid #f3f4f6;">
+                    <div style="display:flex;justify-content:space-between;align-items:center;">
+                        <span class="badge badge-blue">${p.platform}</span>
+                        <span style="font-size:0.75rem;color:#999;">${new Date(p.created).toLocaleDateString()}</span>
+                    </div>
+                    <div style="font-size:0.8rem;color:#666;margin-top:0.25rem;">${escapeHtml(p.content.substring(0, 80))}...</div>
+                </div>
+            `).join('');
+        }
+    }
+
+    // UTILITIES
+    function closeModal(id) { document.getElementById(id).classList.remove('show'); }
+    function escapeHtml(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+    function showToast(msg) {
+        const toast = document.getElementById('toast');
+        toast.textContent = msg;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2500);
+    }
+    function downloadFile(content, filename, type) {
+        const blob = new Blob([content], {type});
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url; a.download = filename;
+        document.body.appendChild(a); a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    }
+    function exportAllData() {
+        const data = JSON.stringify(state, null, 2);
+        downloadFile(data, 'lead_gen_data.json', 'application/json');
+        showToast('All data exported!');
+    }
+
+    // LINKEDIN STRATEGY
+    document.getElementById('li-style').addEventListener('change', function() {
+        document.getElementById('cross-post-input').style.display = this.value === 'cross-post' ? 'block' : 'none';
+    });
+
+    const LI_CTAS = {
+        'follow-bell': '\n\n---\nIf this was useful:\n1. Follow me (tap the bell on my profile) for daily aquarium tips\n2. Repost to help someone in your network\n3. Comment with your biggest filtration challenge',
+        'save-repost': '\n\n---\nFound this helpful?\n- Save it for later\n- Repost to share with fellow hobbyists\n- Comment with your favorite takeaway',
+        'comment-trigger': '\n\n---\nWant our free filter comparison chart? Comment "FILTER" below and I\'ll send it to you.',
+        'link-comments': '\n\n---\nFull review with all the data is linked in the comments below.',
+        'dm-invite': '\n\n---\nDM me your tank size and I\'ll tell you exactly which filter I\'d pick. No strings attached.'
+    };
+
+    const LI_TEMPLATES = {
+        'data-hook': [
+            'We ran {topic} through 90 days of real-world testing.\n\nNot in a lab. On actual stocked aquariums.\n\nThe results:\n\n- {stat1}% flow rate drop after 30 days (industry claims 5%)\n- {stat2} dB noise difference between the loudest and quietest\n- Only {stat3} out of {count} maintained crystal clear water at day 60\n\nThe most expensive option finished 4th.\n\nThe $35 option finished 2nd.\n\nPrice and performance had almost zero correlation in our testing.\n\nStop buying based on Amazon reviews.\nStart buying based on data.',
+            '{stat1}% of aquarium owners replace their filter within 12 months.\n\nNot because filters break.\n\nBecause they bought the wrong one for their tank.\n\nWe tested {count} of the top-selling {topic} filters.\n\nHere\'s what nobody tells you:\n\n- A filter rated for 75 gallons might choke on a 40-gallon tank with heavy bioload\n- The "quiet" label means nothing without dB measurements\n- Flow rate on the box is peak, not sustained\n\nThe gap between marketed specs and real performance is massive.\n\nWe measured it. Every week. For 3 months.',
+            'After testing {count} {topic} filters:\n\nBiggest surprise?\n\nThe #1 performer wasn\'t the filter everyone recommends.\n\nIt wasn\'t the most expensive.\nIt wasn\'t the prettiest.\nIt wasn\'t even the most popular on Amazon.\n\nIt was the filter that matched flow pattern to tank design.\n\nHere\'s what that means:\n\n- Planted tanks need gentle, distributed flow\n- Bare tanks need strong directional flow\n- Reef tanks need chaotic, multi-directional flow\n\nGet this match right and a mid-range filter outperforms a premium one.\n\nGet it wrong and no amount of money fixes cloudy water.'
+        ],
+        'problem-first': [
+            'Your water is cloudy.\n\nYou\'ve tried:\n- Extra water changes\n- More filter media\n- A bigger filter\n- Chemical clarifiers\n\nNothing works.\n\nHere\'s why: you\'re treating symptoms, not the cause.\n\nCloudy water is almost always a bacterial bloom caused by one of 3 things:\n\n1. New tank syndrome (not enough beneficial bacteria)\n2. Overfeeding (excess nutrients feeding the bloom)\n3. Wrong filter media type for your specific water chemistry\n\nThe fix isn\'t more filtration.\n\nIt\'s the RIGHT filtration.\n\nI\'ve helped hundreds of tank owners solve this exact problem.\n\nThe answer is usually simpler and cheaper than they expect.',
+            'If you\'re a pet store owner, you\'ve dealt with this:\n\nCustomer buys a filter. Returns it in 2 weeks.\n\n"It doesn\'t work."\n\nBut the filter IS working. It\'s just wrong for their tank.\n\nWe tested {count} {topic} filters specifically to build a matching guide.\n\nBioload + tank shape + fish species = the filter recommendation.\n\nNot brand loyalty.\nNot price.\nNot what the rep told you to stock.\n\nThe data is clear. Match the filter to the tank and returns drop dramatically.',
+            '"I\'m about to give up on this hobby."\n\nI hear this every week.\n\nSomeone bought a beautiful aquarium.\nFilled it with fish they love.\nWatched everything go wrong.\n\nThe water turns green.\nFish start dying.\nThey spend more money.\nNothing helps.\n\nThe problem is almost never the fish.\nIt\'s almost never the water.\n\nIt\'s the filtration setup.\n\nAnd specifically, it\'s a mismatch between filter capacity and actual bioload.\n\nHere\'s the simple math most people miss:\n\nYour filter\'s rated capacity assumes ideal conditions.\nYour tank has real conditions.\n\nAdjust for that gap and everything changes.'
+        ],
+        'build-public': [
+            'Behind the scenes of our latest filter test:\n\nWeek 1: Set up {count} identical 40-gallon tanks\nWeek 2: Added same fish stock to each tank\nWeek 3: Installed a different {topic} filter on each\nWeek 4-12: Measured flow, clarity, noise, and ammonia weekly\n\nThis is what independent testing looks like.\n\nNo brand sponsorships.\nNo affiliate bias.\nJust measurements.\n\nResults publish next week.\n\nWhat filter do you think won? (I was surprised)',
+            'Quick update on our {topic} testing:\n\nWe\'re 60 days into a 90-day trial.\n\nSome early observations:\n\n- 2 filters have already shown significant flow decline\n- 1 filter is QUIETER now than day 1 (wasn\'t expecting that)\n- Water clarity leaders are not who you\'d expect\n\nFull data drops at day 90.\n\nWe don\'t rush our reviews because real performance reveals itself over time.\n\nMost "reviews" test for a weekend.\nWe test for a quarter.\n\nThat\'s the difference.',
+            'Numbers from last month:\n\n- 47 readers used our matching guide to find their filter\n- 12 sent follow-up messages saying it solved their problem\n- 3 pet stores asked for wholesale recommendations\n- 0 returns reported\n\nThis is what happens when recommendations are based on data, not opinions.\n\nOur review process is slow. We test for 90 days minimum.\n\nBut the results speak for themselves.'
+        ],
+        'myth-bust': [
+            '"Always buy a filter rated for twice your tank size."\n\nThis is the most repeated advice in the aquarium hobby.\n\nIt\'s also wrong.\n\nHere\'s what our data shows:\n\nOversized filters can:\n- Create too much current for many fish species\n- Disrupt beneficial bacteria colonies with excess flow\n- Waste energy and increase noise\n- Cost you 2x for no measurable benefit\n\nThe right sizing formula is:\n\nTank volume x bioload factor = actual filtration need\n\nA 55-gallon tank with 3 small fish needs LESS filtration than a 30-gallon tank with 2 oscars.\n\nStop sizing by tank.\nStart sizing by bioload.',
+            '"Carbon is essential for clear water."\n\nWe tested this.\n\nIn 8 out of 12 test tanks:\n\nRemoving carbon and running biological media only produced CLEARER water within 30 days.\n\nWhy?\n\nCarbon removes medications and some chemicals.\nBut it does nothing for the ammonia → nitrite → nitrate cycle.\n\nBeneficial bacteria handle that.\nAnd biological media houses more bacteria than carbon ever will.\n\nCarbon is useful for removing medication after treatment.\nIt is NOT essential for daily filtration.\n\nSave your money. Run bio media. Change it less often.\n\nYour fish and your wallet will thank you.',
+            'Everyone is saying "{topic} filters are the best."\n\nOur data disagrees.\n\nWe measured:\n- Flow rate at day 1 vs day 90\n- Noise at 3 feet\n- Ammonia processing speed\n- Media replacement cost over 6 months\n\nThe "best" filter depends entirely on YOUR setup.\n\nThere is no universally best filter.\nAnyone telling you otherwise is selling something.'
+        ],
+        'quick-tip': [
+            'One filter trick that saves hours of maintenance:\n\nRinse your filter media in OLD tank water.\n\nNever tap water.\n\nTap water chlorine kills the beneficial bacteria you spent months building.\n\nThat\'s it. One change. Massive impact.\n\nYour filter works because of bacteria, not the media itself.\nProtect the bacteria, and everything runs smoother.',
+            'Free tip for anyone with a canister filter:\n\nPut coarse sponge first.\nThen ceramic rings.\nThen fine mechanical media last.\n\nMost people run it backwards.\n\nCoarse first catches big debris before it clogs your fine media.\nThis alone can double the time between cleanings.\n\n2 minute rearrangement.\n6+ months of easier maintenance.',
+            'If your filter is making noise:\n\nBefore you buy a new one, try this:\n\n1. Check for air in the impeller housing (tilt and burp it)\n2. Clean the impeller and shaft with a pipe brush\n3. Make sure the lid is seated properly\n\n80% of "broken" filters just need a 5-minute cleaning.\n\nDon\'t throw money at a problem that costs 5 minutes to fix.'
+        ]
+    };
+
+    let currentLIPost = '';
+
+    function generateLinkedInPost() {
+        const style = document.getElementById('li-style').value;
+        const topic = document.getElementById('li-topic').value || 'aquarium filters';
+        const ctaType = document.getElementById('li-cta').value;
+
+        if (style === 'cross-post') {
+            const source = document.getElementById('li-cross-content').value;
+            if (!source) { showToast('Paste content to adapt'); return; }
+            currentLIPost = adaptForLinkedIn(source, ctaType);
+        } else {
+            const templates = LI_TEMPLATES[style] || LI_TEMPLATES['data-hook'];
+            let post = templates[Math.floor(Math.random() * templates.length)];
+            post = post.replace(/{topic}/g, topic)
+                .replace(/{count}/g, Math.floor(Math.random() * 8 + 5))
+                .replace(/{stat1}/g, Math.floor(Math.random() * 30 + 35))
+                .replace(/{stat2}/g, Math.floor(Math.random() * 20 + 15))
+                .replace(/{stat3}/g, Math.floor(Math.random() * 3 + 2));
+            currentLIPost = post + (LI_CTAS[ctaType] || '');
+        }
+
+        document.getElementById('li-preview').textContent = currentLIPost;
+        document.getElementById('li-output').style.display = 'block';
+        document.getElementById('li-char-count').textContent = currentLIPost.length + ' / 3000 chars';
+        showToast('LinkedIn post generated!');
+    }
+
+    function adaptForLinkedIn(source, ctaType) {
+        let adapted = source.trim();
+        if (adapted.length < 100) {
+            adapted = adapted + '\n\nWhat do you think?\n\nI\'ve been testing this idea and the results are interesting.';
+        }
+        adapted += LI_CTAS[ctaType] || '';
+        if (adapted.length > 3000) adapted = adapted.substring(0, 2997) + '...';
+        return adapted;
+    }
+
+    function generateBatchLinkedIn() {
+        const topic = document.getElementById('li-topic').value || 'aquarium filters';
+        const ctaType = document.getElementById('li-cta').value;
+        const styles = Object.keys(LI_TEMPLATES);
+        const posts = [];
+
+        for (let i = 0; i < 5; i++) {
+            const style = styles[i % styles.length];
+            const templates = LI_TEMPLATES[style];
+            let post = templates[Math.floor(Math.random() * templates.length)];
+            post = post.replace(/{topic}/g, topic)
+                .replace(/{count}/g, Math.floor(Math.random() * 8 + 5))
+                .replace(/{stat1}/g, Math.floor(Math.random() * 30 + 35))
+                .replace(/{stat2}/g, Math.floor(Math.random() * 20 + 15))
+                .replace(/{stat3}/g, Math.floor(Math.random() * 3 + 2));
+            post += LI_CTAS[ctaType] || '';
+            posts.push({ content: post, style: style });
+        }
+
+        const batchOutput = document.getElementById('li-batch-output');
+        batchOutput.style.display = 'block';
+        batchOutput.innerHTML = '<h3 style="margin-bottom:1rem;">5 LinkedIn Posts (Ready to Post)</h3>' +
+            posts.map((p, i) => `
+            <div class="card" style="margin-bottom:0.75rem;">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem;">
+                    <span class="badge badge-blue">Post ${i+1} - ${p.style.replace('-',' ')}</span>
+                    <span style="font-size:0.75rem;color:#999;">${p.content.length} chars</span>
+                </div>
+                <div class="post-preview" style="max-height:150px;font-size:0.85rem;">${escapeHtml(p.content)}</div>
+                <div class="btn-group" style="margin-top:0.5rem;">
+                    <button class="btn btn-sm btn-secondary" onclick="navigator.clipboard.writeText(${JSON.stringify(p.content).replace(/'/g, '\\\'')});showToast('Post ${i+1} copied!')">Copy</button>
+                    <button class="btn btn-sm btn-success" onclick="saveBatchPost(${i})">Save</button>
+                </div>
+            </div>
+        `).join('');
+        window._batchPosts = posts;
+        showToast('5 posts generated! Copy and post throughout the day.');
+    }
+
+    function saveBatchPost(idx) {
+        if (!window._batchPosts || !window._batchPosts[idx]) return;
+        const p = window._batchPosts[idx];
+        const post = {
+            id: Date.now() + idx,
+            content: p.content,
+            platform: 'linkedin',
+            icp: 'all',
+            template: p.style,
+            topic: document.getElementById('li-topic').value || 'aquarium filters',
+            created: new Date().toISOString(),
+            status: 'draft'
+        };
+        state.posts.push(post);
+        saveState();
+        renderSavedPosts();
+        updateDashboard();
+        showToast('Post saved!');
+    }
+
+    function saveLIPost() {
+        if (!currentLIPost) return showToast('No post to save');
+        const post = {
+            id: Date.now(),
+            content: currentLIPost,
+            platform: 'linkedin',
+            icp: 'all',
+            template: document.getElementById('li-style').value,
+            topic: document.getElementById('li-topic').value || '',
+            created: new Date().toISOString(),
+            status: 'draft'
+        };
+        state.posts.push(post);
+        saveState();
+        renderSavedPosts();
+        updateDashboard();
+        showToast('LinkedIn post saved!');
+    }
+
+    function copyLIPost() {
+        if (!currentLIPost) return showToast('No post to copy');
+        navigator.clipboard.writeText(currentLIPost).then(() => showToast('Copied to clipboard!'));
+    }
+
+    // Initialize
+    renderSavedPosts();
+    updateDashboard();
+    </script>
+</body>
+</html>
