@@ -3,121 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Partner With FishTankFilters – Get Your Products Reviewed &amp; Featured</title>
-    <meta name="description" content="Submit your aquarium filter for independent lab testing and reach 50,000+ aquarium enthusiasts. Data-driven reviews, real-world testing, and transparent rankings.">
-    <link rel="canonical" href="https://fishtankfilters.com/outreach/">
+    <title>Propelo SEO – AI-Powered Outreach That Books Meetings While You Sleep</title>
+    <meta name="description" content="Propelo SEO's AI outreach agent finds your ideal clients, writes personalized emails, and handles follow-ups on autopilot. 100M+ contacts. $0.03/email. 97% deliverability.">
+    <link rel="canonical" href="https://propeloseo.com/outreach/">
     <style>
         :root {
             --bg: #ffffff;
             --bg-alt: #f8fafb;
-            --text: #222222;
-            --muted: #666666;
-            --border: #e3e3e3;
-            --action: #1f7ae0;
-            --action-hover: #1766c0;
-            --action-soft: #e6f1fc;
-            --trust-bar: #f5f5f5;
+            --bg-dark: #0f172a;
+            --text: #1e293b;
+            --muted: #64748b;
+            --border: #e2e8f0;
+            --action: #6366f1;
+            --action-hover: #4f46e5;
+            --action-soft: #eef2ff;
+            --action-glow: rgba(99, 102, 241, 0.15);
+            --green: #10b981;
+            --green-soft: #d1fae5;
+            --gold: #f59e0b;
             --card-bg: #ffffff;
-            --card-shadow: 0 8px 20px rgba(0,0,0,0.04);
-            --radius-lg: 12px;
-            --radius-md: 8px;
-            --radius-sm: 4px;
-            --gold: #EDA300;
-            --green: #16a34a;
-            --green-soft: #dcfce7;
+            --card-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.04);
+            --radius-lg: 16px;
+            --radius-md: 10px;
+            --radius-sm: 6px;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", "Roboto", "Segoe UI", sans-serif;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
             background: var(--bg);
             color: var(--text);
             line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
         a { color: var(--action); text-decoration: none; transition: color 0.2s; }
         a:hover { text-decoration: underline; }
-        .page { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+        .page { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
         /* Header */
-        header {
+        .site-header {
+            border-bottom: 1px solid var(--border);
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 14px 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 16px 0;
-            border-bottom: 1px solid var(--border);
-            max-width: 1120px;
-            margin: 0 auto;
-            padding-left: 16px;
-            padding-right: 16px;
         }
-        .logo { display: flex; align-items: center; gap: 8px; text-decoration: none; }
-        .logo-mark { width: 32px; height: 32px; border-radius: 50%; background: radial-gradient(circle at 30% 30%, #66c2ff, #005a9e); }
-        .logo-text { font-weight: 700; font-size: 18px; letter-spacing: 0.02em; color: var(--text); }
-        nav { display: flex; gap: 20px; font-size: 14px; flex-wrap: wrap; }
+        .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .logo-mark {
+            width: 34px; height: 34px; border-radius: 10px;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-weight: 800; font-size: 16px;
+        }
+        .logo-text { font-weight: 800; font-size: 20px; color: var(--text); letter-spacing: -0.02em; }
+        .logo-text span { color: var(--action); }
+        nav { display: flex; gap: 28px; align-items: center; font-size: 14px; }
         nav a { color: var(--muted); font-weight: 500; }
-        nav a.active { color: var(--text); font-weight: 700; }
-        nav a:hover { color: var(--action); text-decoration: none; }
+        nav a:hover { color: var(--text); text-decoration: none; }
+        .nav-cta {
+            background: var(--action);
+            color: white !important;
+            padding: 8px 20px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .nav-cta:hover { background: var(--action-hover); transform: translateY(-1px); text-decoration: none; }
 
         /* Hero */
         .hero {
-            padding: 80px 0 64px;
+            padding: 80px 0 72px;
             text-align: center;
-            background: linear-gradient(180deg, #f0f7ff 0%, var(--bg) 100%);
+            background: radial-gradient(ellipse at 50% 0%, var(--action-soft) 0%, var(--bg) 70%);
+            overflow: hidden;
         }
-        .hero-kicker {
+        .hero-badge {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
+            font-weight: 600;
             color: var(--action);
-            margin-bottom: 16px;
-            font-weight: 700;
             background: var(--action-soft);
+            border: 1px solid rgba(99,102,241,0.2);
             padding: 6px 16px;
             border-radius: 999px;
+            margin-bottom: 20px;
+            letter-spacing: 0.02em;
+        }
+        .hero-badge-dot {
+            width: 7px; height: 7px; border-radius: 50%;
+            background: var(--green);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
         }
         .hero h1 {
-            font-size: 44px;
-            line-height: 1.15;
-            letter-spacing: -0.03em;
-            margin-bottom: 16px;
-            max-width: 720px;
+            font-size: 52px;
+            line-height: 1.1;
+            letter-spacing: -0.035em;
+            margin-bottom: 20px;
+            max-width: 740px;
             margin-left: auto;
             margin-right: auto;
+            font-weight: 800;
         }
-        .hero h1 span { color: var(--action); }
-        .hero-subtitle {
-            font-size: 18px;
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-sub {
+            font-size: 19px;
             color: var(--muted);
-            max-width: 560px;
-            margin: 0 auto 32px;
+            max-width: 540px;
+            margin: 0 auto 36px;
+            line-height: 1.6;
         }
 
-        /* CTA Form */
-        .hero-form {
+        /* URL Input */
+        .hero-input-wrap {
+            max-width: 540px;
+            margin: 0 auto 16px;
             display: flex;
-            max-width: 520px;
-            margin: 0 auto 24px;
-            gap: 0;
-            box-shadow: 0 8px 32px rgba(31,122,224,0.12);
             border-radius: var(--radius-md);
             overflow: hidden;
+            box-shadow: 0 4px 24px var(--action-glow), 0 1px 3px rgba(0,0,0,0.08);
             border: 2px solid var(--action);
+            background: var(--bg);
         }
-        .hero-form input {
+        .hero-input-wrap input {
             flex: 1;
             padding: 16px 20px;
             font-size: 16px;
             border: none;
             outline: none;
             font-family: inherit;
-            background: var(--bg);
+            background: transparent;
+            color: var(--text);
             min-width: 0;
         }
-        .hero-form input::placeholder { color: #aab;  }
-        .hero-form button {
-            padding: 16px 28px;
+        .hero-input-wrap input::placeholder { color: #94a3b8; }
+        .hero-input-wrap button {
+            padding: 16px 32px;
             background: var(--action);
             color: white;
             font-size: 15px;
@@ -128,108 +167,119 @@
             white-space: nowrap;
             transition: background 0.2s;
         }
-        .hero-form button:hover { background: var(--action-hover); }
-        .hero-note {
+        .hero-input-wrap button:hover { background: var(--action-hover); }
+        .hero-note { font-size: 13px; color: var(--muted); margin-bottom: 8px; }
+        .hero-credits {
             font-size: 13px;
-            color: var(--muted);
+            color: var(--green);
+            font-weight: 600;
         }
 
-        /* Stats Bar */
-        .stats-bar {
+        /* Agent Visualization */
+        .agent-row {
             display: flex;
             justify-content: center;
-            gap: 48px;
-            padding: 32px 0;
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-            background: var(--trust-bar);
+            gap: 12px;
+            margin-top: 48px;
             flex-wrap: wrap;
         }
-        .stat { text-align: center; }
+        .agent-pill {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            border-radius: 999px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+        .agent-pill-icon {
+            width: 20px; height: 20px; border-radius: 50%;
+            background: var(--action-soft);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 11px;
+        }
+
+        /* Stats */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            background: var(--bg-alt);
+        }
+        .stat {
+            text-align: center;
+            padding: 28px 16px;
+            border-right: 1px solid var(--border);
+        }
+        .stat:last-child { border-right: none; }
         .stat-number {
-            font-size: 32px;
+            font-size: 36px;
             font-weight: 800;
             color: var(--text);
-            letter-spacing: -0.02em;
+            letter-spacing: -0.03em;
+            line-height: 1;
+            margin-bottom: 4px;
         }
         .stat-number span { color: var(--action); }
         .stat-label { font-size: 13px; color: var(--muted); font-weight: 500; }
 
         /* Section */
-        .section {
-            padding: 72px 0;
-        }
-        .section-header {
-            text-align: center;
-            margin-bottom: 48px;
-        }
+        .section { padding: 80px 0; }
+        .section-header { text-align: center; margin-bottom: 48px; }
         .section-header h2 {
-            font-size: 32px;
-            letter-spacing: -0.02em;
+            font-size: 36px;
+            letter-spacing: -0.03em;
             margin-bottom: 12px;
+            font-weight: 800;
         }
         .section-header p {
-            font-size: 16px;
+            font-size: 17px;
             color: var(--muted);
-            max-width: 520px;
+            max-width: 500px;
             margin: 0 auto;
         }
 
         /* How It Works */
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-        }
+        .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
         .step {
-            text-align: center;
-            padding: 32px 24px;
+            padding: 32px 28px;
             border-radius: var(--radius-lg);
             background: var(--card-bg);
             border: 1px solid var(--border);
             box-shadow: var(--card-shadow);
             position: relative;
+            text-align: left;
         }
-        .step-number {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: var(--action);
-            color: white;
-            font-size: 20px;
-            font-weight: 800;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 16px;
+        .step-num {
+            width: 36px; height: 36px; border-radius: 10px;
+            background: var(--action-soft);
+            color: var(--action);
+            font-size: 15px; font-weight: 800;
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 16px;
         }
-        .step h3 {
-            font-size: 18px;
-            margin-bottom: 8px;
-        }
-        .step p {
-            font-size: 14px;
-            color: var(--muted);
-            line-height: 1.6;
-        }
-        .step-arrow {
+        .step h3 { font-size: 18px; margin-bottom: 8px; font-weight: 700; }
+        .step p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+        .step-connector {
             position: absolute;
-            right: -22px;
+            right: -16px;
             top: 50%;
             transform: translateY(-50%);
             color: var(--border);
-            font-size: 24px;
+            font-size: 20px;
             z-index: 2;
         }
 
-        /* Features Grid */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-        }
+        /* Features */
+        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
         .feature-card {
-            padding: 28px;
+            padding: 28px 24px;
             border-radius: var(--radius-lg);
             background: var(--card-bg);
             border: 1px solid var(--border);
@@ -237,31 +287,20 @@
             transition: transform 0.2s, box-shadow 0.2s;
         }
         .feature-card:hover {
-            transform: translateY(-3px);
+            transform: translateY(-4px);
             box-shadow: 0 12px 32px rgba(0,0,0,0.08);
         }
         .feature-icon {
-            width: 44px;
-            height: 44px;
-            border-radius: var(--radius-md);
+            width: 44px; height: 44px; border-radius: var(--radius-md);
             background: var(--action-soft);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; align-items: center; justify-content: center;
             margin-bottom: 16px;
-            font-size: 22px;
+            font-size: 20px;
         }
-        .feature-card h3 {
-            font-size: 17px;
-            margin-bottom: 6px;
-        }
-        .feature-card p {
-            font-size: 14px;
-            color: var(--muted);
-            line-height: 1.6;
-        }
+        .feature-card h3 { font-size: 16px; margin-bottom: 6px; font-weight: 700; }
+        .feature-card p { font-size: 14px; color: var(--muted); line-height: 1.6; }
 
-        /* Comparison Table */
+        /* Comparison */
         .comparison-section { background: var(--bg-alt); }
         .comparison-table {
             width: 100%;
@@ -280,30 +319,21 @@
             border-bottom: 1px solid var(--border);
         }
         .comparison-table thead th {
-            background: var(--trust-bar);
+            background: var(--bg-alt);
             font-weight: 700;
             font-size: 13px;
             text-transform: uppercase;
             letter-spacing: 0.05em;
             color: var(--muted);
         }
-        .comparison-table thead th:last-child {
-            color: var(--action);
-        }
-        .comparison-table tbody td:last-child {
-            font-weight: 600;
-            color: var(--action);
-        }
+        .comparison-table thead th:last-child { color: var(--action); }
+        .comparison-table tbody td:last-child { font-weight: 600; color: var(--action); }
         .comparison-table tbody tr:last-child td { border-bottom: none; }
         .check { color: var(--green); font-weight: 700; }
-        .x { color: #dc2626; }
+        .x { color: #ef4444; }
 
         /* Testimonials */
-        .testimonials {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
+        .testimonials { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
         .testimonial {
             padding: 28px;
             border-radius: var(--radius-lg);
@@ -311,49 +341,90 @@
             border: 1px solid var(--border);
             box-shadow: var(--card-shadow);
         }
-        .testimonial-stars {
-            color: var(--gold);
-            font-size: 14px;
-            margin-bottom: 12px;
-            letter-spacing: 2px;
-        }
-        .testimonial-text {
+        .testimonial-quote {
             font-size: 14px;
             color: var(--text);
             line-height: 1.7;
-            margin-bottom: 16px;
-            font-style: italic;
+            margin-bottom: 20px;
         }
-        .testimonial-author {
+        .testimonial-author { display: flex; align-items: center; gap: 12px; }
+        .testimonial-avatar {
+            width: 40px; height: 40px; border-radius: 50%;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-weight: 700; font-size: 15px;
+        }
+        .testimonial-name { font-size: 14px; font-weight: 700; }
+        .testimonial-role { font-size: 12px; color: var(--muted); }
+
+        /* Pricing */
+        .pricing-card {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            background: var(--card-bg);
+            border: 2px solid var(--action);
+            box-shadow: 0 8px 32px var(--action-glow);
+            text-align: center;
+        }
+        .pricing-label {
             font-size: 13px;
             font-weight: 700;
-            color: var(--text);
+            color: var(--action);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 8px;
         }
-        .testimonial-role {
-            font-size: 12px;
-            color: var(--muted);
+        .pricing-amount {
+            font-size: 56px;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+        .pricing-amount sup { font-size: 28px; vertical-align: top; margin-top: 8px; display: inline-block; }
+        .pricing-unit { font-size: 15px; color: var(--muted); margin-bottom: 24px; }
+        .pricing-features { list-style: none; text-align: left; margin-bottom: 32px; }
+        .pricing-features li {
+            padding: 8px 0;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid var(--border);
+        }
+        .pricing-features li:last-child { border-bottom: none; }
+        .pricing-check {
+            width: 20px; height: 20px; border-radius: 50%;
+            background: var(--green-soft);
+            color: var(--green);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 12px; font-weight: 700; flex-shrink: 0;
         }
 
-        /* CTA Section */
+        /* CTA */
         .cta-section {
             text-align: center;
-            padding: 72px 0;
-            background: linear-gradient(180deg, var(--bg) 0%, #f0f7ff 100%);
+            padding: 80px 0;
+            background: var(--bg-dark);
+            color: white;
         }
         .cta-section h2 {
-            font-size: 32px;
-            letter-spacing: -0.02em;
+            font-size: 36px;
+            letter-spacing: -0.03em;
             margin-bottom: 12px;
+            font-weight: 800;
         }
         .cta-section p {
-            font-size: 16px;
-            color: var(--muted);
-            max-width: 480px;
+            font-size: 17px;
+            color: #94a3b8;
+            max-width: 460px;
             margin: 0 auto 32px;
         }
         .cta-button {
             display: inline-block;
-            padding: 16px 40px;
+            padding: 16px 48px;
             background: var(--action);
             color: white;
             font-size: 16px;
@@ -361,138 +432,156 @@
             border-radius: var(--radius-md);
             text-decoration: none;
             transition: background 0.2s, transform 0.2s;
-            box-shadow: 0 8px 24px rgba(31,122,224,0.2);
+            box-shadow: 0 8px 32px rgba(99,102,241,0.3);
         }
-        .cta-button:hover {
-            background: var(--action-hover);
-            transform: translateY(-2px);
-            text-decoration: none;
-        }
-        .cta-guarantee {
-            margin-top: 16px;
-            font-size: 13px;
-            color: var(--muted);
-        }
-
-        /* Trust Logos */
-        .trust-logos {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 32px;
-            flex-wrap: wrap;
-            padding: 24px 0;
-            opacity: 0.6;
-        }
-        .trust-logo {
-            font-size: 16px;
-            font-weight: 700;
-            color: var(--muted);
-            letter-spacing: 0.02em;
-        }
+        .cta-button:hover { background: var(--action-hover); transform: translateY(-2px); text-decoration: none; }
+        .cta-note { margin-top: 16px; font-size: 13px; color: #64748b; }
 
         /* Footer */
-        footer {
+        .site-footer {
             border-top: 1px solid var(--border);
             padding: 32px 0;
             font-size: 13px;
             color: var(--muted);
         }
-        .footer-content {
+        .footer-inner {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
-            gap: 24px;
+            align-items: center;
             flex-wrap: wrap;
+            gap: 16px;
         }
-        .footer-links { display: flex; gap: 16px; flex-wrap: wrap; }
+        .footer-links { display: flex; gap: 20px; }
         .footer-links a { color: var(--muted); font-weight: 500; }
         .footer-links a:hover { color: var(--action); }
 
         /* Responsive */
         @media (max-width: 900px) {
-            .hero h1 { font-size: 32px; }
-            .steps { grid-template-columns: 1fr; gap: 20px; }
-            .step-arrow { display: none; }
-            .features-grid { grid-template-columns: 1fr; }
-            .testimonials { grid-template-columns: 1fr; }
-            .stats-bar { gap: 24px; }
+            .hero h1 { font-size: 36px; }
+            .steps, .features-grid, .testimonials { grid-template-columns: 1fr; }
+            .step-connector { display: none; }
+            .stats-bar { grid-template-columns: repeat(2, 1fr); }
+            .stat:nth-child(2) { border-right: none; }
         }
         @media (max-width: 600px) {
-            header { flex-direction: column; align-items: flex-start; gap: 12px; }
-            nav { gap: 12px; }
+            .header-inner { flex-direction: column; align-items: flex-start; gap: 12px; }
+            nav { gap: 16px; flex-wrap: wrap; }
             .hero { padding: 48px 0 40px; }
             .hero h1 { font-size: 28px; }
-            .hero-form { flex-direction: column; }
-            .hero-form input { border-bottom: 1px solid var(--border); }
-            .stats-bar { gap: 16px; padding: 24px 16px; }
-            .stat-number { font-size: 24px; }
+            .hero-sub { font-size: 16px; }
+            .hero-input-wrap { flex-direction: column; }
+            .hero-input-wrap input { border-bottom: 1px solid var(--border); }
+            .stats-bar { grid-template-columns: 1fr; }
+            .stat { border-right: none; border-bottom: 1px solid var(--border); }
+            .stat:last-child { border-bottom: none; }
             .section { padding: 48px 0; }
-            .footer-content { flex-direction: column; align-items: flex-start; gap: 12px; }
-            .comparison-table { font-size: 13px; }
-            .comparison-table th,
-            .comparison-table td { padding: 10px 12px; }
+            .section-header h2 { font-size: 28px; }
+            .pricing-card { padding: 28px 20px; }
+            .pricing-amount { font-size: 40px; }
+            .footer-inner { flex-direction: column; align-items: flex-start; }
+            .agent-row { gap: 8px; }
+            .agent-pill { font-size: 12px; padding: 6px 12px; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <a href="/" class="logo">
-            <div class="logo-mark"></div>
-            <div class="logo-text">FishTankFilters</div>
-        </a>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/FilterReviews/">Filter Reviews</a>
-            <a href="/TankSetup&Guides/">Setup & Guides</a>
-            <a href="/outreach/" class="active">Partner With Us</a>
-        </nav>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="/" class="logo">
+                <div class="logo-mark">P</div>
+                <div class="logo-text">Propelo <span>SEO</span></div>
+            </a>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/outreach/">Outreach</a>
+                <a href="/about/">About</a>
+                <a href="/Contact/">Contact</a>
+                <a href="/outreach/" class="nav-cta">Get Started</a>
+            </nav>
+        </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero">
         <div class="page">
-            <div class="hero-kicker">Brand Partnerships</div>
-            <h1>Get your filters in front of <span>50,000+ aquarium enthusiasts.</span></h1>
-            <p class="hero-subtitle">Submit your product for independent lab testing. We handle the reviews, the data, and the audience. You get transparent, trust-building exposure.</p>
-            <form class="hero-form" onsubmit="return false;">
-                <input type="email" placeholder="Enter your business email" aria-label="Business email address" required>
-                <button type="submit">Get Started Free</button>
+            <div class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                AI-Powered Outreach Agent
+            </div>
+            <h1>Cold outreach on <span class="highlight">autopilot.</span></h1>
+            <p class="hero-sub">Paste your domain. Our AI agents research your market, find ideal prospects, write personalized emails, and book meetings while you sleep.</p>
+            <form class="hero-input-wrap" onsubmit="return false;">
+                <input type="url" placeholder="Enter your website URL" aria-label="Your website URL" required>
+                <button type="submit">Launch Outreach</button>
             </form>
-            <p class="hero-note">No commitment required. We'll review your product lineup within 48 hours.</p>
+            <p class="hero-note">From URL to first outreach in under 2 minutes.</p>
+            <p class="hero-credits">$50 in free credits to start. No credit card required.</p>
+
+            <div class="agent-row">
+                <div class="agent-pill">
+                    <div class="agent-pill-icon">
+                        <svg width="12" height="12" fill="#6366f1" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                    </div>
+                    Market Research
+                </div>
+                <div class="agent-pill">
+                    <div class="agent-pill-icon">
+                        <svg width="12" height="12" fill="#6366f1" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                    </div>
+                    ICP Discovery
+                </div>
+                <div class="agent-pill">
+                    <div class="agent-pill-icon">
+                        <svg width="12" height="12" fill="#6366f1" viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/></svg>
+                    </div>
+                    Lead Sourcing
+                </div>
+                <div class="agent-pill">
+                    <div class="agent-pill-icon">
+                        <svg width="12" height="12" fill="#6366f1" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    Email Verification
+                </div>
+                <div class="agent-pill">
+                    <div class="agent-pill-icon">
+                        <svg width="12" height="12" fill="#6366f1" viewBox="0 0 24 24"><path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+                    </div>
+                    Personalization
+                </div>
+                <div class="agent-pill">
+                    <div class="agent-pill-icon">
+                        <svg width="12" height="12" fill="#6366f1" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    </div>
+                    Send & Follow-up
+                </div>
+                <div class="agent-pill">
+                    <div class="agent-pill-icon">
+                        <svg width="12" height="12" fill="#6366f1" viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    </div>
+                    Meeting Booking
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Stats Bar -->
+    <!-- Stats -->
     <div class="stats-bar">
         <div class="stat">
-            <div class="stat-number">50<span>K+</span></div>
-            <div class="stat-label">Monthly Readers</div>
+            <div class="stat-number">105<span>M+</span></div>
+            <div class="stat-label">Company Profiles</div>
         </div>
         <div class="stat">
-            <div class="stat-number">120<span>+</span></div>
-            <div class="stat-label">Filters Tested</div>
+            <div class="stat-number">536<span>M+</span></div>
+            <div class="stat-label">People Profiles</div>
         </div>
         <div class="stat">
             <div class="stat-number">97<span>%</span></div>
-            <div class="stat-label">Reader Trust Score</div>
+            <div class="stat-label">Email Deliverability</div>
         </div>
         <div class="stat">
-            <div class="stat-number">24<span>hr</span></div>
-            <div class="stat-label">Avg. Response Time</div>
-        </div>
-    </div>
-
-    <!-- Trusted By -->
-    <div class="page">
-        <div class="trust-logos">
-            <span class="trust-logo">Fluval</span>
-            <span class="trust-logo">Eheim</span>
-            <span class="trust-logo">Marineland</span>
-            <span class="trust-logo">Aqueon</span>
-            <span class="trust-logo">Penn-Plax</span>
-            <span class="trust-logo">Seachem</span>
+            <div class="stat-number">15<span>x</span></div>
+            <div class="stat-label">Cheaper Than Apollo</div>
         </div>
     </div>
 
@@ -501,25 +590,25 @@
         <div class="page">
             <div class="section-header">
                 <h2>How it works</h2>
-                <p>From submission to published review in three simple steps. No guesswork, no bias, just data.</p>
+                <p>Seven AI agents work in parallel to turn your website URL into a live outbound pipeline.</p>
             </div>
             <div class="steps">
                 <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Submit Your Product</h3>
-                    <p>Send us your filter or aquarium product. We accept all types: canister, HOB, internal, sponge, and specialty filters.</p>
-                    <span class="step-arrow">&rarr;</span>
+                    <div class="step-num">1</div>
+                    <h3>Paste Your Domain</h3>
+                    <p>Enter your website URL. Our AI reads your site, understands your product, and identifies your ideal customer profile automatically.</p>
+                    <span class="step-connector">&rarr;</span>
                 </div>
                 <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>We Test It</h3>
-                    <p>Our lab runs real-world tests on stocked aquariums: flow rate, noise levels (dB), water clarity, and longevity over 90+ days.</p>
-                    <span class="step-arrow">&rarr;</span>
+                    <div class="step-num">2</div>
+                    <h3>AI Finds & Writes</h3>
+                    <p>Seven agents research your market, source matching companies, verify contact data, and write deeply personalized cold emails for each prospect.</p>
+                    <span class="step-connector">&rarr;</span>
                 </div>
                 <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Review Goes Live</h3>
-                    <p>Your product gets a detailed, data-rich review published to our audience of 50,000+ aquarium enthusiasts who trust our methodology.</p>
+                    <div class="step-num">3</div>
+                    <h3>Meetings Get Booked</h3>
+                    <p>Emails send from pre-warmed mailboxes on your schedule. Follow-ups run automatically. Interested replies land in your inbox ready to close.</p>
                 </div>
             </div>
         </div>
@@ -529,109 +618,115 @@
     <section class="section" style="background: var(--bg-alt);">
         <div class="page">
             <div class="section-header">
-                <h2>Why brands partner with us</h2>
-                <p>We offer what no other aquarium review site can: independent, lab-grade testing that builds real consumer trust.</p>
+                <h2>Built for founders who ship, not spam</h2>
+                <p>Everything runs on AI, but the emails feel human. Deep research. Real personalization. No templates.</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg width="24" height="24" fill="none" stroke="#1f7ae0" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                        <svg width="22" height="22" fill="none" stroke="#6366f1" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
                     </div>
-                    <h3>Data-Driven Reviews</h3>
-                    <p>Every review includes measured flow rates, decibel readings, and water clarity data. Real numbers, not opinions.</p>
+                    <h3>Semantic Lead Search</h3>
+                    <p>Find prospects by what they do, not just job titles. Our AI understands context and intent to surface leads traditional tools miss.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg width="24" height="24" fill="none" stroke="#1f7ae0" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+                        <svg width="22" height="22" fill="none" stroke="#6366f1" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
                     </div>
-                    <h3>50K+ Engaged Audience</h3>
-                    <p>Our readers are active aquarium hobbyists ready to buy. They visit specifically to make purchasing decisions.</p>
+                    <h3>Deep Personalization</h3>
+                    <p>Every email is researched individually. Company news, tech stack, recent hires, funding rounds. Not "Hi {first_name}" templates.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg width="24" height="24" fill="none" stroke="#1f7ae0" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        <svg width="22" height="22" fill="none" stroke="#6366f1" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
                     </div>
-                    <h3>Independent & Transparent</h3>
-                    <p>We never accept paid rankings. Your product is scored on performance alone, which is exactly why readers trust us.</p>
+                    <h3>Pre-Warmed Mailboxes</h3>
+                    <p>Every email sends from domains with established reputation. 97% deliverability on day one. No warm-up period needed.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg width="24" height="24" fill="none" stroke="#1f7ae0" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                        <svg width="22" height="22" fill="none" stroke="#6366f1" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
                     </div>
-                    <h3>SEO-Optimized Exposure</h3>
-                    <p>Every review is optimized for search engines. Your product appears when hobbyists search for filters in your category.</p>
+                    <h3>Automated Follow-ups</h3>
+                    <p>Multi-step sequences run without intervention. Smart timing. Contextual follow-ups that reference the original message, not generic bumps.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg width="24" height="24" fill="none" stroke="#1f7ae0" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                        <svg width="22" height="22" fill="none" stroke="#6366f1" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
                     </div>
-                    <h3>Detailed Feedback Reports</h3>
-                    <p>Get a full testing report with reader engagement data, comparison rankings, and actionable product feedback.</p>
+                    <h3>Segment Testing</h3>
+                    <p>Generate 300-500 leads in one click across 20+ segments. Track which ICPs convert and double down on what works.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg width="24" height="24" fill="none" stroke="#1f7ae0" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        <svg width="22" height="22" fill="none" stroke="#6366f1" stroke-width="2" viewBox="0 0 24 24"><path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
                     </div>
-                    <h3>Fast Turnaround</h3>
-                    <p>From product submission to published review in under 30 days. Most competing sites take 3-6 months.</p>
+                    <h3>CRM & Calendar Sync</h3>
+                    <p>Replies sync to your CRM. Calendar integration for one-click meeting booking. API access for custom agent stacks.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Comparison Table -->
+    <!-- Comparison -->
     <section class="section comparison-section">
         <div class="page">
             <div class="section-header">
                 <h2>How we compare</h2>
-                <p>See why leading aquarium brands choose us over traditional marketing channels.</p>
+                <p>The outreach stack that replaces your SDR, your data vendor, and your email tool.</p>
             </div>
             <div style="overflow-x: auto;">
                 <table class="comparison-table">
                     <thead>
                         <tr>
-                            <th>Feature</th>
-                            <th>Social Media Ads</th>
-                            <th>Influencer Reviews</th>
-                            <th>FishTankFilters</th>
+                            <th>Capability</th>
+                            <th>ZoomInfo + Outreach</th>
+                            <th>Apollo.io</th>
+                            <th>Propelo SEO</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Independent lab testing</td>
+                            <td>AI-written personalized emails</td>
                             <td class="x">No</td>
-                            <td class="x">No</td>
-                            <td class="check">Yes</td>
+                            <td>Basic</td>
+                            <td class="check">Deep research</td>
                         </tr>
                         <tr>
-                            <td>Quantitative data (flow, dB, clarity)</td>
-                            <td class="x">No</td>
-                            <td class="x">Rarely</td>
-                            <td class="check">Always</td>
-                        </tr>
-                        <tr>
-                            <td>Long-term SEO visibility</td>
-                            <td class="x">None</td>
-                            <td class="x">Limited</td>
-                            <td class="check">Permanent</td>
-                        </tr>
-                        <tr>
-                            <td>Buyer-intent audience</td>
-                            <td>Low</td>
-                            <td>Medium</td>
-                            <td class="check">High</td>
-                        </tr>
-                        <tr>
-                            <td>Transparent methodology</td>
+                            <td>URL-to-pipeline automation</td>
                             <td class="x">No</td>
                             <td class="x">No</td>
-                            <td class="check">Published</td>
+                            <td class="check">2 minutes</td>
                         </tr>
                         <tr>
-                            <td>Cost per qualified lead</td>
-                            <td>$12-25</td>
-                            <td>$8-15</td>
-                            <td class="check">$2-5</td>
+                            <td>Pre-warmed mailboxes included</td>
+                            <td class="x">No</td>
+                            <td class="x">No</td>
+                            <td class="check">Included</td>
+                        </tr>
+                        <tr>
+                            <td>Semantic prospect search</td>
+                            <td class="x">Keyword only</td>
+                            <td class="x">Keyword only</td>
+                            <td class="check">Context-aware</td>
+                        </tr>
+                        <tr>
+                            <td>Multi-agent research per lead</td>
+                            <td class="x">No</td>
+                            <td class="x">No</td>
+                            <td class="check">7 agents</td>
+                        </tr>
+                        <tr>
+                            <td>Cost per email</td>
+                            <td>~$0.50</td>
+                            <td>~$0.15</td>
+                            <td class="check">$0.03</td>
+                        </tr>
+                        <tr>
+                            <td>Monthly minimum</td>
+                            <td>$15,000+</td>
+                            <td>$49+</td>
+                            <td class="check">$0 (pay-as-you-go)</td>
                         </tr>
                     </tbody>
                 </table>
@@ -639,31 +734,69 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
+    <!-- Pricing -->
     <section class="section">
         <div class="page">
             <div class="section-header">
-                <h2>What our brand partners say</h2>
-                <p>Hear from manufacturers who've submitted their products for independent testing.</p>
+                <h2>Simple, transparent pricing</h2>
+                <p>No subscriptions. No seat licenses. Pay only for emails that send.</p>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-label">Pay As You Go</div>
+                <div class="pricing-amount"><sup>$</sup>0.03</div>
+                <div class="pricing-unit">per email sent</div>
+                <ul class="pricing-features">
+                    <li><span class="pricing-check">&#10003;</span> $50 free credits to start</li>
+                    <li><span class="pricing-check">&#10003;</span> 105M+ company database access</li>
+                    <li><span class="pricing-check">&#10003;</span> 536M+ verified contacts</li>
+                    <li><span class="pricing-check">&#10003;</span> Pre-warmed sending domains</li>
+                    <li><span class="pricing-check">&#10003;</span> Unlimited follow-up sequences</li>
+                    <li><span class="pricing-check">&#10003;</span> CRM & calendar integration</li>
+                    <li><span class="pricing-check">&#10003;</span> API access included</li>
+                    <li><span class="pricing-check">&#10003;</span> Daily budget caps you control</li>
+                </ul>
+                <a href="#" class="cta-button" style="display: block; text-align: center;">Start Free</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" style="background: var(--bg-alt);">
+        <div class="page">
+            <div class="section-header">
+                <h2>Founders are closing deals on autopilot</h2>
+                <p>Join hundreds of teams who replaced manual prospecting with AI outreach.</p>
             </div>
             <div class="testimonials">
                 <div class="testimonial">
-                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p class="testimonial-text">"The data-driven review of our canister filter drove more qualified traffic than any paid campaign we've run. Readers trust FishTankFilters because they show real numbers."</p>
-                    <div class="testimonial-author">Marcus L.</div>
-                    <div class="testimonial-role">Product Manager, Aquarium Equipment Brand</div>
+                    <p class="testimonial-quote">"I pasted my URL, went to lunch, and came back to three meeting requests in my inbox. This replaced our entire SDR workflow in a day."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">M</div>
+                        <div>
+                            <div class="testimonial-name">Marcus L.</div>
+                            <div class="testimonial-role">Founder, SaaS Startup</div>
+                        </div>
+                    </div>
                 </div>
                 <div class="testimonial">
-                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p class="testimonial-text">"We were skeptical about independent testing, but the transparency actually boosted our sales. Hobbyists want to see real flow rate and noise data before buying."</p>
-                    <div class="testimonial-author">Sarah K.</div>
-                    <div class="testimonial-role">Marketing Director, Filter Manufacturer</div>
+                    <p class="testimonial-quote">"The personalization is insane. Prospects reply thinking someone spent 20 minutes researching them. It's seven AI agents doing it in seconds."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">S</div>
+                        <div>
+                            <div class="testimonial-name">Sarah K.</div>
+                            <div class="testimonial-role">Head of Growth, B2B Agency</div>
+                        </div>
+                    </div>
                 </div>
                 <div class="testimonial">
-                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p class="testimonial-text">"Fast turnaround, professional testing, and our review still ranks on page one for our target keywords six months later. Best ROI in our marketing budget."</p>
-                    <div class="testimonial-author">James T.</div>
-                    <div class="testimonial-role">Founder, Specialty Filter Company</div>
+                    <p class="testimonial-quote">"We tested Apollo, Instantly, and Smartlead. Propelo's deliverability and cost-per-lead blew them all away. 97% inbox rate from day one."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">J</div>
+                        <div>
+                            <div class="testimonial-name">James T.</div>
+                            <div class="testimonial-role">CEO, Growth Consultancy</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -672,30 +805,28 @@
     <!-- Final CTA -->
     <section class="cta-section">
         <div class="page">
-            <h2>Ready to reach 50,000+ aquarium enthusiasts?</h2>
-            <p>Submit your product for independent testing and get a data-driven review that builds trust and drives sales.</p>
-            <a href="mailto:shanehellmrich@proton.me?subject=Partnership%20Inquiry%20-%20Product%20Review" class="cta-button">Start Your Partnership</a>
-            <p class="cta-guarantee">Free initial consultation. No paid rankings. 100% independent testing.</p>
+            <h2>Your next customer is already in our database.</h2>
+            <p>Paste your URL. Let seven AI agents build your outbound pipeline. First 1,600+ emails are free.</p>
+            <a href="#" class="cta-button">Launch Your Outreach</a>
+            <p class="cta-note">$50 free credits. No credit card. Cancel anytime.</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="site-footer">
         <div class="page">
-            <div class="footer-content">
-                <div>
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <div class="logo-mark" style="width: 24px; height: 24px;"></div>
-                        <span style="font-weight: 700; color: var(--text); font-size: 14px;">FishTankFilters</span>
-                    </div>
-                    <p>&copy; 2026 FishTankFilters. All rights reserved.</p>
+            <div class="footer-inner">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <div class="logo-mark" style="width: 24px; height: 24px; font-size: 12px; border-radius: 6px;">P</div>
+                    <span style="font-weight: 700; font-size: 14px; color: var(--text);">Propelo SEO</span>
+                    <span>&copy; 2026</span>
                 </div>
                 <div class="footer-links">
                     <a href="/">Home</a>
-                    <a href="/FilterReviews/">Reviews</a>
                     <a href="/about/">About</a>
                     <a href="/Contact/">Contact</a>
                     <a href="/Privacy/">Privacy</a>
+                    <a href="/Termsofservice/">Terms</a>
                 </div>
             </div>
         </div>
