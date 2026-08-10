@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PropeloSEO – AI-Powered Outreach That Books Meetings While You Sleep</title>
+    <meta name="description" content="PropeloSEO's AI outreach agent finds your ideal clients, writes personalized emails, and handles follow-ups on autopilot. 100M+ contacts. $0.03/email. 97% deliverability.">
+    <link rel="canonical" href="https://propeloseo.com/outreach/">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --bg-alt: #f8fafb;
+            --bg-dark: #0f172a;
+            --text: #1e293b;
+            --muted: #64748b;
+            --border: #e2e8f0;
+            --action: #6366f1;
+            --action-hover: #4f46e5;
+            --action-soft: #eef2ff;
+            --action-glow: rgba(99, 102, 241, 0.15);
+            --green: #10b981;
+            --green-soft: #d1fae5;
+            --gold: #f59e0b;
+            --card-bg: #ffffff;
+            --card-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.04);
+            --radius-lg: 16px;
+            --radius-md: 10px;
+            --radius-sm: 6px;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { color: var(--action); text-decoration: none; transition: color 0.2s; }
+        a:hover { text-decoration: underline; }
+        .page { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        /* Header */
+        .site-header {
+            border-bottom: 1px solid var(--border);
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .logo-mark { width: 36px; height: 36px; flex-shrink: 0; }
+        .logo-text { font-weight: 800; font-size: 20px; color: var(--text); letter-spacing: -0.02em; }
+        .logo-text span { color: var(--action); }
+        nav { display: flex; gap: 28px; align-items: center; font-size: 14px; }
+        nav a { color: var(--muted); font-weight: 500; }
+        nav a:hover { color: var(--text); text-decoration: none; }
+        .nav-cta {
+            background: var(--action);
+            color: white !important;
+            padding: 8px 20px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .nav-cta:hover { background: var(--action-hover); transform: translateY(-1px); text-decoration: none; }
+
+        /* Hero */
+        .hero {
+            padding: 80px 0 72px;
+            text-align: center;
+            background: radial-gradient(ellipse at 50% 0%, var(--action-soft) 0%, var(--bg) 70%);
+            overflow: hidden;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--action);
+            background: var(--action-soft);
+            border: 1px solid rgba(99,102,241,0.2);
+            padding: 6px 16px;
+            border-radius: 999px;
+            margin-bottom: 20px;
+            letter-spacing: 0.02em;
+        }
+        .hero-badge-dot {
+            width: 7px; height: 7px; border-radius: 50%;
+            background: var(--green);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+        .hero h1 {
+            font-size: 52px;
+            line-height: 1.1;
+            letter-spacing: -0.035em;
+            margin-bottom: 20px;
+            max-width: 740px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 800;
+        }
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-sub {
+            font-size: 19px;
+            color: var(--muted);
+            max-width: 540px;
+            margin: 0 auto 36px;
+            line-height: 1.6;
+        }
+
+        /* Hero CTA */
+        .hero-cta-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+        .hero-book-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 18px 48px;
+            background: var(--action);
+            color: white;
+            font-size: 17px;
+            font-weight: 700;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 24px var(--action-glow), 0 1px 3px rgba(0,0,0,0.08);
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        .hero-book-btn:hover {
+            background: var(--action-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(99,102,241,0.25);
+            text-decoration: none;
+        }
+        .hero-book-btn svg { flex-shrink: 0; }
+        .hero-note { font-size: 13px; color: var(--muted); margin-bottom: 0; }
+        .hero-note-green {
+            font-size: 13px;
+            color: var(--green);
+            font-weight: 600;
+        }
+
+        /* Agent Visualization */
+        .agent-row {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 48px;
+            flex-wrap: wrap;
+        }
+        .agent-pill {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            border-radius: 999px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+        .agent-pill-icon {
+            width: 20px; height: 20px; border-radius: 50%;
+            background: var(--action-soft);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 11px;
+        }
+
+        /* Stats */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            background: var(--bg-alt);
+        }
+        .stat {
+            text-align: center;
+            padding: 28px 16px;
+            border-right: 1px solid var(--border);
+        }
+        .stat:last-child { border-right: none; }
+        .stat-number {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--text);
+            letter-spacing: -0.03em;
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+        .stat-number span { color: var(--action); }
+        .stat-label { font-size: 13px; color: var(--muted); font-weight: 500; }
+
+        /* Section */
+        .section { padding: 80px 0; }
+        .section-header { text-align: center; margin-bottom: 48px; }
+        .section-header h2 {
+            font-size: 36px;
+            letter-spacing: -0.03em;
+            margin-bottom: 12px;
+            font-weight: 800;
+        }
+        .section-header p {
+            font-size: 17px;
+            color: var(--muted);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* How It Works */
+        .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .step {
+            padding: 32px 28px;
+            border-radius: var(--radius-lg);
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            box-shadow: var(--card-shadow);
+            position: relative;
+            text-align: left;
+        }
+        .step-num {
+            width: 36px; height: 36px; border-radius: 10px;
+            background: var(--action-soft);
+            color: var(--action);
+            font-size: 15px; font-weight: 800;
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 16px;
+        }
+        .step h3 { font-size: 18px; margin-bottom: 8px; font-weight: 700; }
+        .step p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+        .step-connector {
+            position: absolute;
+            right: -16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--border);
+            font-size: 20px;
+            z-index: 2;
+        }
+
+        /* Features */
+        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .feature-card {
+            padding: 28px 24px;
+            border-radius: var(--radius-lg);
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            box-shadow: var(--card-shadow);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+        }
+        .feature-icon {
+            width: 44px; height: 44px; border-radius: var(--radius-md);
+            background: var(--action-soft);
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 16px;
+            font-size: 20px;
+        }
+        .feature-card h3 { font-size: 16px; margin-bottom: 6px; font-weight: 700; }
+        .feature-card p { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+        /* Comparison */
+        .comparison-section { background: var(--bg-alt); }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border);
+        }
+        .comparison-table th,
+        .comparison-table td {
+            padding: 14px 20px;
+            text-align: left;
+            font-size: 14px;
+            border-bottom: 1px solid var(--border);
+        }
+        .comparison-table thead th {
+            background: var(--bg-alt);
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--muted);
+        }
+        .comparison-table thead th:last-child { color: var(--action); }
+        .comparison-table tbody td:last-child { font-weight: 600; color: var(--action); }
+        .comparison-table tbody tr:last-child td { border-bottom: none; }
+        .check { color: var(--green); font-weight: 700; }
+        .x { color: #ef4444; }
+
+        /* Testimonials */
+        .testimonials { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .testimonial {
+            padding: 28px;
+            border-radius: var(--radius-lg);
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            box-shadow: var(--card-shadow);
+        }
+        .testimonial-quote {
+            font-size: 14px;
+            color: var(--text);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        .testimonial-author { display: flex; align-items: center; gap: 12px; }
+        .testimonial-avatar {
+            width: 40px; height: 40px; border-radius: 50%;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-weight: 700; font-size: 15px;
+        }
+        .testimonial-name { font-size: 14px; font-weight: 700; }
+        .testimonial-role { font-size: 12px; color: var(--muted); }
+
+        /* Pricing */
+        .pricing-card {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            background: var(--card-bg);
+            border: 2px solid var(--action);
+            box-shadow: 0 8px 32px var(--action-glow);
+            text-align: center;
+        }
+        .pricing-label {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--action);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 8px;
+        }
+        .pricing-amount {
+            font-size: 56px;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+        .pricing-amount sup { font-size: 28px; vertical-align: top; margin-top: 8px; display: inline-block; }
+        .pricing-unit { font-size: 15px; color: var(--muted); margin-bottom: 24px; }
+        .pricing-features { list-style: none; text-align: left; margin-bottom: 32px; }
+        .pricing-features li {
+            padding: 8px 0;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid var(--border);
+        }
+        .pricing-features li:last-child { border-bottom: none; }
+        .pricing-check {
+            width: 20px; height: 20px; border-radius: 50%;
+            background: var(--green-soft);
+            color: var(--green);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 12px; font-weight: 700; flex-shrink: 0;
+        }
+
+        /* CTA */
+        .cta-section {
+            text-align: center;
+            padding: 80px 0;
+            background: var(--bg-dark);
+            color: white;
+        }
+        .cta-section h2 {
+            font-size: 36px;
+            letter-spacing: -0.03em;
+            margin-bottom: 12px;
+            font-weight: 800;
+        }
+        .cta-section p {
+            font-size: 17px;
+            color: #94a3b8;
+            max-width: 460px;
+            margin: 0 auto 32px;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 16px 48px;
+            background: var(--action);
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            transition: background 0.2s, transform 0.2s;
+            box-shadow: 0 8px 32px rgba(99,102,241,0.3);
+        }
+        .cta-button:hover { background: var(--action-hover); transform: translateY(-2px); text-decoration: none; }
+        .cta-note { margin-top: 16px; font-size: 13px; color: #64748b; }
+
+        /* Footer */
+        .site-footer {
+            border-top: 1px solid var(--border);
+            padding: 32px 0;
+            font-size: 13px;
+            color: var(--muted);
+        }
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .footer-links { display: flex; gap: 20px; }
+        .footer-links a { color: var(--muted); font-weight: 500; }
+        .footer-links a:hover { color: var(--action); }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .hero h1 { font-size: 36px; }
+            .steps, .features-grid, .testimonials { grid-template-columns: 1fr; }
+            .step-connector { display: none; }
+            .stats-bar { grid-template-columns: repeat(2, 1fr); }
+            .stat:nth-child(2) { border-right: none; }
+        }
+        @media (max-width: 600px) {
+            .header-inner { flex-direction: column; align-items: flex-start; gap: 12px; }
+            nav { gap: 16px; flex-wrap: wrap; }
+            .hero { padding: 48px 0 40px; }
+            .hero h1 { font-size: 28px; }
+            .hero-sub { font-size: 16px; }
+            .hero-book-btn { padding: 16px 36px; font-size: 15px; }
+            .stats-bar { grid-template-columns: 1fr; }
+            .stat { border-right: none; border-bottom: 1px solid var(--border); }
+            .stat:last-child { border-bottom: none; }
+            .section { padding: 48px 0; }
+            .section-header h2 { font-size: 28px; }
+            .pricing-card { padding: 28px 20px; }
+            .pricing-amount { font-size: 40px; }
+            .footer-inner { flex-direction: column; align-items: flex-start; }
+            .agent-row { gap: 8px; }
+            .agent-pill { font-size: 12px; padding: 6px 12px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="/" class="logo">
+                <svg class="logo-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 8 C55 8, 68 20, 68 35 C68 42, 62 48, 55 50 L50 50 Z" fill="#4285F4"/>
+                    <path d="M55 50 C62 48, 75 42, 82 48 C88 53, 88 68, 80 75 L50 50 Z" fill="#8B45A6"/>
+                    <path d="M50 50 L80 75 C73 82, 60 88, 52 82 C45 77, 42 62, 50 55 Z" fill="#E8A620"/>
+                    <path d="M50 50 L50 55 C42 62, 30 75, 22 68 C15 62, 15 48, 22 40 L50 50 Z" fill="#34A853"/>
+                    <path d="M50 50 L22 40 C28 32, 38 22, 45 28 C48 30, 50 40, 50 50 Z" fill="#4285F4" opacity="0.7"/>
+                </svg>
+                <div class="logo-text">Propelo<span>SEO</span></div>
+            </a>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/outreach/">Outreach</a>
+                <a href="/about/">About</a>
+                <a href="/Contact/">Contact</a>
+                <a href="https://cal.com/propeloseo/strategy-call" class="nav-cta" target="_blank" rel="noopener">Book a Call</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="page">
+            <div class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                AI-Powered Outreach Agent
+            </div>
+            <h1>Cold outreach on <span class="highlight">autopilot.</span></h1>
+            <p class="hero-sub">Our AI agents research your market, find ideal prospects, write personalized emails, and book meetings — while you sleep.</p>
+            <div class="hero-cta-group">
+                <a href="https://cal.com/propeloseo/strategy-call" class="hero-book-btn" target="_blank" rel="noopener">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    Book a Free Strategy Call
+                </a>
+                <p class="hero-note">30-minute call. No commitment. We'll map your outreach strategy live.</p>
+                <p class="hero-note-green">Limited spots available this week</p>
+            </div>
+
+            <div class="agent-row">
+                <div class="agent-pill">
+                    <div class="agent-pill-icon">
+                        <svg width="12" height="12" fill="#6366f1" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                    </div>
+                    Market Research
+                </div>
+                <div class="agent-pill">
+                    <div class="agent-pill-icon">
+                        <svg width="12" height="12" fill="#6366f1" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                    </div>
+                    ICP Discovery
+                </div>
+                <div class="agent-pill">
+                    <div class="agent-pill-icon">
+                        <svg width="12" height="12" fill="#6366f1" viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/></svg>
+                    </div>
+                    Lead Sourcing
+                </div>
+                <div class="agent-pill">
+                    <div class="agent-pill-icon">
+                        <svg width="12" height="12" fill="#6366f1" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    Email Verification
+                </div>
+                <div class="agent-pill">
+                    <div class="agent-pill-icon">
+                        <svg width="12" height="12" fill="#6366f1" viewBox="0 0 24 24"><path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+                    </div>
+                    Personalization
+                </div>
+                <div class="agent-pill">
+                    <div class="agent-pill-icon">
+                        <svg width="12" height="12" fill="#6366f1" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    </div>
+                    Send & Follow-up
+                </div>
+                <div class="agent-pill">
+                    <div class="agent-pill-icon">
+                        <svg width="12" height="12" fill="#6366f1" viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    </div>
+                    Meeting Booking
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <div class="stats-bar">
+        <div class="stat">
+            <div class="stat-number">105<span>M+</span></div>
+            <div class="stat-label">Company Profiles</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">536<span>M+</span></div>
+            <div class="stat-label">People Profiles</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">97<span>%</span></div>
+            <div class="stat-label">Email Deliverability</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">15<span>x</span></div>
+            <div class="stat-label">Cheaper Than Apollo</div>
+        </div>
+    </div>
+
+    <!-- How It Works -->
+    <section class="section">
+        <div class="page">
+            <div class="section-header">
+                <h2>How it works</h2>
+                <p>Seven AI agents work in parallel to turn your website URL into a live outbound pipeline.</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <h3>Paste Your Domain</h3>
+                    <p>Enter your website URL. Our AI reads your site, understands your product, and identifies your ideal customer profile automatically.</p>
+                    <span class="step-connector">&rarr;</span>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <h3>AI Finds & Writes</h3>
+                    <p>Seven agents research your market, source matching companies, verify contact data, and write deeply personalized cold emails for each prospect.</p>
+                    <span class="step-connector">&rarr;</span>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <h3>Meetings Get Booked</h3>
+                    <p>Emails send from pre-warmed mailboxes on your schedule. Follow-ups run automatically. Interested replies land in your inbox ready to close.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" style="background: var(--bg-alt);">
+        <div class="page">
+            <div class="section-header">
+                <h2>Built for founders who ship, not spam</h2>
+                <p>Everything runs on AI, but the emails feel human. Deep research. Real personalization. No templates.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="22" height="22" fill="none" stroke="#6366f1" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                    </div>
+                    <h3>Semantic Lead Search</h3>
+                    <p>Find prospects by what they do, not just job titles. Our AI understands context and intent to surface leads traditional tools miss.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="22" height="22" fill="none" stroke="#6366f1" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+                    </div>
+                    <h3>Deep Personalization</h3>
+                    <p>Every email is researched individually. Company news, tech stack, recent hires, funding rounds. Not "Hi {first_name}" templates.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="22" height="22" fill="none" stroke="#6366f1" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    </div>
+                    <h3>Pre-Warmed Mailboxes</h3>
+                    <p>Every email sends from domains with established reputation. 97% deliverability on day one. No warm-up period needed.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="22" height="22" fill="none" stroke="#6366f1" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                    </div>
+                    <h3>Automated Follow-ups</h3>
+                    <p>Multi-step sequences run without intervention. Smart timing. Contextual follow-ups that reference the original message, not generic bumps.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="22" height="22" fill="none" stroke="#6366f1" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                    </div>
+                    <h3>Segment Testing</h3>
+                    <p>Generate 300-500 leads in one click across 20+ segments. Track which ICPs convert and double down on what works.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="22" height="22" fill="none" stroke="#6366f1" stroke-width="2" viewBox="0 0 24 24"><path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                    </div>
+                    <h3>CRM & Calendar Sync</h3>
+                    <p>Replies sync to your CRM. Calendar integration for one-click meeting booking. API access for custom agent stacks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison -->
+    <section class="section comparison-section">
+        <div class="page">
+            <div class="section-header">
+                <h2>How we compare</h2>
+                <p>The outreach stack that replaces your SDR, your data vendor, and your email tool.</p>
+            </div>
+            <div style="overflow-x: auto;">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Capability</th>
+                            <th>ZoomInfo + Outreach</th>
+                            <th>Apollo.io</th>
+                            <th>PropeloSEO</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>AI-written personalized emails</td>
+                            <td class="x">No</td>
+                            <td>Basic</td>
+                            <td class="check">Deep research</td>
+                        </tr>
+                        <tr>
+                            <td>URL-to-pipeline automation</td>
+                            <td class="x">No</td>
+                            <td class="x">No</td>
+                            <td class="check">2 minutes</td>
+                        </tr>
+                        <tr>
+                            <td>Pre-warmed mailboxes included</td>
+                            <td class="x">No</td>
+                            <td class="x">No</td>
+                            <td class="check">Included</td>
+                        </tr>
+                        <tr>
+                            <td>Semantic prospect search</td>
+                            <td class="x">Keyword only</td>
+                            <td class="x">Keyword only</td>
+                            <td class="check">Context-aware</td>
+                        </tr>
+                        <tr>
+                            <td>Multi-agent research per lead</td>
+                            <td class="x">No</td>
+                            <td class="x">No</td>
+                            <td class="check">7 agents</td>
+                        </tr>
+                        <tr>
+                            <td>Cost per email</td>
+                            <td>~$0.50</td>
+                            <td>~$0.15</td>
+                            <td class="check">$0.03</td>
+                        </tr>
+                        <tr>
+                            <td>Monthly minimum</td>
+                            <td>$15,000+</td>
+                            <td>$49+</td>
+                            <td class="check">$0 (pay-as-you-go)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section">
+        <div class="page">
+            <div class="section-header">
+                <h2>Simple, transparent pricing</h2>
+                <p>No subscriptions. No seat licenses. Pay only for emails that send.</p>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-label">Pay As You Go</div>
+                <div class="pricing-amount"><sup>$</sup>0.03</div>
+                <div class="pricing-unit">per email sent</div>
+                <ul class="pricing-features">
+                    <li><span class="pricing-check">&#10003;</span> $50 free credits to start</li>
+                    <li><span class="pricing-check">&#10003;</span> 105M+ company database access</li>
+                    <li><span class="pricing-check">&#10003;</span> 536M+ verified contacts</li>
+                    <li><span class="pricing-check">&#10003;</span> Pre-warmed sending domains</li>
+                    <li><span class="pricing-check">&#10003;</span> Unlimited follow-up sequences</li>
+                    <li><span class="pricing-check">&#10003;</span> CRM & calendar integration</li>
+                    <li><span class="pricing-check">&#10003;</span> API access included</li>
+                    <li><span class="pricing-check">&#10003;</span> Daily budget caps you control</li>
+                </ul>
+                <a href="https://cal.com/propeloseo/strategy-call" class="cta-button" style="display: block; text-align: center;" target="_blank" rel="noopener">Book Your Strategy Call</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" style="background: var(--bg-alt);">
+        <div class="page">
+            <div class="section-header">
+                <h2>Founders are closing deals on autopilot</h2>
+                <p>Join hundreds of teams who replaced manual prospecting with AI outreach.</p>
+            </div>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p class="testimonial-quote">"I pasted my URL, went to lunch, and came back to three meeting requests in my inbox. This replaced our entire SDR workflow in a day."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">M</div>
+                        <div>
+                            <div class="testimonial-name">Marcus L.</div>
+                            <div class="testimonial-role">Founder, SaaS Startup</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-quote">"The personalization is insane. Prospects reply thinking someone spent 20 minutes researching them. It's seven AI agents doing it in seconds."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">S</div>
+                        <div>
+                            <div class="testimonial-name">Sarah K.</div>
+                            <div class="testimonial-role">Head of Growth, B2B Agency</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-quote">"We tested Apollo, Instantly, and Smartlead. Propelo's deliverability and cost-per-lead blew them all away. 97% inbox rate from day one."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">J</div>
+                        <div>
+                            <div class="testimonial-name">James T.</div>
+                            <div class="testimonial-role">CEO, Growth Consultancy</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-section">
+        <div class="page">
+            <h2>Your next customer is one call away.</h2>
+            <p>Book a free 30-minute strategy call. We'll map your ideal outreach pipeline and show you exactly how it works.</p>
+            <a href="https://cal.com/propeloseo/strategy-call" class="cta-button" target="_blank" rel="noopener">Book a Free Strategy Call</a>
+            <p class="cta-note">No commitment. No pitch. Just a roadmap for your outbound growth.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="page">
+            <div class="footer-inner">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <svg style="width: 24px; height: 24px;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M50 8 C55 8, 68 20, 68 35 C68 42, 62 48, 55 50 L50 50 Z" fill="#4285F4"/>
+                        <path d="M55 50 C62 48, 75 42, 82 48 C88 53, 88 68, 80 75 L50 50 Z" fill="#8B45A6"/>
+                        <path d="M50 50 L80 75 C73 82, 60 88, 52 82 C45 77, 42 62, 50 55 Z" fill="#E8A620"/>
+                        <path d="M50 50 L50 55 C42 62, 30 75, 22 68 C15 62, 15 48, 22 40 L50 50 Z" fill="#34A853"/>
+                        <path d="M50 50 L22 40 C28 32, 38 22, 45 28 C48 30, 50 40, 50 50 Z" fill="#4285F4" opacity="0.7"/>
+                    </svg>
+                    <span style="font-weight: 700; font-size: 14px; color: var(--text);">PropeloSEO</span>
+                    <span>&copy; 2026</span>
+                </div>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="/about/">About</a>
+                    <a href="/Contact/">Contact</a>
+                    <a href="/Privacy/">Privacy</a>
+                    <a href="/Termsofservice/">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
