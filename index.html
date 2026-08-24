@@ -75,6 +75,68 @@
         .trust-dot.green { background: var(--success); }
         .trust-dot.amber { background: var(--gold); }
 
+        /* ── Trust Score Widget ── */
+        .trust-score-section { padding: 56px 0 48px; text-align: center; }
+        .trust-score-section h2 { font-size: clamp(22px, 3.5vw, 30px); letter-spacing: -0.02em; margin-bottom: 8px; }
+        .trust-score-section .section-sub { font-size: 15px; color: var(--text-light); margin-bottom: 28px; }
+        .trust-input-row { display: flex; justify-content: center; gap: 0; max-width: 520px; margin: 0 auto 32px; }
+        .trust-input { flex: 1; padding: 14px 18px; font-size: 16px; border: 2px solid var(--action); border-right: none; border-radius: var(--radius-md) 0 0 var(--radius-md); font-family: inherit; outline: none; color: var(--text); background: var(--bg); }
+        .trust-input:focus { border-color: var(--action-hover); }
+        .trust-input::placeholder { color: #94a3b8; }
+        .trust-btn { padding: 14px 28px; background: var(--action); color: #fff; font-size: 16px; font-weight: 700; border: 2px solid var(--action); border-radius: 0 var(--radius-md) var(--radius-md) 0; cursor: pointer; font-family: inherit; white-space: nowrap; transition: background 0.2s; }
+        .trust-btn:hover { background: var(--action-hover); border-color: var(--action-hover); }
+
+        /* Popup / result card */
+        .trust-popup { display: none; max-width: 600px; margin: 0 auto; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); text-align: left; }
+        .trust-popup.visible { display: block; }
+
+        /* Terminal block */
+        .trust-terminal { background: #1e1e2e; padding: 24px; font-family: "SF Mono", "Cascadia Code", "Fira Code", ui-monospace, monospace; font-size: 13px; line-height: 1.7; position: relative; }
+        .trust-terminal-dots { display: flex; gap: 6px; margin-bottom: 16px; }
+        .trust-terminal-dots span { width: 12px; height: 12px; border-radius: 50%; }
+        .trust-terminal-dots .dot-red { background: #f38ba8; }
+        .trust-terminal-dots .dot-yellow { background: #f9e2af; }
+        .trust-terminal-dots .dot-green { background: #a6e3a1; }
+        .trust-terminal .line { color: #cdd6f4; }
+        .trust-terminal .line .cmd { color: #89b4fa; }
+        .trust-terminal .line .domain { color: #f9e2af; }
+        .trust-terminal .line .label { color: #a6adc8; }
+        .trust-terminal .line .val { color: #cdd6f4; }
+        .trust-terminal .line .val-warn { color: #fab387; }
+        .trust-terminal .line .val-alert { color: #f38ba8; }
+        .trust-terminal .line .val-ok { color: #a6e3a1; }
+        .trust-terminal .line .leak-num { color: #f38ba8; font-weight: 700; }
+        .trust-terminal .line-detail { color: #bac2de; margin-top: 4px; }
+
+        /* Score area */
+        .trust-score-result { background: var(--bg); padding: 28px 24px 32px; }
+        .trust-score-row { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; }
+        .trust-score-num { font-size: 56px; font-weight: 800; letter-spacing: -0.03em; color: var(--text); line-height: 1; }
+        .trust-score-of { font-size: 20px; color: var(--text-light); font-weight: 500; }
+        .trust-score-badge { display: inline-flex; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-left: 8px; }
+        .trust-score-badge.leaking { background: #fee2e2; color: #b91c1c; }
+        .trust-score-badge.warning { background: #fef3c7; color: #92400e; }
+        .trust-score-badge.solid { background: #dcfce7; color: #166534; }
+
+        /* Progress bar */
+        .trust-bar-track { width: 100%; height: 10px; border-radius: 999px; background: #e2e8f0; margin: 12px 0 20px; overflow: hidden; position: relative; }
+        .trust-bar-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, #ef4444 0%, #f59e0b 40%, #22c55e 100%); transition: width 0.6s ease; }
+
+        /* Summary */
+        .trust-summary-headline { font-size: 24px; font-weight: 800; color: var(--text); margin-bottom: 8px; letter-spacing: -0.01em; }
+        .trust-summary-text { font-size: 15px; color: var(--text-light); line-height: 1.6; }
+        .trust-summary-text a { color: var(--action); font-weight: 600; }
+
+        .trust-cta-below { font-size: 15px; color: var(--text); margin-top: 16px; padding: 16px 24px; background: var(--bg-alt); border-top: 1px solid var(--border); }
+        .trust-cta-below strong { color: var(--text); }
+
+        @media (max-width: 480px) {
+            .trust-input-row { flex-direction: column; gap: 8px; }
+            .trust-input { border-right: 2px solid var(--action); border-radius: var(--radius-md); }
+            .trust-btn { border-radius: var(--radius-md); }
+            .trust-score-num { font-size: 42px; }
+        }
+
         /* ── Section scaffolding ── */
         .section { padding: 72px 0; }
         .section-alt { background: var(--bg-alt); }
@@ -271,6 +333,54 @@
         <div class="trust-item"><div class="trust-dot blue"></div> Personally QA'd delivery</div>
     </div>
 </div>
+
+<!-- ════ TRUST SCORE ════ -->
+<section class="trust-score-section section-alt">
+    <div class="wrap">
+        <h2>How visible is your site to AI?</h2>
+        <p class="section-sub">Enter your domain. Get your trust score in seconds.</p>
+        <div class="trust-input-row">
+            <input type="text" class="trust-input" id="trustDomain" placeholder="yourdomain.com" autocomplete="off" spellcheck="false">
+            <button class="trust-btn" id="trustBtn" onclick="showTrustScore()">See my Trust Score</button>
+        </div>
+        <div class="trust-popup" id="trustPopup">
+            <div class="trust-terminal">
+                <div class="trust-terminal-dots"><span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span></div>
+                <div class="line"><span class="cmd">propelo scan</span> <span class="domain" id="termDomain">example.com</span></div>
+                <div class="line"><span class="label">Authority rank </span><span class="val" id="termAuthority">168/1000</span></div>
+                <div class="line"><span class="label">Referring domains </span><span class="val" id="termRefDomains">400</span></div>
+                <div class="line"><span class="label">Homepage status </span><span class="val-warn" id="termHomepage">blocked our crawler (HTTP 403)</span></div>
+                <div class="line"><span class="leak-num" id="termLeakCount">1</span><span class="label"> leak found</span></div>
+                <div class="line-detail" id="termLeakDetail">leak 1: Our scanner (data-centre IP) received HTTP 403 from your homepage. Sites with strict firewall rules block data-centre IPs &mdash; the same class many AI crawlers use. Verify whether real bots are affected.</div>
+            </div>
+            <div class="trust-score-result">
+                <div class="trust-score-row">
+                    <span class="trust-score-num" id="scoreNum">36</span>
+                    <span class="trust-score-of">/100</span>
+                    <span class="trust-score-badge leaking" id="scoreBadge">LEAKING</span>
+                </div>
+                <div class="trust-bar-track">
+                    <div class="trust-bar-fill" id="scoreBar" style="width: 36%;"></div>
+                </div>
+                <div class="trust-summary-headline" id="scoreHeadline">Serious leaks.</div>
+                <p class="trust-summary-text">That's the public layer. The <a href="#audit">full scorecard</a> tests 10 real buyer questions across ChatGPT, Claude, Perplexity and Gemini, and names every business they recommend instead of you.</p>
+            </div>
+            <div class="trust-cta-below">
+                <strong>Want the full picture?</strong> <a href="#audit">Get the $197 AI Visibility Audit</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+function showTrustScore() {
+    var domain = document.getElementById('trustDomain').value.trim();
+    if (!domain) { document.getElementById('trustDomain').focus(); return; }
+    domain = domain.replace(/^https?:\/\//, '').replace(/\/.*$/, '');
+    document.getElementById('termDomain').textContent = domain;
+    document.getElementById('trustPopup').classList.add('visible');
+}
+</script>
 
 <!-- ════ PROBLEM ════ -->
 <section class="section">
