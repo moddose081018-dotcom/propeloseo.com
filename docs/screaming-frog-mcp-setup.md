@@ -66,7 +66,7 @@ Screaming Frog's MCP server runs **locally on the machine where the SEO Spider i
 1. Open SEO Spider with a valid paid licence.
 2. Ensure Database storage mode is active (`File > Settings > Storage Mode`).
 3. Enable Node.js runtime (`File > Settings > MCP Server` > accept Node.js RE).
-4. Start the MCP server (`MCP` menu > `Start MCP Server`).
+4. Start the MCP server (`MCP` menu > `Start MCP Server`). Tick **Auto-start MCP Server on application launch** in `File > Settings > MCP Server` so it comes up with the app from then on.
 5. Install Node.js on the machine (required for the Streamable shim).
 
 **Claude Desktop setup:**
@@ -114,7 +114,7 @@ This calls `sf_list_crawls` and returns the 10 most recent crawls with IDs and s
 
 ## Keeping the Connection Working
 
-Screaming Frog is core to the audit process, so treat the connection as something to verify, not assume. Nothing here auto-starts or self-heals.
+Screaming Frog is core to the audit process, so treat the connection as something to verify, not assume. The MCP server can start itself — tick **Auto-start MCP Server on application launch** in `File > Settings > MCP Server`, which is the single best setting for keeping the connection up. Nothing else here self-heals.
 
 ### Licence renewal — the biggest single risk
 
@@ -141,7 +141,7 @@ If step 6 works, the connection is good. If it fails, the table below covers eve
 |---|---|---|
 | All `sf_*` tools fail after working fine | Licence expired | Renew, then restart the Spider |
 | Tools missing from Claude Desktop entirely | Extension disabled or removed by an app update | Re-install the `.mcpb`, fully quit and reopen Claude Desktop |
-| "MCP Server Active" absent from the Spider | Server not started — it does not auto-start | `MCP` menu > Start MCP Server |
+| "MCP Server Active" absent from the Spider | Server not running, and **Auto-start MCP Server on application launch** is unticked in `File > Settings > MCP Server` | Tick auto-start so it comes up with the app; start it now via the `MCP` menu > Start MCP Server |
 | Connection refused on port 11435 | Spider closed, or another process holds the port | Reopen the Spider; check for a port conflict |
 | MCP options greyed out in settings | Storage mode reverted to RAM | Switch to Database storage, restart the Spider |
 | Extension installs but never starts | Node.js runtime not accepted, or Node.js missing | `File > Settings > MCP Server` > accept the Node.js RE; install Node.js |
@@ -154,7 +154,7 @@ Re-run the preflight checklist after upgrading either the SEO Spider or Claude D
 
 ### Do not let it become a silent dependency
 
-Because the Spider must be open and its MCP server manually started, a Frog-dependent audit can fail at the worst moment. For recurring client work, either run the preflight checklist first, or export the crawl to CSV up front so the analysis no longer depends on a live connection.
+Even with auto-start enabled, the SEO Spider itself must be open for the MCP server to be reachable, so a Frog-dependent audit can still fail at the worst moment. For recurring client work, either run the preflight checklist first, or export the crawl to CSV up front so the analysis no longer depends on a live connection.
 
 ## Available MCP Tools
 
