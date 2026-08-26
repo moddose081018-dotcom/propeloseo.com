@@ -2,6 +2,34 @@
 
 Reference for connecting Screaming Frog SEO Spider to Claude Desktop (or LM Studio) via its built-in MCP server.
 
+## Which Claude Surface Can Use It
+
+**Read this first — it is the most common source of confusion.** Claude Desktop and Claude Code on the web are separate clients with separate MCP configuration. An extension installed in one is invisible to the other, so "we've had Screaming Frog connected for months" and "Screaming Frog isn't connected in this session" can both be true at the same time.
+
+| Surface | Where its MCP config lives | Screaming Frog |
+|---|---|---|
+| **Claude Desktop** (local app) | Installed `.mcpb` extension / `claude_desktop_config.json` | Available — this is the setup documented below |
+| **LM Studio** (local app) | `mcp.json` | Available |
+| **Claude Code CLI**, run on the Frog machine | `.mcp.json` / `claude mcp add` | Should work (same localhost), though not vendor-documented |
+| **Claude Code on the web** / any cloud session | claude.ai account connectors | Never available |
+
+The rule is **same machine or nothing**. The MCP server binds to `127.0.0.1:11435`, so any MCP client running on the same machine as the SEO Spider can reach it. Cloud sessions run in ephemeral containers with no network route to your localhost — `curl http://127.0.0.1:11435/mcp` from one returns connection refused.
+
+Screaming Frog publishes no hosted or remote MCP server, so it will never appear in the claude.ai connector list alongside Ahrefs, DataForSEO, or SE Ranking. Its absence there is expected, not a broken connection.
+
+### Do not tunnel it
+
+Exposing the endpoint publicly (ngrok, Cloudflare Tunnel, router port-forward) so a cloud session can reach it is not a supported workaround and is actively unsafe. The tool surface includes `sf_run_node_js_script`, `sf_npm_install`, and `sf_write_text_file` — arbitrary code execution and filesystem writes on the host. Bound to localhost that is fine. Published to the internet with no authentication in front of it, it is a remote code execution endpoint on your workstation.
+
+### Getting Frog data into a cloud session
+
+1. Run the crawl in Claude Desktop (or the SEO Spider UI) on the local machine.
+2. Export the tabs and reports you need as CSV.
+3. Commit them to this repo, or upload to Google Drive — that connector *is* available in cloud sessions.
+4. The cloud session can then read and analyse the exports directly.
+
+For audit work that does not specifically need Frog, the Ahrefs and SE Ranking site audit tools are available in cloud sessions and cover status codes, canonicals, indexability, and titles/meta. What they do not replace is Frog's custom extraction, JavaScript rendering configuration, and crawl-to-crawl comparison.
+
 ## Requirements
 
 | Requirement | Detail |
@@ -83,6 +111,50 @@ After setup, the extension should appear under `Settings > Developer` in Claude 
 > List my recent Screaming Frog crawls.
 
 This calls `sf_list_crawls` and returns the 10 most recent crawls with IDs and status. No crawl is started.
+
+## Keeping the Connection Working
+
+Screaming Frog is core to the audit process, so treat the connection as something to verify, not assume. Nothing here auto-starts or self-heals.
+
+### Licence renewal — the biggest single risk
+
+**Current licence expires 31 Aug 2026 (username: `moddose`).**
+
+MCP is a paid-only feature. The day the licence lapses, every `sf_*` tool stops working — no warning inside Claude, just failures. Renew at least a week before expiry and update the date in the Requirements table above whenever it changes.
+
+### Preflight checklist
+
+Run this before any client audit that depends on Frog. Takes about thirty seconds.
+
+1. SEO Spider is open (required for Streamable HTTP mode).
+2. Bottom-left of the Spider reads **MCP Server Active**.
+3. `File > Settings > Storage Mode` is set to **Database**.
+4. Licence is current (`Licence > Enter Licence Key` shows a future expiry date).
+5. Claude Desktop `Settings > Developer` lists the extension as **running**.
+6. Ask: *"List my recent Screaming Frog crawls."* A list comes back, nothing is crawled.
+
+If step 6 works, the connection is good. If it fails, the table below covers every failure mode seen so far.
+
+### Failure modes
+
+| Symptom | Likely cause | Fix |
+|---|---|---|
+| All `sf_*` tools fail after working fine | Licence expired | Renew, then restart the Spider |
+| Tools missing from Claude Desktop entirely | Extension disabled or removed by an app update | Re-install the `.mcpb`, fully quit and reopen Claude Desktop |
+| "MCP Server Active" absent from the Spider | Server not started — it does not auto-start | `MCP` menu > Start MCP Server |
+| Connection refused on port 11435 | Spider closed, or another process holds the port | Reopen the Spider; check for a port conflict |
+| MCP options greyed out in settings | Storage mode reverted to RAM | Switch to Database storage, restart the Spider |
+| Extension installs but never starts | Node.js runtime not accepted, or Node.js missing | `File > Settings > MCP Server` > accept the Node.js RE; install Node.js |
+| Worked before a Frog upgrade, broken after | Install path changed, so the `.mcpb` points at nothing | Edit the `.mcpb` to the new install path, or re-download it |
+| Tools present but every call errors in a cloud session | Wrong surface — see [Which Claude Surface Can Use It](#which-claude-surface-can-use-it) | Use Claude Desktop on the Frog machine |
+
+### After any upgrade
+
+Re-run the preflight checklist after upgrading either the SEO Spider or Claude Desktop. Both have broken the connection before: Spider upgrades can move the install path the `.mcpb` references, and Claude Desktop updates can disable extensions. Neither reports the failure until a tool call fails mid-audit.
+
+### Do not let it become a silent dependency
+
+Because the Spider must be open and its MCP server manually started, a Frog-dependent audit can fail at the worst moment. For recurring client work, either run the preflight checklist first, or export the crawl to CSV up front so the analysis no longer depends on a live connection.
 
 ## Available MCP Tools
 
