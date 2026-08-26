@@ -70,14 +70,14 @@ Screaming Frog's MCP server runs **locally on the machine where the SEO Spider i
 5. Install Node.js on the machine (required for the Streamable shim).
 
 **Claude Desktop setup:**
-1. Download the Streamable MCP extension: `spider-streamable-mcp.mcpb` from Screaming Frog's website.
+1. Download the Streamable MCP extension: <https://download.screamingfrog.co.uk/products/seo-spider/spider-streamable-mcp.mcpb>
 2. In Claude Desktop: `Settings > Extensions > Advanced Settings > Install Extension`.
 3. Select the downloaded `.mcpb` file and click Install.
 4. Fully quit and reopen Claude Desktop (on Windows, close from the system tray, not just the window).
 
 The `.mcpb` file assumes the default install path (`C:\Program Files (x86)\` on Windows, `/Applications/` on macOS). Edit the file if your install path differs.
 
-**Equivalent manual config** (for `claude_desktop_config.json` or LM Studio's `mcp.json`):
+**LM Studio config** (`mcp.json` — `Developer > Local Server > mcp.json`):
 
 ```json
 {
@@ -89,13 +89,17 @@ The `.mcpb` file assumes the default install path (`C:\Program Files (x86)\` on 
 }
 ```
 
+> **This is for LM Studio only. Do not put it in `claude_desktop_config.json`.**
+>
+> Screaming Frog documents the bare `url` form solely under its LM Studio instructions. Claude Desktop installs MCP servers through the `.mcpb` extension mechanism above, and silently ignores a `url` entry in `claude_desktop_config.json` — the server simply never appears under `Settings > Developer`, with no error to explain why. Substituting an `npx mcp-remote` shim in that file does not work either. Use the extension.
+
 ### STDIO (headless, no UI)
 
 **Prerequisites:**
 1. Enable Node.js runtime (`File > Settings > MCP Server` > accept Node.js RE).
 
 **Claude Desktop setup:**
-1. Download the STDIO MCP extension: `spider-stdio-mcp.mcpb` from Screaming Frog's website.
+1. Download the STDIO MCP extension: <https://download.screamingfrog.co.uk/products/seo-spider/spider-stdio-mcp.mcpb>
 2. In Claude Desktop: `Settings > Extensions > Advanced Settings > Install Extension`.
 3. Select the downloaded `.mcpb` file and click Install.
 4. Fully quit and reopen Claude Desktop.
@@ -141,6 +145,7 @@ If step 6 works, the connection is good. If it fails, the table below covers eve
 |---|---|---|
 | All `sf_*` tools fail after working fine | Licence expired | Renew, then restart the Spider |
 | Tools missing from Claude Desktop entirely | Extension disabled or removed by an app update | Re-install the `.mcpb`, fully quit and reopen Claude Desktop |
+| Server never appears under `Settings > Developer`, no error shown | Configured by hand in `claude_desktop_config.json` instead of installing the `.mcpb`. Claude Desktop ignores both a `url` entry and an `npx mcp-remote` shim there, silently | Remove the entry from the config file and install the `.mcpb` extension instead |
 | "MCP Server Active" absent from the Spider | Server not running, and **Auto-start MCP Server on application launch** is unticked in `File > Settings > MCP Server` | Tick auto-start so it comes up with the app; start it now via the `MCP` menu > Start MCP Server |
 | Connection refused on port 11435 | Spider closed, or another process holds the port | Reopen the Spider; check for a port conflict |
 | MCP options greyed out in settings | Storage mode reverted to RAM | Switch to Database storage, restart the Spider |
