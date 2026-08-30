@@ -115,9 +115,11 @@ bare rate.
 descending by length** so `"Wedding Photo Booth"` matches before `"Photo Booth"`.
 Escape regex metacharacters in the names.
 
-> **Porting note.** Climby gets citations from structured `url_citation`
-> annotations. Whether DataForSEO's AI-optimization endpoints return citations in
-> a comparable structured form is the single biggest unknown in this spec — see §9.
+> **Resolved 2026-08-30.** DataForSEO's `ai_optimization_llm_response` returns
+> structured citations under `items[].sections[].annotations[]` — `title`, `url`,
+> `start_index`, `end_index`. Richer than the reference implementation's source:
+> the character offsets give citation order for free, so `position` can be
+> populated rather than left null. Implemented in `tools/ai-visibility/`.
 
 ---
 
@@ -257,16 +259,22 @@ run entirely from the agent side with no service to host.
 
 ## 9. Verify before building
 
-1. **Does `ai_optimization_llm_response` return structured citations?** The whole
-   citation half of the spec depends on it. If it returns only prose, fall back to
-   URL-extraction from the answer text and corroborate via Ahrefs Brand Radar —
-   and say so plainly in client deliverables rather than implying parity.
-2. **Per-call cost × prompt count × models × months.** Twenty-five prompts × four
-   engines is 100 subject calls plus 100 judging calls per client per month.
-   Confirm that fits inside $97 before promising it.
-3. **Judge stability.** Run the same stored response through the judge three times.
-   If `alignment_score` moves more than a few points, the composite is not
-   trendable and needs a lower temperature or a coarser scale.
+1. ~~**Does `ai_optimization_llm_response` return structured citations?**~~
+   **Answered — yes.** See §4. Stage one is built and tested against a real
+   payload in `tools/ai-visibility/`.
+2. ~~**Per-call cost.**~~ **Answered.** A live `gpt-4o-mini` call with web search
+   reported `money_spent` of **$0.0266**. Twenty-five prompts × four engines is
+   roughly **$2.66 per client per month** for subject calls — comfortably inside
+   $97, even before judging costs. Re-check on a reasoning model, which will cost
+   materially more.
+3. **Judge stability.** Still open, and only matters once stage two is built. Run
+   the same stored response through the judge three times. If `alignment_score`
+   moves more than a few points, the composite is not trendable and needs a lower
+   temperature or a coarser scale.
+4. **Citation noise.** New, found while building stage one. Models attach
+   citations that do not support the adjacent claim — 4 of 9 cited domains in the
+   first real answer were irrelevant. Cited-domain lists need a human pass before
+   reaching a client; do not present the raw list as "who the AI trusts".
 
 ---
 
@@ -283,3 +291,7 @@ text.
 
 **It would also let the Trust Score scanner return real numbers instead of the
 hardcoded sample it serves today.**
+
+Stage one now exists: `tools/ai-visibility/`. Pure parser, nine passing tests
+against a real captured payload, and a report that already produces mention
+rate, citation rate, cited domains and competitor share of voice.
