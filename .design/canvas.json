@@ -1,0 +1,54 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "title": "A · Evidence-first (leading)", "x": 0, "y": 0, "w": 1440, "h": 1360 },
+    { "file": "MainMobile.dc.html", "title": "A · mobile, 390 wide", "x": 1560, "y": 0, "w": 390, "h": 1340 },
+    { "file": "Editorial.dc.html", "title": "B · Editorial ledger", "x": 0, "y": 1820, "w": 1440, "h": 1200 },
+    { "file": "SprintBoard.dc.html", "title": "C · Sprint board", "x": 1560, "y": 1820, "w": 1440, "h": 1020 },
+    { "file": "PriceForward.dc.html", "title": "D · Price-forward", "x": 0, "y": 3480, "w": 1440, "h": 960 }
+  ],
+  "annotations": [
+    {
+      "id": "dir-a",
+      "x": 0,
+      "y": -340,
+      "w": 1100,
+      "text": "A · EVIDENCE-FIRST  — my pick\n\nThe Trust Score scan becomes the hero image instead of sitting halfway down the page. Dark fold, IBM Plex Sans + Plex Mono, the Catppuccin terminal you already built promoted to the thing people see first.\n\nWhy: the live scan is the one thing on this page no other $97 SEO offer has. Leading with a real 403 and a 36/100 does the arguing for you.\nTradeoff: reads technical. A non-technical owner may see a terminal and assume this is a tool, not a service."
+    },
+    {
+      "id": "dir-a-phone",
+      "x": 1560,
+      "y": -340,
+      "w": 560,
+      "text": "Direction A at phone width — the whole page, not one screen.\n\nHeadline drops to 34px, CTAs go full-width at 54px tall, the scan table loses the long leak sentence. The first screen still ends on a button."
+    },
+    {
+      "id": "dir-b",
+      "x": 0,
+      "y": 1480,
+      "w": 1100,
+      "text": "B · EDITORIAL LEDGER\n\nNewsreader serif over Public Sans, hairline rules, small-caps labels, blue used only as ink. The scan is a ruled ledger table, not a terminal.\n\nWhy: it matches how you already write — \"capacity-true scarcity, not a countdown timer\", \"honest attribution\". This looks like an analyst's letter, and nothing else in the category looks like it.\nTradeoff: quiet. Less obviously software, and the CTA has to work harder without a loud fold."
+    },
+    {
+      "id": "dir-c",
+      "x": 1560,
+      "y": 1480,
+      "w": 1100,
+      "text": "C · SPRINT BOARD\n\nSpace Grotesk, borders instead of shadows, compact hero. The 90-day board is the fold: all three months with full checklists visible without scrolling.\n\nWhy: answers \"what do I actually get for $97\" in about four seconds, which is the objection your pricing section currently absorbs.\nTradeoff: dense. It sells the mechanics well and the outcome poorly, and there is no room left for the AI-visibility story up top."
+    },
+    {
+      "id": "dir-d",
+      "x": 0,
+      "y": 3140,
+      "w": 1100,
+      "text": "D · PRICE-FORWARD\n\nArchivo at 88px, $97 set at 152px, one sentence, one button, a lot of white. Everything else pushed below the fold.\n\nWhy: $97 against a $2,000 category is the strongest number on the page. This is the version that makes the price the argument.\nTradeoff: the AI-visibility differentiator and the scanner both disappear below the fold, so it competes on cheapness rather than on what makes you different."
+    },
+    {
+      "id": "shared",
+      "x": 1560,
+      "y": 3480,
+      "w": 900,
+      "text": "Shared across all four:\n\nYour existing tokens — #2563eb action, #0f172a dark, slate text, the Catppuccin terminal palette, 16/10/6px radii — all carried over. Copy is lifted from the live page; nothing invented.\n\nEmoji icons in the problem cards are replaced with stroke SVG throughout.\n\nDirection A carries one accent-colour lever above the artboard; the other three are fixed."
+    }
+  ],
+  "launch": { "view": "canvas" }
+}
