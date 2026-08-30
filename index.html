@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>PropeloSEO - The 90-Day Visibility Sprint | $97/mo</title>
-    <meta name="description" content="PropeloSEO turns live professional SEO data into one publish-ready Growth Pack every month. AI visibility tracking, technical monitoring, and a real fix in month one. $97/mo, cancel anytime.">
+    <title>AI SEO Services | AI Visibility Monitoring from $97/mo | PropeloSEO</title>
+    <meta name="description" content="AI SEO services for small businesses. We track ChatGPT, Google AI Overviews and AI Mode, then deliver one publish-ready SEO asset every month. $97/mo, cancel anytime.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="canonical" href="https://propeloseo.com/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 
     <style>
         :root {
@@ -13,242 +16,297 @@
             --bg-alt: #f8fafc;
             --bg-dark: #0f172a;
             --text: #1e293b;
+            --text-mid: #475569;
             --text-light: #64748b;
-            --text-inv: #f1f5f9;
+            --text-inv: #f8fafc;
+            --text-inv-mid: #94a3b8;
             --border: #e2e8f0;
+            --border-strong: #cbd5e1;
             --action: #2563eb;
             --action-hover: #1d4ed8;
             --action-soft: #eff6ff;
             --accent: #0ea5e9;
+            --accent-light: #38bdf8;
             --success: #059669;
-            --success-soft: #ecfdf5;
+            --success-bright: #34d399;
             --gold: #d97706;
-            --gold-soft: #fffbeb;
+            --gold-light: #fbbf24;
             --radius-lg: 16px;
             --radius-md: 10px;
             --radius-sm: 6px;
             --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
             --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
             --shadow-lg: 0 12px 40px rgba(0,0,0,0.1);
+            --sans: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+            --mono: "IBM Plex Mono", "SF Mono", ui-monospace, monospace;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        body { font-family: var(--sans); background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
         a { color: var(--action); text-decoration: none; transition: color 0.2s; }
-        a:hover { text-decoration: underline; }
+        a:hover { color: var(--action-hover); }
         img { max-width: 100%; height: auto; display: block; }
-        .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+        h1, h2, h3 { line-height: 1.15; letter-spacing: -0.028em; }
+        .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* ── Shared atoms ── */
+        .kicker { font-family: var(--mono); font-size: 11.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--action); }
+        .kicker-inv { color: var(--accent-light); }
+        .section { padding: 76px 0; }
+        .section-alt { background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .section-dark { background: var(--bg-dark); color: var(--text-inv); }
+        .section-head { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; margin-bottom: 44px; }
+        .section-head h2 { font-size: clamp(26px, 3.4vw, 34px); font-weight: 700; max-width: 800px; text-wrap: pretty; }
+        .section-head p { font-size: clamp(15px, 1.6vw, 16.5px); color: var(--text-light); max-width: 640px; }
+        .section-dark .section-head h2 { color: var(--text-inv); }
+        .section-dark .section-head p { color: var(--text-inv-mid); }
+
+        .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 30px; border-radius: 9px; font-family: inherit; font-size: 16px; font-weight: 600; letter-spacing: -0.01em; border: 1px solid transparent; cursor: pointer; transition: all 0.2s; text-align: center; }
+        .btn-primary { background: var(--action); color: #fff; }
+        .btn-primary:hover { background: var(--action-hover); color: #fff; transform: translateY(-1px); box-shadow: var(--shadow-md); }
+        .btn-ghost-inv { background: transparent; border-color: rgba(148,163,184,0.35); color: #e2e8f0; font-weight: 500; }
+        .btn-ghost-inv:hover { border-color: rgba(148,163,184,0.7); color: #fff; }
+        .btn-ghost { background: var(--bg); border-color: var(--border-strong); color: var(--text); }
+        .btn-ghost:hover { border-color: var(--action); color: var(--action); }
+        .btn-block { width: 100%; }
+
+        .card { border: 1px solid var(--border); border-radius: 14px; padding: 26px; background: var(--bg); }
+        .card h3 { font-size: 17px; font-weight: 600; letter-spacing: -0.015em; margin-bottom: 10px; }
+        .card p { font-size: 14.5px; color: var(--text-light); }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+        .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+        .tick { flex-shrink: 0; margin-top: 3px; }
 
         /* ── Header ── */
-        .site-header { border-bottom: 1px solid var(--border); background: var(--bg); position: sticky; top: 0; z-index: 100; }
-        .site-header .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-        .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 18px; color: var(--text); letter-spacing: -0.02em; }
-        .logo:hover { text-decoration: none; }
-        .logo-mark { width: 30px; height: 30px; border-radius: 8px; background: linear-gradient(135deg, var(--action), var(--accent)); }
-        .site-nav { display: flex; align-items: center; gap: 28px; }
-        .site-nav a { color: var(--text-light); font-size: 14px; font-weight: 500; }
-        .site-nav a:hover { color: var(--text); text-decoration: none; }
-        .nav-cta { display: inline-flex; align-items: center; padding: 8px 18px; border-radius: var(--radius-sm); background: var(--action); color: #fff !important; font-weight: 600; font-size: 14px; transition: background 0.2s; }
-        .nav-cta:hover { background: var(--action-hover); text-decoration: none; }
+        .site-header { background: var(--bg-dark); border-bottom: 1px solid rgba(148,163,184,0.14); position: sticky; top: 0; z-index: 100; }
+        .site-header .wrap { display: flex; align-items: center; justify-content: space-between; height: 76px; }
+        .logo { display: flex; align-items: center; gap: 11px; font-size: 18px; font-weight: 700; letter-spacing: -0.025em; color: var(--text-inv); }
+        .logo:hover { color: #fff; }
+        .logo-mark { width: 32px; height: 32px; border-radius: 8px; background: var(--action); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .site-nav { display: flex; align-items: center; gap: 30px; }
+        .site-nav a { font-size: 14px; font-weight: 500; color: var(--text-inv-mid); }
+        .site-nav a:hover { color: var(--text-inv); }
+        .nav-cta { display: inline-flex; align-items: center; height: 40px; padding: 0 20px; border-radius: 7px; background: var(--action); color: #fff !important; font-size: 14px; font-weight: 600; }
+        .nav-cta:hover { background: var(--action-hover); }
 
         /* ── Hero ── */
-        .hero { padding: 72px 0 56px; text-align: center; }
-        .hero-kicker { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--action); background: var(--action-soft); padding: 6px 16px; border-radius: 999px; margin-bottom: 20px; }
-        .hero h1 { font-size: clamp(32px, 5vw, 48px); line-height: 1.15; letter-spacing: -0.03em; max-width: 720px; margin: 0 auto 16px; }
-        .hero-sub { font-size: 18px; color: var(--text-light); max-width: 600px; margin: 0 auto 32px; line-height: 1.6; }
-        .hero-price { display: inline-flex; align-items: baseline; gap: 8px; margin-bottom: 28px; }
-        .hero-price .amount { font-size: 48px; font-weight: 800; letter-spacing: -0.03em; color: var(--text); }
-        .hero-price .per { font-size: 18px; color: var(--text-light); font-weight: 500; }
-        .hero-price .cancel { font-size: 14px; color: var(--success); font-weight: 600; }
-        .hero-cta-row { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
-        .btn-primary { display: inline-flex; align-items: center; justify-content: center; padding: 14px 32px; border-radius: var(--radius-md); background: var(--action); color: #fff; font-weight: 700; font-size: 16px; transition: all 0.2s; border: none; cursor: pointer; }
-        .btn-primary:hover { background: var(--action-hover); text-decoration: none; transform: translateY(-1px); box-shadow: var(--shadow-md); }
-        .btn-secondary { display: inline-flex; align-items: center; justify-content: center; padding: 14px 32px; border-radius: var(--radius-md); background: var(--bg); color: var(--text); font-weight: 600; font-size: 16px; border: 1px solid var(--border); transition: all 0.2s; cursor: pointer; }
-        .btn-secondary:hover { border-color: var(--action); color: var(--action); text-decoration: none; }
-        .hero-note { font-size: 13px; color: var(--text-light); }
+        .hero { background: var(--bg-dark); }
+        .hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr) 560px; gap: 64px; align-items: start; padding-top: 68px; padding-bottom: 76px; }
+        .hero-copy { display: flex; flex-direction: column; align-items: flex-start; gap: 22px; padding-top: 6px; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 9px; padding: 7px 15px 7px 12px; border-radius: 999px; background: rgba(37,99,235,0.18); border: 1px solid rgba(59,130,246,0.35); font-family: var(--mono); font-size: 11.5px; font-weight: 500; letter-spacing: 0.13em; text-transform: uppercase; color: #93c5fd; }
+        .hero-badge::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent-light); flex-shrink: 0; }
+        .hero h1 { font-size: clamp(32px, 5.2vw, 54px); line-height: 1.06; letter-spacing: -0.035em; font-weight: 700; color: var(--text-inv); max-width: 560px; text-wrap: pretty; }
+        .hero-sub { font-size: clamp(15.5px, 1.8vw, 17px); line-height: 1.65; color: var(--text-inv-mid); max-width: 520px; text-wrap: pretty; }
+        .hero-price { display: flex; align-items: baseline; flex-wrap: wrap; gap: 12px; }
+        .hero-price .amount { font-size: clamp(38px, 4.4vw, 46px); font-weight: 700; letter-spacing: -0.04em; color: var(--text-inv); line-height: 1; }
+        .hero-price .per { font-size: 16px; font-weight: 500; color: var(--text-inv-mid); }
+        .hero-meta { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 14px; margin-top: -14px; }
+        .hero-meta .sep { width: 1px; height: 14px; background: rgba(148,163,184,0.3); }
+        .hero-meta .note { font-size: 14px; color: var(--text-inv-mid); }
+        .hero-meta .ok { display: inline-flex; align-items: center; gap: 6px; color: var(--success-bright); font-size: 14px; font-weight: 600; }
+        .hero-cta { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+        .hero-guarantee { display: flex; align-items: flex-start; gap: 9px; max-width: 480px; font-size: 13.5px; line-height: 1.55; color: var(--text-light); }
+        .hero-guarantee svg { flex-shrink: 0; margin-top: 2px; }
 
-        /* ── Trust Bar ── */
-        .trust-bar { padding: 16px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-        .trust-bar .wrap { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; align-items: center; }
-        .trust-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-light); font-weight: 500; }
-        .trust-dot { width: 8px; height: 8px; border-radius: 50%; }
-        .trust-dot.blue { background: var(--action); }
-        .trust-dot.green { background: var(--success); }
-        .trust-dot.amber { background: var(--gold); }
+        /* ── Terminal / scan card ── */
+        .scan-card { border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,0.45); border: 1px solid rgba(148,163,184,0.14); }
+        .term { background: #1e1e2e; padding: 22px 24px 24px; font-family: var(--mono); font-size: 13px; line-height: 1.75; overflow-x: auto; }
+        .term-dots { display: flex; gap: 7px; margin-bottom: 18px; }
+        .term-dots span { width: 11px; height: 11px; border-radius: 50%; }
+        .dot-r { background: #f38ba8; } .dot-y { background: #f9e2af; } .dot-g { background: #a6e3a1; }
+        .term .cmd { color: #89b4fa; } .term .dom { color: #f9e2af; } .term .base { color: #cdd6f4; }
+        .term-rows { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 0 12px; margin-top: 12px; }
+        .term-rows dt { color: #a6adc8; } .term-rows dd { color: #cdd6f4; }
+        .term-rows dd.warn { color: #fab387; } .term-rows dd.alert { color: #f38ba8; }
+        .term-leak { margin-top: 14px; color: #f38ba8; font-weight: 600; }
+        .term-detail { margin-top: 6px; color: #bac2de; font-size: 12.5px; line-height: 1.7; }
+        .score { background: var(--bg); padding: 26px 26px 24px; }
+        .score-row { display: flex; align-items: baseline; flex-wrap: wrap; gap: 10px; }
+        .score-num { font-size: clamp(42px, 5vw, 52px); font-weight: 700; letter-spacing: -0.04em; color: var(--text); line-height: 1; }
+        .score-of { font-size: 19px; font-weight: 500; color: var(--text-light); }
+        .score-badge { padding: 4px 11px; border-radius: 5px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; background: #fee2e2; color: #b91c1c; }
+        .score-badge.warning { background: #fef3c7; color: #92400e; }
+        .score-badge.solid { background: #dcfce7; color: #166534; }
+        .score-track { width: 100%; height: 9px; border-radius: 999px; background: var(--border); margin: 16px 0 18px; overflow: hidden; }
+        .score-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, #ef4444 0%, #f59e0b 100%); transition: width 0.6s ease; }
+        .score h3 { font-size: 21px; font-weight: 700; letter-spacing: -0.015em; }
+        .score p { margin-top: 7px; font-size: 14.5px; line-height: 1.6; color: var(--text-light); }
+        .scan-foot { background: var(--bg-alt); border-top: 1px solid var(--border); padding: 15px 26px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 14px; }
+        .scan-foot a { font-weight: 600; }
 
-        /* ── Trust Score Widget ── */
-        .trust-score-section { padding: 56px 0 48px; text-align: center; }
-        .trust-score-section h2 { font-size: clamp(22px, 3.5vw, 30px); letter-spacing: -0.02em; margin-bottom: 8px; }
-        .trust-score-section .section-sub { font-size: 15px; color: var(--text-light); margin-bottom: 28px; }
-        .trust-input-row { display: flex; justify-content: center; gap: 0; max-width: 520px; margin: 0 auto 32px; }
-        .trust-input { flex: 1; padding: 14px 18px; font-size: 16px; border: 2px solid var(--action); border-right: none; border-radius: var(--radius-md) 0 0 var(--radius-md); font-family: inherit; outline: none; color: var(--text); background: var(--bg); }
-        .trust-input:focus { border-color: var(--action-hover); }
-        .trust-input::placeholder { color: #94a3b8; }
-        .trust-btn { padding: 14px 28px; background: var(--action); color: #fff; font-size: 16px; font-weight: 700; border: 2px solid var(--action); border-radius: 0 var(--radius-md) var(--radius-md) 0; cursor: pointer; font-family: inherit; white-space: nowrap; transition: background 0.2s; }
-        .trust-btn:hover { background: var(--action-hover); border-color: var(--action-hover); }
+        /* ── Source bar ── */
+        .sources { border-bottom: 1px solid var(--border); padding: 26px 0; }
+        .sources .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+        .sources-label { font-family: var(--mono); font-size: 11.5px; font-weight: 500; letter-spacing: 0.13em; text-transform: uppercase; color: var(--text-inv-mid); }
+        .source-chips { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+        .chip { display: flex; align-items: center; gap: 9px; padding: 9px 16px; border: 1px solid var(--border); border-radius: 8px; font-size: 13.5px; font-weight: 500; }
+        .chip::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--action); flex-shrink: 0; }
+        .chip.c2::before { background: var(--accent); } .chip.c3::before { background: var(--success); } .chip.c4::before { background: var(--gold); }
 
-        /* Popup / result card */
-        .trust-popup { display: none; max-width: 600px; margin: 0 auto; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); text-align: left; }
-        .trust-popup.visible { display: block; }
+        /* ── Scanner ── */
+        .scanner { background: var(--bg-alt); border-bottom: 1px solid var(--border); padding: 46px 0; }
+        .scanner .wrap { display: grid; grid-template-columns: minmax(0, 1fr) 600px; gap: 56px; align-items: center; }
+        .scanner h2 { font-size: clamp(23px, 2.8vw, 28px); font-weight: 700; margin-bottom: 8px; text-wrap: pretty; }
+        .scanner p { font-size: 15.5px; color: var(--text-light); max-width: 480px; }
+        .scan-form { display: flex; }
+        .scan-input { flex: 1; min-width: 0; height: 56px; padding: 0 18px; font-family: inherit; font-size: 16px; color: var(--text); background: var(--bg); border: 2px solid var(--action); border-right: none; border-radius: 9px 0 0 9px; outline: none; }
+        .scan-input::placeholder { color: #94a3b8; }
+        .scan-input:focus { border-color: var(--action-hover); }
+        .scan-btn { height: 56px; padding: 0 28px; background: var(--action); border: 2px solid var(--action); border-radius: 0 9px 9px 0; color: #fff; font-family: inherit; font-size: 16px; font-weight: 600; white-space: nowrap; cursor: pointer; transition: background 0.2s; }
+        .scan-btn:hover { background: var(--action-hover); border-color: var(--action-hover); }
+        .scan-hint { margin-top: 10px; font-size: 13px; color: var(--text-inv-mid); }
+        .scan-result { display: none; margin-top: 24px; }
+        .sample-tag { display: flex; align-items: center; gap: 8px; padding: 10px 24px; background: #fef3c7; border-bottom: 1px solid #fde68a; font-size: 12.5px; font-weight: 600; color: #92400e; }
+        .sample-tag svg { flex-shrink: 0; }
+        .scan-result.visible { display: block; }
 
-        /* Terminal block */
-        .trust-terminal { background: #1e1e2e; padding: 24px; font-family: "SF Mono", "Cascadia Code", "Fira Code", ui-monospace, monospace; font-size: 13px; line-height: 1.7; position: relative; }
-        .trust-terminal-dots { display: flex; gap: 6px; margin-bottom: 16px; }
-        .trust-terminal-dots span { width: 12px; height: 12px; border-radius: 50%; }
-        .trust-terminal-dots .dot-red { background: #f38ba8; }
-        .trust-terminal-dots .dot-yellow { background: #f9e2af; }
-        .trust-terminal-dots .dot-green { background: #a6e3a1; }
-        .trust-terminal .line { color: #cdd6f4; }
-        .trust-terminal .line .cmd { color: #89b4fa; }
-        .trust-terminal .line .domain { color: #f9e2af; }
-        .trust-terminal .line .label { color: #a6adc8; }
-        .trust-terminal .line .val { color: #cdd6f4; }
-        .trust-terminal .line .val-warn { color: #fab387; }
-        .trust-terminal .line .val-alert { color: #f38ba8; }
-        .trust-terminal .line .val-ok { color: #a6e3a1; }
-        .trust-terminal .line .leak-num { color: #f38ba8; font-weight: 700; }
-        .trust-terminal .line-detail { color: #bac2de; margin-top: 4px; }
+        /* ── Problem cards ── */
+        .icon-box { width: 42px; height: 42px; border-radius: var(--radius-md); background: #f1f5f9; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+        .icon-box.blue { background: var(--action-soft); }
 
-        /* Score area */
-        .trust-score-result { background: var(--bg); padding: 28px 24px 32px; }
-        .trust-score-row { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; }
-        .trust-score-num { font-size: 56px; font-weight: 800; letter-spacing: -0.03em; color: var(--text); line-height: 1; }
-        .trust-score-of { font-size: 20px; color: var(--text-light); font-weight: 500; }
-        .trust-score-badge { display: inline-flex; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-left: 8px; }
-        .trust-score-badge.leaking { background: #fee2e2; color: #b91c1c; }
-        .trust-score-badge.warning { background: #fef3c7; color: #92400e; }
-        .trust-score-badge.solid { background: #dcfce7; color: #166534; }
+        /* ── Why now ── */
+        .why .wrap { display: grid; grid-template-columns: 400px minmax(0, 1fr); gap: 72px; align-items: start; }
+        .why h2 { font-size: clamp(26px, 3.4vw, 34px); font-weight: 700; text-wrap: pretty; margin-top: 12px; }
+        .prose { display: flex; flex-direction: column; gap: 18px; max-width: 740px; }
+        .prose p { font-size: 15.5px; line-height: 1.75; color: var(--text-mid); }
 
-        /* Progress bar */
-        .trust-bar-track { width: 100%; height: 10px; border-radius: 999px; background: #e2e8f0; margin: 12px 0 20px; overflow: hidden; position: relative; }
-        .trust-bar-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, #ef4444 0%, #f59e0b 40%, #22c55e 100%); transition: width 0.6s ease; }
+        /* ── Compare ── */
+        .compare { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto 28px; }
+        .compare-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px; display: flex; flex-direction: column; gap: 16px; }
+        .compare-card.is-ai { border-color: var(--action); box-shadow: 0 4px 16px rgba(37,99,235,0.08); }
+        .compare-card h3 { display: flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 600; letter-spacing: -0.02em; }
+        .compare-card ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .compare-card li { font-size: 14.5px; line-height: 1.55; color: var(--text-mid); }
 
-        /* Summary */
-        .trust-summary-headline { font-size: 24px; font-weight: 800; color: var(--text); margin-bottom: 8px; letter-spacing: -0.01em; }
-        .trust-summary-text { font-size: 15px; color: var(--text-light); line-height: 1.6; }
-        .trust-summary-text a { color: var(--action); font-weight: 600; }
-
-        .trust-cta-below { font-size: 15px; color: var(--text); margin-top: 16px; padding: 16px 24px; background: var(--bg-alt); border-top: 1px solid var(--border); }
-        .trust-cta-below strong { color: var(--text); }
-
-        @media (max-width: 480px) {
-            .trust-input-row { flex-direction: column; gap: 8px; }
-            .trust-input { border-right: 2px solid var(--action); border-radius: var(--radius-md); }
-            .trust-btn { border-radius: var(--radius-md); }
-            .trust-score-num { font-size: 42px; }
-        }
-
-        /* ── Section scaffolding ── */
-        .section { padding: 72px 0; }
-        .section-alt { background: var(--bg-alt); }
-        .section-dark { background: var(--bg-dark); color: var(--text-inv); }
-        .section-dark .text-muted { color: #94a3b8; }
-        .section-header { text-align: center; margin-bottom: 48px; }
-        .section-header .kicker { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--action); margin-bottom: 8px; }
-        .section-dark .section-header .kicker { color: var(--accent); }
-        .section-header h2 { font-size: clamp(26px, 4vw, 36px); letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 12px; }
-        .section-header p { font-size: 16px; color: var(--text-light); max-width: 560px; margin: 0 auto; }
-        .section-dark .section-header p { color: #94a3b8; }
-        .text-muted { color: var(--text-light); }
-
-        /* ── Problem ── */
-        .problem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
-        .problem-card { padding: 24px; border-radius: var(--radius-md); border: 1px solid var(--border); background: var(--bg); }
-        .problem-card .icon { width: 40px; height: 40px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 12px; }
-        .problem-card h3 { font-size: 16px; margin-bottom: 6px; }
-        .problem-card p { font-size: 14px; color: var(--text-light); }
-
-        /* ── Timeline / How it Works ── */
-        .timeline { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-        .timeline-step { position: relative; padding: 28px 24px; border-radius: var(--radius-lg); background: var(--bg); border: 1px solid var(--border); box-shadow: var(--shadow-sm); }
-        .timeline-step.highlight { border-color: var(--action); box-shadow: 0 0 0 3px var(--action-soft), var(--shadow-md); }
-        .step-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--action); background: var(--action-soft); padding: 4px 12px; border-radius: 999px; margin-bottom: 14px; }
-        .step-badge.gold { color: var(--gold); background: var(--gold-soft); }
-        .timeline-step h3 { font-size: 18px; margin-bottom: 8px; letter-spacing: -0.01em; }
-        .timeline-step p { font-size: 14px; color: var(--text-light); margin-bottom: 12px; }
-        .step-includes { list-style: none; display: grid; gap: 6px; }
-        .step-includes li { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; }
-        .step-includes li::before { content: "\2713"; color: var(--success); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
-
-        /* ── Features / What's Included ── */
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .feature-card { padding: 24px; border-radius: var(--radius-md); background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); }
-        .section-dark .feature-card { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.08); }
-        .feature-card h3 { font-size: 16px; margin-bottom: 6px; }
-        .feature-card p { font-size: 14px; color: #94a3b8; }
+        /* ── Timeline ── */
+        .step { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; }
+        .step.is-first { border-color: var(--action); box-shadow: 0 4px 16px rgba(37,99,235,0.08); }
+        .step-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 24px; background: var(--bg-alt); border-bottom: 1px solid var(--border); font-family: var(--mono); font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-light); }
+        .step-head .tag { font-size: 11px; letter-spacing: 0.08em; color: #94a3b8; }
+        .step.is-first .step-head { background: var(--action-soft); border-bottom-color: #dbeafe; color: var(--action); }
+        .step.is-first .step-head .tag { color: var(--action); }
+        .step.is-last .step-head { background: #fffbeb; border-bottom-color: #fde68a; color: #b45309; }
+        .step.is-last .step-head .tag { color: #b45309; }
+        .step-body { padding: 24px; display: flex; flex-direction: column; gap: 14px; }
+        .step-body h3 { font-size: 19px; font-weight: 600; letter-spacing: -0.02em; }
+        .step-body > p { font-size: 14.5px; color: var(--text-light); }
+        .checks { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+        .checks li { display: flex; align-items: flex-start; gap: 9px; font-size: 13.5px; line-height: 1.5; color: var(--text-mid); }
+        .checks li.em { color: var(--bg-dark); font-weight: 600; }
 
         /* ── Engine ── */
-        .engine-visual { display: grid; grid-template-columns: 1fr auto 1fr; gap: 24px; align-items: center; max-width: 800px; margin: 0 auto; }
-        .engine-input, .engine-output { display: grid; gap: 10px; }
-        .engine-pill { display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: var(--radius-md); background: var(--bg); border: 1px solid var(--border); font-size: 14px; font-weight: 500; }
-        .engine-pill .dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
-        .engine-arrow { font-size: 32px; color: var(--action); font-weight: 700; text-align: center; }
-        .engine-output-card { padding: 16px 20px; border-radius: var(--radius-md); background: var(--success-soft); border: 1px solid #bbf7d0; }
-        .engine-output-card h4 { font-size: 14px; color: var(--success); margin-bottom: 4px; }
-        .engine-output-card p { font-size: 13px; color: var(--text-light); }
+        .engine { display: grid; grid-template-columns: minmax(0, 1fr) 64px minmax(0, 1fr); gap: 24px; align-items: center; max-width: 940px; margin: 0 auto; }
+        .engine-in { display: flex; flex-direction: column; gap: 10px; }
+        .engine-pill { display: flex; align-items: center; gap: 12px; padding: 14px 18px; border: 1px solid var(--border); border-radius: var(--radius-md); font-size: 14.5px; font-weight: 500; }
+        .engine-pill::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--success); flex-shrink: 0; }
+        .engine-pill.p2::before { background: var(--action); } .engine-pill.p3::before { background: var(--gold); } .engine-pill.p4::before { background: var(--accent); }
+        .engine-arrow { display: flex; align-items: center; justify-content: center; color: var(--action); }
+        .engine-out { border: 1px solid #bbf7d0; background: #ecfdf5; border-radius: 14px; padding: 26px 24px; display: flex; flex-direction: column; gap: 8px; }
+        .engine-out .kicker { color: var(--success); }
+        .engine-out h3 { font-size: 20px; font-weight: 700; color: #065f46; }
+        .engine-out p { font-size: 14.5px; line-height: 1.6; color: var(--text-mid); }
+
+        /* ── Dark feature cards ── */
+        .feature { background: rgba(255,255,255,0.04); border: 1px solid rgba(148,163,184,0.16); border-radius: 14px; padding: 26px; }
+        .feature h3 { font-size: 17px; font-weight: 600; letter-spacing: -0.015em; color: var(--text-inv); margin-bottom: 9px; }
+        .feature p { font-size: 14.5px; line-height: 1.6; color: var(--text-inv-mid); }
+        .features { max-width: 1000px; margin: 0 auto; }
+
+        /* ── Buyer's guide ── */
+        .guide { max-width: 1000px; margin: 0 auto; }
+        .guide-row { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 20px; padding: 24px 0; border-top: 1px solid var(--border); }
+        .guide-row:last-child { border-bottom: 1px solid var(--border); }
+        .guide-num { font-family: var(--mono); font-size: 22px; font-weight: 600; letter-spacing: -0.02em; color: var(--border-strong); }
+        .guide-row h3 { font-size: 18px; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 7px; }
+        .guide-row p { font-size: 15px; line-height: 1.7; color: var(--text-light); max-width: 820px; }
 
         /* ── Pricing ── */
-        .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 800px; margin: 0 auto; }
-        .price-card { border-radius: var(--radius-lg); border: 1px solid var(--border); padding: 36px 28px; background: var(--bg); position: relative; }
-        .price-card.hero-card { border-color: var(--action); box-shadow: 0 0 0 3px var(--action-soft), var(--shadow-lg); }
-        .price-badge { position: absolute; top: -12px; left: 28px; background: var(--action); color: #fff; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 5px 14px; border-radius: 999px; }
-        .price-card h3 { font-size: 20px; margin-bottom: 4px; letter-spacing: -0.01em; }
-        .price-card .price-desc { font-size: 14px; color: var(--text-light); margin-bottom: 16px; }
-        .price-card .price-amount { font-size: 40px; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 4px; }
-        .price-card .price-term { font-size: 14px; color: var(--text-light); margin-bottom: 20px; }
-        .price-list { list-style: none; display: grid; gap: 10px; margin-bottom: 24px; }
-        .price-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; }
-        .price-list li::before { content: "\2713"; color: var(--success); font-weight: 700; flex-shrink: 0; }
+        .prices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; max-width: 900px; margin: 0 auto; }
+        .price { position: relative; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 36px 30px 30px; display: flex; flex-direction: column; gap: 16px; }
+        .price.is-hero { border-color: var(--action); box-shadow: 0 12px 40px rgba(37,99,235,0.1); }
+        .price-flag { position: absolute; top: -12px; left: 30px; background: var(--action); color: #fff; font-family: var(--mono); font-size: 10.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 13px; border-radius: 999px; }
+        .price h3 { font-size: 21px; font-weight: 700; letter-spacing: -0.02em; }
+        .price-desc { font-size: 14.5px; line-height: 1.55; color: var(--text-light); margin-top: 5px; }
+        .price-amount { display: flex; align-items: baseline; gap: 8px; }
+        .price-amount .n { font-size: 42px; font-weight: 700; letter-spacing: -0.04em; line-height: 1; }
+        .price-amount .t { font-size: 16px; font-weight: 500; color: var(--text-light); }
+        .price-fine { font-size: 13.5px; color: var(--text-light); margin-top: -8px; }
+        .price-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .price-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 14.5px; line-height: 1.5; color: var(--text-mid); }
+        .price .btn { margin-top: auto; }
+        .price-note { max-width: 900px; margin: 24px auto 0; text-align: center; font-size: 14px; color: var(--text-light); }
 
-        /* ── Guarantee ── */
-        .guarantee-box { max-width: 680px; margin: 0 auto; padding: 36px; border-radius: var(--radius-lg); background: var(--success-soft); border: 1px solid #bbf7d0; text-align: center; }
-        .guarantee-box h3 { font-size: 22px; color: var(--success); margin-bottom: 12px; }
-        .guarantee-box p { font-size: 15px; color: var(--text); }
-
-        /* ── Founding ── */
-        .founding-box { max-width: 600px; margin: 0 auto; text-align: center; padding: 48px 32px; border-radius: var(--radius-lg); background: var(--bg); border: 2px solid var(--gold); }
-        .founding-box h3 { font-size: 26px; margin-bottom: 8px; letter-spacing: -0.02em; }
-        .founding-box .spots { font-size: 16px; color: var(--gold); font-weight: 700; margin-bottom: 16px; }
-        .founding-box p { font-size: 15px; color: var(--text-light); margin-bottom: 24px; }
+        /* ── Guarantee + founding ── */
+        .assure { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; max-width: 1160px; margin: 0 auto; }
+        .assure-card { border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 30px; display: flex; flex-direction: column; gap: 12px; }
+        .assure-card h3 { display: flex; align-items: center; gap: 11px; font-size: 19px; font-weight: 700; letter-spacing: -0.02em; }
+        .assure-card p { font-size: 14.5px; line-height: 1.7; color: var(--text-light); }
+        .assure-card.dark { background: var(--bg-dark); border-color: var(--bg-dark); }
+        .assure-card.dark h3 { color: var(--text-inv); font-size: 21px; }
+        .assure-card.dark p { color: var(--text-inv-mid); }
+        .founding-tags { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+        .founding-tags .k { font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; color: var(--gold-light); }
+        .founding-tags .seats { padding: 3px 10px; border-radius: 999px; background: rgba(251,191,36,0.14); border: 1px solid rgba(251,191,36,0.3); font-size: 11px; font-weight: 600; color: var(--gold-light); }
 
         /* ── FAQ ── */
-        .faq-list { max-width: 680px; margin: 0 auto; }
-        .faq-item { border-bottom: 1px solid var(--border); }
-        .faq-q { width: 100%; text-align: left; background: none; border: none; padding: 20px 0; font-size: 16px; font-weight: 600; color: var(--text); cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: inherit; line-height: 1.4; }
-        .faq-q::after { content: "+"; font-size: 22px; color: var(--text-light); transition: transform 0.2s; flex-shrink: 0; margin-left: 16px; }
-        .faq-q.open::after { content: "\2212"; }
-        .faq-a { display: none; padding: 0 0 20px; font-size: 15px; color: var(--text-light); line-height: 1.7; }
-        .faq-a.open { display: block; }
+        .faq-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 40px; max-width: 1120px; margin: 0 auto; }
+        .faq-item { display: flex; flex-direction: column; gap: 8px; padding: 22px 0; border-top: 1px solid var(--border); }
+        .faq-item h3 { font-size: 16.5px; font-weight: 600; letter-spacing: -0.015em; }
+        .faq-item p { font-size: 14.5px; line-height: 1.65; color: var(--text-light); }
+
+        /* ── Final CTA ── */
+        .final { background: var(--bg-dark); padding: 80px 0; text-align: center; }
+        .final h2 { font-size: clamp(30px, 4vw, 40px); font-weight: 700; letter-spacing: -0.032em; color: var(--text-inv); max-width: 720px; margin: 0 auto 20px; text-wrap: pretty; }
+        .final p { font-size: 17px; line-height: 1.65; color: var(--text-inv-mid); max-width: 600px; margin: 0 auto 28px; }
+        .final-cta { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+        .final small { font-size: 13.5px; color: var(--text-light); }
 
         /* ── Footer ── */
-        .site-footer { border-top: 1px solid var(--border); padding: 32px 0; background: var(--bg); }
-        .site-footer .wrap { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; flex-wrap: wrap; }
-        .footer-brand { font-size: 13px; color: var(--text-light); max-width: 320px; }
-        .footer-brand .logo { margin-bottom: 8px; }
-        .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
-        .footer-links a { font-size: 13px; color: var(--text-light); font-weight: 500; }
-        .footer-links a:hover { color: var(--action); }
-        .footer-copy { font-size: 12px; color: var(--text-light); text-align: center; padding-top: 24px; border-top: 1px solid var(--border); margin-top: 24px; }
-
-        /* ── Mobile menu ── */
-        .menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
-        .menu-toggle span { display: block; width: 22px; height: 2px; background: var(--text); margin: 5px 0; transition: 0.3s; }
+        .site-footer { border-top: 1px solid var(--border); padding: 44px 0 32px; }
+        .footer-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 48px; flex-wrap: wrap; }
+        .footer-brand { display: flex; flex-direction: column; gap: 10px; max-width: 400px; }
+        .footer-brand .logo { color: var(--text); font-size: 16px; }
+        .footer-brand .logo-mark { width: 28px; height: 28px; border-radius: 7px; }
+        .footer-brand p { font-size: 14px; line-height: 1.6; color: var(--text-light); }
+        .footer-links { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; padding-top: 6px; }
+        .footer-links a { font-size: 14px; font-weight: 500; color: var(--text-light); }
+        .footer-links a:hover { color: var(--text); }
+        .footer-legal { border-top: 1px solid var(--border); margin-top: 28px; padding-top: 20px; font-size: 13px; color: #94a3b8; }
 
         /* ── Responsive ── */
-        @media (max-width: 768px) {
-            .hero { padding: 48px 0 40px; }
-            .hero-price .amount { font-size: 36px; }
-            .timeline { grid-template-columns: 1fr; }
-            .pricing-grid { grid-template-columns: 1fr; }
-            .engine-visual { grid-template-columns: 1fr; text-align: center; }
-            .engine-arrow { transform: rotate(90deg); }
-            .menu-toggle { display: block; }
-            .site-nav { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); flex-direction: column; padding: 16px 20px; gap: 16px; box-shadow: var(--shadow-md); }
-            .site-nav.open { display: flex; }
+        @media (max-width: 1080px) {
+            .hero .wrap { grid-template-columns: 1fr; gap: 44px; }
+            .scan-card { max-width: 620px; }
+            .scanner .wrap { grid-template-columns: 1fr; gap: 28px; }
+            .why .wrap { grid-template-columns: 1fr; gap: 24px; }
+            .why h2 { margin-top: 0; }
         }
-        @media (max-width: 480px) {
-            .hero h1 { font-size: 28px; }
-            .section { padding: 48px 0; }
-            .founding-box { padding: 32px 20px; }
+        @media (max-width: 900px) {
+            .site-nav a:not(.nav-cta) { display: none; }
+            .grid-3 { grid-template-columns: 1fr; }
+            .engine { grid-template-columns: 1fr; gap: 20px; }
+            .engine-arrow { transform: rotate(90deg); }
+            .faq-grid { grid-template-columns: 1fr; gap: 0 0; }
+            .sources .wrap { flex-direction: column; align-items: flex-start; gap: 16px; }
+        }
+        @media (max-width: 760px) {
+            .section { padding: 56px 0; }
+            .grid-2, .compare, .prices, .assure { grid-template-columns: 1fr; }
+            .term-rows { grid-template-columns: 130px minmax(0, 1fr); }
+            .term { font-size: 12px; }
+        }
+        @media (max-width: 420px) {
+            .hero-meta .sep { display: none; }
+        }
+        @media (max-width: 560px) {
+            .wrap { padding: 0 20px; }
+            .hero .wrap { padding-top: 40px; padding-bottom: 44px; }
+            .hero-cta, .final-cta { flex-direction: column; align-items: stretch; width: 100%; }
+            .hero-cta .btn, .final-cta .btn { width: 100%; }
+            .scan-form { flex-direction: column; gap: 10px; }
+            .scan-input { border-right: 2px solid var(--action); border-radius: 9px; }
+            .scan-btn { border-radius: 9px; width: 100%; }
+            .guide-row { grid-template-columns: 40px minmax(0, 1fr); gap: 14px; }
+            .price, .assure-card { padding: 28px 20px 24px; }
         }
     </style>
 
@@ -257,19 +315,19 @@
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
         "name": "PropeloSEO",
-        "description": "Data-driven SEO membership. Live professional SEO data turned into one publish-ready Growth Pack every month.",
+        "description": "AI SEO services for small businesses. Professional SEO data turned into one publish-ready Growth Pack every month, with AI visibility monitoring across ChatGPT, Perplexity, Gemini and Google AI Overviews.",
         "url": "https://propeloseo.com",
         "priceRange": "$$",
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
-            "name": "SEO Services",
+            "name": "AI SEO Services",
             "itemListElement": [
                 {
                     "@type": "Offer",
                     "name": "Growth Membership",
                     "price": "97.00",
                     "priceCurrency": "USD",
-                    "description": "Monthly SEO membership with one publish-ready Growth Pack per month, AI visibility monitoring, and technical SEO baseline."
+                    "description": "Monthly AI SEO membership with one publish-ready Growth Pack per month, AI visibility monitoring, and a technical SEO baseline."
                 },
                 {
                     "@type": "Offer",
@@ -282,95 +340,528 @@
         }
     }
     </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            { "@type": "Question", "name": "What is AI SEO?", "acceptedAnswer": { "@type": "Answer", "text": "AI SEO is the work of getting a business surfaced by AI search engines such as ChatGPT, Perplexity, Gemini and Google AI Overviews, rather than only in the traditional list of search results. It combines classic technical SEO with measurement of what AI models actually say when asked a buying question." } },
+            { "@type": "Question", "name": "Does AI SEO replace traditional SEO?", "acceptedAnswer": { "@type": "Answer", "text": "No. AI systems still rely on crawlable, well-structured, credible pages, so traditional SEO remains the foundation. AI SEO adds a second scoreboard on top of it." } },
+            { "@type": "Question", "name": "What is generative engine optimization?", "acceptedAnswer": { "@type": "Answer", "text": "Generative engine optimization, or GEO, is another name for the same discipline, sometimes also called answer engine optimization, or AEO. What matters is whether a provider measures AI visibility or only claims to." } },
+            { "@type": "Question", "name": "Which AI platforms do you track?", "acceptedAnswer": { "@type": "Answer", "text": "ChatGPT, Perplexity AI, Google Gemini and Google AI Overviews as standard, with Microsoft Bing chat and AI Mode included in the audit." } },
+            { "@type": "Question", "name": "What exactly is a Growth Pack?", "acceptedAnswer": { "@type": "Answer", "text": "A Growth Pack is one clearly scoped, publish-ready deliverable built from your live SEO data: a content brief, a technical fix specification, an on-page optimisation, or a competitive gap analysis, whichever represents your highest-impact opportunity that month." } },
+            { "@type": "Question", "name": "What happens in month one?", "acceptedAnswer": { "@type": "Answer", "text": "We set up your full baseline (technical crawl, keyword tracking, competitor snapshot and AI visibility check), identify your top three opportunities, and deliver a Quick-Win Pack including one eligible low-risk fix that we implement with your written approval." } },
+            { "@type": "Question", "name": "Do you implement changes every month?", "acceptedAnswer": { "@type": "Answer", "text": "The first month includes one eligible fix, implemented. From month two onward, Growth Packs are publish-ready deliverables, scoped and documented and ready for you or your developer to implement." } },
+            { "@type": "Question", "name": "What counts as an eligible Quick-Win fix?", "acceptedAnswer": { "@type": "Answer", "text": "Metadata changes, broken internal links, basic schema corrections, indexability-setting corrections, and one small on-page improvement. Excluded: development work, template changes, migrations, complex schema, plugin conflicts and high-risk site-wide changes." } },
+            { "@type": "Question", "name": "How do Growth Credits work?", "acceptedAnswer": { "@type": "Answer", "text": "You receive one Growth Credit per month. Each credit redeems for one Growth Pack. You can hold a maximum of three credits at a time, and each credit expires individually 90 days after issue." } },
+            { "@type": "Question", "name": "Can I cancel at any time?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. There is no minimum commitment and no cancellation friction. You keep everything delivered to date and have 30 days to redeem any remaining Growth Credits." } },
+            { "@type": "Question", "name": "Do you guarantee rankings or traffic?", "acceptedAnswer": { "@type": "Answer", "text": "No. Rankings, traffic and revenue depend on variables outside any SEO provider's control. We guarantee the delivery of your Growth Pack on time and as specified." } },
+            { "@type": "Question", "name": "How is this different from AI SEO agencies?", "acceptedAnswer": { "@type": "Answer", "text": "Most AI SEO agencies start at $2,000 per month for managed digital marketing. This service is productized: a fixed monthly fee, one deliverable, published limits." } }
+        ]
+    }
+    </script>
 </head>
 <body>
 
-<!-- ════ HEADER ════ -->
 <header class="site-header">
     <div class="wrap">
-        <a href="/" class="logo">
-            <div class="logo-mark"></div>
+        <a class="logo" href="/">
+            <span class="logo-mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15l7-7 7 7"/></svg></span>
             PropeloSEO
         </a>
-        <button class="menu-toggle" aria-label="Menu" onclick="document.querySelector('.site-nav').classList.toggle('open')">
-            <span></span><span></span><span></span>
-        </button>
         <nav class="site-nav">
-            <a href="#how-it-works">How It Works</a>
-            <a href="#whats-included">What's Included</a>
+            <a href="#how-it-works">How it works</a>
+            <a href="#whats-included">What's included</a>
             <a href="#pricing">Pricing</a>
             <a href="#faq">FAQ</a>
-            <a href="/about/" class="nav-cta">Start Your Sprint</a>
+            <a class="nav-cta" href="#pricing">Start your sprint</a>
         </nav>
     </div>
 </header>
 
-<!-- ════ HERO ════ -->
 <section class="hero">
     <div class="wrap">
-        <div class="hero-kicker">The 90-Day Visibility Sprint</div>
-        <h1>Live SEO data. One publish-ready asset. Every month.</h1>
-        <p class="hero-sub">PropeloSEO converts professional-grade data from Ahrefs, DataForSEO and Screaming Frog into one clearly scoped Growth Pack each month, starting with a real fix implemented in month one.</p>
-        <div class="hero-price">
-            <span class="amount">$97</span>
-            <span class="per">/month</span>
-            <span class="cancel">Cancel anytime</span>
+        <div class="hero-copy">
+            <span class="hero-badge">The 90-Day Visibility Sprint</span>
+            <h1>AI SEO services. One publish-ready asset. Every month.</h1>
+            <p class="hero-sub">PropeloSEO is an AI SEO service for small businesses. We turn professional-grade data from Ahrefs, DataForSEO and Screaming Frog into one clearly scoped Growth Pack each month &mdash; and track what ChatGPT, Google AI Overviews and AI Mode say about you while we do it.</p>
+            <div class="hero-price">
+                <span class="amount">$97</span>
+                <span class="per">/month</span>
+            </div>
+            <div class="hero-meta">
+                <span class="ok"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Cancel anytime</span>
+                <span class="sep"></span>
+                <span class="note">A subscription, not a retainer</span>
+            </div>
+            <div class="hero-cta">
+                <a class="btn btn-primary" href="#pricing">Start the 90-Day Sprint</a>
+                <a class="btn btn-ghost-inv" href="#audit">$197 AI Visibility Audit</a>
+            </div>
+            <p class="hero-guarantee">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                Your first Quick-Win Pack arrives within five business days of onboarding &mdash; or your first month is refunded.
+            </p>
         </div>
-        <div class="hero-cta-row">
-            <a href="#pricing" class="btn-primary">Start the 90-Day Sprint</a>
-            <a href="#audit" class="btn-secondary">$197 AI Visibility Audit</a>
+
+        <div class="scan-card">
+            <div class="term">
+                <div class="term-dots"><span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span></div>
+                <div class="base"><span class="cmd">propelo scan</span> <span class="dom">example.com</span></div>
+                <dl class="term-rows">
+                    <dt>Authority rank</dt><dd class="warn">168/1000</dd>
+                    <dt>Referring domains</dt><dd>400</dd>
+                    <dt>Homepage status</dt><dd class="alert">blocked our crawler (HTTP 403)</dd>
+                </dl>
+                <div class="term-leak">1 leak found</div>
+                <div class="term-detail">leak 1: Our scanner received HTTP 403 from your homepage. Strict firewall rules block data-centre IPs &mdash; the same class many AI crawlers use. If AI systems cannot read your pages, you will not be cited in AI answers.</div>
+            </div>
+            <div class="score">
+                <div class="score-row">
+                    <span class="score-num">36</span>
+                    <span class="score-of">/100</span>
+                    <span class="score-badge">Leaking</span>
+                </div>
+                <div class="score-track"><div class="score-fill" style="width: 36%"></div></div>
+                <h3>Serious leaks.</h3>
+                <p>That's the public layer. The full scorecard tests 10 real buyer questions across ChatGPT, Claude, Perplexity AI and Google Gemini &mdash; and names every business those AI engines recommend instead of you.</p>
+            </div>
+            <div class="scan-foot">
+                <span>Want the full picture?</span>
+                <a href="#audit">Get the $197 AI Visibility Audit &rarr;</a>
+            </div>
         </div>
-        <p class="hero-note">Founding cohort: limited to ten members. Every pack personally QA'd before delivery.</p>
     </div>
 </section>
 
-<!-- ════ TRUST BAR ════ -->
-<div class="trust-bar">
+<div class="sources">
     <div class="wrap">
-        <div class="trust-item"><div class="trust-dot blue"></div> Ahrefs professional data</div>
-        <div class="trust-item"><div class="trust-dot green"></div> DataForSEO AI visibility suite</div>
-        <div class="trust-item"><div class="trust-dot amber"></div> Screaming Frog technical crawl</div>
-        <div class="trust-item"><div class="trust-dot blue"></div> Personally QA'd delivery</div>
+        <span class="sources-label">Built on the same data as SEO agencies charging 10&times; more</span>
+        <div class="source-chips">
+            <span class="chip">Ahrefs professional data</span>
+            <span class="chip c2">DataForSEO AI visibility</span>
+            <span class="chip c3">Screaming Frog crawl</span>
+            <span class="chip c4">Personally QA'd</span>
+        </div>
     </div>
 </div>
 
-<!-- ════ TRUST SCORE ════ -->
-<section class="trust-score-section section-alt">
+<section class="scanner" id="scan">
     <div class="wrap">
-        <h2>How visible is your site to AI?</h2>
-        <p class="section-sub">Enter your domain. Get your trust score in seconds.</p>
-        <div class="trust-input-row">
-            <input type="text" class="trust-input" id="trustDomain" placeholder="yourdomain.com" autocomplete="off" spellcheck="false">
-            <button class="trust-btn" id="trustBtn" onclick="showTrustScore()">See my Trust Score</button>
+        <div>
+            <h2>That was example.com. Now run it on yours.</h2>
+            <p>A free AI SEO check. No account, no card, no call.</p>
         </div>
-        <div class="trust-popup" id="trustPopup">
-            <div class="trust-terminal">
-                <div class="trust-terminal-dots"><span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span></div>
-                <div class="line"><span class="cmd">propelo scan</span> <span class="domain" id="termDomain">example.com</span></div>
-                <div class="line"><span class="label">Authority rank </span><span class="val" id="termAuthority">168/1000</span></div>
-                <div class="line"><span class="label">Referring domains </span><span class="val" id="termRefDomains">400</span></div>
-                <div class="line"><span class="label">Homepage status </span><span class="val-warn" id="termHomepage">blocked our crawler (HTTP 403)</span></div>
-                <div class="line"><span class="leak-num" id="termLeakCount">1</span><span class="label"> leak found</span></div>
-                <div class="line-detail" id="termLeakDetail">leak 1: Our scanner (data-centre IP) received HTTP 403 from your homepage. Sites with strict firewall rules block data-centre IPs &mdash; the same class many AI crawlers use. Verify whether real bots are affected.</div>
-            </div>
-            <div class="trust-score-result">
-                <div class="trust-score-row">
-                    <span class="trust-score-num" id="scoreNum">36</span>
-                    <span class="trust-score-of">/100</span>
-                    <span class="trust-score-badge leaking" id="scoreBadge">LEAKING</span>
+        <div>
+            <form class="scan-form" onsubmit="showTrustScore(); return false;">
+                <input class="scan-input" id="trustDomain" type="text" aria-label="Your domain" placeholder="yourdomain.com" autocomplete="url" spellcheck="false">
+                <button class="scan-btn" id="trustBtn" type="submit">See my Trust Score</button>
+            </form>
+            <p class="scan-hint">Scores authority, referring domains and crawler access against live data, so you can see where your ranking and current AI visibility stand today.</p>
+
+            <div class="scan-result scan-card" id="trustPopup">
+                <div class="sample-tag">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+                    Sample output. Your real figures are produced by the audit, not by this page.
                 </div>
-                <div class="trust-bar-track">
-                    <div class="trust-bar-fill" id="scoreBar" style="width: 36%;"></div>
+                <div class="term">
+                    <div class="base"><span class="cmd">propelo scan</span> <span class="dom" id="termDomain">yourdomain.com</span></div>
+                    <dl class="term-rows">
+                        <dt>Authority rank</dt><dd class="warn" id="termAuthority">168/1000</dd>
+                        <dt>Referring domains</dt><dd id="termRefDomains">400</dd>
+                        <dt>Homepage status</dt><dd class="alert" id="termHomepage">blocked our crawler (HTTP 403)</dd>
+                    </dl>
+                    <div class="term-leak" id="termLeakCount">1 leak found</div>
+                    <div class="term-detail" id="termLeakDetail">leak 1: Our scanner (data-centre IP) received HTTP 403 from your homepage. Sites with strict firewall rules block data-centre IPs &mdash; the same class many AI crawlers use. Verify whether real bots are affected.</div>
                 </div>
-                <div class="trust-summary-headline" id="scoreHeadline">Serious leaks.</div>
-                <p class="trust-summary-text">That's the public layer. The <a href="#audit">full scorecard</a> tests 10 real buyer questions across ChatGPT, Claude, Perplexity and Gemini, and names every business they recommend instead of you.</p>
-            </div>
-            <div class="trust-cta-below">
-                <strong>Want the full picture?</strong> <a href="#audit">Get the $197 AI Visibility Audit</a>
+                <div class="score">
+                    <div class="score-row">
+                        <span class="score-num" id="scoreNum">36</span>
+                        <span class="score-of">/100</span>
+                        <span class="score-badge" id="scoreBadge">Leaking</span>
+                    </div>
+                    <div class="score-track"><div class="score-fill" id="scoreBar" style="width: 36%"></div></div>
+                    <h3 id="scoreHeadline">Serious leaks.</h3>
+                    <p>That's the public layer. The full scorecard tests 10 real buyer questions across ChatGPT, Claude, Perplexity and Gemini, and names every business they recommend instead of you.</p>
+                </div>
+                <div class="scan-foot">
+                    <span>Want the full picture?</span>
+                    <a href="#audit">Get the $197 AI Visibility Audit &rarr;</a>
+                </div>
             </div>
         </div>
     </div>
 </section>
+
+<section class="section">
+    <div class="wrap">
+        <div class="section-head">
+            <span class="kicker">The problem</span>
+            <h2>You know your site should rank higher. You just need the work done, not a dashboard.</h2>
+            <p>Most SEO tools hand you data and walk away. Most AI SEO agencies charge thousands before you see results. There's a gap between the two, and that gap is where this service sits.</p>
+        </div>
+        <div class="grid-3">
+            <div class="card">
+                <span class="icon-box"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 14v-3M12 14V9M17 14v-5M8 20h8"/></svg></span>
+                <h3>Monitoring alone is a commodity</h3>
+                <p>Dashboards and rank trackers are everywhere. Raw data without action doesn't move your ranking. Analytics is not an SEO strategy, and a search engine results page screenshot is not a deliverable.</p>
+            </div>
+            <div class="card">
+                <span class="icon-box"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6.5c0-1.9-2.2-3-5-3s-5 1.1-5 3 2.2 2.7 5 3.3 5 1.4 5 3.4-2.2 3.3-5 3.3-5-1.4-5-3.3"/></svg></span>
+                <h3>Managed SEO starts at $2,000+</h3>
+                <p>Full-service retainers are right for some businesses and overkill for many. A small business should be able to buy real SEO work without a five-figure commitment to a digital marketing agency.</p>
+            </div>
+            <div class="card">
+                <span class="icon-box blue"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a14 14 0 0 0 0 18M12 3a14 14 0 0 1 0 18M3.5 9h17M3.5 15h17"/></svg></span>
+                <h3>AI is changing where buyers find you</h3>
+                <p>ChatGPT, Perplexity, Google AI Mode and AI Overviews already answer your buyers' questions directly. Do those AI systems mention you? Most businesses have no idea, because traditional SEO tools were never built to look.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section why">
+    <div class="wrap">
+        <div>
+            <span class="kicker">Why now</span>
+            <h2>Why AI SEO matters now</h2>
+        </div>
+        <div class="prose">
+            <p>The search experience has changed shape. A growing share of questions are answered inside an AI overview or a chat reply, so the click that used to arrive from a blue link now arrives, if at all, as AI referral traffic from a citation. Buyers who rely on AI assistants to shortlist vendors may never see a results page at all.</p>
+            <p>That makes AI search optimization a distribution question, not a vanity metric. If AI platforms consistently name three competitors and not you, you are absent from the shortlist before any comparison starts. Businesses that need AI SEO usually discover it late, after traffic has already drifted.</p>
+            <p>Generative search does not run on a separate internet. It reads the same pages, so SEO best practices still apply &mdash; but what gets rewarded shifts toward clarity, structure and citable specifics rather than keyword density.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="wrap">
+        <div class="section-head">
+            <span class="kicker">SEO and GEO</span>
+            <h2>AI SEO and traditional SEO are not the same job</h2>
+            <p>They overlap heavily, but they are not interchangeable &mdash; and a service that only does one leaves the other unmanaged.</p>
+        </div>
+        <div class="compare">
+            <div class="compare-card">
+                <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7L12 19"/></svg>Traditional SEO</h3>
+                <ul>
+                    <li>Earns a blue link in a list of search results.</li>
+                    <li>Position is stable enough to track day to day.</li>
+                    <li>Measured against a search engine results page.</li>
+                </ul>
+            </div>
+            <div class="compare-card is-ai">
+                <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/><circle cx="12" cy="12" r="3.5"/></svg>AI SEO, or GEO</h3>
+                <ul>
+                    <li>Earns a mention inside the answer, where there may be no list at all.</li>
+                    <li>No stable position, so measurement has to be built differently.</li>
+                    <li>Measured by asking AI search engines real buyer questions.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="prose" style="max-width: 1000px; margin: 0 auto;">
+            <p>The overlap is real. AI engines still lean on crawlability, clean structure, topical depth and credible citations, so technical SEO and generative engine optimization sit on the same foundation. If your pages are slow, blocked or thin, neither Google nor a large language model can use them. That part has not changed.</p>
+            <p>Nothing here asks you to replace traditional SEO. Both scoreboards are run together, with SEO strategies designed to serve each at once, and both feed into the same monthly deliverable.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="how-it-works">
+    <div class="wrap">
+        <div class="section-head">
+            <span class="kicker">How it works</span>
+            <h2>Three months. Measurable progress. Then keep going.</h2>
+            <p>The Growth Membership is sold as a 90-Day Visibility Sprint. Here's what each month looks like.</p>
+        </div>
+        <div class="grid-3">
+            <div class="step is-first">
+                <div class="step-head">Month 01 <span class="tag">Fix implemented</span></div>
+                <div class="step-body">
+                    <h3>Baseline + Quick-Win Pack</h3>
+                    <p>We set up your measurement baseline and deliver a real, implemented fix within five business days.</p>
+                    <ul class="checks">
+                        <li><svg class="tick" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Full technical crawl (up to 500 URLs)</li>
+                        <li><svg class="tick" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Keyword and SERP baseline (up to 50 keywords)</li>
+                        <li><svg class="tick" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Competitor and backlink-gap snapshot</li>
+                        <li><svg class="tick" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Limited AI Visibility Baseline</li>
+                        <li><svg class="tick" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Three opportunities ranked by commercial value</li>
+                        <li class="em"><svg class="tick" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>One eligible low-risk fix, implemented with your approval</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-head">Month 02 <span class="tag">Credit issued</span></div>
+                <div class="step-body">
+                    <h3>Biggest Opportunity Pack</h3>
+                    <p>With the baseline set, your second Growth Pack targets the highest-impact opportunity identified.</p>
+                    <ul class="checks">
+                        <li><svg class="tick" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Updated monitoring and critical alerts</li>
+                        <li><svg class="tick" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>AI-engine visibility tracking</li>
+                        <li><svg class="tick" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>One publish-ready Growth Pack</li>
+                        <li><svg class="tick" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>One bankable Growth Credit issued</li>
+                        <li><svg class="tick" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Plain-English progress record</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step is-last">
+                <div class="step-head">Month 03 <span class="tag">Bonus credit</span></div>
+                <div class="step-body">
+                    <h3>90-Day Progress Report</h3>
+                    <p>Your sprint closes with a clear evidence report. The membership then continues on the same terms.</p>
+                    <ul class="checks">
+                        <li><svg class="tick" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Baseline vs. current comparison</li>
+                        <li><svg class="tick" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Work delivered and implemented</li>
+                        <li><svg class="tick" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Observed movement with honest attribution</li>
+                        <li><svg class="tick" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>One Growth Pack included</li>
+                        <li><svg class="tick" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Bonus credit on sprint completion</li>
+                        <li><svg class="tick" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Continue your membership or cancel freely</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt" id="whats-included">
+    <div class="wrap">
+        <div class="section-head">
+            <span class="kicker">The Propelo Evidence Engine</span>
+            <h2>Professional data in. Publish-ready asset out.</h2>
+            <p>Every Growth Pack is built from the same professional SEO tools used by agencies charging ten times more.</p>
+        </div>
+        <div class="engine">
+            <div class="engine-in">
+                <span class="engine-pill">Technical crawl (Screaming Frog)</span>
+                <span class="engine-pill p2">SERP and keyword movement</span>
+                <span class="engine-pill p3">Competitor and backlink gaps</span>
+                <span class="engine-pill p4">AI-engine citation checks</span>
+            </div>
+            <div class="engine-arrow"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg></div>
+            <div class="engine-out">
+                <span class="kicker">Output</span>
+                <h3>Your Growth Pack</h3>
+                <p>One ranked, publish-ready asset, personally QA'd before delivery. Scoped, evidence-based, ready to implement.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-dark">
+    <div class="wrap">
+        <div class="section-head">
+            <span class="kicker kicker-inv">AI visibility monitoring</span>
+            <h2>Know where AI search is sending your buyers.</h2>
+            <p>Few services at this price offer AI citation tracking at all. For some members this alone justifies the subscription, because it answers a question no traditional SEO report can.</p>
+        </div>
+        <div class="grid-2 features">
+            <div class="feature">
+                <h3>ChatGPT, Perplexity, Gemini, AI Overviews and AI Mode</h3>
+                <p>We track which businesses these AI search engines name when your buyers ask purchase questions, and which they recommend instead of you. Coverage spans ChatGPT, Perplexity AI, Google Gemini, Microsoft Bing chat, and Google AI Overviews and AI Mode.</p>
+            </div>
+            <div class="feature">
+                <h3>Citation and link tracking</h3>
+                <p>We monitor not just mentions but which domains and pages AI models cite as sources, using DataForSEO's AI optimization suite and Ahrefs Brand Radar.</p>
+            </div>
+            <div class="feature">
+                <h3>Month-over-month trends</h3>
+                <p>Citations are measured with an identical prompt set and method every month, so changes reflect real movement rather than prompt variance. That is what makes the trend line worth reading.</p>
+            </div>
+            <div class="feature">
+                <h3>Built into every Growth Pack</h3>
+                <p>AI visibility data feeds directly into your recommendations. When AI systems overlook you, your Growth Pack says what to do about it, in the same document as the rest of your SEO work.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="wrap">
+        <div class="section-head">
+            <span class="kicker">Buyer's guide</span>
+            <h2>How to choose the right AI SEO service</h2>
+            <p>Most AI SEO agencies are selling one of three things: a dashboard, a retainer, or a rebranded content mill. Five questions separate them.</p>
+        </div>
+        <div class="guide">
+            <div class="guide-row">
+                <span class="guide-num">01</span>
+                <div>
+                    <h3>Does it ship work, or only reports?</h3>
+                    <p>A report you have to act on yourself is a tool, not a service, and should be priced like one. Ask what physically arrives each month and who implements it. Good AI SEO services follow through to something publishable.</p>
+                </div>
+            </div>
+            <div class="guide-row">
+                <span class="guide-num">02</span>
+                <div>
+                    <h3>Does it measure AI search at all?</h3>
+                    <p>Many providers added &ldquo;AI SEO&rdquo; to a page without adding any measurement of AI Overviews, AI Mode or chat assistants. Ask which AI platforms are tested, how often, and whether the prompt set stays constant between months. Without that, AI search results are anecdote.</p>
+                </div>
+            </div>
+            <div class="guide-row">
+                <span class="guide-num">03</span>
+                <div>
+                    <h3>Is the technical SEO floor covered?</h3>
+                    <p>Generative engine optimization services layered on a site AI crawlers cannot reach are wasted spend. Ask whether a technical crawl is included, and what happens when it finds something broken.</p>
+                </div>
+            </div>
+            <div class="guide-row">
+                <span class="guide-num">04</span>
+                <div>
+                    <h3>Is the scope honest about what it excludes?</h3>
+                    <p>We do not do link building, pay-per-click, or full-service digital marketing. Those are separate disciplines with separate budgets, and a provider claiming all of them for $97 is not being straight with you.</p>
+                </div>
+            </div>
+            <div class="guide-row">
+                <span class="guide-num">05</span>
+                <div>
+                    <h3>Are the limits written down?</h3>
+                    <p>Honest SEO services state what is excluded. Ours are in the terms: no development work, no migrations, no template changes, no high-risk site-wide edits.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="wrap">
+        <div class="section-head">
+            <span class="kicker">Bankable value</span>
+            <h2>Growth Credits that accumulate.</h2>
+            <p>One credit per month. Your balance is visible. Value builds the longer you stay.</p>
+        </div>
+        <div class="grid-3" style="max-width: 1080px; margin: 0 auto;">
+            <div class="card"><h3>One credit per month</h3><p>Each credit redeems for one Growth Pack. Maximum balance of three credits at any time.</p></div>
+            <div class="card"><h3>90-day individual expiry</h3><p>Each credit expires 90 days after issue. No surprise forfeiture; you always know the timeline.</p></div>
+            <div class="card"><h3>Keep what you've earned</h3><p>If you cancel, you have 30 days to redeem any remaining credits. Everything delivered to date is yours to keep.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="pricing">
+    <div class="wrap">
+        <div class="section-head">
+            <span class="kicker">Pricing</span>
+            <h2>Simple, honest pricing.</h2>
+            <p>One membership. One standalone diagnostic. No feature-checklist comparison games.</p>
+        </div>
+        <div class="prices">
+            <div class="price is-hero">
+                <span class="price-flag">Recommended</span>
+                <div>
+                    <h3>Growth Membership</h3>
+                    <p class="price-desc">The 90-Day Visibility Sprint, then continuing membership.</p>
+                </div>
+                <div class="price-amount"><span class="n">$97</span><span class="t">/mo</span></div>
+                <p class="price-fine">Cancel anytime. No minimum commitment.</p>
+                <ul class="price-list">
+                    <li><svg class="tick" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Full technical and search baseline</li>
+                    <li><svg class="tick" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>AI Visibility Baseline included</li>
+                    <li><svg class="tick" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>One Growth Pack per month</li>
+                    <li><svg class="tick" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Month-one Quick-Win fix implemented</li>
+                    <li><svg class="tick" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Bankable Growth Credits</li>
+                    <li><svg class="tick" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>AI-engine visibility monitoring</li>
+                    <li><svg class="tick" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Critical alerts and progress tracking</li>
+                    <li><svg class="tick" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>90-Day Progress Report at sprint close</li>
+                    <li><svg class="tick" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>One website, 500-URL crawl, 50 keywords</li>
+                </ul>
+                <a class="btn btn-primary btn-block" href="#founding">Start the Sprint</a>
+            </div>
+            <div class="price" id="audit">
+                <div>
+                    <h3>AI Visibility Audit</h3>
+                    <p class="price-desc">A standalone diagnostic for businesses not ready for a monthly membership.</p>
+                </div>
+                <div class="price-amount"><span class="n">$197</span><span class="t">one-time</span></div>
+                <p class="price-fine">Join the membership within 30 days and your first month is free.</p>
+                <ul class="price-list">
+                    <li><svg class="tick" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>25 buyer questions across four AI engines</li>
+                    <li><svg class="tick" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Manual analysis of citation patterns</li>
+                    <li><svg class="tick" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Full rerun included</li>
+                    <li><svg class="tick" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Deeper than the membership baseline</li>
+                    <li><svg class="tick" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Clear re-entry path to the Growth Membership</li>
+                </ul>
+                <a class="btn btn-ghost btn-block" href="/Contact/">Request Your Audit</a>
+            </div>
+        </div>
+        <p class="price-note">Need managed implementation? Managed SEO retainers start at $2,000/mo with a separate qualification process.</p>
+    </div>
+</section>
+
+<section class="section" id="founding" style="padding-top: 0;">
+    <div class="wrap">
+        <div class="assure">
+            <div class="assure-card">
+                <h3><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>The delivery guarantee</h3>
+                <p>Your first Quick-Win Pack &mdash; including one eligible fix, implemented &mdash; arrives within five business days of completed onboarding, required access and your written approval. If it is late or materially incomplete, your first month is refunded. Rankings, traffic and revenue depend on variables outside our control and are never guaranteed.</p>
+            </div>
+            <div class="assure-card dark">
+                <div class="founding-tags">
+                    <span class="k">Founding cohort</span>
+                    <span class="seats">10 seats</span>
+                </div>
+                <h3>Limited to ten members</h3>
+                <p>I personally QA every Growth Pack before it reaches you. The founding cohort locks in the $97 price for as long as you stay subscribed. This is capacity-true scarcity, not a countdown timer.</p>
+                <a class="btn btn-primary btn-block" href="/Contact/">Apply for a Founding Spot</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt" id="faq">
+    <div class="wrap">
+        <div class="section-head">
+            <span class="kicker">Questions</span>
+            <h2>AI SEO services: frequently asked questions</h2>
+        </div>
+        <div class="faq-grid">
+            <div class="faq-item"><h3>What is AI SEO?</h3><p>AI SEO is the work of getting a business surfaced by AI search engines such as ChatGPT, Perplexity, Gemini and Google AI Overviews, rather than only in the traditional list of search results. It combines classic technical SEO with measurement of what AI models actually say when asked a buying question. Some providers call it SEO for AI; the work is the same.</p></div>
+            <div class="faq-item"><h3>Does AI SEO replace traditional SEO?</h3><p>No. AI systems still rely on crawlable, well-structured, credible pages, so traditional SEO remains the foundation. AI SEO adds a second scoreboard on top of it. Any service telling you to replace traditional SEO outright is selling you a story.</p></div>
+            <div class="faq-item"><h3>What is generative engine optimization?</h3><p>Generative engine optimization, or GEO, is another name for the same discipline &mdash; sometimes also called answer engine optimization, or AEO. The terminology is still settling. What matters is whether a provider measures AI visibility or only claims to.</p></div>
+            <div class="faq-item"><h3>Which AI platforms do you track?</h3><p>ChatGPT, Perplexity AI, Google Gemini and Google AI Overviews as standard, with Microsoft Bing chat and AI Mode included in the audit. Coverage follows where your buyers actually ask, not where the marketing is loudest.</p></div>
+            <div class="faq-item"><h3>What exactly is a Growth Pack?</h3><p>A Growth Pack is one clearly scoped, publish-ready deliverable built from your live SEO data. It could be a content brief, a technical fix specification, an on-page optimisation, or a competitive gap analysis &mdash; whichever represents your highest-impact opportunity that month. Every pack is evidence-based and personally reviewed before delivery.</p></div>
+            <div class="faq-item"><h3>What happens in month one?</h3><p>In month one, we set up your full baseline (technical crawl, keyword tracking, competitor snapshot, and AI visibility check), identify your top three opportunities, and deliver a Quick-Win Pack. This first pack includes one eligible low-risk fix that we implement with your written approval &mdash; within five business days of completed onboarding and access.</p></div>
+            <div class="faq-item"><h3>Do you implement changes every month?</h3><p>The first month includes one eligible fix, implemented. From month two onward, Growth Packs are publish-ready deliverables &mdash; scoped, documented, and ready for you or your developer to implement. Routine implementation is excluded after month one but can be purchased separately.</p></div>
+            <div class="faq-item"><h3>What counts as an &ldquo;eligible&rdquo; Quick-Win fix?</h3><p>Eligible fixes include metadata changes, broken internal links, basic schema corrections, indexability-setting corrections, and one small on-page improvement. Excluded: development work, template changes, migrations, complex schema, plugin conflicts, and high-risk site-wide changes. These boundaries are defined in the terms so the promise stays honest.</p></div>
+            <div class="faq-item"><h3>How do Growth Credits work?</h3><p>You receive one Growth Credit per month. Each credit redeems for one Growth Pack. You can hold a maximum of three credits at a time, and each credit expires individually 90 days after issue. Normal redemption is one per month; additional redemptions are subject to capacity. If you cancel, you have 30 days to redeem any remaining credits.</p></div>
+            <div class="faq-item"><h3>Can I cancel at any time?</h3><p>Yes. There is no minimum commitment and no cancellation friction. If you cancel, you keep everything delivered to date and have 30 days to redeem any remaining Growth Credits. We earn your continued membership through visible, accumulating value.</p></div>
+            <div class="faq-item"><h3>Do you guarantee rankings or traffic?</h3><p>No. Rankings, traffic and revenue depend on variables outside any SEO provider's control. We guarantee the delivery of your Growth Pack on time and as specified. The 90-Day Progress Report shows your baseline, work delivered, observed movement, and &mdash; critically &mdash; what can and cannot reasonably be attributed to the work.</p></div>
+            <div class="faq-item"><h3>How is this different from AI SEO agencies?</h3><p>Most AI SEO agencies start at $2,000 per month for managed digital marketing. This service is productized: a fixed monthly fee, one deliverable, published limits. Choosing the right AI SEO agency is a different decision from choosing a subscription &mdash; and if you need full-service implementation, managed SEO is a separate engagement with a separate qualification process.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="final">
+    <div class="wrap">
+        <h2>Ready to see where you stand?</h2>
+        <p>Start the 90-Day Visibility Sprint at $97/mo. Real data, a real fix in month one, and clear progress you can measure across both traditional search and modern AI search.</p>
+        <div class="final-cta">
+            <a class="btn btn-primary" href="#founding">Start the Sprint &mdash; $97/mo</a>
+            <a class="btn btn-ghost-inv" href="#audit">$197 AI Visibility Audit</a>
+        </div>
+        <small>Founding cohort: limited to ten members. Every pack personally QA'd before delivery.</small>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="wrap">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a class="logo" href="/">
+                    <span class="logo-mark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15l7-7 7 7"/></svg></span>
+                    PropeloSEO
+                </a>
+                <p>AI SEO services and AI visibility monitoring for small businesses. Professional data in, publish-ready assets out.</p>
+            </div>
+            <nav class="footer-links">
+                <a href="/about/">About</a>
+                <a href="/Contact/">Contact</a>
+                <a href="/Privacy/">Privacy</a>
+                <a href="/Termsofservice/">Terms</a>
+                <a href="/Refunds/">Refunds</a>
+            </nav>
+        </div>
+        <div class="footer-legal">&copy; 2026 PropeloSEO. All rights reserved. All prices are pilot assumptions subject to validation.</div>
+    </div>
+</footer>
 
 <script>
 function showTrustScore() {
@@ -381,317 +872,5 @@ function showTrustScore() {
     document.getElementById('trustPopup').classList.add('visible');
 }
 </script>
-
-<!-- ════ PROBLEM ════ -->
-<section class="section">
-    <div class="wrap">
-        <div class="section-header">
-            <div class="kicker">The Problem</div>
-            <h2>You know your site should rank higher. You just need the work done, not a dashboard.</h2>
-            <p>Most SEO tools hand you data and walk away. Most agencies charge thousands before you see results. There's a gap between the two.</p>
-        </div>
-        <div class="problem-grid">
-            <div class="problem-card">
-                <div class="icon" style="background: var(--action-soft); color: var(--action);">&#128269;</div>
-                <h3>Monitoring alone is a commodity</h3>
-                <p>Dashboards and rank trackers are everywhere. But raw data without action doesn't move your business.</p>
-            </div>
-            <div class="problem-card">
-                <div class="icon" style="background: var(--gold-soft); color: var(--gold);">&#128176;</div>
-                <h3>Managed SEO starts at $2,000+</h3>
-                <p>Full-service retainers are the right solution for some businesses, but overkill for many. There should be something in between.</p>
-            </div>
-            <div class="problem-card">
-                <div class="icon" style="background: var(--success-soft); color: var(--success);">&#129302;</div>
-                <h3>AI is changing where buyers find you</h3>
-                <p>ChatGPT, Perplexity and Gemini are already answering your buyers' questions. Do they mention you? Most businesses have no idea.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ════ HOW IT WORKS ════ -->
-<section class="section section-alt" id="how-it-works">
-    <div class="wrap">
-        <div class="section-header">
-            <div class="kicker">How It Works</div>
-            <h2>Three months. Measurable progress. Then keep going.</h2>
-            <p>The Growth Membership is sold as a 90-Day Visibility Sprint. Here's what each month looks like.</p>
-        </div>
-        <div class="timeline">
-            <div class="timeline-step highlight">
-                <div class="step-badge">Month 1</div>
-                <h3>Baseline + Quick-Win Pack</h3>
-                <p>We set up your measurement baseline and deliver a real, implemented fix within five business days.</p>
-                <ul class="step-includes">
-                    <li>Full technical crawl (up to 500 URLs)</li>
-                    <li>Keyword and SERP baseline (up to 50 keywords)</li>
-                    <li>Competitor and backlink-gap snapshot</li>
-                    <li>Limited AI Visibility Baseline</li>
-                    <li>Three opportunities ranked by commercial value</li>
-                    <li>One eligible low-risk fix, implemented with your approval</li>
-                </ul>
-            </div>
-            <div class="timeline-step">
-                <div class="step-badge">Month 2</div>
-                <h3>Biggest Opportunity Pack</h3>
-                <p>With the baseline set, your second Growth Pack targets the highest-impact opportunity identified.</p>
-                <ul class="step-includes">
-                    <li>Updated monitoring and critical alerts</li>
-                    <li>AI-engine visibility tracking</li>
-                    <li>One publish-ready Growth Pack</li>
-                    <li>One bankable Growth Credit issued</li>
-                    <li>Plain-English progress record</li>
-                </ul>
-            </div>
-            <div class="timeline-step">
-                <div class="step-badge gold">Month 3</div>
-                <h3>90-Day Progress Report</h3>
-                <p>Your sprint closes with a clear evidence report. The membership then continues on the same terms.</p>
-                <ul class="step-includes">
-                    <li>Baseline vs. current comparison</li>
-                    <li>Work delivered and implemented</li>
-                    <li>Observed movement with honest attribution</li>
-                    <li>One Growth Pack included</li>
-                    <li>Bonus credit on sprint completion</li>
-                    <li>Continue your membership or cancel freely</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ════ THE ENGINE ════ -->
-<section class="section" id="whats-included">
-    <div class="wrap">
-        <div class="section-header">
-            <div class="kicker">The Propelo Evidence Engine</div>
-            <h2>Professional data in. Publish-ready asset out.</h2>
-            <p>Every Growth Pack is built from the same professional data sources used by agencies charging ten times more.</p>
-        </div>
-        <div class="engine-visual">
-            <div class="engine-input">
-                <div class="engine-pill"><div class="dot" style="background: var(--action);"></div> Technical crawl (Screaming Frog)</div>
-                <div class="engine-pill"><div class="dot" style="background: var(--success);"></div> SERP and keyword movement</div>
-                <div class="engine-pill"><div class="dot" style="background: var(--gold);"></div> Competitor and backlink gaps</div>
-                <div class="engine-pill"><div class="dot" style="background: var(--accent);"></div> AI-engine citation checks</div>
-            </div>
-            <div class="engine-arrow">&rarr;</div>
-            <div class="engine-output">
-                <div class="engine-output-card">
-                    <h4>Your Growth Pack</h4>
-                    <p>One ranked, publish-ready asset, personally QA'd before delivery. Scoped, evidence-based, ready to implement.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ════ AI VISIBILITY ════ -->
-<section class="section section-dark">
-    <div class="wrap">
-        <div class="section-header">
-            <div class="kicker">AI Visibility Monitoring</div>
-            <h2>Know where AI is sending your buyers.</h2>
-            <p>Few competitors at this price point offer AI-engine citation tracking. For some members, this alone justifies the subscription.</p>
-        </div>
-        <div class="features-grid">
-            <div class="feature-card">
-                <h3>ChatGPT, Perplexity, Gemini</h3>
-                <p>Track which businesses these AI engines name when your buyers ask purchase-related questions. See who they recommend instead of you.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Citation and link tracking</h3>
-                <p>Monitor not just mentions but which domains and pages AI engines cite as sources. Powered by DataForSEO's AI optimisation suite and Ahrefs Brand Radar.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Month-over-month trends</h3>
-                <p>AI citations are measured using the identical prompt set and testing method every month, so changes reflect real movement, not prompt variance.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Built into every Growth Pack</h3>
-                <p>AI visibility data feeds directly into your pack recommendations. When AI engines overlook you, your Growth Pack shows what to do about it.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ════ GROWTH CREDITS ════ -->
-<section class="section section-alt">
-    <div class="wrap">
-        <div class="section-header">
-            <div class="kicker">Bankable Value</div>
-            <h2>Growth Credits that accumulate.</h2>
-            <p>One credit per month. Your balance is visible. Value builds the longer you stay.</p>
-        </div>
-        <div class="problem-grid">
-            <div class="problem-card">
-                <h3>One credit per month</h3>
-                <p>Each credit redeems for one Growth Pack. Maximum balance of three credits at any time.</p>
-            </div>
-            <div class="problem-card">
-                <h3>90-day individual expiry</h3>
-                <p>Each credit expires 90 days after issue. No surprise forfeiture; you always know the timeline.</p>
-            </div>
-            <div class="problem-card">
-                <h3>Keep what you've earned</h3>
-                <p>If you cancel, you have 30 days to redeem any remaining credits. Everything delivered to date is yours to keep.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ════ PRICING ════ -->
-<section class="section" id="pricing">
-    <div class="wrap">
-        <div class="section-header">
-            <div class="kicker">Pricing</div>
-            <h2>Simple, honest pricing.</h2>
-            <p>One membership. One standalone diagnostic. No feature-checklist comparison games.</p>
-        </div>
-        <div class="pricing-grid">
-            <div class="price-card hero-card">
-                <div class="price-badge">Recommended</div>
-                <h3>Growth Membership</h3>
-                <p class="price-desc">The 90-Day Visibility Sprint, then continuing membership.</p>
-                <div class="price-amount">$97<span style="font-size: 18px; font-weight: 500; color: var(--text-light);">/mo</span></div>
-                <p class="price-term">Cancel anytime. No minimum commitment.</p>
-                <ul class="price-list">
-                    <li>Full technical and search baseline</li>
-                    <li>AI Visibility Baseline included</li>
-                    <li>One Growth Pack per month</li>
-                    <li>Month-one Quick-Win fix implemented</li>
-                    <li>Bankable Growth Credits</li>
-                    <li>AI-engine visibility monitoring</li>
-                    <li>Critical alerts and progress tracking</li>
-                    <li>90-Day Progress Report at sprint close</li>
-                    <li>One website, 500-URL crawl, 50 keywords</li>
-                </ul>
-                <a href="#founding" class="btn-primary" style="width: 100%; text-align: center;">Start the Sprint</a>
-            </div>
-            <div class="price-card" id="audit">
-                <h3>AI Visibility Audit</h3>
-                <p class="price-desc">A standalone diagnostic for businesses not ready for a monthly membership.</p>
-                <div class="price-amount">$197<span style="font-size: 18px; font-weight: 500; color: var(--text-light);"> one-time</span></div>
-                <p class="price-term">Join the membership within 30 days and your first month is free.</p>
-                <ul class="price-list">
-                    <li>25 buyer questions across four AI engines</li>
-                    <li>Manual analysis of citation patterns</li>
-                    <li>Full rerun included</li>
-                    <li>Deeper than the membership baseline</li>
-                    <li>Clear re-entry path to the Growth Membership</li>
-                </ul>
-                <a href="/Contact/" class="btn-secondary" style="width: 100%; text-align: center;">Request Your Audit</a>
-            </div>
-        </div>
-        <p style="text-align: center; margin-top: 24px; font-size: 14px; color: var(--text-light);">Need managed implementation? <a href="/Contact/">Managed SEO retainers start at $2,000/mo</a> with a separate qualification process.</p>
-    </div>
-</section>
-
-<!-- ════ GUARANTEE ════ -->
-<section class="section section-alt">
-    <div class="wrap">
-        <div class="guarantee-box">
-            <h3>The delivery guarantee</h3>
-            <p>Your first Quick-Win Pack &mdash; including one eligible fix, implemented &mdash; arrives within five business days of completed onboarding, required access and your written approval. If it is late or materially incomplete, your first month is refunded. Rankings, traffic and revenue depend on variables outside our control and are never guaranteed.</p>
-        </div>
-    </div>
-</section>
-
-<!-- ════ FOUNDING COHORT ════ -->
-<section class="section" id="founding">
-    <div class="wrap">
-        <div class="founding-box">
-            <h3>Founding Cohort</h3>
-            <div class="spots">Limited to ten members</div>
-            <p>I personally QA every Growth Pack before it reaches you. The founding cohort locks in the $97 price for as long as you stay subscribed. This is capacity-true scarcity, not a countdown timer.</p>
-            <a href="/Contact/" class="btn-primary">Apply for a Founding Spot</a>
-        </div>
-    </div>
-</section>
-
-<!-- ════ FAQ ════ -->
-<section class="section section-alt" id="faq">
-    <div class="wrap">
-        <div class="section-header">
-            <div class="kicker">Questions</div>
-            <h2>Frequently asked questions</h2>
-        </div>
-        <div class="faq-list">
-            <div class="faq-item">
-                <button class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">What exactly is a Growth Pack?</button>
-                <div class="faq-a">A Growth Pack is one clearly scoped, publish-ready deliverable built from your live SEO data. It could be a content brief, a technical fix specification, an on-page optimisation, or a competitive gap analysis &mdash; whichever represents your highest-impact opportunity that month. Every pack is evidence-based and personally reviewed before delivery.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">What happens in month one?</button>
-                <div class="faq-a">In month one, we set up your full baseline (technical crawl, keyword tracking, competitor snapshot, and AI visibility check), identify your top three opportunities, and deliver a Quick-Win Pack. This first pack includes one eligible low-risk fix that we implement with your written approval &mdash; within five business days of completed onboarding and access.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Do you implement changes every month?</button>
-                <div class="faq-a">The first month includes one eligible fix, implemented. From month two onward, Growth Packs are publish-ready deliverables &mdash; scoped, documented, and ready for you or your developer to implement. Routine implementation is excluded after month one but can be purchased separately.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">What counts as an "eligible" Quick-Win fix?</button>
-                <div class="faq-a">Eligible fixes include metadata changes, broken internal links, basic schema corrections, indexability-setting corrections, and one small on-page improvement. Excluded: development work, template changes, migrations, complex schema, plugin conflicts, and high-risk site-wide changes. These boundaries are defined in the terms so the promise stays honest.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">How do Growth Credits work?</button>
-                <div class="faq-a">You receive one Growth Credit per month. Each credit redeems for one Growth Pack. You can hold a maximum of three credits at a time, and each credit expires individually 90 days after issue. Normal redemption is one per month; additional redemptions are subject to capacity. If you cancel, you have 30 days to redeem any remaining credits.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Can I cancel at any time?</button>
-                <div class="faq-a">Yes. There is no minimum commitment and no cancellation friction. If you cancel, you keep everything delivered to date and have 30 days to redeem any remaining Growth Credits. We earn your continued membership through visible, accumulating value.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">What is the AI Visibility Audit?</button>
-                <div class="faq-a">The AI Visibility Audit is a standalone $197 diagnostic &mdash; deeper than the baseline included in the membership. It covers 25 buyer questions across four AI engines (ChatGPT, Perplexity, Gemini, and more), includes manual analysis of citation patterns, and comes with a full rerun. If you purchase the audit and then join the Growth Membership within 30 days, your first membership month is free.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Do you guarantee rankings or traffic?</button>
-                <div class="faq-a">No. Rankings, traffic and revenue depend on variables outside any SEO provider's control. We guarantee the delivery of your Growth Pack on time and as specified. The 90-Day Progress Report shows your baseline, work delivered, observed movement, and &mdash; critically &mdash; what can and cannot reasonably be attributed to the work.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">What about managed SEO?</button>
-                <div class="faq-a">Managed SEO retainers start at $2,000 per month and are a separate engagement with a separate qualification process. If your business needs full-service implementation beyond Growth Packs, get in touch and we'll discuss whether managed SEO is the right fit.</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ════ FINAL CTA ════ -->
-<section class="section">
-    <div class="wrap" style="text-align: center;">
-        <h2 style="font-size: clamp(26px, 4vw, 36px); letter-spacing: -0.02em; margin-bottom: 12px;">Ready to see where you stand?</h2>
-        <p style="font-size: 16px; color: var(--text-light); max-width: 480px; margin: 0 auto 28px;">Start with the 90-Day Visibility Sprint at $97/mo. Real data, a real fix in month one, and clear progress you can measure.</p>
-        <div class="hero-cta-row">
-            <a href="/Contact/" class="btn-primary">Start the Sprint &mdash; $97/mo</a>
-            <a href="#audit" class="btn-secondary">$197 AI Visibility Audit</a>
-        </div>
-    </div>
-</section>
-
-<!-- ════ FOOTER ════ -->
-<footer class="site-footer">
-    <div class="wrap">
-        <div class="footer-brand">
-            <a href="/" class="logo">
-                <div class="logo-mark"></div>
-                PropeloSEO
-            </a>
-            <p style="margin-top: 8px;">Data-driven SEO membership. Professional data in, publish-ready assets out.</p>
-        </div>
-        <div class="footer-links">
-            <a href="/about/">About</a>
-            <a href="/Contact/">Contact</a>
-            <a href="/Privacy/">Privacy</a>
-            <a href="/Termsofservice/">Terms</a>
-            <a href="/Refunds/">Refunds</a>
-        </div>
-    </div>
-    <div class="wrap">
-        <p class="footer-copy">&copy; 2026 PropeloSEO. All rights reserved. All prices are pilot assumptions subject to validation.</p>
-    </div>
-</footer>
-
 </body>
 </html>
