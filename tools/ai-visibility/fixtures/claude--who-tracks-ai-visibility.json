@@ -1,0 +1,204 @@
+{
+  "_meta": {
+    "captured": "2026-08-30T12:06:00Z",
+    "llm_type": "claude",
+    "model_name": "claude-haiku-4-5",
+    "web_search": true,
+    "temperature": 0.1,
+    "cost_usd": 0.0256,
+    "prompt_id": "who-tracks-ai-visibility",
+    "note": "Real DataForSEO ai_optimization_llm_response payload (tasks[0].result[0]). Annotation `text` dropped — parser does not read it. Everything the parser reads is verbatim."
+  },
+  "model_name": "claude-haiku-4-5-20251001",
+  "input_tokens": 11085,
+  "output_tokens": 783,
+  "reasoning_tokens": 0,
+  "web_search": true,
+  "money_spent": 0.025,
+  "datetime": "2026-08-30 12:06:00 +00:00",
+  "fan_out_queries": [
+    "SEO services track ChatGPT Perplexity Gemini mentions business",
+    "AI chatbot mention tracking tools businesses 2026"
+  ],
+  "items": [
+    {
+      "type": "message",
+      "sections": [
+        {
+          "type": "text",
+          "text": "I'll search for information about SEO services that track mentions of businesses in AI chatbots and search engines.",
+          "annotations": null
+        }
+      ]
+    },
+    {
+      "type": "message",
+      "sections": [
+        {
+          "type": "text",
+          "text": "Based on current tools available, several SEO services and platforms now specifically measure whether ChatGPT, Perplexity, and Gemini mention your business:\n\n## Dedicated AI Visibility Tracking Tools\n\n",
+          "annotations": null
+        },
+        {
+          "type": "text",
+          "text": "**OtterlyAI** - Tracks brand mentions and website citations on ChatGPT, Perplexity, AI Overviews, AI Mode, Gemini, and Copilot",
+          "annotations": [
+            {
+              "title": "AI Search Monitoring Tool: Track ChatGPT, Perplexity & Google AIO",
+              "url": "https://otterly.ai/",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ".\n\n",
+          "annotations": null
+        },
+        {
+          "type": "text",
+          "text": "**Semrush AI Visibility Toolkit** - Tracks brand mentions and sentiment across six AI models including ChatGPT, Perplexity, Gemini, Llama, Claude, and DeepSeek",
+          "annotations": [
+            {
+              "title": "Top 15 AI SEO Tools for Improving Visibility in ChatGPT, Perplexity, and Google | Data-Mania, LLC",
+              "url": "https://www.data-mania.com/blog/best-ai-seo-tools-improve-visibility-chatgpt-perplexity-google/",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", with ",
+          "annotations": null
+        },
+        {
+          "type": "text",
+          "text": "pricing starting at $99/month for the standalone toolkit",
+          "annotations": [
+            {
+              "title": "Top 15 AI SEO Tools for Improving Visibility in ChatGPT, Perplexity, and Google | Data-Mania, LLC",
+              "url": "https://www.data-mania.com/blog/best-ai-seo-tools-improve-visibility-chatgpt-perplexity-google/",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ".\n\n",
+          "annotations": null
+        },
+        {
+          "type": "text",
+          "text": "**Answer Socrates' LLM Brand Tracker** - Tracks how often AI recommends your brand across ChatGPT, Perplexity, Gemini, Claude, DeepSeek, and Grok, with free monitoring for ChatGPT and Gemini, and paid plans starting at $15/month",
+          "annotations": [
+            {
+              "title": "LLM Brand Tracker: Track Your Brand Mentions in ChatGPT, Perplexity, Gemini & Claude",
+              "url": "https://answersocrates.com/llm-brand-tracker",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "LLM Brand Tracker: Track Your Brand Mentions in ChatGPT, Perplexity, Gemini & Claude",
+              "url": "https://answersocrates.com/llm-brand-tracker",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ".\n\n",
+          "annotations": null
+        },
+        {
+          "type": "text",
+          "text": "**LLMrefs** - An AI search analytics tool for ChatGPT, Perplexity, Google AI Overviews/Mode, Gemini, Claude and more that maps your SEO keywords to AI visibility, showing which brands and URLs get cited for each query",
+          "annotations": [
+            {
+              "title": "Best AI Tools to Monitor SaaS Brand Visibility (2026)",
+              "url": "https://www.therankmasters.com/insights/ai-visibility/best-ai-tools-monitor-saas-brand-visibility-chatgpt-perplexity",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ".\n\n",
+          "annotations": null
+        },
+        {
+          "type": "text",
+          "text": "**AIclicks** - An AI search optimization tool for ChatGPT, Perplexity and Gemini that tracks where you appear in AI answers and suggests content actions to boost your share-of-voice",
+          "annotations": [
+            {
+              "title": "Best AI Tools to Monitor SaaS Brand Visibility (2026)",
+              "url": "https://www.therankmasters.com/insights/ai-visibility/best-ai-tools-monitor-saas-brand-visibility-chatgpt-perplexity",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ".\n\n",
+          "annotations": null
+        },
+        {
+          "type": "text",
+          "text": "**Frizerly** - Tracks AI brand mentions on ChatGPT, Gemini, Claude, and Perplexity, with a focus on local service businesses",
+          "annotations": [
+            {
+              "title": "What tool can track if ChatGPT, Gemini, Claude, and Perplexity mention my local service business? | Frizerly Blog",
+              "url": "https://blog.frizerly.com/19696/what_tool_can_track_if_chatgpt_gemini_claude_and_perplexity_mention_my_local_service_business",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ".\n\n## Full-Service SEO Agencies\n\n",
+          "annotations": null
+        },
+        {
+          "type": "text",
+          "text": "**SEO Discovery** - Offers Ecommerce AI SEO Services that track AI mentions, citations, referrals, and conversions to measure visibility across AI platforms at $250/month",
+          "annotations": [
+            {
+              "title": "Ecommerce AI SEO: Rank in ChatGPT, Gemini and Perplexity",
+              "url": "https://www.seodiscovery.com/blog/ecommerce-ai-seo-chatgpt-gemini-perplexity/",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ".\n\nThese tools represent a new category that ",
+          "annotations": null
+        },
+        {
+          "type": "text",
+          "text": "tracks how your brand appears when someone asks ChatGPT, Perplexity, Gemini, or Claude a question",
+          "annotations": [
+            {
+              "title": "AI Visibility Tools 2026: Track Your Brand Across LLMs",
+              "url": "https://www.digitalapplied.com/blog/ai-visibility-tools-2026-track-brand-chatgpt-perplexity-gemini",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", filling a gap that traditional SEO tools weren't designed to measure.",
+          "annotations": null
+        }
+      ]
+    }
+  ]
+}

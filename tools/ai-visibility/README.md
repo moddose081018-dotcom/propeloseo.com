@@ -63,9 +63,76 @@ listed is invisible. Seed the list from a first sweep, then keep it current.
 Nested names are handled — matching "AEO Collective" masks the span so "AEO"
 cannot double-count it — but unknown names are simply missed.
 
-## Current baseline
+## Baseline: 20 runs, 5 prompts x 4 engines, 2026-08-30
 
-One prompt, one model: PropeloSEO is **not mentioned and not cited**, while
-Posirank, AEO Collective, Arvow, AIO Copilot and ZeroRank are all named. That
-is the honest starting point the 90-Day Progress Report should be measured
-against.
+`gpt-4o-mini` / `claude-haiku-4-5` / `gemini-2.5-flash` / `sonar`, web search
+requested on every call. Total spend **$0.3835**.
+
+**PropeloSEO was mentioned in 0 of 20 answers and cited in 0 of 328 citations.**
+That is the honest starting point the 90-Day Progress Report measures against.
+
+Recommended instead, by share of voice:
+
+| Brand | Checks | Share of voice |
+| --- | --- | --- |
+| Semrush | 8 | 40% |
+| SE Ranking | 4 | 20% |
+| Ahrefs | 3 | 15% |
+| Peec AI | 3 | 15% |
+| Profound | 2 | 10% |
+
+Semrush, SE Ranking and Ahrefs are the incumbents to displace — and note we
+*pay* two of them. 145 distinct domains were cited across the 20 answers.
+
+## What the run exposed
+
+**1. `web_search: true` is a request, not a guarantee — and gpt-4o-mini ignored
+it 3 times in 5.** The result object reports what actually happened. Ungrounded
+runs answer from model memory, return zero citations, and cost ~33x less
+($0.0008 vs $0.027). Pooling them with grounded runs would silently deflate
+citation rate and corrupt any trend. `scan.mjs` flags them and reports a
+grounded-only citation rate. **Any production run must check `web_search` on
+the response and re-issue when false** — or use a model that grounds reliably.
+
+**2. Four engines, four different citation shapes.** The parser handles all
+four; a naive implementation would break on three of them.
+
+| Engine | Shape | Offsets | Domain source |
+| --- | --- | --- | --- |
+| ChatGPT | one section, inline annotations | yes | URL |
+| Claude | many fragments, `annotations: null` on unattributed ones, duplicated entries | no | URL |
+| Gemini | one section, heavy duplication | yes | **`title` only** |
+| Perplexity | one section, 20-source bibliography, `[n]` markers in text | no | URL |
+
+**3. Gemini hides the real domain.** Every Gemini citation URL is a
+`vertexaisearch.cloud.google.com/grounding-api-redirect/...` wrapper. Resolving
+the domain from the URL would attribute every Gemini citation to Google and
+make an owned citation **undetectable**. `resolveDomain()` falls back to the
+annotation `title`, which Gemini supplies as a bare domain.
+
+**4. Perplexity is 5-7x cheaper and cites 20 sources a time** ($0.0056 vs
+$0.023-$0.037). But its citations are a bibliography, not per-claim
+attributions, so "cited" means something weaker there than on ChatGPT. Do not
+pool citation rates across engines without saying so.
+
+**5. Three of four engines actively warn buyers off this price band.** Claude
+calls "$99-$199/month for comprehensive SEO" a red flag; Gemini says anything
+under $200/month "should be carefully vetted... automated spam tactics"; a
+cited source warns to "be wary of companies offering services for $150 a month
+or less". **The $97 price is not just unknown to AI search — it pattern-matches
+to something these engines tell buyers to avoid.** That is a positioning
+problem no amount of citation-building fixes on its own, and it is the single
+most actionable finding in this run.
+
+## Two cautions before this reaches a client
+
+**Citations include noise.** In the first sampled answer, 4 of 9 cited domains
+were irrelevant — an icon library, a Dutch article about Arrow Electronics, a
+Turkish credit app. Cited-domain lists need a human pass; never present the raw
+list as "who the AI trusts".
+
+**Competitor detection only sees names in `brand.json`.** Unknown competitors
+are invisible. This run surfaced many worth adding (Otterly, Rankscale,
+Writesonic, ZipTie, Ranked.ai, Sitemile, WebFX, Thrive, Searchbloom). Seed from
+a sweep, then maintain. Nested names are handled — matching "AEO Collective"
+masks the span so "AEO" cannot double-count — but unlisted names are missed.

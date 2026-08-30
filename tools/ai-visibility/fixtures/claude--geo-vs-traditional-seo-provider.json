@@ -1,0 +1,112 @@
+{
+  "_meta": {
+    "captured": "2026-08-30T12:10:17Z",
+    "llm_type": "claude",
+    "model_name": "claude-haiku-4-5",
+    "web_search": true,
+    "temperature": 0.1,
+    "cost_usd": 0.022488,
+    "prompt_id": "geo-vs-traditional-seo-provider",
+    "note": "Real DataForSEO payload (tasks[0].result[0]). Annotation `text` dropped — parser does not read it."
+  },
+  "model_name": "claude-haiku-4-5-20251001",
+  "input_tokens": 9773,
+  "output_tokens": 423,
+  "reasoning_tokens": 0,
+  "web_search": true,
+  "money_spent": 0.021888,
+  "datetime": "2026-08-30 12:10:17 +00:00",
+  "fan_out_queries": [
+    "generative engine optimization technical SEO small business"
+  ],
+  "items": [
+    {
+      "type": "message",
+      "sections": [
+        {
+          "type": "text",
+          "text": "I'll search for information about generative engine optimization services for small businesses.",
+          "annotations": null
+        }
+      ]
+    },
+    {
+      "type": "message",
+      "sections": [
+        {
+          "type": "text",
+          "text": "Based on the search results, several companies and platforms provide generative engine optimization alongside traditional technical SEO for small businesses:\n\n1. **HubSpot** - ",
+          "annotations": null
+        },
+        {
+          "type": "text",
+          "text": "HubSpot offers AEO (answer engine optimization) through Marketing Hub Pro and Enterprise customers, which tracks brand visibility across ChatGPT, Perplexity, and Gemini, and monitors competitors' share of voice with prioritized recommendations",
+          "annotations": [
+            {
+              "title": "Generative engine optimization for small business: How to win with a small budget in 2026",
+              "url": "https://blog.hubspot.com/marketing/generative-engine-optimization-small-business",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". ",
+          "annotations": null
+        },
+        {
+          "type": "text",
+          "text": "It's also available as a standalone tool for $50/month",
+          "annotations": [
+            {
+              "title": "Generative engine optimization for small business: How to win with a small budget in 2026",
+              "url": "https://blog.hubspot.com/marketing/generative-engine-optimization-small-business",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ".\n\n2. **Salesforce** - ",
+          "annotations": null
+        },
+        {
+          "type": "text",
+          "text": "Salesforce's unified CRM platform can help centralize client questions and issues, which you can then turn into GEO-optimized content",
+          "annotations": [
+            {
+              "title": "Generative Engine Optimization (GEO): Teach AI Who You Are",
+              "url": "https://www.salesforce.com/blog/small-business/generative-engine-optimization/",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ".\n\n3. **Screaming Frog** - ",
+          "annotations": null
+        },
+        {
+          "type": "text",
+          "text": "This software crawls your website to identify technical SEO issues, missing metadata, broken links, and schema implementation problems, and is invaluable for small businesses wanting deep technical insights without hiring a developer",
+          "annotations": [
+            {
+              "title": "Generative engine optimization for small business: How to win with a small budget in 2026",
+              "url": "https://blog.hubspot.com/marketing/generative-engine-optimization-small-business",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ".\n\n4. **Mailchimp** - Mailchimp provides resources on generative engine optimization for small businesses.\n\nAdditionally, various digital agencies and consultants (like Alders Digital, Fulfill Digital, and Luce Media) offer GEO services for small businesses, though they weren't specifically highlighted as providing both services in the search results.",
+          "annotations": null
+        }
+      ]
+    }
+  ]
+}

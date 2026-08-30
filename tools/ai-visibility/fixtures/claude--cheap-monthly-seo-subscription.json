@@ -1,0 +1,113 @@
+{
+  "_meta": {
+    "captured": "2026-08-30T12:02:44Z",
+    "llm_type": "claude",
+    "model_name": "claude-haiku-4-5",
+    "web_search": true,
+    "temperature": 0.1,
+    "cost_usd": 0.022556,
+    "prompt_id": "cheap-monthly-seo-subscription",
+    "note": "Real DataForSEO ai_optimization_llm_response payload (tasks[0].result[0]). Annotation `text` fields dropped — the parser does not read them. Everything the parser reads is verbatim."
+  },
+  "model_name": "claude-haiku-4-5-20251001",
+  "input_tokens": 10041,
+  "output_tokens": 383,
+  "reasoning_tokens": 0,
+  "web_search": true,
+  "money_spent": 0.021956,
+  "datetime": "2026-08-30 12:02:44 +00:00",
+  "fan_out_queries": [
+    "SEO providers fixed monthly subscription under $150"
+  ],
+  "items": [
+    {
+      "type": "message",
+      "sections": [
+        {
+          "type": "text",
+          "text": "I'll search for information about affordable SEO providers with fixed monthly subscriptions under $150.",
+          "annotations": null
+        }
+      ]
+    },
+    {
+      "type": "message",
+      "sections": [
+        {
+          "type": "text",
+          "text": "Based on my search results, here are SEO providers that offer fixed monthly subscriptions under $150:\n\n",
+          "annotations": null
+        },
+        {
+          "type": "text",
+          "text": "**Ranked.ai** offers fixed monthly subscription plans starting at $99 per month, with their Standard plan at $99/month including 25 keywords, 1 blog per week, on-page optimization, backlinks, and unlimited web copy.",
+          "annotations": [
+            {
+              "title": "Find the Best Monthly SEO Services: We Examine 7 Top Agencies | Embarque",
+              "url": "https://www.embarque.io/post/monthly-seo-services-agencies",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Find the Best Monthly SEO Services: We Examine 7 Top Agencies | Embarque",
+              "url": "https://www.embarque.io/post/monthly-seo-services-agencies",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "\n\nHowever, it's important to note that ",
+          "annotations": null
+        },
+        {
+          "type": "text",
+          "text": "some industry experts warn to be wary of companies offering services for $150 a month or less, as they may be relying on shady methods or will provide very few results.",
+          "annotations": [
+            {
+              "title": "SEO Pricing Guide: How Much Does SEO Cost In 2026?",
+              "url": "https://foxxr.com/blog/how-much-does-seo-cost/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "SEO Pricing Guide: How Much Does SEO Cost In 2026?",
+              "url": "https://foxxr.com/blog/how-much-does-seo-cost/",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Additionally, ",
+          "annotations": null
+        },
+        {
+          "type": "text",
+          "text": "agencies charging under $500/month would only be allocating roughly 2-3 hours to your account, while meaningful SEO requires 15-40 hours per month depending on scope.",
+          "annotations": [
+            {
+              "title": "SEO Pricing 2026: What SEO Services Cost by Agency",
+              "url": "https://www.digitalapplied.com/blog/seo-pricing-2026-what-seo-services-cost",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "SEO Pricing 2026: What SEO Services Cost by Agency",
+              "url": "https://www.digitalapplied.com/blog/seo-pricing-2026-what-seo-services-cost",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "\n\nWhile Ranked.ai appears to be the main provider offering plans under $150, most other established SEO agencies start at higher price points ($199-$500+ per month). If you're considering a sub-$150 option, you may want to carefully evaluate what services are actually included and whether the provider can deliver meaningful results for your specific needs.",
+          "annotations": null
+        }
+      ]
+    }
+  ]
+}

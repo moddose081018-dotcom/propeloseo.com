@@ -6,6 +6,42 @@
  * and citation rate are defensible line by line, not model opinion.
  */
 
+/**
+ * Hosts that wrap the real citation target in a redirect. Gemini returns every
+ * grounding citation as a vertexaisearch redirect, so the URL host is useless
+ * for attribution — the real domain appears only in the annotation `title`.
+ */
+const REDIRECT_HOSTS = new Set(['vertexaisearch.cloud.google.com'])
+
+const BARE_DOMAIN_RE = /^[a-z0-9](?:[a-z0-9-]*[a-z0-9])?(?:\.[a-z0-9-]+)*\.[a-z]{2,}$/i
+
+/** True when the URL only redirects to the real source. */
+export function isRedirectUrl(url) {
+  try {
+    const u = new URL(url)
+    return REDIRECT_HOSTS.has(u.hostname.toLowerCase()) || u.pathname.includes('/grounding-api-redirect/')
+  } catch {
+    return false
+  }
+}
+
+/**
+ * Resolve the domain a citation actually points at.
+ *
+ * For a redirect URL the hostname is the redirector, so fall back to the
+ * annotation title when that title is itself a bare domain (which is what
+ * Gemini supplies). Returns `{ domain, viaTitle }` so a report can disclose
+ * which citations were resolved indirectly.
+ */
+export function resolveDomain(url, title) {
+  if (isRedirectUrl(url)) {
+    const t = (title ?? '').trim().toLowerCase().replace(/^www\./, '')
+    if (BARE_DOMAIN_RE.test(t)) return { domain: t, viaTitle: true }
+    return { domain: null, viaTitle: false }
+  }
+  return { domain: domainOf(url), viaTitle: false }
+}
+
 /** Lowercased hostname with a leading `www.` removed, or null if unparseable. */
 export function domainOf(url) {
   try {
@@ -91,16 +127,38 @@ export function detectNames(text, names) {
   return found.sort((a, b) => a.index - b.index).map((f) => f.name)
 }
 
-/** Pull the text sections out of a DataForSEO llm_responses result object. */
+/**
+ * Pull text out of a DataForSEO llm_responses result.
+ *
+ * Engines differ: ChatGPT and Gemini return one section holding the whole
+ * answer, while Claude splits a single message into many contiguous fragments
+ * with `annotations: null` on the unattributed ones. Fragments within an item
+ * are therefore concatenated with no separator (they are one continuous
+ * sentence) and separate items are joined with a blank line. Joining every
+ * section with a separator would inject whitespace mid-sentence and can split
+ * a brand name across the boundary.
+ */
 export function extractSections(result) {
-  const out = []
+  const items = []
   for (const item of result?.items ?? []) {
+    const sections = []
     for (const section of item?.sections ?? []) {
       if (section?.type !== 'text' || typeof section.text !== 'string') continue
-      out.push({ text: section.text, annotations: section.annotations ?? [] })
+      sections.push({ text: section.text, annotations: section.annotations ?? [] })
     }
+    if (sections.length) items.push(sections)
   }
-  return out
+  return items
+}
+
+/** Flat list of sections, for callers that do not care about item grouping. */
+export function flattenSections(items) {
+  return items.flat()
+}
+
+/** Reconstruct the answer text as the reader saw it. */
+export function joinText(items) {
+  return items.map((sections) => sections.map((s) => s.text).join('')).join('\n\n')
 }
 
 /**
@@ -111,34 +169,43 @@ export function extractSections(result) {
  * word-boundary matched against the answer text.
  */
 export function parseResponse({ result, brand }) {
-  const sections = extractSections(result)
-  const text = sections.map((s) => s.text).join('\n\n')
+  const items = extractSections(result)
+  const sections = flattenSections(items)
+  const text = joinText(items)
 
   const citations = []
+  let order = 0
   for (const s of sections) {
     for (const a of s.annotations) {
       if (!a?.url) continue
       const url = canonicalUrl(a.url)
-      const domain = domainOf(url)
+      const { domain, viaTitle } = resolveDomain(a.url, a.title)
       citations.push({
         url,
         rawUrl: a.url,
         title: a.title ?? null,
         domain,
+        domainViaTitle: viaTitle,
         isOwned: isOwnedDomain(domain, brand.ownDomain),
         startIndex: typeof a.start_index === 'number' ? a.start_index : null,
-        endIndex: typeof a.end_index === 'number' ? a.end_index : null,
+        // Encounter order, used when the engine supplies no character offsets.
+        order: order++,
       })
     }
   }
-  // Order of appearance in the answer, so position 1 is the first thing cited.
-  citations.sort((a, b) => (a.startIndex ?? 0) - (b.startIndex ?? 0))
+  // Offsets when the engine gives them (ChatGPT, Gemini), encounter order
+  // otherwise (Claude, Perplexity). Never mix the two within one response.
+  const hasOffsets = citations.some((c) => c.startIndex !== null)
+  citations.sort((a, b) =>
+    hasOffsets ? (a.startIndex ?? 0) - (b.startIndex ?? 0) : a.order - b.order,
+  )
   citations.forEach((c, i) => {
     c.position = i + 1
   })
 
   const ownedCitations = citations.filter((c) => c.isOwned)
-  const distinctDomains = [...new Set(citations.map((c) => c.domain).filter(Boolean))]
+  const resolvedDomains = citations.map((c) => c.domain).filter(Boolean)
+  const distinctDomains = [...new Set(resolvedDomains)]
   const distinctUrls = [...new Set(citations.map((c) => c.url))]
   const { mentioned, matchedTokens } = detectMention(text, brand.mentionTokens)
 
@@ -156,6 +223,8 @@ export function parseResponse({ result, brand }) {
     totalCitations: citations.length,
     distinctDomainCount: distinctDomains.length,
     distinctUrlCount: distinctUrls.length,
+    unresolvedDomainCount: citations.length - resolvedDomains.length,
+    citationsHaveOffsets: hasOffsets,
     citations,
     distinctDomains,
 
@@ -175,6 +244,10 @@ export function rollup(runs) {
   const pct = (n) => (total ? Math.round((n / total) * 1000) / 10 : 0)
   const mentioned = runs.filter((r) => r.mentioned).length
   const cited = runs.filter((r) => r.citedInAnnotations).length
+  // `web_search: true` is a REQUEST. The result reports what actually happened,
+  // and an ungrounded run answers from model memory with no citations at all —
+  // it measures something different and must not be pooled with grounded runs.
+  const ungrounded = runs.filter((r) => !r.webSearch)
 
   const competitorCounts = new Map()
   for (const r of runs) {
@@ -199,6 +272,12 @@ export function rollup(runs) {
     cited,
     mentionRate: pct(mentioned),
     citationRate: pct(cited),
+    ungroundedRuns: ungrounded.length,
+    ungroundedIds: ungrounded.map((r) => r.promptId ?? r.modelName),
+    citationRateGrounded: (() => {
+      const g = runs.filter((r) => r.webSearch)
+      return g.length ? Math.round((g.filter((r) => r.citedInAnnotations).length / g.length) * 1000) / 10 : null
+    })(),
     totalCitations: runs.reduce((s, r) => s + r.totalCitations, 0),
     ownedCitations: runs.reduce((s, r) => s + r.citationCount, 0),
     costUsd: Math.round(runs.reduce((s, r) => s + (r.costUsd ?? 0), 0) * 10000) / 10000,

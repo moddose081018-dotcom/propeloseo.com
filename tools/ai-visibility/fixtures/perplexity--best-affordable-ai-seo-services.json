@@ -1,0 +1,153 @@
+{
+  "_meta": {
+    "captured": "2026-08-30T11:58:01Z",
+    "llm_type": "perplexity",
+    "model_name": "sonar",
+    "web_search": true,
+    "temperature": 0.1,
+    "cost_usd": 0.006157,
+    "prompt_id": "best-affordable-ai-seo-services",
+    "note": "Real DataForSEO ai_optimization_llm_response payload (tasks[0].result[0]). Annotation `text` fields are dropped — the parser does not read them. Everything the parser reads is verbatim. Perplexity returns a source bibliography rather than inline attributions; the answer references them as [1][6][8] markers."
+  },
+  "model_name": "sonar",
+  "input_tokens": 29,
+  "output_tokens": 528,
+  "reasoning_tokens": 0,
+  "web_search": true,
+  "money_spent": 0.005557,
+  "datetime": "2026-08-30 11:58:01 +00:00",
+  "fan_out_queries": null,
+  "items": [
+    {
+      "type": "message",
+      "sections": [
+        {
+          "type": "text",
+          "text": "The **best affordable options** for small businesses that specifically track visibility in **ChatGPT** and **AI Overviews** are **Otterly**, **Siftly**, and **CheckThat.ai** for budget monitoring, with **SE Ranking** as the best all-in-one SEO suite if you also want traditional SEO features in the same subscription.[1][6][8]\n\n- **Otterly** — Best low-cost choice for AI visibility tracking; public entry pricing is **$29/month**, and it covers **Google AI Overviews, ChatGPT, Perplexity, and Copilot**.[1][6]\n- **Siftly** — Good budget-friendly option for small teams that want monitoring plus guidance on what to fix; it is positioned as an affordable AI SEO tool for small businesses and starts with plans around **$79/month**.[1][6]\n- **CheckThat.ai** — Strong option if you mainly want **chatbot visibility tracking**; it offers **free access** with payment only for custom prompt tracking and monitors **ChatGPT, Perplexity, Claude, and Google AI Mode**.[8]\n- **SE Ranking** — Best value if you want **SEO + AI visibility** together; its Core plan starts at **$103.20/month annually** and includes AI search visibility monitoring alongside broader SEO tools.[1][5]\n- **Rankscale.ai** — A lower-cost specialized tracker mentioned by reviewers, starting at about **$20/month**, useful if your priority is granular AI search visibility analysis rather than a full SEO suite.[11]\n\nFor a small business on a tight budget, the most practical short list is:\n\n| Need | Best fit | Why |\n|---|---|---|\n| Lowest-cost AI visibility tracking | **Otterly** | Cheapest clearly listed paid option with ChatGPT and AI Overviews coverage.[1][6] |\n| Free or near-free entry | **CheckThat.ai** | Free access for baseline monitoring.[8] |\n| Tracking plus actionable guidance | **Siftly** | Designed for small businesses that need monitoring and fixes, not just reports.[6] |\n| Full SEO stack with AI visibility | **SE Ranking** | Combines conventional SEO workflow with AI visibility tracking.[1][5] |\n\nIf you want, I can also turn this into a **ranked shortlist by budget**—for example, **under $30/month**, **under $100/month**, or **best for local businesses**.",
+          "annotations": [
+            {
+              "title": "9 Best AI SEO Services for Small Businesses: Pricing and Fit (2026)",
+              "url": "https://snezzi.com/blog/9-best-ai-seo-services-for-small-businesses-affordable-options-compared/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Best AI SEO agencies for small business (2026, reviewed)",
+              "url": "https://growthmanager.ai/best-ai-seo-agency/for/small-business",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Best AI SEO Tools for Small Business (2026) - Cited",
+              "url": "https://cited.so/blog/best-ai-seo-tools-for-small-business",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "10 Best AI SEO Tools for Small Business in 2026",
+              "url": "https://thestacc.com/best/ai-seo-tools-for-small-business/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "7. Ahrefs: Best For Backlink...",
+              "url": "https://ailedgrowth.com/learn/best-ai-seo-tools-small-business",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Best AI SEO Tools for Small Business (2026) | Siftly",
+              "url": "https://siftly.ai/blog/ai-seo-tools-for-small-business",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Best AI SEO Tools for Small Business in 2026 Ranked",
+              "url": "https://www.layer3labs.io/guides/best-ai-seo-tools",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Best AI SEO Tools for Small Businesses in 2026 | CheckThat.ai",
+              "url": "https://checkthat.ai/answers/what-are-the-best-ai-seo-tools-for-small-business",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "AI SEO Tools for Small Business: A 2025 Buyer's Guide",
+              "url": "https://www.layer3labs.io/guides/ai-seo-tools-for-small-business",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Best AI SEO Tools for Small Business Websites (2026) – Rank Faster",
+              "url": "https://techaigoz.com/blog/ai-seo-tools-for-small-business-websites",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "I tested dozens of AI SEO tools for small business",
+              "url": "https://www.eesel.ai/blog/ai-seo-tools-for-small-business",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Best Affordable AI SEO Tools for Small Businesses.",
+              "url": "https://neuronwriter.com/best-affordable-ai-seo-tools-for-small-businesses/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "16 Best AI SEO Tools We Tested on Real Campaigns - OneLittleWeb",
+              "url": "https://onelittleweb.com/top-tools/best-ai-seo-tools/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "9 Best AI SEO Tools for Small Businesses in 2026 - UPLARN",
+              "url": "https://www.uplarn.com/best-ai-seo-tools/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Cheap SEO: 10 Best Tools & Services to Rank Fast (2026)",
+              "url": "https://www.seozilla.ai/cheap-seo",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "10 Best AI SEO Tools for Small Businesses Compared (2025)",
+              "url": "https://www.seoswarm.ai/blog/ai-seo-tools-for-small-business",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "AI SEO Tools Small Business: 12 Best Solutions for 2026",
+              "url": "https://www.moonrank.ai/blog/ai-seo-tools-small-business-12-best-solutions-for-2026",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "AI SEO Packages for Small Businesses | USA-Based SEO Agency",
+              "url": "https://www.thirdmarblemarketing.com/seo-packages",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "10 Best Affordable SEO Services for Small Business (2026 Guide)",
+              "url": "https://deftsoft.com/10-best-affordable-seo-services-for-small-business-2026-guide/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "The Best SEO Agencies for Small Businesses: 2026 Edition",
+              "url": "https://focus-digital.co/the-best-seo-agencies-for-small-businesses/",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

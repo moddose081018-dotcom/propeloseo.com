@@ -1,0 +1,153 @@
+{
+  "_meta": {
+    "captured": "2026-08-30T12:09:48Z",
+    "llm_type": "perplexity",
+    "model_name": "sonar",
+    "web_search": true,
+    "temperature": 0.1,
+    "cost_usd": 0.00585,
+    "prompt_id": "geo-vs-traditional-seo-provider",
+    "note": "Real DataForSEO payload (tasks[0].result[0]). Annotation `text` dropped — parser does not read it. Bibliography-style citations referenced by [n] markers."
+  },
+  "model_name": "sonar",
+  "input_tokens": 22,
+  "output_tokens": 228,
+  "reasoning_tokens": 0,
+  "web_search": true,
+  "money_spent": 0.00525,
+  "datetime": "2026-08-30 12:09:48 +00:00",
+  "fan_out_queries": null,
+  "items": [
+    {
+      "type": "message",
+      "sections": [
+        {
+          "type": "text",
+          "text": "A few agencies appear to offer **generative engine optimization (GEO)** alongside **traditional technical SEO** for small businesses, including **Revisible**, **Sparkplug Marketing**, and **SEO Discovery**.[7][10][15]\n\n- **Revisible** says it is a managed service built specifically for small business owners and offers GEO for AI tools like ChatGPT, Google AI Overview, Perplexity, and Microsoft Copilot.[7]\n- **Sparkplug Marketing** describes a complete AI search optimization program for small businesses, from **technical schema markup** to content strategy.[10]\n- **SEO Discovery** says its services include **technical SEO**, schema markup, AI-friendly content optimization, and ongoing optimization for both traditional and AI-powered search, and it explicitly includes local businesses among its audience.[15]\n- **Epic Web Studios** also mentions **structured data and technical SEO** as part of its GEO service.[8]\n\nIf you want, I can narrow this to the **best fit for your small business type** — for example, local services, ecommerce, or B2B.",
+          "annotations": [
+            {
+              "title": "Generative Engine Optimization Services | GEO Agency - Percepture",
+              "url": "https://percepture.com/services/geo-services",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "The 12 Best Generative Engine Optimization (GEO) ...",
+              "url": "https://thedigitalelevator.com/blog/best-generative-engine-optimization-geo-agencies/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Generative Engine Optimization Services | GEO Agency",
+              "url": "https://www.orangemantra.com/services/generative-engine-optimization/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Generative Engine Optimization (GEO) Services - Power Digital",
+              "url": "https://powerdigitalmarketing.com/services/generative-engine-optimization-services/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "The Top GEO Agencies of 2026 - First Page Sage",
+              "url": "https://firstpagesage.com/seo-blog/the-top-generative-engine-optimization-geo-agencies/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Reviews of Generative Engine Optimization Services for Startups",
+              "url": "https://emarketed.com/geo/reviews-of-generative-engine-optimization-services-for-startups/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Generative Engine Optimization Services | Revisible",
+              "url": "https://www.revisible.com/generative-engine-optimization-services/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Generative Engine Optimization Services - Epic Web Studios",
+              "url": "https://www.epicwebstudios.com/generative-engine-optimization",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Generative Engine Optimization Services | Succeeding Small",
+              "url": "https://succeedingsmall.co/generative-engine-optimization/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "AI SEO for Small Business | Generative Engine ...",
+              "url": "https://sparkplugmarketing.com/ai-seo",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "The 15 Best Generative Engine Optimization Services",
+              "url": "https://www.sovyn.com/blog/generative-engine-optimization",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "You will get Generative Engine Optimization for your local Business",
+              "url": "https://www.upwork.com/services/product/marketing-generative-engine-optimization-for-your-local-business-1928454652577802607",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "10 Best Generative Engine Optimization (GEO) Agencies August, 2026",
+              "url": "https://minuttia.com/best-geo-agencies/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Generative Engine Optimization Services | Toptal®",
+              "url": "https://www.toptal.com/services/marketing-agency/generative-engine-optimization-services",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "15 Best Generative Engine Optimisation (GEO) Agencies ...",
+              "url": "https://www.seodiscovery.com/blog/best-generative-engine-optimisation-agencies/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Best Generative Engine Optimization Tools for Small Businesses",
+              "url": "https://www.ntooitive.com/blog/smart-tools-for-the-ai-era-best-generative-engine-optimization-solutions-for-small-businesses/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Top Generative Engine Optimization (GEO) Companies - Clutch",
+              "url": "https://clutch.co/us/seo-firms/generative-engine-optimization",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Generative engine optimization for small business - HubSpot Blog",
+              "url": "https://blog.hubspot.com/marketing/generative-engine-optimization-small-business",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Generative Engine Optimization (GEO) for Small Businesses",
+              "url": "https://precisionmarketingpartners.com/generative-engine-optimization-geo-for-small-businesses-2/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Generative Engine Optimization (GEO) Services",
+              "url": "https://www.directom.com/services/generative-engine-optimization-services/",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

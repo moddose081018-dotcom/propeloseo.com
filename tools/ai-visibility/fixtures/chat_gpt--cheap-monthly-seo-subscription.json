@@ -1,0 +1,89 @@
+{
+  "_meta": {
+    "captured": "2026-08-30T12:02:04Z",
+    "llm_type": "chat_gpt",
+    "model_name": "gpt-4o-mini",
+    "web_search": true,
+    "temperature": 0.1,
+    "cost_usd": 0.027177,
+    "prompt_id": "cheap-monthly-seo-subscription",
+    "note": "Real DataForSEO ai_optimization_llm_response payload (tasks[0].result[0]). Annotation `text` fields dropped — the parser does not read them. Everything the parser reads is verbatim."
+  },
+  "model_name": "gpt-4o-mini-2024-07-18",
+  "input_tokens": 8174,
+  "output_tokens": 584,
+  "reasoning_tokens": 0,
+  "web_search": true,
+  "money_spent": 0.0265765,
+  "datetime": "2026-08-30 12:02:04 +00:00",
+  "fan_out_queries": [
+    "SEO providers fixed monthly subscription under $150"
+  ],
+  "items": [
+    {
+      "type": "message",
+      "sections": [
+        {
+          "type": "text",
+          "text": "Several SEO service providers offer monthly subscriptions under $150, providing cost-effective solutions compared to traditional $2,000 retainers. Here are some options to consider:\n\n\n[SNS運用はAIエージェントの時代へ。ADKが「SOCIAI（ソシアイ）」の提供を開始 | O!Product AI](https://oproduct.ai/articles/6697742?utm_source=openai)\n**Socio AI**  \nOffers HVAC-specific SEO services at $150 per month, including Google Business Profile optimization, bilingual website development, blog content, review generation, and local SEO execution. ([socio-ai.com](https://socio-ai.com/hvac-seo-services?utm_source=openai))\n\n\n\n[Davis Studio VT | Art Classes & Camps for Kids, Teens & Adults](https://davisstudiovt.com/?utm_source=openai)\n**Dravis Studio**  \nProvides an 'SEO Starter' package at $150 per month, featuring a website audit, basic on-page SEO for up to 5 pages, optimization for 5 keywords, and monthly progress reports. ([dravisstudio.com](https://dravisstudio.com/landing-page/?utm_source=openai))\n\n\n\n[Entrust net Logo PNG Transparent & SVG Vector - Freebie Supply](https://freebiesupply.com/logos/entrust-net-logo/?utm_source=openai)\n**Enter.Net**  \nOffers a 'Local/Organic SEO' package at $150 per month, including initial website SEO setup, keyword and meta description updates, and optimization for up to 10 pages with 5-10 locations. ([enter.net](https://enter.net/services/search-engine-optimization?utm_source=openai))\n\n\n\n[Ikon Pass Prices Go up May 5. Here’s What You Need to Know If You’re on the Fence. - Newschoolers.com](https://www.newschoolers.com/news/read/Ikon-Pass-Prices-5-Herea-Youa-Fence?utm_source=openai)\n**PeakRanking Digital Solutions**  \nProvides small business web design and SEO services starting at $150 per month, covering design, development, hosting, unlimited edits, 24/7 support, and lifetime updates. ([peakrankingseo.com](https://peakrankingseo.com/?utm_source=openai))\n\n\n\n\n**Akash SEO**  \nOffers a 'Local SEO Plan' at $150 per month, including SEO analysis, on-page and technical SEO, Google Business Profile optimization, content creation (1x 1000 words), link building (10 backlinks), and monthly reports. ([akashseo.com](https://akashseo.com/pricing/?utm_source=openai))\n\n\nThese providers offer a range of services tailored to different business needs, all priced below traditional retainer fees. ",
+          "annotations": [
+            {
+              "title": "SNS運用はAIエージェントの時代へ。ADKが「SOCIAI（ソシアイ）」の提供を開始 | O!Product AI",
+              "url": "https://oproduct.ai/articles/6697742?utm_source=openai",
+              "start_index": 184,
+              "end_index": 300
+            },
+            {
+              "title": "Affordable HVAC SEO Services | $150/mo | Socio AI",
+              "url": "https://socio-ai.com/hvac-seo-services?utm_source=openai",
+              "start_index": 506,
+              "end_index": 580
+            },
+            {
+              "title": "Davis Studio VT | Art Classes & Camps for Kids, Teens & Adults",
+              "url": "https://davisstudiovt.com/?utm_source=openai",
+              "start_index": 584,
+              "end_index": 694
+            },
+            {
+              "title": "Affordable SEO Packages | Dravis Studio",
+              "url": "https://dravisstudio.com/landing-page/?utm_source=openai",
+              "start_index": 891,
+              "end_index": 969
+            },
+            {
+              "title": "Entrust net Logo PNG Transparent & SVG Vector - Freebie Supply",
+              "url": "https://freebiesupply.com/logos/entrust-net-logo/?utm_source=openai",
+              "start_index": 973,
+              "end_index": 1106
+            },
+            {
+              "title": "SEO Services | Search Engine Optimization | Enter.Net",
+              "url": "https://enter.net/services/search-engine-optimization?utm_source=openai",
+              "start_index": 1311,
+              "end_index": 1397
+            },
+            {
+              "title": "Ikon Pass Prices Go up May 5. Here’s What You Need to Know If You’re on the Fence. - Newschoolers.com",
+              "url": "https://www.newschoolers.com/news/read/Ikon-Pass-Prices-5-Herea-Youa-Fence?utm_source=openai",
+              "start_index": 1401,
+              "end_index": 1598
+            },
+            {
+              "title": "Small Business Web Designer | PeakRanking Digital Solutions | $0 Down $150 Per Month",
+              "url": "https://peakrankingseo.com/?utm_source=openai",
+              "start_index": 1807,
+              "end_index": 1876
+            },
+            {
+              "title": "SEO Pricing – Akash Srivastava",
+              "url": "https://akashseo.com/pricing/?utm_source=openai",
+              "start_index": 2116,
+              "end_index": 2181
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "_meta": {
+    "captured": "2026-08-30T12:05:41Z",
+    "llm_type": "perplexity",
+    "model_name": "sonar",
+    "web_search": true,
+    "temperature": 0.1,
+    "cost_usd": 0.006153,
+    "prompt_id": "who-tracks-ai-visibility",
+    "note": "Real DataForSEO ai_optimization_llm_response payload (tasks[0].result[0]). Annotation `text` dropped — parser does not read it. Everything the parser reads is verbatim. Perplexity returns a source bibliography referenced by [n] markers."
+  },
+  "model_name": "sonar",
+  "input_tokens": 26,
+  "output_tokens": 527,
+  "reasoning_tokens": 0,
+  "web_search": true,
+  "money_spent": 0.005553,
+  "datetime": "2026-08-30 12:05:41 +00:00",
+  "fan_out_queries": null,
+  "items": [
+    {
+      "type": "message",
+      "sections": [
+        {
+          "type": "text",
+          "text": "The SEO services in your results that **actually measure whether ChatGPT, Perplexity, and Gemini mention your business** are the ones that explicitly track **brand mentions/citations across those three engines** rather than just general SEO rankings.[2][7][8][15][17][18]\n\nThe strongest matches are:\n\n- **OtterlyAI** — explicitly says it tracks brand visibility and citations across **ChatGPT, Gemini, and Perplexity**.[7][17]\n- **Profound** — listed as tracking **ChatGPT, Perplexity, Gemini** with citation tracking and AI visibility analytics.[8][15][18]\n- **Semrush AI Visibility Toolkit / SEOmonitor AI search tracking** — these track AI mentions/citations and include **ChatGPT, Perplexity, and Gemini** in their coverage.[1][3][6][11][13]\n- **Rankscale AI** — listed as tracking **ChatGPT, Gemini, and Perplexity** with citations and mentions.[14][15]\n- **Peec AI** — included in coverage lists for **AI Mode, ChatGPT, AI Overviews, Copilot, Gemini, and Perplexity**.[15]\n- **AI Rank Lab / Ryze AI / Keyword.com AI Tracker** — these appear in comparison pages as tools for multi-engine brand mention tracking, including the major LLMs you named.[16]\n\nA few clarifications matter:\n\n- Some tools only track **ChatGPT + AI Overviews** or **ChatGPT + Perplexity**, so they do **not** fully satisfy your exact three-engine requirement unless Gemini is also listed.[1][3][5]\n- Some results are **blog roundups**, not vendor documentation, so the most reliable confirmations are the product pages or vendor pages that directly state platform coverage.[1][3][7][15][17]\n- If you want the safest shortlist based on the sources here, start with **OtterlyAI, Profound, Semrush AI Visibility Toolkit, and Rankscale AI** because they are repeatedly described as measuring **mentions/citations** across the engines you care about.[7][8][11][14][15]\n\nIf you want, I can turn this into a **buying shortlist** with columns for **exact engine coverage, citation tracking, pricing, and whether they track prompts vs. whole-domain visibility**.",
+          "annotations": [
+            {
+              "title": "SEOmonitor: Unified SEO & AI Search Tracking Platform Designed ...",
+              "url": "https://www.seomonitor.com/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "The 8 Best AI Visibility Tracking Tools for ChatGPT, Claude, Gemini ...",
+              "url": "https://quickseo.ai/blog/top-ai-visibility-tracking-tools-chatgpt-claude-gemini-perplexity-2026",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "AI Search Tracking Software — ChatGPT, Gemini & Perplexity",
+              "url": "https://www.seomonitor.com/ai-search-tracking-software",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "How to Choose a GEO Agency That Gets AI Citations",
+              "url": "https://www.xseek.io/blogs/articles/which-geo-agency-gets-you-cited-by-ai",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Perplexity Search Visibility and Brand Mentions Tracker",
+              "url": "https://seranking.com/perplexity-visibility-tracker.html",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "13 best answer engine optimization (AEO) tools for ... - HubSpot Blog",
+              "url": "https://blog.hubspot.com/marketing/answer-engine-optimization-tools",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "The 25 Best AI SEO Tools in 2026",
+              "url": "https://otterly.ai/blog/the-25-best-ai-seo-tools/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Ahrefs Brand Radar -- Ai...",
+              "url": "https://www.vectoron.ai/blog/seo-content-strategy/best-llm-seo-tracking-software",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "26 AI SEO Services that Help Agencies Scale - Respona",
+              "url": "https://respona.com/blog/ai-seo-services/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Top 12 AI Search Optimization Tools to Track ChatGPT & Perpl",
+              "url": "https://www.memetik.ai/resources/ai-search-optimization-tools",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Roi Of Ai Visibility...",
+              "url": "https://www.digitalapplied.com/blog/ai-visibility-tools-2026-track-brand-chatgpt-perplexity-gemini",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "From 2 to $3 M ARR: How Tally's 8-Person Team Won with ChatGPT ...",
+              "url": "https://aiseotracker.com/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "AI SEO 2026: How to Rank in Perplexity, ChatGPT & Gemini",
+              "url": "https://www.agiledigitalagency.com/blog/ai-seo-rank-perplexity-chatgpt-gemini/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "16 Best Google AI Overviews Tracking Tools in 2026",
+              "url": "https://llmpulse.ai/blog/best-google-ai-overviews-trackers/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "7 Best Software for AI Visibility in Search (2026)",
+              "url": "https://www.seoptimer.com/blog/best-software-ai-visibility-search/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "How to Track Your Brand Across ChatGPT Claude Gemini Perplexity",
+              "url": "https://www.get-ryze.ai/blog/how-to-track-your-brand-across-chatgpt-claude-gemini-perplexity",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "AI Search Monitoring Tool: Track ChatGPT, Perplexity & Google AIO",
+              "url": "https://otterly.ai/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "What Are the Best AI SEO Tools for Brand Visibility in AI ...",
+              "url": "https://limy.ai/blog/what-are-the-best-ai-seo-tools-for-brand-visibility-in-ai-search",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "I tracked how AI search engines (ChatGPT, Perplexity ...",
+              "url": "https://www.reddit.com/r/SaaS/comments/1riefr0/i_tracked_how_ai_search_engines_chatgpt/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "ChatGPT, Gemini, Perplexity Sources for Local Businesses",
+              "url": "https://www.cheers.tech/geo-academy/ai-search-engine-source-differences",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

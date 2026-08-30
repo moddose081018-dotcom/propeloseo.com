@@ -1,0 +1,153 @@
+{
+  "_meta": {
+    "captured": "2026-08-30T12:02:18Z",
+    "llm_type": "perplexity",
+    "model_name": "sonar",
+    "web_search": true,
+    "temperature": 0.1,
+    "cost_usd": 0.005908,
+    "prompt_id": "cheap-monthly-seo-subscription",
+    "note": "Real DataForSEO ai_optimization_llm_response payload (tasks[0].result[0]). Annotation `text` fields dropped — the parser does not read them. Everything the parser reads is verbatim. Perplexity returns a source bibliography; the answer references it with [n] markers."
+  },
+  "model_name": "sonar",
+  "input_tokens": 28,
+  "output_tokens": 280,
+  "reasoning_tokens": 0,
+  "web_search": true,
+  "money_spent": 0.005308,
+  "datetime": "2026-08-30 12:02:18 +00:00",
+  "fan_out_queries": null,
+  "items": [
+    {
+      "type": "message",
+      "sections": [
+        {
+          "type": "text",
+          "text": "Several **SEO providers offer fixed monthly subscriptions under $150**, including **WebCEO** at **$119/mo** for its Startup plan, with fixed pricing and no additional charges on that plan.[1] **Semrush** also has a plan starting at **$117.33/mo billed annually** (or **$139/mo** month-to-month), which is under $150.[6] **4Core Digital** lists a **Starter** package at **$149/month**.[15] **RankYak** advertises a **flat $99/month** subscription with no tiers or upsells.[20]\n\nA few other low-cost options from the results are:\n- **Ranked.ai**: **$99/mo** fixed monthly subscription.[11]\n- **Embarque**: **$299/mo** starting price, so *not* under $150.[11]\n- **DPOM**: **$249/mo** and up, so *not* under $150.[10]\n- **Third Marble Marketing**: starts at **$499/mo**, so *not* under $150.[9]\n\nIf you want, I can turn this into a **shortlist of the best under-$150 providers** with notes on whether they are *software tools* or *done-for-you SEO services*.",
+          "annotations": [
+            {
+              "title": "Online SEO Tools Pricing",
+              "url": "https://www.webceo.com/online-seo-tools-price.htm",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "SEO Packages | SEO Pricing Plans - ClickReady Marketing",
+              "url": "https://www.clickready.com/seo-pricing-plans",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Best Affordable SEO Services 2026: 12 Ranked on Value",
+              "url": "https://thestacc.com/best/affordable-seo-services/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "SEO Pricing 2026: What SEO Services Cost by Agency",
+              "url": "https://www.digitalapplied.com/blog/seo-pricing-2026-what-seo-services-cost",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Monthly SEO Packages for Small Businesses",
+              "url": "https://loganix.com/seo-packages/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "SEO & AI Search Plans and Pricing - Semrush",
+              "url": "https://www.semrush.com/pricing/seo-ai-search/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Affordable SEO Packages – Monthly SEO Plans & Pricing - 1Solutions",
+              "url": "https://www.1solutions.biz/affordable-seo-packages/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Best Monthly SEO Services 2026: 12 Retainers Compared - theStacc",
+              "url": "https://thestacc.com/best/monthly-seo-services/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "AI SEO Packages for Small Businesses | USA-Based SEO Agency",
+              "url": "https://www.thirdmarblemarketing.com/seo-packages",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "SEO Pricing & Packages: Fixed Monthly Plans from $249 | DPOM",
+              "url": "https://www.dpomusa.com/seo-pricing-packages/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Find the Best Monthly SEO Services: We Examine 7 Top ...",
+              "url": "https://www.embarque.io/post/monthly-seo-services-agencies",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Top 10 Cheap Seo Services",
+              "url": "https://rankai.ai/articles/cheap-seo-services-top-10-for-startups-smbs-2025",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "SEO Software Subscription Pricing: Complete Guide 2026",
+              "url": "https://www.trysight.ai/blog/seo-software-subscription-pricing",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "4 Most Affordable SEO Services in 2026 for Your Budget",
+              "url": "https://www.seo.com/blog/affordable-seo-services/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "SEO Packages | 4Core Digital",
+              "url": "https://4coredigital.com/packages",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "10 Best SEO Services – Forbes Advisor",
+              "url": "https://www.forbes.com/advisor/business/software/best-seo-services/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "$150 dollar a month seo packages",
+              "url": "https://www.reddit.com/r/SEO/comments/1dxkzbw/150_dollar_a_month_seo_packages/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Budget-friendly Monthly SEO Plan and Packages - SAG IPL",
+              "url": "https://www.sagipl.com/monthly-seo-packages.php",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "SEO Pricing Guide: How Much Should You Actually Budget ...",
+              "url": "https://thedigitalelevator.com/blog/seo-pricing-guide/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Small Business SEO Packages: 17 Prices Compared",
+              "url": "https://rankyak.com/blog/seo-packages-for-small-business",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

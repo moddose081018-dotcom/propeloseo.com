@@ -1,0 +1,153 @@
+{
+  "_meta": {
+    "captured": "2026-08-30T12:12:39Z",
+    "llm_type": "perplexity",
+    "model_name": "sonar",
+    "web_search": true,
+    "temperature": 0.1,
+    "cost_usd": 0.006199,
+    "prompt_id": "done-for-you-not-dashboard",
+    "note": "Real DataForSEO payload (tasks[0].result[0]). Annotation `text` dropped — parser does not read it. Bibliography-style citations referenced by [n] markers."
+  },
+  "model_name": "sonar",
+  "input_tokens": 25,
+  "output_tokens": 574,
+  "reasoning_tokens": 0,
+  "web_search": true,
+  "money_spent": 0.005599,
+  "datetime": "2026-08-30 12:12:39 +00:00",
+  "fan_out_queries": null,
+  "items": [
+    {
+      "type": "message",
+      "sections": [
+        {
+          "type": "text",
+          "text": "If you want **monthly SEO work actually implemented**, the clearest fits in your results are **WebFX, Sitemile, Wolfstone Digital, Rankai, and Embarque** because they explicitly describe ongoing execution of technical fixes, content, and optimization rather than audit-only reporting.[1][2][7][8][14]\n\nHere’s the most relevant shortlist, based on whether they **do the fixes themselves**:\n\n| Provider | Evidence of implementation | Best fit |\n|---|---|---|\n| **WebFX** | Monthly SEO includes managing **technical fixes, content creation, keyword optimization, and link building** each month.[14] | Teams wanting a broad managed SEO retainer |\n| **Sitemile** | Says they **carry out the work** and that technical recommendations from the audit are **implemented by them the same month**.[2] | Buyers who want audit-to-fix execution without waiting on another developer |\n| **Wolfstone Digital** | Lists **ongoing technical auditing and remediation**, plus crawl error resolution, Core Web Vitals monitoring, schema implementation, and site architecture improvements.[8] | Ongoing managed SEO with defined monthly deliverables |\n| **Rankai** | Bundles **technical fixes**, content, and rewrites into a monthly fee, with the audit feeding directly into monthly execution.[1] | SMBs wanting audit plus continuous execution |\n| **Embarque** | Describes a full-service monthly plan that integrates **technical updates** into ongoing SEO work.[5] | SaaS/startups wanting revenue-focused monthly SEO |\n| **Page One Power** | Described as providing **hands-on SEO services** with technical fixes and monthly deliverables.[3] | Brands wanting hands-on monthly optimization |\n\nA few providers in your results are more **audit-heavy or strategy-heavy** and are less clearly “done-for-you implementation” focused. For example, some listings emphasize audits, recommendations, or support for your dev team rather than direct execution.[4][6][10][11]\n\nIf your filter is specifically **“I want them to fix things every month, not hand me a dashboard,”** the strongest signal from the results is:\n\n- **Sitemile** for explicit “we implement the audit recommendations ourselves.”[2]\n- **Wolfstone Digital** for clearly defined monthly remediation work.[8]\n- **WebFX** for a large managed-SEO operation with monthly technical fixes included.[14]\n- **Rankai** for packaged monthly execution tied to audits.[1]\n\nIf you want, I can turn this into a tighter **buying shortlist by budget**: under $1k/month, $1k–$3k/month, and $3k+/month.",
+          "annotations": [
+            {
+              "title": "Frequently Asked Questions",
+              "url": "https://rankai.ai/articles/best-seo-audit-service-providers",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Buy SEO Services Online — Monthly SEO Packages & Pricing",
+              "url": "https://sitemile.com/seo-packages/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Best SEO Website Optimization Services | 2026 Rankings",
+              "url": "https://zipdo.co/service/seo-website-optimization/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "20 Best Technical SEO Agencies in 2026 - seoworks.com",
+              "url": "https://www.seoworks.com/lists/20-best-technical-seo-agencies-2026/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Find the Best Monthly SEO Services: We Examine 7 Top Agencies",
+              "url": "https://www.embarque.io/post/monthly-seo-services-agencies",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "9 Best Technical SEO Agencies to Consider in 2026 - MADX Digital",
+              "url": "https://www.madx.digital/learn/technical-seo-agencies",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Top 10 Best Fully Managed SEO Services | 2026 Verified Picks",
+              "url": "https://worldmetrics.org/service/fully-managed-seo/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Managed SEO Services | Ongoing SEO & GEO - Wolfstone Digital",
+              "url": "https://wolfstone.digital/services/managed-seo/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "The 10 Best Technical SEO Agencies in 2026 - Searchbloom",
+              "url": "https://www.searchbloom.com/strategy/best-technical-seo-agencies/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Top Technical SEO Agencies in 2026",
+              "url": "https://www.designrush.com/agency/search-engine-optimization/technical-seo-agencies",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Best Technical SEO Agencies in 2026: Top Experts for Site ...",
+              "url": "https://eseospace.com/blog/best-technical-seo-agencies-2026/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "10 Best Technical SEO Agencies in the USA",
+              "url": "https://articles.abilogic.com/792131/best-technical-seo-agencies-usa.html",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Technical Foundation",
+              "url": "https://www.tenspeed.io/blog/best-technical-seo-agencies",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Expert Monthly SEO Services Proven To Grow Your Revenue - WebFX",
+              "url": "https://www.webfx.com/seo/services/monthly-seo/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "10 Best Technical SEO Agencies for 2026 (Expert-Reviewed List)",
+              "url": "https://www.link-assistant.com/rankdots/blog/best-technical-seo-agencies.html",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "9 Best Technical SEO Agencies for 2026 (Honest Review)",
+              "url": "https://piperocket.digital/list/best-technical-seo-agencies/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Top 12 Technical SEO Agencies to Audit and Improve Your Site",
+              "url": "https://www.sovyn.com/blog/technical-seo?hs_amp=true",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Monthly SEO & Search Engine Optimization Packages",
+              "url": "https://www.mannixmarketing.com/seo/monthly-seo-services/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Best technical SEO agencies to fix your website and visibility",
+              "url": "https://therealthingmarketing.com/blog/technical-seo-agencies/",
+              "start_index": null,
+              "end_index": null
+            },
+            {
+              "title": "Top 10 Technical SEO Agencies Optimizing Site Performance in 2026",
+              "url": "https://ninjapromo.io/technical-seo-agencies",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

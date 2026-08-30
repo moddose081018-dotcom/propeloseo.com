@@ -1,0 +1,181 @@
+{
+  "_meta": {
+    "captured": "2026-08-30T12:12:54Z",
+    "llm_type": "claude",
+    "model_name": "claude-haiku-4-5",
+    "web_search": true,
+    "temperature": 0.1,
+    "cost_usd": 0.024708,
+    "prompt_id": "done-for-you-not-dashboard",
+    "note": "Real DataForSEO payload (tasks[0].result[0]). Annotation `text` dropped — parser does not read it."
+  },
+  "model_name": "claude-haiku-4-5-20251001",
+  "input_tokens": 10613,
+  "output_tokens": 699,
+  "reasoning_tokens": 0,
+  "web_search": true,
+  "money_spent": 0.024108,
+  "datetime": "2026-08-30 12:12:54 +00:00",
+  "fan_out_queries": [
+    "SEO agencies implementation fixes monthly service 2026",
+    "best SEO providers hands-on implementation not just reporting"
+  ],
+  "items": [
+    {
+      "type": "message",
+      "sections": [
+        {
+          "type": "text",
+          "text": "I'll search for information about SEO service providers that focus on actual implementation rather than just reporting.",
+          "annotations": null
+        }
+      ]
+    },
+    {
+      "type": "message",
+      "sections": [
+        {
+          "type": "text",
+          "text": "Based on current industry standards, here's what to look for in SEO providers that actually deliver implementation work:\n\n## What Real Implementation Looks Like\n\n",
+          "annotations": null
+        },
+        {
+          "type": "text",
+          "text": "A structured monthly cycle includes technical audit and fixes in week one, on-page optimisation and content publishing in weeks two and three, link building outreach running continuously, and a full reporting and strategy review in week four.",
+          "annotations": [
+            {
+              "title": "What Does an SEO Agency Do? (Complete 2026 Breakdown) | ConversionCrush Blogs",
+              "url": "https://conversioncrush.com/blog/what-does-an-seo-agency-do",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "\n\n",
+          "annotations": null
+        },
+        {
+          "type": "text",
+          "text": "A full-service SEO agency delivers monthly: technical audit monitoring and fixes, on-page optimisation, 2-4 new SEO blog posts, 4-8 quality backlinks from DA 40+ sources, Google Search Console monitoring, and a full monthly report.",
+          "annotations": [
+            {
+              "title": "How to Hire an SEO Agency for Small Business (2026 Complete Guide) | ConversionCrush Blogs",
+              "url": "https://conversioncrush.com/blog/how-to-hire-seo-agency-small-business",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "\n\n## Red Flags to Avoid\n\nWatch out for providers that:\n- ",
+          "annotations": null
+        },
+        {
+          "type": "text",
+          "text": "Guarantee #1 rankings or fixed traffic numbers in 30–60 days",
+          "annotations": [
+            {
+              "title": "SEO Pricing in 2026: What SEO Really Costs - Arc4",
+              "url": "https://arc4.com/resources/seo-pricing/",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "\n- ",
+          "annotations": null
+        },
+        {
+          "type": "text",
+          "text": "Offer $99–$199/month for comprehensive SEO in competitive markets, which barely covers overhead for skilled professionals",
+          "annotations": [
+            {
+              "title": "SEO Pricing in 2026: What SEO Really Costs - Arc4",
+              "url": "https://arc4.com/resources/seo-pricing/",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "\n- ",
+          "annotations": null
+        },
+        {
+          "type": "text",
+          "text": "Only show impressions, clicks, and keyword positions without connecting them to business results like phone calls, form submissions, leads, or revenue",
+          "annotations": [
+            {
+              "title": "What Full-Service SEO Actually Includes in 2026 (and What's Missing From Most Proposals)",
+              "url": "https://www.seoservicesnews.com/full-service-seo-2026-what-agencies-skip",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "\n\n## What to Expect in Pricing\n\n",
+          "annotations": null
+        },
+        {
+          "type": "text",
+          "text": "Agency retainers in 2026 typically range from $2,500 to over $10,000 per month.",
+          "annotations": [
+            {
+              "title": "Buy SEO Services 2026: Complete Guide to Software & Agency Solutions Group Buy 2026: SEO Domination for $0.99 - Toolsurf is Best Group Buy SEO Tools Provider - SEO Group buy",
+              "url": "https://www.toolsurf.com/buy-seo-services-2026-complete-guide-to-software-agency-solutions-group-buy-2026-seo-domination-for-0-99-2/",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " ",
+          "annotations": null
+        },
+        {
+          "type": "text",
+          "text": "The average small business pays $2,500-$5,000 per month for comprehensive SEO.",
+          "annotations": [
+            {
+              "title": "SEO Pricing 2026: What SEO Services Cost by Agency",
+              "url": "https://www.digitalapplied.com/blog/seo-pricing-2026-what-seo-services-cost",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "\n\n## Key Questions to Ask Prospects\n\n1. **Do they do hands-on technical fixes monthly?** Ask for examples of specific fixes they've implemented.\n2. **Is reporting tied to business outcomes?** ",
+          "annotations": null
+        },
+        {
+          "type": "text",
+          "text": "Clear reports should show what work was performed, what changed in rankings and traffic, and how those changes connect to actual business outcomes.",
+          "annotations": [
+            {
+              "title": "What Full-Service SEO Actually Includes in 2026 (and What's Missing From Most Proposals)",
+              "url": "https://www.seoservicesnews.com/full-service-seo-2026-what-agencies-skip",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "\n3. **What's included in their standard retainer?** Avoid agencies that treat schema implementation, entity optimization, or GBP management as premium add-ons.\n\nThe key differentiator is whether they're executing work or just monitoring—ask for a detailed breakdown of their monthly deliverables and request references from clients in your industry.",
+          "annotations": null
+        }
+      ]
+    }
+  ]
+}

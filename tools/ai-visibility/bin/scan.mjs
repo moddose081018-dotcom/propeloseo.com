@@ -51,10 +51,16 @@ console.log(`  mention rate    ${summary.mentionRate}%  (${summary.mentioned}/${
 console.log(`  citation rate   ${summary.citationRate}%  (${summary.cited}/${summary.totalChecks})`)
 console.log(`  citations       ${summary.ownedCitations} owned of ${summary.totalCitations} total`)
 console.log(`  spend           $${summary.costUsd.toFixed(4)}`)
+if (summary.ungroundedRuns) {
+  console.log(`\n  ! ${summary.ungroundedRuns} of ${summary.totalChecks} runs came back ungrounded (web_search returned false).`)
+  console.log(`    Those answered from model memory with no citations. Citation rate over`)
+  console.log(`    grounded runs only: ${summary.citationRateGrounded}%`)
+}
 
 console.log(`\n  Per check:`)
 for (const r of runs) {
-  const flags = [r.mentioned ? 'mentioned' : '—', r.citedInAnnotations ? 'cited' : '—'].join(' / ')
+  const flags = [r.mentioned ? 'mentioned' : '—', r.citedInAnnotations ? 'cited' : '—',
+                 r.webSearch ? '' : 'UNGROUNDED'].filter(Boolean).join(' / ')
   console.log(`    ${pad(r.promptId, 34)} ${pad(r.modelName ?? '?', 26)} ${flags}`)
 }
 
@@ -66,9 +72,14 @@ if (summary.competitors.length) {
 }
 
 if (summary.citedDomains.length) {
-  console.log(`\n  Domains AI cited as sources:`)
-  for (const d of summary.citedDomains) {
+  // 145 domains is not a deliverable. Show the ones cited more than once —
+  // a domain cited across several checks is a real pattern; a single hit is noise.
+  const repeat = summary.citedDomains.filter((d) => d.runs > 1)
+  const shown = repeat.length ? repeat : summary.citedDomains.slice(0, 20)
+  console.log(`\n  Domains AI cited in more than one check (${shown.length} of ${summary.citedDomains.length} total):`)
+  for (const d of shown) {
     console.log(`    ${pad(d.name, 40)} ${d.runs} check(s)`)
   }
+  console.log(`\n    Full list: bin/scan.mjs --json`)
 }
 console.log()

@@ -1,0 +1,181 @@
+{
+  "_meta": {
+    "captured": "2026-08-30T11:57:38Z",
+    "llm_type": "claude",
+    "model_name": "claude-haiku-4-5",
+    "web_search": true,
+    "temperature": 0.1,
+    "cost_usd": 0.024653,
+    "prompt_id": "best-affordable-ai-seo-services",
+    "note": "Real DataForSEO ai_optimization_llm_response payload (tasks[0].result[0]). Annotation `text` fields are dropped — the parser does not read them. Everything the parser reads is verbatim."
+  },
+  "model_name": "claude-haiku-4-5-20251001",
+  "input_tokens": 10633,
+  "output_tokens": 684,
+  "reasoning_tokens": 0,
+  "web_search": true,
+  "money_spent": 0.024053,
+  "datetime": "2026-08-30 11:57:38 +00:00",
+  "fan_out_queries": [
+    "affordable AI SEO services ChatGPT AI Overviews visibility tracking",
+    "best SEO tools small business ChatGPT visibility monitoring"
+  ],
+  "items": [
+    {
+      "type": "message",
+      "sections": [
+        {
+          "type": "text",
+          "text": "I'll search for information about affordable AI SEO services that track ChatGPT and AI Overviews visibility for small businesses.",
+          "annotations": null
+        }
+      ]
+    },
+    {
+      "type": "message",
+      "sections": [
+        {
+          "type": "text",
+          "text": "Based on recent research, here are the best affordable AI SEO services for small businesses that track ChatGPT and AI Overviews visibility:\n\n## Top Affordable Options\n\n**Otterly.AI** - ",
+          "annotations": null
+        },
+        {
+          "type": "text",
+          "text": "Affordable and straightforward to get started, with a Lite plan starting at $25/month (billed annually) that includes daily tracking of 15 prompts and tracks Google AI Overviews, ChatGPT, Perplexity, and Microsoft Copilot",
+          "annotations": [
+            {
+              "title": "The 8 best AI visibility tools in 2026",
+              "url": "https://zapier.com/blog/best-ai-visibility-tool/",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ".\n\n**Peec AI** - ",
+          "annotations": null
+        },
+        {
+          "type": "text",
+          "text": "Designed for small and mid-sized marketing teams that want an affordable way to track AI search visibility, starting at $80/month when billed annually",
+          "annotations": [
+            {
+              "title": "11 Best AI Search Visibility Tools For SaaS In 2026",
+              "url": "https://nathanojaokomo.com/blog/best-ai-visibility-tools",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". ",
+          "annotations": null
+        },
+        {
+          "type": "text",
+          "text": "It tracks how often brands appear across tools like ChatGPT, Perplexity, Gemini, Claude, and Google AI Overviews, and tracks citations, competitor mentions, and share of voice",
+          "annotations": [
+            {
+              "title": "11 Best AI Search Visibility Tools For SaaS In 2026",
+              "url": "https://nathanojaokomo.com/blog/best-ai-visibility-tools",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ".\n\n**ZipTie AI** - ",
+          "annotations": null
+        },
+        {
+          "type": "text",
+          "text": "The cheapest entry-style option",
+          "annotations": [
+            {
+              "title": "Top 11 AI Visibility Tools to Track and Improve AI Search Presence",
+              "url": "https://www.saffronedge.com/blog/ai-visibility-tools/",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", with ",
+          "annotations": null
+        },
+        {
+          "type": "text",
+          "text": "the Basic plan starting at $58.65/month (billed annually), which includes 500 AI search checks across three answer engines and 10 content optimizations",
+          "annotations": [
+            {
+              "title": "The 8 best AI visibility tools in 2026",
+              "url": "https://zapier.com/blog/best-ai-visibility-tool/",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ".\n\n**Writesonic** - ",
+          "annotations": null
+        },
+        {
+          "type": "text",
+          "text": "Ideal for smaller teams and content-heavy operations, with pricing starting at $49/month for AI writing tools and $79/month for SEO and GEO capabilities",
+          "annotations": [
+            {
+              "title": "What Are the Best AI SEO Tools for Brand Visibility in AI Search?",
+              "url": "https://limy.ai/blog/what-are-the-best-ai-seo-tools-for-brand-visibility-in-ai-search",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ".\n\n## Free or Low-Cost Starting Points\n\n",
+          "annotations": null
+        },
+        {
+          "type": "text",
+          "text": "SE Ranking and Semrush's free AI visibility checker are good starting points if you want to validate visibility before paying for enterprise tools",
+          "annotations": [
+            {
+              "title": "Top 11 AI Visibility Tools to Track and Improve AI Search Presence",
+              "url": "https://www.saffronedge.com/blog/ai-visibility-tools/",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ".\n\nThese tools help you ",
+          "annotations": null
+        },
+        {
+          "type": "text",
+          "text": "track a fixed set of prompts weekly across ChatGPT, Gemini, Perplexity, Claude, Copilot, and AI Overviews, then compare mentions, citations, and share of voice over time",
+          "annotations": [
+            {
+              "title": "Top 11 AI Visibility Tools to Track and Improve AI Search Presence",
+              "url": "https://www.saffronedge.com/blog/ai-visibility-tools/",
+              "start_index": null,
+              "end_index": null
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "annotations": null
+        }
+      ]
+    }
+  ]
+}
