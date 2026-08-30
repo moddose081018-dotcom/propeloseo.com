@@ -1,14 +1,60 @@
 {
   "pages": [
-    { "id": "page-1", "name": "Homepage" },
-    { "id": "page-2", "name": "Earlier directions" }
+    {
+      "id": "page-1",
+      "name": "Homepage"
+    },
+    {
+      "id": "page-2",
+      "name": "Earlier directions"
+    }
   ],
   "artboards": [
-    { "file": "Main.dc.html", "title": "PropeloSEO homepage — desktop", "page": "page-1", "x": 0, "y": 0, "w": 1440, "h": 7800 },
-    { "file": "MainMobile.dc.html", "title": "Mobile, 390 wide — first screens", "page": "page-1", "x": 1560, "y": 0, "w": 390, "h": 1340 },
-    { "file": "Editorial.dc.html", "title": "B · Editorial ledger", "page": "page-2", "x": 0, "y": 0, "w": 1440, "h": 1200 },
-    { "file": "SprintBoard.dc.html", "title": "C · Sprint board", "page": "page-2", "x": 1560, "y": 0, "w": 1440, "h": 1020 },
-    { "file": "PriceForward.dc.html", "title": "D · Price-forward", "page": "page-2", "x": 0, "y": 1420, "w": 1440, "h": 960 }
+    {
+      "file": "Main.dc.html",
+      "title": "PropeloSEO homepage — desktop",
+      "page": "page-1",
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 11200
+    },
+    {
+      "file": "MainMobile.dc.html",
+      "title": "Mobile, 390 wide",
+      "page": "page-1",
+      "x": 1560,
+      "y": 0,
+      "w": 390,
+      "h": 9200
+    },
+    {
+      "file": "Editorial.dc.html",
+      "title": "B · Editorial ledger",
+      "page": "page-2",
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 1200
+    },
+    {
+      "file": "SprintBoard.dc.html",
+      "title": "C · Sprint board",
+      "page": "page-2",
+      "x": 1560,
+      "y": 0,
+      "w": 1440,
+      "h": 1020
+    },
+    {
+      "file": "PriceForward.dc.html",
+      "title": "D · Price-forward",
+      "page": "page-2",
+      "x": 0,
+      "y": 1420,
+      "w": 1440,
+      "h": 960
+    }
   ],
   "annotations": [
     {
@@ -17,7 +63,7 @@
       "x": 0,
       "y": -300,
       "w": 1100,
-      "text": "DIRECTION A — FULL PAGE\n\nFourteen sections, top to bottom: hero with the live scan · data-source band · \"run it on your domain\" scanner · the problem · the 90-day sprint · the Evidence Engine · AI visibility (dark) · Growth Credits · pricing · guarantee + founding cohort · FAQ · closing CTA · footer.\n\nStatic mockup — nothing is clickable. The scanner input shows its placeholder state; the FAQ shows every answer open so the copy can be read at a glance.\n\nOne lever above the artboard changes the accent colour across the whole page."
+      "text": "DIRECTION A — FULL PAGE, COPY OPTIMISED\n\nSixteen sections: hero with the live scan · data-source band · \"run it on your domain\" scanner · the problem · why AI SEO matters now · AI SEO vs traditional SEO · the 90-day sprint · the Evidence Engine · AI visibility (dark) · how to choose an AI SEO service · Growth Credits · pricing · guarantee + founding cohort · FAQ · closing CTA · footer.\n\nCopy rewritten against NeuronWriter for \"ai seo services\" and scored 81/100 — above the best page currently ranking on that term. Three sections are new: why AI SEO matters now, the SEO-vs-GEO comparison, and the five-question buyer's guide.\n\nStatic mockup — nothing is clickable. The FAQ shows every answer open so the copy reads at a glance. One lever above the artboard changes the accent colour across the whole page."
     },
     {
       "id": "mobile-note",
@@ -25,7 +71,7 @@
       "x": 1560,
       "y": -300,
       "w": 560,
-      "text": "Mobile covers the first screens only — hero, price, CTAs, the scan card and the source band.\n\nI'll extend it to the full page once the copy is settled, so it only gets built once."
+      "text": "Direction A at phone width — the full page, not one screen.\n\nHeadline drops to 34px, every CTA is a full-width 54px target, the three-up grids stack, and the SEO-vs-GEO panels and buyer's guide reflow to a single column.\n\n8,720px against the desktop's 10,639 — the copy is the same, it just costs less height at 390 wide."
     },
     {
       "id": "archive-note",
@@ -36,5 +82,8 @@
       "text": "The three directions not chosen, kept for reference.\n\nB · Editorial ledger — serif masthead, scan as a ruled table.\nC · Sprint board — all three months above the fold.\nD · Price-forward — $97 at 152px, one button.\n\nNone of these is being carried forward; delete the page whenever you want it gone."
     }
   ],
-  "launch": { "view": "canvas", "page": "page-1" }
+  "launch": {
+    "view": "canvas",
+    "page": "page-1"
+  }
 }
