@@ -18,8 +18,8 @@
         body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
         a { color: var(--action); text-decoration: none; }
         a:hover { text-decoration: underline; }
-        .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
-        .content-wrap { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+        .wrap { max-width: 1600px; margin: 0 auto; padding: 0 24px; }
+        .content-wrap { max-width: 780px; margin: 0 auto; padding: 0 24px; }
 
         .site-header { border-bottom: 1px solid var(--border); background: var(--bg); position: sticky; top: 0; z-index: 100; }
         .site-header .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
@@ -43,7 +43,7 @@
         .email-box { background: var(--action-soft); border-left: 4px solid var(--action); padding: 28px; border-radius: var(--radius-sm); margin: 24px 0; }
         .email-box h2 { font-size: 22px; margin: 0 0 8px; }
         .email-box p { margin-bottom: 12px; }
-        .email-address { font-size: 22px; color: var(--action); font-weight: 700; }
+        .email-address { font-size: clamp(17px, 5vw, 22px); color: var(--action); font-weight: 700; display: inline-block; max-width: 100%; overflow-wrap: anywhere; }
 
         .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin: 24px 0; }
         .contact-card { padding: 24px; border-radius: var(--radius-md); border: 1px solid var(--border); background: var(--bg-alt); }
