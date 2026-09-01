@@ -2,198 +2,275 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service - PropeloSEO</title>
     <meta name="description" content="PropeloSEO Terms of Service. Membership terms, Growth Credit mechanics, eligible Quick-Win scope, and delivery guarantee.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="canonical" href="https://propeloseo.com/Termsofservice/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
     <style>
         :root {
-            --bg: #ffffff; --bg-alt: #f8fafc; --text: #1e293b; --text-light: #64748b;
-            --border: #e2e8f0; --action: #2563eb; --action-hover: #1d4ed8; --action-soft: #eff6ff;
-            --accent: #0ea5e9; --radius-lg: 16px; --radius-md: 10px; --radius-sm: 6px;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --bg-dark: #0f172a;
+            --text: #1e293b;
+            --text-mid: #475569;
+            --text-light: #64748b;
+            --text-inv: #f8fafc;
+            --text-inv-mid: #94a3b8;
+            --border: #e2e8f0;
+            --border-strong: #cbd5e1;
+            --action: #2563eb;
+            --action-hover: #1d4ed8;
+            --action-soft: #eff6ff;
+            --accent: #0ea5e9;
+            --accent-light: #38bdf8;
+            --success: #059669;
+            --gold: #d97706;
+            --radius-lg: 16px;
+            --radius-md: 10px;
+            --radius-sm: 6px;
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+            --measure: 780px;
+            --sans: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+            --mono: "IBM Plex Mono", "SF Mono", ui-monospace, monospace;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
-        a { color: var(--action); text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        body { font-family: var(--sans); background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        a { color: var(--action); text-decoration: none; transition: color 0.2s; }
+        a:hover { color: var(--action-hover); }
+        img { max-width: 100%; height: auto; display: block; }
+        h1, h2, h3 { line-height: 1.15; letter-spacing: -0.028em; }
         .wrap { max-width: 1600px; margin: 0 auto; padding: 0 24px; }
-        .content-wrap { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        .kicker { font-family: var(--mono); font-size: 11.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-light); }
 
-        .site-header { border-bottom: 1px solid var(--border); background: var(--bg); position: sticky; top: 0; z-index: 100; }
-        .site-header .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-        .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 18px; color: var(--text); letter-spacing: -0.02em; }
-        .logo:hover { text-decoration: none; }
-        .logo-mark { width: 30px; height: 30px; border-radius: 8px; background: linear-gradient(135deg, var(--action), var(--accent)); }
-        .site-nav { display: flex; align-items: center; gap: 28px; }
-        .site-nav a { color: var(--text-light); font-size: 14px; font-weight: 500; }
-        .site-nav a:hover { color: var(--text); text-decoration: none; }
-        .nav-cta { display: inline-flex; padding: 8px 18px; border-radius: var(--radius-sm); background: var(--action); color: #fff !important; font-weight: 600; font-size: 14px; }
-        .nav-cta:hover { background: var(--action-hover); text-decoration: none; }
+        /* ── Header ── */
+        .site-header { background: var(--bg-dark); border-bottom: 1px solid rgba(148,163,184,0.14); position: sticky; top: 0; z-index: 100; }
+        .site-header .wrap { display: flex; align-items: center; justify-content: space-between; height: 76px; }
+        .logo { display: flex; align-items: center; gap: 11px; font-size: 18px; font-weight: 700; letter-spacing: -0.025em; color: var(--text-inv); }
+        .logo:hover { color: #fff; }
+        .logo-mark { width: 32px; height: 32px; border-radius: 8px; background: var(--action); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .site-nav { display: flex; align-items: center; gap: 30px; }
+        .site-nav a { font-size: 14px; font-weight: 500; color: var(--text-inv-mid); }
+        .site-nav a:hover { color: var(--text-inv); }
+        .nav-cta { display: inline-flex; align-items: center; height: 40px; padding: 0 20px; border-radius: 7px; background: var(--action); color: #fff !important; font-size: 14px; font-weight: 600; }
+        .nav-cta:hover { background: var(--action-hover); }
 
-        .page-header { padding: 56px 0 40px; }
-        .page-header h1 { font-size: 36px; letter-spacing: -0.02em; margin-bottom: 8px; }
-        .page-header .updated { font-size: 14px; color: var(--text-light); }
+        /* ── Page hero ── */
+        .page-hero { background: var(--bg-dark); padding: 66px 0 58px; }
+        .page-hero .wrap { max-width: var(--measure); display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+        .page-hero h1 { font-size: clamp(30px, 4.4vw, 46px); font-weight: 700; letter-spacing: -0.035em; color: var(--text-inv); text-wrap: pretty; }
+        .page-hero p { font-size: clamp(15.5px, 1.8vw, 17px); line-height: 1.65; color: var(--text-inv-mid); text-wrap: pretty; }
+        .page-hero .updated { font-family: var(--mono); font-size: 12.5px; font-weight: 500; letter-spacing: 0.06em; color: var(--text-inv-mid); }
 
-        .content { padding-bottom: 64px; }
-        .content h2 { font-size: 20px; margin: 32px 0 12px; }
-        .content h3 { font-size: 17px; margin: 24px 0 8px; color: var(--text); }
-        .content p { font-size: 15px; color: var(--text); margin-bottom: 14px; line-height: 1.7; }
-        .content ul, .content ol { margin: 0 0 14px 20px; }
-        .content li { font-size: 15px; margin-bottom: 6px; line-height: 1.6; }
+        /* ── Document body ── */
+        .doc { max-width: var(--measure); margin: 0 auto; padding: 56px 24px 84px; }
+        .doc > h2 { font-size: clamp(21px, 2.6vw, 25px); font-weight: 700; margin: 44px 0 14px; padding-top: 30px; border-top: 1px solid var(--border); text-wrap: pretty; }
+        .doc > h2:first-child, .doc > .lede + h2 { margin-top: 0; padding-top: 0; border-top: none; }
+        .doc > .lede { font-size: 17px; line-height: 1.7; color: var(--text); margin-bottom: 36px; text-wrap: pretty; }
+        .doc h3 { font-size: 17.5px; font-weight: 600; letter-spacing: -0.02em; margin: 28px 0 10px; }
+        .doc p { font-size: 16px; line-height: 1.75; color: var(--text-mid); margin-bottom: 16px; }
+        .doc p:last-child { margin-bottom: 0; }
+        .doc strong { color: var(--text); font-weight: 600; }
+        .doc ul { list-style: none; display: flex; flex-direction: column; gap: 11px; margin: 0 0 22px; }
+        .doc li { position: relative; padding-left: 22px; font-size: 15.5px; line-height: 1.7; color: var(--text-mid); }
+        .doc li::before { content: ""; position: absolute; left: 3px; top: 10px; width: 6px; height: 6px; border-radius: 50%; background: var(--border-strong); }
 
-        .highlight { background: var(--action-soft); border-left: 4px solid var(--action); padding: 20px 24px; border-radius: var(--radius-sm); margin: 24px 0; }
-        .highlight p { margin-bottom: 0; }
+        /* ── Callouts ── */
+        .callout { background: var(--action-soft); border: 1px solid #dbeafe; border-left: 3px solid var(--action); border-radius: var(--radius-md); padding: 22px 24px; margin: 26px 0; }
+        .callout p { margin: 0; font-size: 15.5px; }
+        .callout.good { background: #ecfdf5; border-color: #bbf7d0; border-left-color: var(--success); }
+        .callout.good h3 { margin: 0 0 8px; font-size: 19px; font-weight: 700; color: #065f46; }
 
-        .site-footer { border-top: 1px solid var(--border); padding: 32px 0; }
-        .site-footer .wrap { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; flex-wrap: wrap; }
-        .footer-brand { font-size: 13px; color: var(--text-light); }
-        .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
-        .footer-links a { font-size: 13px; color: var(--text-light); font-weight: 500; }
-        .footer-copy { font-size: 12px; color: var(--text-light); text-align: center; padding-top: 24px; border-top: 1px solid var(--border); margin-top: 24px; }
+        /* ── Card grid ── */
+        /* Cards are not prose, so above the reading measure they break out of the
+           column and use the room; the surrounding text stays at 780px. */
+        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; margin: 24px 0 28px; }
+        .card { border: 1px solid var(--border); border-radius: 14px; padding: 24px; background: var(--bg); }
+        .card h3 { font-size: 16.5px; font-weight: 600; letter-spacing: -0.015em; margin: 0 0 8px; }
+        .card p { font-size: 14.5px; line-height: 1.6; color: var(--text-light); margin: 0; }
 
-        .menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
-        .menu-toggle span { display: block; width: 22px; height: 2px; background: var(--text); margin: 5px 0; }
-        @media (max-width: 768px) {
-            .menu-toggle { display: block; }
-            .site-nav { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); flex-direction: column; padding: 16px 20px; gap: 16px; }
-            .site-nav.open { display: flex; }
+        /* ── Contact email ── */
+        .mailto { display: inline-block; max-width: 100%; font-family: var(--mono); font-size: clamp(15px, 4.2vw, 20px); font-weight: 600; color: var(--action); overflow-wrap: anywhere; }
+
+        /* ── Footer ── */
+        .site-footer { border-top: 1px solid var(--border); padding: 44px 0 32px; }
+        .footer-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 48px; flex-wrap: wrap; }
+        .footer-brand { display: flex; flex-direction: column; gap: 10px; max-width: 400px; }
+        .footer-brand .logo { color: var(--text); font-size: 16px; }
+        .footer-brand .logo:hover { color: var(--action); }
+        .footer-brand .logo-mark { width: 28px; height: 28px; border-radius: 7px; }
+        .footer-brand p { font-size: 14px; line-height: 1.6; color: var(--text-light); }
+        .footer-links { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; padding-top: 6px; }
+        .footer-links a { font-size: 14px; font-weight: 500; color: var(--text-light); }
+        .footer-links a:hover { color: var(--text); }
+        .footer-legal { border-top: 1px solid var(--border); margin-top: 28px; padding-top: 20px; font-size: 13px; color: #94a3b8; }
+
+        /* ── Responsive ── */
+        @media (min-width: 1180px) {
+            .cards { width: 1080px; margin-left: 50%; transform: translateX(-50%); }
+        }
+        @media (max-width: 900px) {
+            .site-nav a:not(.nav-cta) { display: none; }
+        }
+        @media (max-width: 760px) {
+            .page-hero { padding: 48px 0 42px; }
+            .doc { padding: 44px 24px 64px; }
+        }
+        @media (max-width: 560px) {
+            .wrap { padding: 0 20px; }
+            .doc { padding-left: 20px; padding-right: 20px; }
         }
     </style>
 </head>
 <body>
-    <header class="site-header">
-        <div class="wrap">
-            <a href="/" class="logo"><div class="logo-mark"></div> PropeloSEO</a>
-            <button class="menu-toggle" aria-label="Menu" onclick="document.querySelector('.site-nav').classList.toggle('open')"><span></span><span></span><span></span></button>
-            <nav class="site-nav">
-                <a href="/#pricing">Pricing</a>
-                <a href="/about/">About</a>
-                <a href="/Contact/">Contact</a>
-                <a href="/#pricing" class="nav-cta">Start Your Sprint</a>
-            </nav>
-        </div>
-    </header>
 
-    <div class="content-wrap">
-        <div class="page-header">
-            <h1>Terms of Service</h1>
-            <p class="updated">Last updated: August 2026</p>
-        </div>
-
-        <div class="content">
-            <p>These terms govern your use of PropeloSEO's services, including the Growth Membership, AI Visibility Audit, and managed SEO retainers. By subscribing or purchasing, you agree to these terms.</p>
-
-            <div class="highlight">
-                <p><strong>Note:</strong> All prices, delivery times, operating limits, and pilot targets in these terms are management test assumptions subject to validation by the founding cohort. Terms may be updated as the pilot progresses.</p>
-            </div>
-
-            <h2>1. Growth Membership</h2>
-            <h3>Subscription terms</h3>
-            <p>The Growth Membership is billed at $97 per month via Stripe. There is no minimum commitment. You may cancel at any time; cancellation takes effect at the end of your current billing period.</p>
-
-            <h3>What is included</h3>
-            <p>Each month of active membership includes:</p>
-            <ul>
-                <li>Updated technical, ranking, competitor and AI-engine visibility monitoring with critical alerts</li>
-                <li>Three prioritised opportunities ranked by commercial relevance</li>
-                <li>One Growth Credit (subject to the credit terms below)</li>
-                <li>A plain-English progress record</li>
-                <li>Member pricing on additional Growth Packs</li>
-            </ul>
-
-            <h3>Service limits</h3>
-            <p>The Growth Membership covers one website, a crawl of up to 500 URLs, tracking of up to 50 keywords, a comparison against up to three competitors, one content swap per pack, and one revision round per pack.</p>
-
-            <h3>Welcome phase (month one)</h3>
-            <p>Your first month includes a full technical and search baseline within the limits above, a limited AI Visibility Baseline (a defined subset of buyer questions and engines, deliberately narrower than the standalone AI Visibility Audit), three ranked opportunities, and your first Quick-Win Growth Pack with one eligible fix implemented.</p>
-
-            <h2>2. Quick-Win Pack and eligible scope</h2>
-            <p>The first Growth Pack delivered to new members is a Quick-Win Pack. It includes one eligible low-risk fix, implemented with your written approval, within five business days of completed onboarding, required access and written approval.</p>
-
-            <h3>Eligible fixes</h3>
-            <ul>
-                <li>Metadata changes (title tags, meta descriptions)</li>
-                <li>Broken internal link repairs</li>
-                <li>Basic schema corrections</li>
-                <li>Indexability-setting corrections</li>
-                <li>One small on-page improvement</li>
-            </ul>
-
-            <h3>Excluded from eligible scope</h3>
-            <ul>
-                <li>Development work</li>
-                <li>Template or theme changes</li>
-                <li>Site migrations</li>
-                <li>Complex schema implementations</li>
-                <li>Plugin conflicts</li>
-                <li>High-risk site-wide changes</li>
-            </ul>
-
-            <p>From month two onward, Growth Packs are publish-ready deliverables. Routine implementation is excluded unless purchased separately.</p>
-
-            <h2>3. Growth Credits</h2>
-            <ul>
-                <li>One Growth Credit is issued per month of active membership.</li>
-                <li>Maximum credit balance: three credits at any time.</li>
-                <li>Each credit expires individually 90 days after issue.</li>
-                <li>Normal redemption: one credit per month. Additional redemptions are subject to capacity and a stated turnaround time.</li>
-                <li>Each Growth Pack type is scoped to approximately equivalent production cost.</li>
-                <li>On cancellation, you have 30 days to redeem any remaining credits.</li>
-            </ul>
-
-            <h2>4. Delivery guarantee</h2>
-            <p>Your first Quick-Win Pack &mdash; including one eligible fix, implemented &mdash; arrives within five business days of completed onboarding, required access and your written approval. If it is late or materially incomplete, your first month is refunded.</p>
-            <p>PropeloSEO guarantees the delivery of work as specified. Rankings, traffic, revenue and other outcomes that depend on variables outside our control are never guaranteed.</p>
-
-            <h2>5. AI Visibility Audit</h2>
-            <p>The AI Visibility Audit is a standalone diagnostic priced at $197 (one-time). It includes 25 buyer questions across four AI engines, manual analysis of citation patterns, and a full rerun. Audit buyers who join the Growth Membership within 30 days of purchase receive their first membership month free.</p>
-
-            <h2>6. Managed SEO retainers</h2>
-            <p>Managed SEO retainers start at $2,000 per month and are governed by a separate engagement agreement. They are a separate service from the Growth Membership.</p>
-
-            <h2>7. Founding cohort</h2>
-            <p>Founding cohort members who subscribe during the pilot period lock in the $97 monthly price for as long as they remain continuously subscribed. The founding cohort is limited to ten members.</p>
-
-            <h2>8. Cancellation</h2>
-            <p>You may cancel your Growth Membership at any time. On cancellation:</p>
-            <ul>
-                <li>Your membership continues until the end of your current billing period.</li>
-                <li>You keep everything delivered to date.</li>
-                <li>You have 30 days to redeem any remaining Growth Credits.</li>
-                <li>There is no cancellation fee or penalty.</li>
-            </ul>
-
-            <h2>9. Website access</h2>
-            <p>To deliver your Growth Packs, we may require access to your website, CMS, Google Search Console, or analytics platforms. You are responsible for providing access in a timely manner. Delivery timelines begin after onboarding is complete and required access is granted.</p>
-
-            <h2>10. Intellectual property</h2>
-            <p>All Growth Packs, reports, and deliverables created for you are yours to use. PropeloSEO retains the right to reference the work in anonymised case studies unless you opt out in writing.</p>
-
-            <h2>11. Limitation of liability</h2>
-            <p>PropeloSEO's total liability is limited to the fees paid during the 12 months preceding any claim. We are not liable for indirect, consequential, or incidental damages, including lost revenue, lost rankings, or business interruption.</p>
-
-            <h2>12. Changes to these terms</h2>
-            <p>We may update these terms as the pilot progresses. Active members will be notified of material changes via email at least 14 days before they take effect.</p>
-
-            <h2>13. Contact</h2>
-            <p>Questions about these terms? Email us at <a href="mailto:shanehellmrich@proton.me">shanehellmrich@proton.me</a>.</p>
-        </div>
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="/">
+            <span class="logo-mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15l7-7 7 7"/></svg></span>
+            PropeloSEO
+        </a>
+        <nav class="site-nav">
+            <a href="/#how-it-works">How it works</a>
+            <a href="/#whats-included">What's included</a>
+            <a href="/#pricing">Pricing</a>
+            <a href="/#faq">FAQ</a>
+            <a class="nav-cta" href="/#pricing">Start your sprint</a>
+        </nav>
     </div>
+</header>
 
-    <footer class="site-footer">
-        <div class="wrap">
+<section class="page-hero">
+    <div class="wrap">
+        <span class="kicker">Legal</span>
+        <h1>Terms of Service</h1>
+        <p class="updated">Last updated: August 2026</p>
+    </div>
+</section>
+
+<main class="doc">
+<p class="lede">These terms govern your use of PropeloSEO's services, including the Growth Membership, AI Visibility Audit, and managed SEO retainers. By subscribing or purchasing, you agree to these terms.</p>
+
+<div class="callout">
+    <p><strong>Note:</strong> All prices, delivery times, operating limits, and pilot targets in these terms are management test assumptions subject to validation by the founding cohort. Terms may be updated as the pilot progresses.</p>
+</div>
+
+<h2>1. Growth Membership</h2>
+<h3>Subscription terms</h3>
+<p>The Growth Membership is billed at $97 per month via Stripe. There is no minimum commitment. You may cancel at any time; cancellation takes effect at the end of your current billing period.</p>
+
+<h3>What is included</h3>
+<p>Each month of active membership includes:</p>
+<ul>
+    <li>Updated technical, ranking, competitor and AI-engine visibility monitoring with critical alerts</li>
+    <li>Three prioritised opportunities ranked by commercial relevance</li>
+    <li>One Growth Credit (subject to the credit terms below)</li>
+    <li>A plain-English progress record</li>
+    <li>Member pricing on additional Growth Packs</li>
+</ul>
+
+<h3>Service limits</h3>
+<p>The Growth Membership covers one website, a crawl of up to 500 URLs, tracking of up to 50 keywords, a comparison against up to three competitors, one content swap per pack, and one revision round per pack.</p>
+
+<h3>Welcome phase (month one)</h3>
+<p>Your first month includes a full technical and search baseline within the limits above, a limited AI Visibility Baseline (a defined subset of buyer questions and engines, deliberately narrower than the standalone AI Visibility Audit), three ranked opportunities, and your first Quick-Win Growth Pack with one eligible fix implemented.</p>
+
+<h2>2. Quick-Win Pack and eligible scope</h2>
+<p>The first Growth Pack delivered to new members is a Quick-Win Pack. It includes one eligible low-risk fix, implemented with your written approval, within five business days of completed onboarding, required access and written approval.</p>
+
+<h3>Eligible fixes</h3>
+<ul>
+    <li>Metadata changes (title tags, meta descriptions)</li>
+    <li>Broken internal link repairs</li>
+    <li>Basic schema corrections</li>
+    <li>Indexability-setting corrections</li>
+    <li>One small on-page improvement</li>
+</ul>
+
+<h3>Excluded from eligible scope</h3>
+<ul>
+    <li>Development work</li>
+    <li>Template or theme changes</li>
+    <li>Site migrations</li>
+    <li>Complex schema implementations</li>
+    <li>Plugin conflicts</li>
+    <li>High-risk site-wide changes</li>
+</ul>
+
+<p>From month two onward, Growth Packs are publish-ready deliverables. Routine implementation is excluded unless purchased separately.</p>
+
+<h2>3. Growth Credits</h2>
+<ul>
+    <li>One Growth Credit is issued per month of active membership.</li>
+    <li>Maximum credit balance: three credits at any time.</li>
+    <li>Each credit expires individually 90 days after issue.</li>
+    <li>Normal redemption: one credit per month. Additional redemptions are subject to capacity and a stated turnaround time.</li>
+    <li>Each Growth Pack type is scoped to approximately equivalent production cost.</li>
+    <li>On cancellation, you have 30 days to redeem any remaining credits.</li>
+</ul>
+
+<h2>4. Delivery guarantee</h2>
+<p>Your first Quick-Win Pack &mdash; including one eligible fix, implemented &mdash; arrives within five business days of completed onboarding, required access and your written approval. If it is late or materially incomplete, your first month is refunded.</p>
+<p>PropeloSEO guarantees the delivery of work as specified. Rankings, traffic, revenue and other outcomes that depend on variables outside our control are never guaranteed.</p>
+
+<h2>5. AI Visibility Audit</h2>
+<p>The AI Visibility Audit is a standalone diagnostic priced at $197 (one-time). It includes 25 buyer questions across four AI engines, manual analysis of citation patterns, and a full rerun. Audit buyers who join the Growth Membership within 30 days of purchase receive their first membership month free.</p>
+
+<h2>6. Managed SEO retainers</h2>
+<p>Managed SEO retainers start at $2,000 per month and are governed by a separate engagement agreement. They are a separate service from the Growth Membership.</p>
+
+<h2>7. Founding cohort</h2>
+<p>Founding cohort members who subscribe during the pilot period lock in the $97 monthly price for as long as they remain continuously subscribed. The founding cohort is limited to ten members.</p>
+
+<h2>8. Cancellation</h2>
+<p>You may cancel your Growth Membership at any time. On cancellation:</p>
+<ul>
+    <li>Your membership continues until the end of your current billing period.</li>
+    <li>You keep everything delivered to date.</li>
+    <li>You have 30 days to redeem any remaining Growth Credits.</li>
+    <li>There is no cancellation fee or penalty.</li>
+</ul>
+
+<h2>9. Website access</h2>
+<p>To deliver your Growth Packs, we may require access to your website, CMS, Google Search Console, or analytics platforms. You are responsible for providing access in a timely manner. Delivery timelines begin after onboarding is complete and required access is granted.</p>
+
+<h2>10. Intellectual property</h2>
+<p>All Growth Packs, reports, and deliverables created for you are yours to use. PropeloSEO retains the right to reference the work in anonymised case studies unless you opt out in writing.</p>
+
+<h2>11. Limitation of liability</h2>
+<p>PropeloSEO's total liability is limited to the fees paid during the 12 months preceding any claim. We are not liable for indirect, consequential, or incidental damages, including lost revenue, lost rankings, or business interruption.</p>
+
+<h2>12. Changes to these terms</h2>
+<p>We may update these terms as the pilot progresses. Active members will be notified of material changes via email at least 14 days before they take effect.</p>
+
+<h2>13. Contact</h2>
+<p>Questions about these terms? Email us at <a href="mailto:shanehellmrich@proton.me">shanehellmrich@proton.me</a>.</p>
+</main>
+
+<footer class="site-footer">
+    <div class="wrap">
+        <div class="footer-top">
             <div class="footer-brand">
-                <a href="/" class="logo"><div class="logo-mark"></div> PropeloSEO</a>
+                <a class="logo" href="/">
+                    <span class="logo-mark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15l7-7 7 7"/></svg></span>
+                    PropeloSEO
+                </a>
+                <p>AI SEO services and AI visibility monitoring for small businesses. Professional data in, publish-ready assets out.</p>
             </div>
-            <div class="footer-links">
+            <nav class="footer-links">
                 <a href="/about/">About</a>
                 <a href="/Contact/">Contact</a>
                 <a href="/Privacy/">Privacy</a>
                 <a href="/Termsofservice/">Terms</a>
                 <a href="/Refunds/">Refunds</a>
-            </div>
+            </nav>
         </div>
-        <div class="wrap"><p class="footer-copy">&copy; 2026 PropeloSEO. All rights reserved.</p></div>
-    </footer>
+        <div class="footer-legal">&copy; 2026 PropeloSEO. All rights reserved. All prices are pilot assumptions subject to validation.</div>
+    </div>
+</footer>
+
 </body>
 </html>

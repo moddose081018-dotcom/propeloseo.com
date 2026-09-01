@@ -2,153 +2,224 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - PropeloSEO</title>
     <meta name="description" content="PropeloSEO turns live professional SEO data into publish-ready Growth Packs. Learn about our approach and data sources.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="canonical" href="https://propeloseo.com/about/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
     <style>
         :root {
-            --bg: #ffffff; --bg-alt: #f8fafc; --text: #1e293b; --text-light: #64748b;
-            --border: #e2e8f0; --action: #2563eb; --action-hover: #1d4ed8; --action-soft: #eff6ff;
-            --accent: #0ea5e9; --success: #059669; --radius-lg: 16px; --radius-md: 10px; --radius-sm: 6px;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --bg-dark: #0f172a;
+            --text: #1e293b;
+            --text-mid: #475569;
+            --text-light: #64748b;
+            --text-inv: #f8fafc;
+            --text-inv-mid: #94a3b8;
+            --border: #e2e8f0;
+            --border-strong: #cbd5e1;
+            --action: #2563eb;
+            --action-hover: #1d4ed8;
+            --action-soft: #eff6ff;
+            --accent: #0ea5e9;
+            --accent-light: #38bdf8;
+            --success: #059669;
+            --gold: #d97706;
+            --radius-lg: 16px;
+            --radius-md: 10px;
+            --radius-sm: 6px;
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+            --measure: 780px;
+            --sans: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+            --mono: "IBM Plex Mono", "SF Mono", ui-monospace, monospace;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
-        a { color: var(--action); text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        body { font-family: var(--sans); background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        a { color: var(--action); text-decoration: none; transition: color 0.2s; }
+        a:hover { color: var(--action-hover); }
+        img { max-width: 100%; height: auto; display: block; }
+        h1, h2, h3 { line-height: 1.15; letter-spacing: -0.028em; }
         .wrap { max-width: 1600px; margin: 0 auto; padding: 0 24px; }
-        .content-wrap { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        .kicker { font-family: var(--mono); font-size: 11.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-light); }
 
-        .site-header { border-bottom: 1px solid var(--border); background: var(--bg); position: sticky; top: 0; z-index: 100; }
-        .site-header .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-        .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 18px; color: var(--text); letter-spacing: -0.02em; }
-        .logo:hover { text-decoration: none; }
-        .logo-mark { width: 30px; height: 30px; border-radius: 8px; background: linear-gradient(135deg, var(--action), var(--accent)); }
-        .site-nav { display: flex; align-items: center; gap: 28px; }
-        .site-nav a { color: var(--text-light); font-size: 14px; font-weight: 500; }
-        .site-nav a:hover { color: var(--text); text-decoration: none; }
-        .nav-cta { display: inline-flex; padding: 8px 18px; border-radius: var(--radius-sm); background: var(--action); color: #fff !important; font-weight: 600; font-size: 14px; }
-        .nav-cta:hover { background: var(--action-hover); text-decoration: none; }
+        /* ── Header ── */
+        .site-header { background: var(--bg-dark); border-bottom: 1px solid rgba(148,163,184,0.14); position: sticky; top: 0; z-index: 100; }
+        .site-header .wrap { display: flex; align-items: center; justify-content: space-between; height: 76px; }
+        .logo { display: flex; align-items: center; gap: 11px; font-size: 18px; font-weight: 700; letter-spacing: -0.025em; color: var(--text-inv); }
+        .logo:hover { color: #fff; }
+        .logo-mark { width: 32px; height: 32px; border-radius: 8px; background: var(--action); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .site-nav { display: flex; align-items: center; gap: 30px; }
+        .site-nav a { font-size: 14px; font-weight: 500; color: var(--text-inv-mid); }
+        .site-nav a:hover { color: var(--text-inv); }
+        .nav-cta { display: inline-flex; align-items: center; height: 40px; padding: 0 20px; border-radius: 7px; background: var(--action); color: #fff !important; font-size: 14px; font-weight: 600; }
+        .nav-cta:hover { background: var(--action-hover); }
 
-        .page-header { padding: 56px 0 40px; }
-        .page-header h1 { font-size: 36px; letter-spacing: -0.02em; margin-bottom: 12px; }
-        .page-header p { font-size: 18px; color: var(--text-light); max-width: 560px; }
+        /* ── Page hero ── */
+        .page-hero { background: var(--bg-dark); padding: 66px 0 58px; }
+        .page-hero .wrap { max-width: var(--measure); display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+        .page-hero h1 { font-size: clamp(30px, 4.4vw, 46px); font-weight: 700; letter-spacing: -0.035em; color: var(--text-inv); text-wrap: pretty; }
+        .page-hero p { font-size: clamp(15.5px, 1.8vw, 17px); line-height: 1.65; color: var(--text-inv-mid); text-wrap: pretty; }
+        .page-hero .updated { font-family: var(--mono); font-size: 12.5px; font-weight: 500; letter-spacing: 0.06em; color: var(--text-inv-mid); }
 
-        .content { padding-bottom: 64px; }
-        .content h2 { font-size: 24px; margin: 40px 0 12px; letter-spacing: -0.01em; }
-        .content p { font-size: 16px; color: var(--text); margin-bottom: 16px; line-height: 1.7; }
-        .content ul { margin: 0 0 16px 20px; }
-        .content li { font-size: 16px; margin-bottom: 8px; line-height: 1.6; }
+        /* ── Document body ── */
+        .doc { max-width: var(--measure); margin: 0 auto; padding: 56px 24px 84px; }
+        .doc > h2 { font-size: clamp(21px, 2.6vw, 25px); font-weight: 700; margin: 44px 0 14px; padding-top: 30px; border-top: 1px solid var(--border); text-wrap: pretty; }
+        .doc > h2:first-child, .doc > .lede + h2 { margin-top: 0; padding-top: 0; border-top: none; }
+        .doc > .lede { font-size: 17px; line-height: 1.7; color: var(--text); margin-bottom: 36px; text-wrap: pretty; }
+        .doc h3 { font-size: 17.5px; font-weight: 600; letter-spacing: -0.02em; margin: 28px 0 10px; }
+        .doc p { font-size: 16px; line-height: 1.75; color: var(--text-mid); margin-bottom: 16px; }
+        .doc p:last-child { margin-bottom: 0; }
+        .doc strong { color: var(--text); font-weight: 600; }
+        .doc ul { list-style: none; display: flex; flex-direction: column; gap: 11px; margin: 0 0 22px; }
+        .doc li { position: relative; padding-left: 22px; font-size: 15.5px; line-height: 1.7; color: var(--text-mid); }
+        .doc li::before { content: ""; position: absolute; left: 3px; top: 10px; width: 6px; height: 6px; border-radius: 50%; background: var(--border-strong); }
 
-        .highlight { background: var(--action-soft); border-left: 4px solid var(--action); padding: 20px 24px; border-radius: var(--radius-sm); margin: 24px 0; }
-        .highlight p { margin-bottom: 0; }
+        /* ── Callouts ── */
+        .callout { background: var(--action-soft); border: 1px solid #dbeafe; border-left: 3px solid var(--action); border-radius: var(--radius-md); padding: 22px 24px; margin: 26px 0; }
+        .callout p { margin: 0; font-size: 15.5px; }
+        .callout.good { background: #ecfdf5; border-color: #bbf7d0; border-left-color: var(--success); }
+        .callout.good h3 { margin: 0 0 8px; font-size: 19px; font-weight: 700; color: #065f46; }
 
-        .data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 24px 0; }
-        .data-card { padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border); background: var(--bg-alt); }
-        .data-card h3 { font-size: 16px; margin-bottom: 6px; }
-        .data-card p { font-size: 14px; color: var(--text-light); margin-bottom: 0; }
+        /* ── Card grid ── */
+        /* Cards are not prose, so above the reading measure they break out of the
+           column and use the room; the surrounding text stays at 780px. */
+        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; margin: 24px 0 28px; }
+        .card { border: 1px solid var(--border); border-radius: 14px; padding: 24px; background: var(--bg); }
+        .card h3 { font-size: 16.5px; font-weight: 600; letter-spacing: -0.015em; margin: 0 0 8px; }
+        .card p { font-size: 14.5px; line-height: 1.6; color: var(--text-light); margin: 0; }
 
-        .site-footer { border-top: 1px solid var(--border); padding: 32px 0; }
-        .site-footer .wrap { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; flex-wrap: wrap; }
-        .footer-brand { font-size: 13px; color: var(--text-light); }
-        .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
-        .footer-links a { font-size: 13px; color: var(--text-light); font-weight: 500; }
-        .footer-copy { font-size: 12px; color: var(--text-light); text-align: center; padding-top: 24px; border-top: 1px solid var(--border); margin-top: 24px; }
+        /* ── Contact email ── */
+        .mailto { display: inline-block; max-width: 100%; font-family: var(--mono); font-size: clamp(15px, 4.2vw, 20px); font-weight: 600; color: var(--action); overflow-wrap: anywhere; }
 
-        .menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
-        .menu-toggle span { display: block; width: 22px; height: 2px; background: var(--text); margin: 5px 0; }
-        @media (max-width: 768px) {
-            .menu-toggle { display: block; }
-            .site-nav { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); flex-direction: column; padding: 16px 20px; gap: 16px; }
-            .site-nav.open { display: flex; }
+        /* ── Footer ── */
+        .site-footer { border-top: 1px solid var(--border); padding: 44px 0 32px; }
+        .footer-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 48px; flex-wrap: wrap; }
+        .footer-brand { display: flex; flex-direction: column; gap: 10px; max-width: 400px; }
+        .footer-brand .logo { color: var(--text); font-size: 16px; }
+        .footer-brand .logo:hover { color: var(--action); }
+        .footer-brand .logo-mark { width: 28px; height: 28px; border-radius: 7px; }
+        .footer-brand p { font-size: 14px; line-height: 1.6; color: var(--text-light); }
+        .footer-links { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; padding-top: 6px; }
+        .footer-links a { font-size: 14px; font-weight: 500; color: var(--text-light); }
+        .footer-links a:hover { color: var(--text); }
+        .footer-legal { border-top: 1px solid var(--border); margin-top: 28px; padding-top: 20px; font-size: 13px; color: #94a3b8; }
+
+        /* ── Responsive ── */
+        @media (min-width: 1180px) {
+            .cards { width: 1080px; margin-left: 50%; transform: translateX(-50%); }
+        }
+        @media (max-width: 900px) {
+            .site-nav a:not(.nav-cta) { display: none; }
+        }
+        @media (max-width: 760px) {
+            .page-hero { padding: 48px 0 42px; }
+            .doc { padding: 44px 24px 64px; }
+        }
+        @media (max-width: 560px) {
+            .wrap { padding: 0 20px; }
+            .doc { padding-left: 20px; padding-right: 20px; }
         }
     </style>
 </head>
 <body>
-    <header class="site-header">
-        <div class="wrap">
-            <a href="/" class="logo"><div class="logo-mark"></div> PropeloSEO</a>
-            <button class="menu-toggle" aria-label="Menu" onclick="document.querySelector('.site-nav').classList.toggle('open')"><span></span><span></span><span></span></button>
-            <nav class="site-nav">
-                <a href="/#how-it-works">How It Works</a>
-                <a href="/#pricing">Pricing</a>
-                <a href="/#faq">FAQ</a>
-                <a href="/Contact/">Contact</a>
-                <a href="/#pricing" class="nav-cta">Start Your Sprint</a>
-            </nav>
-        </div>
-    </header>
 
-    <div class="content-wrap">
-        <div class="page-header">
-            <h1>About PropeloSEO</h1>
-            <p>We monitor and manufacture. Live professional SEO data goes in; one publish-ready Growth Pack comes out every month.</p>
-        </div>
-
-        <div class="content">
-            <h2>What we do</h2>
-            <p>PropeloSEO is a data-driven SEO membership. Each month, we convert live data from professional-grade sources into one clearly scoped, publish-ready Growth Pack for your business.</p>
-            <p>We don't hand you a dashboard and walk away. We don't charge agency rates for work that can be productised. We sit in the gap between raw monitoring tools and full-service retainers, doing the work that actually moves your visibility.</p>
-
-            <div class="highlight">
-                <p><strong>The principle:</strong> guarantee the deliverable, never the outcome. Rankings and traffic depend on variables outside any provider's control. The delivery of evidence-based, publish-ready work is entirely within ours.</p>
-            </div>
-
-            <h2>The data behind every Growth Pack</h2>
-            <p>Every recommendation we make is built on the same professional data sources used by agencies charging ten times more:</p>
-
-            <div class="data-grid">
-                <div class="data-card">
-                    <h3>Ahrefs</h3>
-                    <p>Keyword tracking, backlink analysis, competitor gaps, and Brand Radar for AI citation monitoring.</p>
-                </div>
-                <div class="data-card">
-                    <h3>DataForSEO</h3>
-                    <p>SERP tracking, AI optimisation suite for ChatGPT, Perplexity and Gemini citation checks.</p>
-                </div>
-                <div class="data-card">
-                    <h3>Screaming Frog</h3>
-                    <p>Full technical crawl up to 500 URLs per site. Indexability, internal linking, schema, and page-level issues.</p>
-                </div>
-            </div>
-
-            <h2>AI visibility as a competitive advantage</h2>
-            <p>AI engines are already answering your buyers' questions. ChatGPT, Perplexity and Gemini name businesses, recommend solutions, and link to sources. Most businesses at this price point have no visibility into whether AI mentions them at all.</p>
-            <p>PropeloSEO tracks where AI is sending your buyers &mdash; who gets named, who gets cited, and who gets linked. This data feeds directly into your Growth Pack, so when AI engines overlook you, you know what to do about it.</p>
-
-            <h2>How we work</h2>
-            <ul>
-                <li><strong>One membership, one deliverable.</strong> No feature-checklist comparisons. One Growth Pack per month, scoped to equivalent production cost.</li>
-                <li><strong>Month one proves it.</strong> Your first pack includes a real fix, implemented with your approval, within five business days.</li>
-                <li><strong>Personally QA'd.</strong> Every Growth Pack is reviewed before delivery. This is a selling point, not a bottleneck.</li>
-                <li><strong>Cancel anytime.</strong> No minimum commitment. Retention is earned through visible, accumulating value &mdash; not lock-in.</li>
-                <li><strong>Honest economics.</strong> We count labour at real internal rates and price accordingly. No inflated value stacks or invented comparisons.</li>
-            </ul>
-
-            <h2>What we don't claim</h2>
-            <p>We don't guarantee rankings, traffic or revenue. We don't promise the same service as a $10,000/month agency. We don't use invented standalone values or fabricated scarcity. When we say "founding cohort: ten spots," that's because every pack is personally QA'd and there are genuinely ten spots.</p>
-
-            <h2>Get started</h2>
-            <p>The Growth Membership is $97/month, cancel anytime. Start with the <a href="/#pricing">90-Day Visibility Sprint</a> or request a standalone <a href="/#audit">AI Visibility Audit</a> for $197.</p>
-            <p>Need managed implementation? <a href="/Contact/">Managed SEO retainers</a> start at $2,000/month with a separate qualification process.</p>
-        </div>
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="/">
+            <span class="logo-mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15l7-7 7 7"/></svg></span>
+            PropeloSEO
+        </a>
+        <nav class="site-nav">
+            <a href="/#how-it-works">How it works</a>
+            <a href="/#whats-included">What's included</a>
+            <a href="/#pricing">Pricing</a>
+            <a href="/#faq">FAQ</a>
+            <a class="nav-cta" href="/#pricing">Start your sprint</a>
+        </nav>
     </div>
+</header>
 
-    <footer class="site-footer">
-        <div class="wrap">
+<section class="page-hero">
+    <div class="wrap">
+        <span class="kicker">About</span>
+        <h1>About PropeloSEO</h1>
+        <p>We monitor and manufacture. Live professional SEO data goes in; one publish-ready Growth Pack comes out every month.</p>
+    </div>
+</section>
+
+<main class="doc">
+<h2>What we do</h2>
+<p>PropeloSEO is a data-driven SEO membership. Each month, we convert live data from professional-grade sources into one clearly scoped, publish-ready Growth Pack for your business.</p>
+<p>We don't hand you a dashboard and walk away. We don't charge agency rates for work that can be productised. We sit in the gap between raw monitoring tools and full-service retainers, doing the work that actually moves your visibility.</p>
+
+<div class="callout">
+    <p><strong>The principle:</strong> guarantee the deliverable, never the outcome. Rankings and traffic depend on variables outside any provider's control. The delivery of evidence-based, publish-ready work is entirely within ours.</p>
+</div>
+
+<h2>The data behind every Growth Pack</h2>
+<p>Every recommendation we make is built on the same professional data sources used by agencies charging ten times more:</p>
+
+<div class="cards">
+    <div class="card">
+        <h3>Ahrefs</h3>
+        <p>Keyword tracking, backlink analysis, competitor gaps, and Brand Radar for AI citation monitoring.</p>
+    </div>
+    <div class="card">
+        <h3>DataForSEO</h3>
+        <p>SERP tracking, AI optimisation suite for ChatGPT, Perplexity and Gemini citation checks.</p>
+    </div>
+    <div class="card">
+        <h3>Screaming Frog</h3>
+        <p>Full technical crawl up to 500 URLs per site. Indexability, internal linking, schema, and page-level issues.</p>
+    </div>
+</div>
+
+<h2>AI visibility as a competitive advantage</h2>
+<p>AI engines are already answering your buyers' questions. ChatGPT, Perplexity and Gemini name businesses, recommend solutions, and link to sources. Most businesses at this price point have no visibility into whether AI mentions them at all.</p>
+<p>PropeloSEO tracks where AI is sending your buyers &mdash; who gets named, who gets cited, and who gets linked. This data feeds directly into your Growth Pack, so when AI engines overlook you, you know what to do about it.</p>
+
+<h2>How we work</h2>
+<ul>
+    <li><strong>One membership, one deliverable.</strong> No feature-checklist comparisons. One Growth Pack per month, scoped to equivalent production cost.</li>
+    <li><strong>Month one proves it.</strong> Your first pack includes a real fix, implemented with your approval, within five business days.</li>
+    <li><strong>Personally QA'd.</strong> Every Growth Pack is reviewed before delivery. This is a selling point, not a bottleneck.</li>
+    <li><strong>Cancel anytime.</strong> No minimum commitment. Retention is earned through visible, accumulating value &mdash; not lock-in.</li>
+    <li><strong>Honest economics.</strong> We count labour at real internal rates and price accordingly. No inflated value stacks or invented comparisons.</li>
+</ul>
+
+<h2>What we don't claim</h2>
+<p>We don't guarantee rankings, traffic or revenue. We don't promise the same service as a $10,000/month agency. We don't use invented standalone values or fabricated scarcity. When we say "founding cohort: ten spots," that's because every pack is personally QA'd and there are genuinely ten spots.</p>
+
+<h2>Get started</h2>
+<p>The Growth Membership is $97/month, cancel anytime. Start with the <a href="/#pricing">90-Day Visibility Sprint</a> or request a standalone <a href="/#audit">AI Visibility Audit</a> for $197.</p>
+<p>Need managed implementation? <a href="/Contact/">Managed SEO retainers</a> start at $2,000/month with a separate qualification process.</p>
+</main>
+
+<footer class="site-footer">
+    <div class="wrap">
+        <div class="footer-top">
             <div class="footer-brand">
-                <a href="/" class="logo"><div class="logo-mark"></div> PropeloSEO</a>
+                <a class="logo" href="/">
+                    <span class="logo-mark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15l7-7 7 7"/></svg></span>
+                    PropeloSEO
+                </a>
+                <p>AI SEO services and AI visibility monitoring for small businesses. Professional data in, publish-ready assets out.</p>
             </div>
-            <div class="footer-links">
+            <nav class="footer-links">
                 <a href="/about/">About</a>
                 <a href="/Contact/">Contact</a>
                 <a href="/Privacy/">Privacy</a>
                 <a href="/Termsofservice/">Terms</a>
                 <a href="/Refunds/">Refunds</a>
-            </div>
+            </nav>
         </div>
-        <div class="wrap"><p class="footer-copy">&copy; 2026 PropeloSEO. All rights reserved.</p></div>
-    </footer>
+        <div class="footer-legal">&copy; 2026 PropeloSEO. All rights reserved. All prices are pilot assumptions subject to validation.</div>
+    </div>
+</footer>
+
 </body>
 </html>
