@@ -1,0 +1,247 @@
+{
+  "_meta": {
+    "captured": "2026-08-30T12:10:34Z",
+    "llm_type": "gemini",
+    "model_name": "gemini-2.5-flash",
+    "web_search": true,
+    "temperature": 0.1,
+    "cost_usd": 0.037692,
+    "prompt_id": "geo-vs-traditional-seo-provider",
+    "note": "Real DataForSEO payload (tasks[0].result[0]). Annotation `text` dropped. Gemini citations are vertexaisearch grounding redirects; real domain is in `title`."
+  },
+  "model_name": "gemini-2.5-flash",
+  "input_tokens": 80,
+  "output_tokens": 827,
+  "reasoning_tokens": 0,
+  "web_search": true,
+  "money_spent": 0.0370915,
+  "datetime": "2026-08-30 12:10:34 +00:00",
+  "fan_out_queries": [
+    "generative engine optimization small business",
+    "generative SEO services for small business",
+    "technical SEO services for small business"
+  ],
+  "items": [
+    {
+      "type": "message",
+      "sections": [
+        {
+          "type": "text",
+          "text": "Many digital marketing agencies are now offering \"Generative Engine Optimization\" (GEO) services alongside traditional technical SEO for small businesses. GEO focuses on optimizing your online presence so that AI tools like ChatGPT, Google AI Overviews, Gemini, and Perplexity cite, recommend, and trust your business in their generated answers. This is becoming increasingly important as customers are using AI-powered search more frequently to ask questions and get recommendations.\n\nHere's a breakdown of what these services typically involve and some providers:\n\n**What Generative Engine Optimization (GEO) Entails:**\n*   **Optimizing for AI-generated answers:** Unlike traditional SEO, which aims for high rankings in search engine results pages (SERPs), GEO focuses on getting your business directly mentioned and recommended in AI responses.\n*   **Entity and Evidence Foundation:** This includes defining your brand consistently across the web (name, categories, services, locations), strengthening your Google Business Profile, and publishing \"evidence assets\" like service pages with outcomes, pricing, FAQs, and testimonials.\n*   **Structuring content for AI:** This involves using schema markup, consistent entity naming, and machine-readable product specifications so large language models can accurately retrieve and summarize your content.\n*   **Building Trust and Authority:** AI systems favor sources with clear expertise, local relevance, and corroborating citations. This means focusing on brand consistency, tone of voice, reviews, social content, and listings.\n*   **Adapting to conversational search:** AI search is more conversational, with users asking natural language questions rather than just keywords.\n\n**What Traditional Technical SEO Involves:**\n*   **Website Optimization:** This includes improving website performance, crawlability, and indexability for search engines.\n*   **Keyword Research:** Identifying relevant keywords to drive qualified traffic.\n*   **Content Creation:** Developing SEO-driven content that attracts, engages, and converts customers.\n*   **On-page and Off-page SEO:** Optimizing elements on your website and building backlinks to strengthen authority.\n*   **Technical SEO Audits:** Identifying and resolving issues like site speed, Core Web Vitals, mobile optimization, XML sitemaps, and crawl errors.\n\n**Providers Offering Both GEO and Technical SEO for Small Businesses:**\n\nMany agencies are integrating GEO into their existing SEO services. When looking for a provider, consider those that emphasize both traditional SEO foundations and AI search visibility. Some examples of agencies that offer these services include:\n\n*   **Onely:** This agency specializes in technical SEO and AI Search Optimization, focusing on resolving infrastructure problems for both traditional search and AI-generated answers.\n*   **WebFX:** They provide custom SEO strategies for small businesses that include website optimization, keyword research, content creation, and technical SEO.\n*   **Searchbloom:** They offer small business SEO through their ART methodology (Authority, Relevance, and Technology), which includes technical foundations, local SEO, content work, and AI search optimization.\n*   **SeoTuners:** This agency provides small business SEO services that include audits, technical SEO, content development, and backlink acquisition.\n*   **Thrive Internet Marketing Agency:** They offer technical SEO services, including comprehensive audits, competitor analysis, keyword research, and mobile optimization.\n*   **Percepture:** This agency specializes in Generative Engine Optimization services, combining SEO, structured data, entity optimization, and digital PR to make brands visible in AI-driven search platforms.\n*   **Direct Online Marketing:** They offer fully managed AI marketing services, including GEO, AEO, and AIO, to help businesses scale content production and performance.\n\nWhen choosing an agency, it's important to look for one that can diagnose root causes of technical issues, explain them clearly, and provide a roadmap for implementation. They should also be able to track AI mentions, sentiment, and referral traffic to measure ROI.",
+          "annotations": [
+            {
+              "title": "precisionmarketingpartners.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHo6wUIKTH5hfHID5Usr6FVMwXHRK5oQ0OUSxWnJa0AfRVrMnt-rErK93wG39KYXl-63oj1R_HRneXbvk-CMhx8p4xgYGsUZxIIEn-d0nNyFWtfzeuIz_8F32MHTbQj2MlvUVFeo-Z-2hfTFb5CEFl8mprYiwCdShRfAsVOe3bANBxq01hTWiBTs56cHqjPfVXx2FKx4ooubdibdQ==",
+              "start_index": 155,
+              "end_index": 345
+            },
+            {
+              "title": "succeedingsmall.co",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKluVTO6Ic_m1Gm8bFAqKFoPZ_X5KWfCyshxUU43EmSikgWx2MHklLDfWqkcr-lTlac_VNXoRSRlv_4p29NQO_KZa2BLN9m1QOe8-TtzAF_NtDou4hTybS2-6EScZKTqTf7fVmy6tL6AdOYGtu2XtnCbX5ZQ==",
+              "start_index": 155,
+              "end_index": 345
+            },
+            {
+              "title": "percepture.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGC3HgCbnG729hU4vKBYOZ27fJ23L4RvyOOv1jM69Whp8_r9-fmqZguR7MrhvXu1KQvW0A_tA2l5LKgX7-ZoDUPKgMPXkgcf6fTjumZL5bG2ZFz3ZvNxrqsBFTB9E1B9QEGbjlmJ1F_",
+              "start_index": 155,
+              "end_index": 345
+            },
+            {
+              "title": "precisionmarketingpartners.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHo6wUIKTH5hfHID5Usr6FVMwXHRK5oQ0OUSxWnJa0AfRVrMnt-rErK93wG39KYXl-63oj1R_HRneXbvk-CMhx8p4xgYGsUZxIIEn-d0nNyFWtfzeuIz_8F32MHTbQj2MlvUVFeo-Z-2hfTFb5CEFl8mprYiwCdShRfAsVOe3bANBxq01hTWiBTs56cHqjPfVXx2FKx4ooubdibdQ==",
+              "start_index": 346,
+              "end_index": 484
+            },
+            {
+              "title": "ntooitive.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF8YJlFx9awYlBvcz3It7WxlRkjUxOy08WRz7irnkOJqBz6O4adgVzyUdEwpI7tqxrQFNby9YHQSCM0fWhIWgk1_ymUFu_OgN6v65FcXfG9AVKiTST9aCrzKYimK7be-y3EpuaSuEPH9dW-2EJadDpYGtWu80QbcdkLnmcNaoa8TZQGIP98xJPbYIPgfmbWc96xDMMcrozsf-vKmjAfUxDpreBhavP6Ej_Fi6VLzf90rpHEgqHa8nBd",
+              "start_index": 346,
+              "end_index": 484
+            },
+            {
+              "title": "precisionmarketingpartners.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHo6wUIKTH5hfHID5Usr6FVMwXHRK5oQ0OUSxWnJa0AfRVrMnt-rErK93wG39KYXl-63oj1R_HRneXbvk-CMhx8p4xgYGsUZxIIEn-d0nNyFWtfzeuIz_8F32MHTbQj2MlvUVFeo-Z-2hfTFb5CEFl8mprYiwCdShRfAsVOe3bANBxq01hTWiBTs56cHqjPfVXx2FKx4ooubdibdQ==",
+              "start_index": 567,
+              "end_index": 848
+            },
+            {
+              "title": "succeedingsmall.co",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKluVTO6Ic_m1Gm8bFAqKFoPZ_X5KWfCyshxUU43EmSikgWx2MHklLDfWqkcr-lTlac_VNXoRSRlv_4p29NQO_KZa2BLN9m1QOe8-TtzAF_NtDou4hTybS2-6EScZKTqTf7fVmy6tL6AdOYGtu2XtnCbX5ZQ==",
+              "start_index": 567,
+              "end_index": 848
+            },
+            {
+              "title": "hubspot.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1yuKdmtyNUrmUb29P1VHSvi_PGiWEJOZz-LsdXIinw9JfIJ7i4pPMebOgxJ0d9thqvRFa3Xuw-s78E0_C8Uv-NPwUw5PD_ywZoKaI91MDZjD61e4xiLVT-bhZQ3q3MEi3Vd6li67E1s8tJAesENCTGCtAWusTN-OmxDx9Ey2COzOxq5ugZTbwFgw=",
+              "start_index": 567,
+              "end_index": 848
+            },
+            {
+              "title": "precisionmarketingpartners.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHo6wUIKTH5hfHID5Usr6FVMwXHRK5oQ0OUSxWnJa0AfRVrMnt-rErK93wG39KYXl-63oj1R_HRneXbvk-CMhx8p4xgYGsUZxIIEn-d0nNyFWtfzeuIz_8F32MHTbQj2MlvUVFeo-Z-2hfTFb5CEFl8mprYiwCdShRfAsVOe3bANBxq01hTWiBTs56cHqjPfVXx2FKx4ooubdibdQ==",
+              "start_index": 849,
+              "end_index": 1135
+            },
+            {
+              "title": "precisionmarketingpartners.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHo6wUIKTH5hfHID5Usr6FVMwXHRK5oQ0OUSxWnJa0AfRVrMnt-rErK93wG39KYXl-63oj1R_HRneXbvk-CMhx8p4xgYGsUZxIIEn-d0nNyFWtfzeuIz_8F32MHTbQj2MlvUVFeo-Z-2hfTFb5CEFl8mprYiwCdShRfAsVOe3bANBxq01hTWiBTs56cHqjPfVXx2FKx4ooubdibdQ==",
+              "start_index": 1136,
+              "end_index": 1353
+            },
+            {
+              "title": "percepture.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGC3HgCbnG729hU4vKBYOZ27fJ23L4RvyOOv1jM69Whp8_r9-fmqZguR7MrhvXu1KQvW0A_tA2l5LKgX7-ZoDUPKgMPXkgcf6fTjumZL5bG2ZFz3ZvNxrqsBFTB9E1B9QEGbjlmJ1F_",
+              "start_index": 1136,
+              "end_index": 1353
+            },
+            {
+              "title": "precisionmarketingpartners.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHo6wUIKTH5hfHID5Usr6FVMwXHRK5oQ0OUSxWnJa0AfRVrMnt-rErK93wG39KYXl-63oj1R_HRneXbvk-CMhx8p4xgYGsUZxIIEn-d0nNyFWtfzeuIz_8F32MHTbQj2MlvUVFeo-Z-2hfTFb5CEFl8mprYiwCdShRfAsVOe3bANBxq01hTWiBTs56cHqjPfVXx2FKx4ooubdibdQ==",
+              "start_index": 1354,
+              "end_index": 1484
+            },
+            {
+              "title": "ntooitive.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF8YJlFx9awYlBvcz3It7WxlRkjUxOy08WRz7irnkOJqBz6O4adgVzyUdEwpI7tqxrQFNby9YHQSCM0fWhIWgk1_ymUFu_OgN6v65FcXfG9AVKiTST9aCrzKYimK7be-y3EpuaSuEPH9dW-2EJadDpYGtWu80QbcdkLnmcNaoa8TZQGIP98xJPbYIPgfmbWc96xDMMcrozsf-vKmjAfUxDpreBhavP6Ej_Fi6VLzf90rpHEgqHa8nBd",
+              "start_index": 1354,
+              "end_index": 1484
+            },
+            {
+              "title": "ntooitive.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF8YJlFx9awYlBvcz3It7WxlRkjUxOy08WRz7irnkOJqBz6O4adgVzyUdEwpI7tqxrQFNby9YHQSCM0fWhIWgk1_ymUFu_OgN6v65FcXfG9AVKiTST9aCrzKYimK7be-y3EpuaSuEPH9dW-2EJadDpYGtWu80QbcdkLnmcNaoa8TZQGIP98xJPbYIPgfmbWc96xDMMcrozsf-vKmjAfUxDpreBhavP6Ej_Fi6VLzf90rpHEgqHa8nBd",
+              "start_index": 1485,
+              "end_index": 1580
+            },
+            {
+              "title": "ntooitive.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF8YJlFx9awYlBvcz3It7WxlRkjUxOy08WRz7irnkOJqBz6O4adgVzyUdEwpI7tqxrQFNby9YHQSCM0fWhIWgk1_ymUFu_OgN6v65FcXfG9AVKiTST9aCrzKYimK7be-y3EpuaSuEPH9dW-2EJadDpYGtWu80QbcdkLnmcNaoa8TZQGIP98xJPbYIPgfmbWc96xDMMcrozsf-vKmjAfUxDpreBhavP6Ej_Fi6VLzf90rpHEgqHa8nBd",
+              "start_index": 1581,
+              "end_index": 1729
+            },
+            {
+              "title": "webfx.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHolAPggFKCWEHbAL8plrM8aN94cW9TIHR6FKio0zTmpa_daAuhyUDcRn7qnVHQXYh48jG91VaNwP3vsn4x1eD7umV7Cgjvlgu_x94gMI6iyiWnhoPCT917gCe27D852boU",
+              "start_index": 1731,
+              "end_index": 1901
+            },
+            {
+              "title": "onely.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFioRDFZxznc-lWmeKmljc3J6qwjaTcPMla52gLucArscnEp9t8XtrN6jIhXRtRVzdH_WE2dcUeg2IQVv2ROki6YyMF5vVf3fjeX2-wumHT6xkdd7MpwDszxjiXWx608BytTVhPP22_JmnGYZeYv7oQIA==",
+              "start_index": 1731,
+              "end_index": 1901
+            },
+            {
+              "title": "google.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-Zormuk65aXp26Ug_tBVkx6nNOk8CYmftKE9WiHKGkvec7exBtFFMZGsWC9xsIkIBp0Vd6faGIsFpxsrLRAvCpxFagYceOVYFgsxGi-THb5GVrddpW5K_L6b7TJEU6rJrP0eKOg8piQuswXMonJh-Vz8kQsLdcRyNf6eyVHqXZLzJwMfTWQ==",
+              "start_index": 1731,
+              "end_index": 1901
+            },
+            {
+              "title": "webfx.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHolAPggFKCWEHbAL8plrM8aN94cW9TIHR6FKio0zTmpa_daAuhyUDcRn7qnVHQXYh48jG91VaNwP3vsn4x1eD7umV7Cgjvlgu_x94gMI6iyiWnhoPCT917gCe27D852boU",
+              "start_index": 1902,
+              "end_index": 1985
+            },
+            {
+              "title": "seotuners.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFOGc4SmL0OSDdgIs47_1_YISzR1wk3_rQOFrgwiDTK2jfglLnA0wlMx59BSC73Q0HFu5_vfAtp4sEPwzzRrGDTQlTcqGezmswlZcoXpvJqSKR60IolRMDSHFgB0L4bbJ-AYQQWUFalPQQyGg=",
+              "start_index": 1902,
+              "end_index": 1985
+            },
+            {
+              "title": "thriveagency.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH0bpnGZJWY9R0QDMjzi__rHrQqaKzfWlanJOvqiBlyXRF4TWUHmzsZyZq5zNYMEAbX9JexO2cenBeNz0waUDY-rUZs7RkXURunSfFzoqPjI604oLsoP5dAf8Hgrx3ToStF0g5C6sxGAR7ZcMjyo5P4gZFcq2ipjb_Kef3d",
+              "start_index": 1902,
+              "end_index": 1985
+            },
+            {
+              "title": "webfx.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHolAPggFKCWEHbAL8plrM8aN94cW9TIHR6FKio0zTmpa_daAuhyUDcRn7qnVHQXYh48jG91VaNwP3vsn4x1eD7umV7Cgjvlgu_x94gMI6iyiWnhoPCT917gCe27D852boU",
+              "start_index": 1986,
+              "end_index": 2089
+            },
+            {
+              "title": "webfx.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHolAPggFKCWEHbAL8plrM8aN94cW9TIHR6FKio0zTmpa_daAuhyUDcRn7qnVHQXYh48jG91VaNwP3vsn4x1eD7umV7Cgjvlgu_x94gMI6iyiWnhoPCT917gCe27D852boU",
+              "start_index": 2090,
+              "end_index": 2207
+            },
+            {
+              "title": "webfx.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHolAPggFKCWEHbAL8plrM8aN94cW9TIHR6FKio0zTmpa_daAuhyUDcRn7qnVHQXYh48jG91VaNwP3vsn4x1eD7umV7Cgjvlgu_x94gMI6iyiWnhoPCT917gCe27D852boU",
+              "start_index": 2208,
+              "end_index": 2357
+            },
+            {
+              "title": "seotuners.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFOGc4SmL0OSDdgIs47_1_YISzR1wk3_rQOFrgwiDTK2jfglLnA0wlMx59BSC73Q0HFu5_vfAtp4sEPwzzRrGDTQlTcqGezmswlZcoXpvJqSKR60IolRMDSHFgB0L4bbJ-AYQQWUFalPQQyGg=",
+              "start_index": 2208,
+              "end_index": 2357
+            },
+            {
+              "title": "thriveagency.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH0bpnGZJWY9R0QDMjzi__rHrQqaKzfWlanJOvqiBlyXRF4TWUHmzsZyZq5zNYMEAbX9JexO2cenBeNz0waUDY-rUZs7RkXURunSfFzoqPjI604oLsoP5dAf8Hgrx3ToStF0g5C6sxGAR7ZcMjyo5P4gZFcq2ipjb_Kef3d",
+              "start_index": 2208,
+              "end_index": 2357
+            },
+            {
+              "title": "onely.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFioRDFZxznc-lWmeKmljc3J6qwjaTcPMla52gLucArscnEp9t8XtrN6jIhXRtRVzdH_WE2dcUeg2IQVv2ROki6YyMF5vVf3fjeX2-wumHT6xkdd7MpwDszxjiXWx608BytTVhPP22_JmnGYZeYv7oQIA==",
+              "start_index": 2680,
+              "end_index": 2863
+            },
+            {
+              "title": "webfx.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHolAPggFKCWEHbAL8plrM8aN94cW9TIHR6FKio0zTmpa_daAuhyUDcRn7qnVHQXYh48jG91VaNwP3vsn4x1eD7umV7Cgjvlgu_x94gMI6iyiWnhoPCT917gCe27D852boU",
+              "start_index": 2864,
+              "end_index": 3024
+            },
+            {
+              "title": "searchbloom.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHUU5AXpvHFtkZ1QA769EbfJAUCPQcN9CXIdRmUkHDoQCGlL6O88XI7q4cJj04EJ8EyA5GWzrr8i6ks_cwqTAtGtwlLqLidc6wi2qTE-5ZyoYaBxY3jJUtQcJdopqTg2QP6dIlHh_lgObHeQmlbcG8u4iJcieBid59VvTkoejbXnFLZVqZmjGpZEp4hWMw=",
+              "start_index": 3025,
+              "end_index": 3236
+            },
+            {
+              "title": "seotuners.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFOGc4SmL0OSDdgIs47_1_YISzR1wk3_rQOFrgwiDTK2jfglLnA0wlMx59BSC73Q0HFu5_vfAtp4sEPwzzRrGDTQlTcqGezmswlZcoXpvJqSKR60IolRMDSHFgB0L4bbJ-AYQQWUFalPQQyGg=",
+              "start_index": 3237,
+              "end_index": 3387
+            },
+            {
+              "title": "thriveagency.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH0bpnGZJWY9R0QDMjzi__rHrQqaKzfWlanJOvqiBlyXRF4TWUHmzsZyZq5zNYMEAbX9JexO2cenBeNz0waUDY-rUZs7RkXURunSfFzoqPjI604oLsoP5dAf8Hgrx3ToStF0g5C6sxGAR7ZcMjyo5P4gZFcq2ipjb_Kef3d",
+              "start_index": 3388,
+              "end_index": 3560
+            },
+            {
+              "title": "percepture.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGC3HgCbnG729hU4vKBYOZ27fJ23L4RvyOOv1jM69Whp8_r9-fmqZguR7MrhvXu1KQvW0A_tA2l5LKgX7-ZoDUPKgMPXkgcf6fTjumZL5bG2ZFz3ZvNxrqsBFTB9E1B9QEGbjlmJ1F_",
+              "start_index": 3561,
+              "end_index": 3770
+            },
+            {
+              "title": "directom.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQbzR9aaOb7Cx16RL6Ihj6pSRfTaG_mLMs9QKpTxyNbGpAr9KRTGgtQTziFklfk6wOIK4k0XCP10E0D78iCsZFU4US7FKiR3uj7znfwAGi-IaiePtMQblQnriF_1xEMi1v1pZF7uAFW57mhJW8dj3OnVzmKNwPBo0T9h_1A7u4Qqxq7vQ=",
+              "start_index": 3771,
+              "end_index": 3941
+            },
+            {
+              "title": "onely.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFioRDFZxznc-lWmeKmljc3J6qwjaTcPMla52gLucArscnEp9t8XtrN6jIhXRtRVzdH_WE2dcUeg2IQVv2ROki6YyMF5vVf3fjeX2-wumHT6xkdd7MpwDszxjiXWx608BytTVhPP22_JmnGYZeYv7oQIA==",
+              "start_index": 3943,
+              "end_index": 4113
+            },
+            {
+              "title": "percepture.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGC3HgCbnG729hU4vKBYOZ27fJ23L4RvyOOv1jM69Whp8_r9-fmqZguR7MrhvXu1KQvW0A_tA2l5LKgX7-ZoDUPKgMPXkgcf6fTjumZL5bG2ZFz3ZvNxrqsBFTB9E1B9QEGbjlmJ1F_",
+              "start_index": 4114,
+              "end_index": 4208
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

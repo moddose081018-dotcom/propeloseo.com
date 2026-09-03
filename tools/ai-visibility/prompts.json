@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "frozen": "2026-08-30",
+  "note": "The integrity anchor. Editing any `text` breaks month-over-month comparability — add a new prompt and retire the old one with is_active:false instead. Bump `version` on any change.",
+  "prompts": [
+    {
+      "id": "best-affordable-ai-seo-services",
+      "text": "What are the best affordable AI SEO services for small businesses that track ChatGPT and AI Overviews visibility?",
+      "category": "core-offer",
+      "query_type": "comparison",
+      "is_active": true
+    },
+    {
+      "id": "cheap-monthly-seo-subscription",
+      "text": "Which SEO providers offer a fixed monthly subscription under $150 instead of a $2,000 retainer?",
+      "category": "pricing",
+      "query_type": "deal_breaker",
+      "is_active": true
+    },
+    {
+      "id": "who-tracks-ai-visibility",
+      "text": "Which SEO services actually measure whether ChatGPT, Perplexity and Gemini mention my business?",
+      "category": "differentiator",
+      "query_type": "feature_verify",
+      "is_active": true
+    },
+    {
+      "id": "geo-vs-traditional-seo-provider",
+      "text": "Who provides generative engine optimization alongside traditional technical SEO for a small business?",
+      "category": "differentiator",
+      "query_type": "icp_alignment",
+      "is_active": true
+    },
+    {
+      "id": "done-for-you-not-dashboard",
+      "text": "I want SEO work delivered each month, not another dashboard. Which providers actually implement fixes?",
+      "category": "core-offer",
+      "query_type": "deal_breaker",
+      "is_active": true
+    }
+  ]
+}

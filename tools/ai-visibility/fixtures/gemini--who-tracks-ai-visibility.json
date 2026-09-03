@@ -1,0 +1,435 @@
+{
+  "_meta": {
+    "captured": "2026-08-30T12:06:23Z",
+    "llm_type": "gemini",
+    "model_name": "gemini-2.5-flash",
+    "web_search": true,
+    "temperature": 0.1,
+    "cost_usd": 0.03818,
+    "prompt_id": "who-tracks-ai-visibility",
+    "note": "Real DataForSEO payload (tasks[0].result[0]). Annotation `text` dropped — parser does not read it. Gemini returns every citation as a vertexaisearch grounding redirect; the real domain appears only in `title`."
+  },
+  "model_name": "gemini-2.5-flash",
+  "input_tokens": 101,
+  "output_tokens": 1020,
+  "reasoning_tokens": 0,
+  "web_search": true,
+  "money_spent": 0.0375803,
+  "datetime": "2026-08-30 12:06:23 +00:00",
+  "fan_out_queries": [
+    "SEO services measuring AI mentions",
+    "SEO tools for ChatGPT business mentions",
+    "SEO tools for Perplexity AI business mentions",
+    "SEO tools for Gemini AI business mentions",
+    "AI content monitoring for brand mentions"
+  ],
+  "items": [
+    {
+      "type": "message",
+      "sections": [
+        {
+          "type": "text",
+          "text": "Yes, several SEO services and tools are specifically designed to measure whether AI models like ChatGPT, Perplexity, and Gemini mention your business. This is a growing area of focus in SEO, often referred to as AI SEO or Generative Engine Optimization (GEO).\n\nHere are some of the key services and tools that offer this capability:\n\n**Dedicated AI Visibility & Mention Tracking Platforms:**\n\n*   **Frizerly:** This tool is highlighted as a strong option for Gemini SEO and mention tracking. It auto-publishes content structured for Gemini citations and tracks every mention your brand earns across Gemini, AI Overviews, ChatGPT, Perplexity, Claude, and Grok.\n*   **WorkDuo:** Positioned as a top ChatGPT SEO tracking and brand monitoring tool, WorkDuo provides unified visibility into how your content performs across various AI search platforms, including Google AI Overviews, Perplexity, DeepSeek, Claude, and MS Copilot.\n*   **Dageno AI:** This platform is considered a leading tool for tracking AI search visibility across ChatGPT and Gemini. It connects visibility monitoring with GEO strategy, content generation, and attribution, and also monitors Google AI Overviews, Perplexity, Copilot, and Grok.\n*   **Profound:** Profound monitors how often your brand is cited across ChatGPT, Perplexity, Google AI Overviews, Gemini, and Microsoft Copilot, and breaks down the prompts driving those citations.\n*   **LLM Pulse:** This platform tracks brand mentions, citations, sentiment, traffic, and recommendations across ChatGPT, Gemini, Perplexity, and Google AI.\n*   **Otterly AI:** Otterly offers multi-platform monitoring, including Perplexity, and tracks whether your brand is cited, which URLs appear, and how consistently you surface across AI responses.\n*   **AIclicks:** This platform tracks how brands appear across AI-driven search environments like ChatGPT, Google AI Overviews, and other large language models, focusing on prompt-level analysis.\n*   **Keyword.com:** Their AI Visibility Tracker helps you see where and how often Gemini mentions your brand, and tracks AI visibility metrics across Gemini, AI Overviews, AI Mode, ChatGPT, and Perplexity.\n*   **Peec AI:** This tool is mentioned alongside Keyword.com and Rankscale for tracking Gemini results and ChatGPT mentions.\n*   **Rankability:** This AI visibility tracker includes Perplexity tracking within an all-in-one AI SEO suite, automating prompt execution and logging mentions, citations, and links across competitors.\n*   **AthenaHQ:** AthenaHQ is listed as a tool that watches ChatGPT for mentions and is also mentioned for tracking AI SEO KPIs.\n*   **Brandlight:** This tool is also listed among the best for tracking AI search visibility across ChatGPT and Gemini.\n\n**Traditional SEO Tools with AI Visibility Features:**\n\n*   **Semrush AI Visibility Toolkit:** This toolkit monitors brand mentions across Perplexity and other platforms, integrating with Semrush's existing SEO workflows. It also tracks mentions, citations, and sentiment globally across AI-driven search environments like Google AI Overviews and ChatGPT.\n*   **SE Ranking AI Visibility Tracker:** This tool is a good option for agencies, SMBs, and SEO teams, offering AI brand mention and link tracking alongside traditional SEO workflows. It tracks brands across Google AIOs, AI Mode, ChatGPT, and Gemini.\n*   **Ahrefs Brand Radar:** Ahrefs offers AI-search modules that blend traditional SEO with AI-SERP tracking, and its Brand Radar is listed for tracking AI search visibility.\n\n**Key Metrics These Services Track:**\n\nThese services generally track a range of metrics to provide a comprehensive view of your brand's AI visibility:\n\n*   **Brand Mentions:** How often your brand is explicitly named.\n*   **Citations/Links:** When your website or specific URLs are referenced or linked within AI-generated answers.\n*   **Sentiment:** Whether the mentions are positive, negative, or neutral.\n*   **Share of Voice:** How often your brand is referenced compared to competitors.\n*   **Answer Position:** Where your brand appears within AI-generated answers.\n*   **Prompt-Level Visibility:** How your brand appears for specific user queries or prompts.\n*   **AI-Driven Traffic and Conversions:** Connecting AI visibility to actual website traffic and business outcomes.\n\n**Why this is important:**\n\nAI-powered answer engines are changing how users discover information and brands. Being cited by these AI models can significantly impact organic traffic, conversions, and brand authority. Traditional SEO methods are no longer sufficient, as AI systems generate answers, summarize sources, and cite pages rather than just listing ranked URLs.",
+          "annotations": [
+            {
+              "title": "webfx.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHEQco59xwiAFxFSaOLoUgF9EU2AcA1-cD0HVrvVk1h8sQ2OJdDRvKS3PPyfiaolpjXRlRTkq3i3fgfq89z-L1yew0jbILUx6YGz0zB9N4TsQLm0ObjzUxmrjNG4oZe7Fl3uA==",
+              "start_index": 151,
+              "end_index": 259
+            },
+            {
+              "title": "frizerly.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEF7iVPaVixTEHYc-atPU1NdALCc9XG-xSG_nlPoVrvEsFAZtnG4POC7gM53bvo3NPhF7A61yBn_dNMvFevFtk-gX4T1h00D5NUCiBXGrGAsowYZ_umzfUsqu4dG1JSzshdrM6t9L_R-K-Kgx8K",
+              "start_index": 492,
+              "end_index": 659
+            },
+            {
+              "title": "frizerly.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHUZI8Ghg9ywYkuXz9j_Mtb9F78JksJUjhVey1WXujW0aIYO0kzy9o1RSNqPdIzYSP7vMzbZcf8c_N03zmqM1OYAoZW_lv5XzT47EuU2J9d9cZdXsEwGXc6TwQSwfYxOUfSCHclBt5r3R6KKnXucyMuIWr9Zf6UXP4lYQLWGI9lDQltv-per0N2WCG1mKsln6KV6JJkH6CSw==",
+              "start_index": 492,
+              "end_index": 659
+            },
+            {
+              "title": "frizerly.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEigT2zjN9H8uNfPJgt2XWiXohPMB7lkkEPFdasQ590QJpNWzH0CfEbtCdwQkcKmn5AnAiyxpIjMaBwNCfnyZsXdw89J_KVlaamauOjDA3SrDNdwLOuPSs7dOruCwgYZImWPDVWXuMw0L_-PWGLB8I9fM5I7YIcGPApAJM4AK2Ef0Ibe7MeTSeWDbJo5jPKUEz_f2xwo0vqnSDXIQ==",
+              "start_index": 492,
+              "end_index": 659
+            },
+            {
+              "title": "workduo.ai",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEYnEbQ3dIbhOY7pXCBNKnYnEg3mFhaBGD4jAl1FUnGTsAzOzJqCGpUmTBCDZSIyIDY7-oeco5rtBaPBF8xdwRj0cGikUKfAEWu_nR042oc1BIpe8ZYh2UTvFK6BSZh9SIjYiPnc3DXCOMt_ickcBOYegPwJJE=",
+              "start_index": 660,
+              "end_index": 924
+            },
+            {
+              "title": "dageno.ai",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2HPqH9spn-JXevewtivaGMo0NNe7sYkmjMLvg65BJIzwPQ15UE7qZi5RvmnDKawGvWsm81w6WyKKdRmhqnONgtGVsOvB53yhQP_4ZDOI60Ya4kvGaHVphv1ORu_BbwiEKy8PEgAT-WzwzxDSyhqtnAF-mf2_lGoyv7tyNo5eLEvCLGQ==",
+              "start_index": 1048,
+              "end_index": 1207
+            },
+            {
+              "title": "dageno.ai",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwR9XUPXsFOqA9MDFvR_wHyEooImRQRr8GYrNdMjTmRxYXse90NZ7HoMs20MNbpiXlE_-XoAeWygrbIOYSyodttugTP60laspZxzeT8rL60gOwUsYXs24hxm0815g8c_1TnzKRHSQHcpcn7DMlbb811-xFGwch2kk4OgWaaHCajOR_HScLhg==",
+              "start_index": 1048,
+              "end_index": 1207
+            },
+            {
+              "title": "respona.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEOzj7K_zs4nWDoICowjlQs7fAd8mKocsyAlc5UiGyYTR2Ic0Qd-4OamUQORz-OVF8nOcRdW94CD62wTSrdrpUp10-Kyb4f1G25Z43v3VtArsat4xZGfoeqzOs1rwMEklCpdJtx",
+              "start_index": 1208,
+              "end_index": 1406
+            },
+            {
+              "title": "missiongrowth.io",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHt8vbrecoawKT3xY-bnLwj9A-bxDiSQF7L6F0h2RyMN-FzfhpOKfAaH2ZCOL6341zN2v5iL39-W-AYHA-lqs5IsfvHkrmCgkfmhcl2fPCK1Fz0prfyI-EfC2kjtGt-VZ0fU0w8-kH19hjfbKKUFyY=",
+              "start_index": 1208,
+              "end_index": 1406
+            },
+            {
+              "title": "dageno.ai",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2HPqH9spn-JXevewtivaGMo0NNe7sYkmjMLvg65BJIzwPQ15UE7qZi5RvmnDKawGvWsm81w6WyKKdRmhqnONgtGVsOvB53yhQP_4ZDOI60Ya4kvGaHVphv1ORu_BbwiEKy8PEgAT-WzwzxDSyhqtnAF-mf2_lGoyv7tyNo5eLEvCLGQ==",
+              "start_index": 1407,
+              "end_index": 1564
+            },
+            {
+              "title": "workduo.ai",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEYnEbQ3dIbhOY7pXCBNKnYnEg3mFhaBGD4jAl1FUnGTsAzOzJqCGpUmTBCDZSIyIDY7-oeco5rtBaPBF8xdwRj0cGikUKfAEWu_nR042oc1BIpe8ZYh2UTvFK6BSZh9SIjYiPnc3DXCOMt_ickcBOYegPwJJE=",
+              "start_index": 1565,
+              "end_index": 1761
+            },
+            {
+              "title": "dageno.ai",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBO1gPvGPkDCl6zqbPTDGoU4yTYmAFFRRxmTigqdPJJEgwIHYMtovMBKtNv6FpaCIKYLLE2gJqJwM_t_cYSOVm-oCVCq01cA_8yNRQPxzat9Qm5OWN3A0HEcBZAN5nbKVJzkbFRTrqYiWi18n8Oicdr8Ca",
+              "start_index": 1565,
+              "end_index": 1761
+            },
+            {
+              "title": "missiongrowth.io",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHt8vbrecoawKT3xY-bnLwj9A-bxDiSQF7L6F0h2RyMN-FzfhpOKfAaH2ZCOL6341zN2v5iL39-W-AYHA-lqs5IsfvHkrmCgkfmhcl2fPCK1Fz0prfyI-EfC2kjtGt-VZ0fU0w8-kH19hjfbKKUFyY=",
+              "start_index": 1565,
+              "end_index": 1761
+            },
+            {
+              "title": "builtin.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQELWCMZs88boK7aOe7mtWwJtPtceorHOTJrSBZVTlayIzrnSBryRWgu8UgP8GyLLqjLftZwHiTqdzAvtmJe4KX2nfIl6tu_K8xmeuVKssjVhY_0J7YBdyDkR3uIkMz-_L_YdVdClq-8lq3_NXOWydf_YDKj5ZG7",
+              "start_index": 1762,
+              "end_index": 1958
+            },
+            {
+              "title": "missiongrowth.io",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHt8vbrecoawKT3xY-bnLwj9A-bxDiSQF7L6F0h2RyMN-FzfhpOKfAaH2ZCOL6341zN2v5iL39-W-AYHA-lqs5IsfvHkrmCgkfmhcl2fPCK1Fz0prfyI-EfC2kjtGt-VZ0fU0w8-kH19hjfbKKUFyY=",
+              "start_index": 1762,
+              "end_index": 1958
+            },
+            {
+              "title": "keyword.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEoTVZZzzpcqjCLz25jxToW-frWgA5UJuqO0kWaShszEj6XYKkHy7pSBqDdK0Q5bLBxquxHybiGSqQtwH9Pjy5QKW21G2jBS9A6G8J9HAKjT9_1IqGLhyhoaueD0d4YEsTK_xaPLRgodzsC_A2_kQ0_PRHH",
+              "start_index": 1959,
+              "end_index": 2165
+            },
+            {
+              "title": "keyword.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFYSIxqyn2sDR-1EPTd9l5KvrxS1KtgbKs4oxChm7TusWDN-TVTk5zGLfWGjkKX0c-TV6HqX0ZcSC7P9j3RQ8CJfk7aHtb-Er4R92r6iuB_vxwJDkrvBVwwCMtxdAdSGDrhu2ng8riVEZN_J7plg_FFlQ==",
+              "start_index": 1959,
+              "end_index": 2165
+            },
+            {
+              "title": "missiongrowth.io",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHt8vbrecoawKT3xY-bnLwj9A-bxDiSQF7L6F0h2RyMN-FzfhpOKfAaH2ZCOL6341zN2v5iL39-W-AYHA-lqs5IsfvHkrmCgkfmhcl2fPCK1Fz0prfyI-EfC2kjtGt-VZ0fU0w8-kH19hjfbKKUFyY=",
+              "start_index": 2166,
+              "end_index": 2291
+            },
+            {
+              "title": "keyword.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEoTVZZzzpcqjCLz25jxToW-frWgA5UJuqO0kWaShszEj6XYKkHy7pSBqDdK0Q5bLBxquxHybiGSqQtwH9Pjy5QKW21G2jBS9A6G8J9HAKjT9_1IqGLhyhoaueD0d4YEsTK_xaPLRgodzsC_A2_kQ0_PRHH",
+              "start_index": 2166,
+              "end_index": 2291
+            },
+            {
+              "title": "keyword.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFYSIxqyn2sDR-1EPTd9l5KvrxS1KtgbKs4oxChm7TusWDN-TVTk5zGLfWGjkKX0c-TV6HqX0ZcSC7P9j3RQ8CJfk7aHtb-Er4R92r6iuB_vxwJDkrvBVwwCMtxdAdSGDrhu2ng8riVEZN_J7plg_FFlQ==",
+              "start_index": 2166,
+              "end_index": 2291
+            },
+            {
+              "title": "webfx.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHEQco59xwiAFxFSaOLoUgF9EU2AcA1-cD0HVrvVk1h8sQ2OJdDRvKS3PPyfiaolpjXRlRTkq3i3fgfq89z-L1yew0jbILUx6YGz0zB9N4TsQLm0ObjzUxmrjNG4oZe7Fl3uA==",
+              "start_index": 2166,
+              "end_index": 2291
+            },
+            {
+              "title": "useomnia.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGuEY_Gx49Y_WF3a7EvEkZNkLjpSkF12ncwKos0mtRAGTHU6kfeHWIeQ9Wf3i0RCfNoCKkTkPS1uxIZIwKmmwUUg6bVh8f7KTK-yTK1Lvd4V-S0Hb44nAdYVqyRMw2DRxNEA4HbX0NjfsWpJ23rgmP_2tKyKUuD",
+              "start_index": 2292,
+              "end_index": 2494
+            },
+            {
+              "title": "dageno.ai",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2HPqH9spn-JXevewtivaGMo0NNe7sYkmjMLvg65BJIzwPQ15UE7qZi5RvmnDKawGvWsm81w6WyKKdRmhqnONgtGVsOvB53yhQP_4ZDOI60Ya4kvGaHVphv1ORu_BbwiEKy8PEgAT-WzwzxDSyhqtnAF-mf2_lGoyv7tyNo5eLEvCLGQ==",
+              "start_index": 2495,
+              "end_index": 2623
+            },
+            {
+              "title": "missiongrowth.io",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHt8vbrecoawKT3xY-bnLwj9A-bxDiSQF7L6F0h2RyMN-FzfhpOKfAaH2ZCOL6341zN2v5iL39-W-AYHA-lqs5IsfvHkrmCgkfmhcl2fPCK1Fz0prfyI-EfC2kjtGt-VZ0fU0w8-kH19hjfbKKUFyY=",
+              "start_index": 2495,
+              "end_index": 2623
+            },
+            {
+              "title": "webfx.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHEQco59xwiAFxFSaOLoUgF9EU2AcA1-cD0HVrvVk1h8sQ2OJdDRvKS3PPyfiaolpjXRlRTkq3i3fgfq89z-L1yew0jbILUx6YGz0zB9N4TsQLm0ObjzUxmrjNG4oZe7Fl3uA==",
+              "start_index": 2495,
+              "end_index": 2623
+            },
+            {
+              "title": "dageno.ai",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2HPqH9spn-JXevewtivaGMo0NNe7sYkmjMLvg65BJIzwPQ15UE7qZi5RvmnDKawGvWsm81w6WyKKdRmhqnONgtGVsOvB53yhQP_4ZDOI60Ya4kvGaHVphv1ORu_BbwiEKy8PEgAT-WzwzxDSyhqtnAF-mf2_lGoyv7tyNo5eLEvCLGQ==",
+              "start_index": 2624,
+              "end_index": 2744
+            },
+            {
+              "title": "dageno.ai",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwR9XUPXsFOqA9MDFvR_wHyEooImRQRr8GYrNdMjTmRxYXse90NZ7HoMs20MNbpiXlE_-XoAeWygrbIOYSyodttugTP60laspZxzeT8rL60gOwUsYXs24hxm0815g8c_1TnzKRHSQHcpcn7DMlbb811-xFGwch2kk4OgWaaHCajOR_HScLhg==",
+              "start_index": 2624,
+              "end_index": 2744
+            },
+            {
+              "title": "dageno.ai",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2HPqH9spn-JXevewtivaGMo0NNe7sYkmjMLvg65BJIzwPQ15UE7qZi5RvmnDKawGvWsm81w6WyKKdRmhqnONgtGVsOvB53yhQP_4ZDOI60Ya4kvGaHVphv1ORu_BbwiEKy8PEgAT-WzwzxDSyhqtnAF-mf2_lGoyv7tyNo5eLEvCLGQ==",
+              "start_index": 2968,
+              "end_index": 3101
+            },
+            {
+              "title": "useomnia.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGuEY_Gx49Y_WF3a7EvEkZNkLjpSkF12ncwKos0mtRAGTHU6kfeHWIeQ9Wf3i0RCfNoCKkTkPS1uxIZIwKmmwUUg6bVh8f7KTK-yTK1Lvd4V-S0Hb44nAdYVqyRMw2DRxNEA4HbX0NjfsWpJ23rgmP_2tKyKUuD",
+              "start_index": 2968,
+              "end_index": 3101
+            },
+            {
+              "title": "missiongrowth.io",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHt8vbrecoawKT3xY-bnLwj9A-bxDiSQF7L6F0h2RyMN-FzfhpOKfAaH2ZCOL6341zN2v5iL39-W-AYHA-lqs5IsfvHkrmCgkfmhcl2fPCK1Fz0prfyI-EfC2kjtGt-VZ0fU0w8-kH19hjfbKKUFyY=",
+              "start_index": 2968,
+              "end_index": 3101
+            },
+            {
+              "title": "sproutsocial.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGpV0IKRtwCslUq6ODBME8ha5qglMdTjbQeAL372tkiB20TJY9HfVlpL3Bq9ibfBP4aE09beHtAiyW314wZ5HChK5hc6mkteAPzIXZvHjgRFmNn-y10nOueu4y49DXHfV41lP3_MEiorYoiw4ckiKWTBg==",
+              "start_index": 2968,
+              "end_index": 3101
+            },
+            {
+              "title": "dageno.ai",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2HPqH9spn-JXevewtivaGMo0NNe7sYkmjMLvg65BJIzwPQ15UE7qZi5RvmnDKawGvWsm81w6WyKKdRmhqnONgtGVsOvB53yhQP_4ZDOI60Ya4kvGaHVphv1ORu_BbwiEKy8PEgAT-WzwzxDSyhqtnAF-mf2_lGoyv7tyNo5eLEvCLGQ==",
+              "start_index": 3287,
+              "end_index": 3353
+            },
+            {
+              "title": "missiongrowth.io",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHt8vbrecoawKT3xY-bnLwj9A-bxDiSQF7L6F0h2RyMN-FzfhpOKfAaH2ZCOL6341zN2v5iL39-W-AYHA-lqs5IsfvHkrmCgkfmhcl2fPCK1Fz0prfyI-EfC2kjtGt-VZ0fU0w8-kH19hjfbKKUFyY=",
+              "start_index": 3287,
+              "end_index": 3353
+            },
+            {
+              "title": "seranking.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE2MhPlCTszEPLz7oMMy1Mx25aZue1LG3Rfy7iAE0H8cxa1t-uPYdhSkEZyx1pr7HydRwCKf1AI9i5swSHZXORIHwk8toSLFSwQr0Qk8KPx3uyn18DMUeTEiZ_HfFeNIcoRDWwG7sz7P0DMsQ==",
+              "start_index": 3287,
+              "end_index": 3353
+            },
+            {
+              "title": "workduo.ai",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEYnEbQ3dIbhOY7pXCBNKnYnEg3mFhaBGD4jAl1FUnGTsAzOzJqCGpUmTBCDZSIyIDY7-oeco5rtBaPBF8xdwRj0cGikUKfAEWu_nR042oc1BIpe8ZYh2UTvFK6BSZh9SIjYiPnc3DXCOMt_ickcBOYegPwJJE=",
+              "start_index": 3354,
+              "end_index": 3528
+            },
+            {
+              "title": "dageno.ai",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2HPqH9spn-JXevewtivaGMo0NNe7sYkmjMLvg65BJIzwPQ15UE7qZi5RvmnDKawGvWsm81w6WyKKdRmhqnONgtGVsOvB53yhQP_4ZDOI60Ya4kvGaHVphv1ORu_BbwiEKy8PEgAT-WzwzxDSyhqtnAF-mf2_lGoyv7tyNo5eLEvCLGQ==",
+              "start_index": 3354,
+              "end_index": 3528
+            },
+            {
+              "title": "missiongrowth.io",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHt8vbrecoawKT3xY-bnLwj9A-bxDiSQF7L6F0h2RyMN-FzfhpOKfAaH2ZCOL6341zN2v5iL39-W-AYHA-lqs5IsfvHkrmCgkfmhcl2fPCK1Fz0prfyI-EfC2kjtGt-VZ0fU0w8-kH19hjfbKKUFyY=",
+              "start_index": 3354,
+              "end_index": 3528
+            },
+            {
+              "title": "dageno.ai",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2HPqH9spn-JXevewtivaGMo0NNe7sYkmjMLvg65BJIzwPQ15UE7qZi5RvmnDKawGvWsm81w6WyKKdRmhqnONgtGVsOvB53yhQP_4ZDOI60Ya4kvGaHVphv1ORu_BbwiEKy8PEgAT-WzwzxDSyhqtnAF-mf2_lGoyv7tyNo5eLEvCLGQ==",
+              "start_index": 3683,
+              "end_index": 3748
+            },
+            {
+              "title": "builtin.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQELWCMZs88boK7aOe7mtWwJtPtceorHOTJrSBZVTlayIzrnSBryRWgu8UgP8GyLLqjLftZwHiTqdzAvtmJe4KX2nfIl6tu_K8xmeuVKssjVhY_0J7YBdyDkR3uIkMz-_L_YdVdClq-8lq3_NXOWydf_YDKj5ZG7",
+              "start_index": 3683,
+              "end_index": 3748
+            },
+            {
+              "title": "explodingtopics.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFqBWf18Rolw0Omt5HHIIbQXDL3ToB0OUihNKsYvRsX9iACAPTYjYaLFgkFsUmweg4SoFVzLqzRo6Bgsv8vtw2XHhUFxqanb78909S12bKV031uLAjdfVfYeL-nT3tEE2V67aqcE0LJKnQMBubotpW3GG08esSr",
+              "start_index": 3683,
+              "end_index": 3748
+            },
+            {
+              "title": "workduo.ai",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEYnEbQ3dIbhOY7pXCBNKnYnEg3mFhaBGD4jAl1FUnGTsAzOzJqCGpUmTBCDZSIyIDY7-oeco5rtBaPBF8xdwRj0cGikUKfAEWu_nR042oc1BIpe8ZYh2UTvFK6BSZh9SIjYiPnc3DXCOMt_ickcBOYegPwJJE=",
+              "start_index": 3749,
+              "end_index": 3862
+            },
+            {
+              "title": "dageno.ai",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2HPqH9spn-JXevewtivaGMo0NNe7sYkmjMLvg65BJIzwPQ15UE7qZi5RvmnDKawGvWsm81w6WyKKdRmhqnONgtGVsOvB53yhQP_4ZDOI60Ya4kvGaHVphv1ORu_BbwiEKy8PEgAT-WzwzxDSyhqtnAF-mf2_lGoyv7tyNo5eLEvCLGQ==",
+              "start_index": 3749,
+              "end_index": 3862
+            },
+            {
+              "title": "useomnia.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGuEY_Gx49Y_WF3a7EvEkZNkLjpSkF12ncwKos0mtRAGTHU6kfeHWIeQ9Wf3i0RCfNoCKkTkPS1uxIZIwKmmwUUg6bVh8f7KTK-yTK1Lvd4V-S0Hb44nAdYVqyRMw2DRxNEA4HbX0NjfsWpJ23rgmP_2tKyKUuD",
+              "start_index": 3749,
+              "end_index": 3862
+            },
+            {
+              "title": "hikmahaiagency.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFzujWlRBGa9B3RGYAFsC0_r7qHouuU-6oJSp1fzv2_tu9-wyyc6CuWpChLn7yFCwvQGCP9DwVBHGALIlDiaYcwuVJ3G6ikDw3Jn7eoRTyEgRcJP9xIdWWFznka6takn7kIAizTpjVivE7BznTVDLRh-Q6cQqec7nki6eW9nA==",
+              "start_index": 3749,
+              "end_index": 3862
+            },
+            {
+              "title": "dageno.ai",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2HPqH9spn-JXevewtivaGMo0NNe7sYkmjMLvg65BJIzwPQ15UE7qZi5RvmnDKawGvWsm81w6WyKKdRmhqnONgtGVsOvB53yhQP_4ZDOI60Ya4kvGaHVphv1ORu_BbwiEKy8PEgAT-WzwzxDSyhqtnAF-mf2_lGoyv7tyNo5eLEvCLGQ==",
+              "start_index": 3863,
+              "end_index": 3938
+            },
+            {
+              "title": "respona.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEOzj7K_zs4nWDoICowjlQs7fAd8mKocsyAlc5UiGyYTR2Ic0Qd-4OamUQORz-OVF8nOcRdW94CD62wTSrdrpUp10-Kyb4f1G25Z43v3VtArsat4xZGfoeqzOs1rwMEklCpdJtx",
+              "start_index": 3863,
+              "end_index": 3938
+            },
+            {
+              "title": "explodingtopics.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFqBWf18Rolw0Omt5HHIIbQXDL3ToB0OUihNKsYvRsX9iACAPTYjYaLFgkFsUmweg4SoFVzLqzRo6Bgsv8vtw2XHhUFxqanb78909S12bKV031uLAjdfVfYeL-nT3tEE2V67aqcE0LJKnQMBubotpW3GG08esSr",
+              "start_index": 3863,
+              "end_index": 3938
+            },
+            {
+              "title": "techhq.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFFHqRGtaFztIvPmQWMFVwbKjIUZac50E3TqC-bzPvJ63JDwOju04eGcXPCATY6Odhb9G40gnGCw_1jtYG9RL9jASYToKN8V8VlDHIa0aMdyioKykDcADu7xtG2D_KGWx1E6zv-GCKcGLq1nUGqRNkCHI4UjL7OJo1A3PY23ajNKp5V7Siv3MMKwjuMtu8t",
+              "start_index": 3863,
+              "end_index": 3938
+            },
+            {
+              "title": "dageno.ai",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2HPqH9spn-JXevewtivaGMo0NNe7sYkmjMLvg65BJIzwPQ15UE7qZi5RvmnDKawGvWsm81w6WyKKdRmhqnONgtGVsOvB53yhQP_4ZDOI60Ya4kvGaHVphv1ORu_BbwiEKy8PEgAT-WzwzxDSyhqtnAF-mf2_lGoyv7tyNo5eLEvCLGQ==",
+              "start_index": 3939,
+              "end_index": 4022
+            },
+            {
+              "title": "respona.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEOzj7K_zs4nWDoICowjlQs7fAd8mKocsyAlc5UiGyYTR2Ic0Qd-4OamUQORz-OVF8nOcRdW94CD62wTSrdrpUp10-Kyb4f1G25Z43v3VtArsat4xZGfoeqzOs1rwMEklCpdJtx",
+              "start_index": 3939,
+              "end_index": 4022
+            },
+            {
+              "title": "builtin.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQELWCMZs88boK7aOe7mtWwJtPtceorHOTJrSBZVTlayIzrnSBryRWgu8UgP8GyLLqjLftZwHiTqdzAvtmJe4KX2nfIl6tu_K8xmeuVKssjVhY_0J7YBdyDkR3uIkMz-_L_YdVdClq-8lq3_NXOWydf_YDKj5ZG7",
+              "start_index": 3939,
+              "end_index": 4022
+            },
+            {
+              "title": "explodingtopics.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFqBWf18Rolw0Omt5HHIIbQXDL3ToB0OUihNKsYvRsX9iACAPTYjYaLFgkFsUmweg4SoFVzLqzRo6Bgsv8vtw2XHhUFxqanb78909S12bKV031uLAjdfVfYeL-nT3tEE2V67aqcE0LJKnQMBubotpW3GG08esSr",
+              "start_index": 3939,
+              "end_index": 4022
+            },
+            {
+              "title": "dageno.ai",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2HPqH9spn-JXevewtivaGMo0NNe7sYkmjMLvg65BJIzwPQ15UE7qZi5RvmnDKawGvWsm81w6WyKKdRmhqnONgtGVsOvB53yhQP_4ZDOI60Ya4kvGaHVphv1ORu_BbwiEKy8PEgAT-WzwzxDSyhqtnAF-mf2_lGoyv7tyNo5eLEvCLGQ==",
+              "start_index": 4023,
+              "end_index": 4101
+            },
+            {
+              "title": "dageno.ai",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2HPqH9spn-JXevewtivaGMo0NNe7sYkmjMLvg65BJIzwPQ15UE7qZi5RvmnDKawGvWsm81w6WyKKdRmhqnONgtGVsOvB53yhQP_4ZDOI60Ya4kvGaHVphv1ORu_BbwiEKy8PEgAT-WzwzxDSyhqtnAF-mf2_lGoyv7tyNo5eLEvCLGQ==",
+              "start_index": 4102,
+              "end_index": 4195
+            },
+            {
+              "title": "respona.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEOzj7K_zs4nWDoICowjlQs7fAd8mKocsyAlc5UiGyYTR2Ic0Qd-4OamUQORz-OVF8nOcRdW94CD62wTSrdrpUp10-Kyb4f1G25Z43v3VtArsat4xZGfoeqzOs1rwMEklCpdJtx",
+              "start_index": 4102,
+              "end_index": 4195
+            },
+            {
+              "title": "builtin.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQELWCMZs88boK7aOe7mtWwJtPtceorHOTJrSBZVTlayIzrnSBryRWgu8UgP8GyLLqjLftZwHiTqdzAvtmJe4KX2nfIl6tu_K8xmeuVKssjVhY_0J7YBdyDkR3uIkMz-_L_YdVdClq-8lq3_NXOWydf_YDKj5ZG7",
+              "start_index": 4102,
+              "end_index": 4195
+            },
+            {
+              "title": "dageno.ai",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2HPqH9spn-JXevewtivaGMo0NNe7sYkmjMLvg65BJIzwPQ15UE7qZi5RvmnDKawGvWsm81w6WyKKdRmhqnONgtGVsOvB53yhQP_4ZDOI60Ya4kvGaHVphv1ORu_BbwiEKy8PEgAT-WzwzxDSyhqtnAF-mf2_lGoyv7tyNo5eLEvCLGQ==",
+              "start_index": 4196,
+              "end_index": 4312
+            },
+            {
+              "title": "webfx.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHEQco59xwiAFxFSaOLoUgF9EU2AcA1-cD0HVrvVk1h8sQ2OJdDRvKS3PPyfiaolpjXRlRTkq3i3fgfq89z-L1yew0jbILUx6YGz0zB9N4TsQLm0ObjzUxmrjNG4oZe7Fl3uA==",
+              "start_index": 4196,
+              "end_index": 4312
+            },
+            {
+              "title": "frizerly.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHUZI8Ghg9ywYkuXz9j_Mtb9F78JksJUjhVey1WXujW0aIYO0kzy9o1RSNqPdIzYSP7vMzbZcf8c_N03zmqM1OYAoZW_lv5XzT47EuU2J9d9cZdXsEwGXc6TwQSwfYxOUfSCHclBt5r3R6KKnXucyMuIWr9Zf6UXP4lYQLWGI9lDQltv-per0N2WCG1mKsln6KV6JJkH6CSw==",
+              "start_index": 4424,
+              "end_index": 4530
+            },
+            {
+              "title": "lpagery.io",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1xY7panghjN8Vm4A4iXrjcVr11PiuY-5iSGmRqHS1tuj2VFwG-frXyQ7rvLpJnlKk4zU_vC9G_BfPXTnmvtb-E_D5LQYmkdmtDdMAYqRaivSXAQdCbnHVaX3rd_5aEcYP7HkVp42SLJC4zbIrhd4=",
+              "start_index": 4424,
+              "end_index": 4530
+            },
+            {
+              "title": "builtin.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQELWCMZs88boK7aOe7mtWwJtPtceorHOTJrSBZVTlayIzrnSBryRWgu8UgP8GyLLqjLftZwHiTqdzAvtmJe4KX2nfIl6tu_K8xmeuVKssjVhY_0J7YBdyDkR3uIkMz-_L_YdVdClq-8lq3_NXOWydf_YDKj5ZG7",
+              "start_index": 4424,
+              "end_index": 4530
+            },
+            {
+              "title": "qoulomb.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFqL9wi_J_CAajS1b2TGVrh-GgQpzN638cZzFqThRKqNafOlrmo9SmILVlk8eJ38DlOP15NC5XVWMpTq7LNw5aLWddF4xRdy_-4Af_9Ou5sWYe3pRYoFr0oKY9R-4GDkh1n_5z9MTKtW4VMN1Hb_xJhG4CfEQ2QyNP2MN02OLo=",
+              "start_index": 4424,
+              "end_index": 4530
+            },
+            {
+              "title": "dageno.ai",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2HPqH9spn-JXevewtivaGMo0NNe7sYkmjMLvg65BJIzwPQ15UE7qZi5RvmnDKawGvWsm81w6WyKKdRmhqnONgtGVsOvB53yhQP_4ZDOI60Ya4kvGaHVphv1ORu_BbwiEKy8PEgAT-WzwzxDSyhqtnAF-mf2_lGoyv7tyNo5eLEvCLGQ==",
+              "start_index": 4531,
+              "end_index": 4684
+            },
+            {
+              "title": "lpagery.io",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1xY7panghjN8Vm4A4iXrjcVr11PiuY-5iSGmRqHS1tuj2VFwG-frXyQ7rvLpJnlKk4zU_vC9G_BfPXTnmvtb-E_D5LQYmkdmtDdMAYqRaivSXAQdCbnHVaX3rd_5aEcYP7HkVp42SLJC4zbIrhd4=",
+              "start_index": 4531,
+              "end_index": 4684
+            },
+            {
+              "title": "builtin.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQELWCMZs88boK7aOe7mtWwJtPtceorHOTJrSBZVTlayIzrnSBryRWgu8UgP8GyLLqjLftZwHiTqdzAvtmJe4KX2nfIl6tu_K8xmeuVKssjVhY_0J7YBdyDkR3uIkMz-_L_YdVdClq-8lq3_NXOWydf_YDKj5ZG7",
+              "start_index": 4531,
+              "end_index": 4684
+            },
+            {
+              "title": "keyword.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFYSIxqyn2sDR-1EPTd9l5KvrxS1KtgbKs4oxChm7TusWDN-TVTk5zGLfWGjkKX0c-TV6HqX0ZcSC7P9j3RQ8CJfk7aHtb-Er4R92r6iuB_vxwJDkrvBVwwCMtxdAdSGDrhu2ng8riVEZN_J7plg_FFlQ==",
+              "start_index": 4531,
+              "end_index": 4684
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

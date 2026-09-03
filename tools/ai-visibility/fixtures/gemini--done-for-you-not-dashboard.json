@@ -1,0 +1,170 @@
+{
+  "_meta": {
+    "captured": "2026-08-30T12:13:13Z",
+    "llm_type": "gemini",
+    "model_name": "gemini-2.5-flash",
+    "web_search": true,
+    "temperature": 0.1,
+    "cost_usd": 0.037279,
+    "prompt_id": "done-for-you-not-dashboard",
+    "note": "Real DataForSEO payload (tasks[0].result[0]). Annotation `text` dropped. Gemini citations are vertexaisearch grounding redirects; real domain is in `title`."
+  },
+  "model_name": "gemini-2.5-flash",
+  "input_tokens": 95,
+  "output_tokens": 660,
+  "reasoning_tokens": 0,
+  "web_search": true,
+  "money_spent": 0.0366785,
+  "datetime": "2026-08-30 12:13:13 +00:00",
+  "fan_out_queries": [
+    "SEO providers that implement fixes monthly",
+    "SEO agencies that provide implementation services",
+    "SEO companies that focus on implementation over dashboards",
+    "monthly SEO implementation services"
+  ],
+  "items": [
+    {
+      "type": "message",
+      "sections": [
+        {
+          "type": "text",
+          "text": "Many SEO providers offer monthly services that include the actual implementation of fixes, rather than just providing reports or dashboards. These agencies understand that consistent effort and direct action are crucial for improving search engine performance.\n\nHere are some types of providers and specific agencies known for implementing SEO fixes:\n\n**Providers that Emphasize Implementation:**\n\n*   **Full-service Digital Marketing Agencies:** Many of these agencies offer comprehensive monthly SEO packages that include on-site optimizations, content creation, technical fixes, and link building. They often have teams dedicated to executing the recommended strategies.\n*   **Agencies Specializing in \"Done-for-You\" SEO:** Some providers explicitly market themselves as offering \"done-for-you\" or \"fully managed\" SEO services, meaning they handle the implementation of all necessary changes.\n*   **Agencies Focused on Measurable Results:** Providers that prioritize leads, sales, and revenue often understand that implementation is key to achieving those outcomes. They go beyond vanity metrics and focus on practical SEO services.\n\n**Examples of Agencies Mentioned for Implementation or Comprehensive Services:**\n\n*   **Mannix Marketing:** Their monthly SEO service packages are designed to consistently keep digital marketing efforts on point, including implementing on-site optimizations and updates, content creation, and more.\n*   **Embarque:** They specialize in monthly SEO services that combine keyword research, conversion-focused on-page optimization, and tailored content strategies, focusing on turning organic traffic into leads and sales.\n*   **Ranked.ai:** This agency offers fixed monthly subscription plans that include weekly content creation, on-page and technical optimization, and backlink acquisition.\n*   **Sitemile:** They offer professional SEO packages that combine keyword research, on-page SEO, manual backlinks, and technical fixes into a single retainer, emphasizing \"real work — not dashboards, not promises, not fluff.\"\n*   **Deftsoft:** They build their SEO work around the specific needs of the business, which can include improving service pages, fixing technical problems, and building search-focused content.\n*   **SeoProfy:** This agency provides services such as technical audits, link-building strategies, and content optimization to enhance online visibility and improve website rankings.\n*   **Searchbloom:** They are praised for their expertise in tailoring SEO strategies to specific business needs, resulting in significant improvements in online visibility and conversion rates.\n*   **OuterBox:** They offer various monthly SEO packages that include strategic positioning in the marketplace and proactive solutions, many of which they implement themselves.\n*   **iPullRank:** They are noted for their strength in technical SEO and AI search engineering.\n*   **Victorious:** Known for systematic, process-driven SEO with strong link building and technical optimization capabilities.\n\nWhen evaluating providers, look for those that clearly outline their implementation process as part of their monthly services. Ask specific questions about who will be making the changes to your website, how content will be created and optimized, and how technical issues will be addressed and resolved.",
+          "annotations": [
+            {
+              "title": "embarque.io",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHtWawq5yeaH5Lq6ntu9csBrWdjYIPZI_L96ZYbTSpHlrEB_8Z_-l8B_hB2zrXK2PTaKYaEN4YUfd0GXmeThxOXJKaUOIRmekyWyATZEkX7-yNwr-Caj4rl5I_i5y-0j16SUbJXlu5L0gNnsycoUbcsUD9_dg=",
+              "start_index": 141,
+              "end_index": 260
+            },
+            {
+              "title": "chalifourconsulting.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHjpbsSTPksXKVpDOWrw5YHzWBfQlSszzQSDgUMB0mxDFNt7LcLIAc5eENgJXxiQVl1BVxz6NG335S31xXdPzjBZEYssgMFO9UmJLLhmQuK9z7CxeaYuf1rrsGdFaowyqUILV8GrzTRY8MfI5_EFZQxNcwoIOA=",
+              "start_index": 141,
+              "end_index": 260
+            },
+            {
+              "title": "holickycorporation.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGEKBMejHHlXwj3h8q0Tor61w5XFZi9KI2dvdjCKW7DD7mJvmvPTh0uD8u2zzvGvpV3NpcPblHfaDnF3jYUOi1XQozEVSNa2H8tc7FBEC1zTCYRjvOYUTuu6ycooChFgbiQXUWqxJNVLNtnsvvErZxUfsDwGRhelvG9aXIjrp8M5Iac15WtOLE0tDKnRfZ8F4-OaNEssb8VeDGwhQ==",
+              "start_index": 141,
+              "end_index": 260
+            },
+            {
+              "title": "mannixmarketing.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEhbW9OtnvjnWJK3JmASEinrXoa-zmYV0ze9OauMEtXwXSDdSXI6MxmuZbsx6zvWMpH_ZlTDAGENvAe8vXERJ9QD-c8gNz27qDe15kqa7L3HsishG62OFuRkl5hZqwXwCJg3EskDi_z3WD3iToYBIBA_kN-ig==",
+              "start_index": 398,
+              "end_index": 600
+            },
+            {
+              "title": "holickycorporation.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGEKBMejHHlXwj3h8q0Tor61w5XFZi9KI2dvdjCKW7DD7mJvmvPTh0uD8u2zzvGvpV3NpcPblHfaDnF3jYUOi1XQozEVSNa2H8tc7FBEC1zTCYRjvOYUTuu6ycooChFgbiQXUWqxJNVLNtnsvvErZxUfsDwGRhelvG9aXIjrp8M5Iac15WtOLE0tDKnRfZ8F4-OaNEssb8VeDGwhQ==",
+              "start_index": 398,
+              "end_index": 600
+            },
+            {
+              "title": "sitemile.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1wDi4ASs_ZcYtREoILqhqFHo-2hJ09gYHzyZ9xfAnnP-S37F4LmumOgL1NZHQFyHcx-qvrz41HmYWBeS006cbl4YeXyh9kbFKR0da551hwvI3CaM6fCMsdVEEavU=",
+              "start_index": 398,
+              "end_index": 600
+            },
+            {
+              "title": "embarque.io",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHtWawq5yeaH5Lq6ntu9csBrWdjYIPZI_L96ZYbTSpHlrEB_8Z_-l8B_hB2zrXK2PTaKYaEN4YUfd0GXmeThxOXJKaUOIRmekyWyATZEkX7-yNwr-Caj4rl5I_i5y-0j16SUbJXlu5L0gNnsycoUbcsUD9_dg=",
+              "start_index": 674,
+              "end_index": 895
+            },
+            {
+              "title": "embarque.io",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHtWawq5yeaH5Lq6ntu9csBrWdjYIPZI_L96ZYbTSpHlrEB_8Z_-l8B_hB2zrXK2PTaKYaEN4YUfd0GXmeThxOXJKaUOIRmekyWyATZEkX7-yNwr-Caj4rl5I_i5y-0j16SUbJXlu5L0gNnsycoUbcsUD9_dg=",
+              "start_index": 1069,
+              "end_index": 1135
+            },
+            {
+              "title": "sitemile.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1wDi4ASs_ZcYtREoILqhqFHo-2hJ09gYHzyZ9xfAnnP-S37F4LmumOgL1NZHQFyHcx-qvrz41HmYWBeS006cbl4YeXyh9kbFKR0da551hwvI3CaM6fCMsdVEEavU=",
+              "start_index": 1069,
+              "end_index": 1135
+            },
+            {
+              "title": "ignitevisibility.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGl8UnZK6-2XKC5NC8ZwPl1y0dQPjmBHoMhXr2D9pH11WF5h6YFXMyIN1098xT0mX6xaziOWrJPNIN9ONq9-QJymNsq4-qc8gQt7Jn4Rv4nUjI1tpOzxbh6TuWkXiv9iI-N-AqyvA==",
+              "start_index": 1069,
+              "end_index": 1135
+            },
+            {
+              "title": "mannixmarketing.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEhbW9OtnvjnWJK3JmASEinrXoa-zmYV0ze9OauMEtXwXSDdSXI6MxmuZbsx6zvWMpH_ZlTDAGENvAe8vXERJ9QD-c8gNz27qDe15kqa7L3HsishG62OFuRkl5hZqwXwCJg3EskDi_z3WD3iToYBIBA_kN-ig==",
+              "start_index": 1219,
+              "end_index": 1435
+            },
+            {
+              "title": "embarque.io",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHtWawq5yeaH5Lq6ntu9csBrWdjYIPZI_L96ZYbTSpHlrEB_8Z_-l8B_hB2zrXK2PTaKYaEN4YUfd0GXmeThxOXJKaUOIRmekyWyATZEkX7-yNwr-Caj4rl5I_i5y-0j16SUbJXlu5L0gNnsycoUbcsUD9_dg=",
+              "start_index": 1436,
+              "end_index": 1656
+            },
+            {
+              "title": "embarque.io",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHtWawq5yeaH5Lq6ntu9csBrWdjYIPZI_L96ZYbTSpHlrEB_8Z_-l8B_hB2zrXK2PTaKYaEN4YUfd0GXmeThxOXJKaUOIRmekyWyATZEkX7-yNwr-Caj4rl5I_i5y-0j16SUbJXlu5L0gNnsycoUbcsUD9_dg=",
+              "start_index": 1657,
+              "end_index": 1827
+            },
+            {
+              "title": "sitemile.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1wDi4ASs_ZcYtREoILqhqFHo-2hJ09gYHzyZ9xfAnnP-S37F4LmumOgL1NZHQFyHcx-qvrz41HmYWBeS006cbl4YeXyh9kbFKR0da551hwvI3CaM6fCMsdVEEavU=",
+              "start_index": 1828,
+              "end_index": 2057
+            },
+            {
+              "title": "deftsoft.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWdh2HzLP1T4zECsOriWriMbAUyG3-TlZWSh41II0Jav58ydrMm2bQba0CjUdXVLWB5ve0z6mNHiUPqVq8pjjxeQXHotU2KkBrNiu45l7bcxaB_7RYxoYHB7p15oy5RjcUeY7BGZ_8OrdtGFxIx-gmSmMf2y09YqrrwD4S_RdCJ4bjvHcEc5SJhz9mfgD4",
+              "start_index": 2058,
+              "end_index": 2251
+            },
+            {
+              "title": "clutch.co",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCmRHs8mKuRpU22VaoF1MWOxj6mH6z_50fneb3IWRGgm9t-b1cSw4E2T0pseuiWf9XFZsRScvg8aok1rNGpN1z2rrhH6huYe-nxKZHbPjvc2cgx8-fg8Sqyg==",
+              "start_index": 2252,
+              "end_index": 2435
+            },
+            {
+              "title": "clutch.co",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCmRHs8mKuRpU22VaoF1MWOxj6mH6z_50fneb3IWRGgm9t-b1cSw4E2T0pseuiWf9XFZsRScvg8aok1rNGpN1z2rrhH6huYe-nxKZHbPjvc2cgx8-fg8Sqyg==",
+              "start_index": 2436,
+              "end_index": 2630
+            },
+            {
+              "title": "siegemedia.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF0HMBhFEDILthAG7uJNQQxyUv837yoR-HR_i0MF2jBKV_rp_Ad9Ibdf4RDLUt7hDX_GKRv3D3eqXebmr7fVMlsxU4duRimuFmfb6VfFZQCU6a6KcZ-1XSeL2fx-suZqeusEQSGpF9neUj1tCFGRIsggA0cH-poc_F08A==",
+              "start_index": 2436,
+              "end_index": 2630
+            },
+            {
+              "title": "outerboxdesign.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFDM85xf4gGLy9G3kiikpzsMrErw8pd5jARShHnbWM1G9UpOEfUhQwHUpuXxMTlGE064d0Jitdx-URKDwU-pQch5WCdk20BdTB63QRKZSUtRagjk2LpA0Tu8txvtXbl_RpcAvqdk7_ps6hWy2mMBlPf2-gEDVBx9TP-7nUtaPZHVMgX",
+              "start_index": 2631,
+              "end_index": 2808
+            },
+            {
+              "title": "clutch.co",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFCOZ_kbNXdpypEo1JyCf9p9kgt4gcfEj3_tYnRKXzCq8RvHCnB_Dko3GnPTiLldXAEoy36DdvU5H5JnLey5uq5tJSGxu2iE3DHcFIsrzh9eRxE_mA6g==",
+              "start_index": 2631,
+              "end_index": 2808
+            },
+            {
+              "title": "yesoptimist.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHvoeo03ylYYreaDcMnwl1lMOeXm_pInAwiew353edSqB1fLKxqlXYN70cIJhnRS_U5OdIyOm0wxD1cZp_4YnXp9hps0elHS2-M03nX94aqNQYFdNWtAdu2mjBMEAfXgn5LKd-NiT8S9zdCUq_e",
+              "start_index": 2809,
+              "end_index": 2905
+            },
+            {
+              "title": "yesoptimist.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHvoeo03ylYYreaDcMnwl1lMOeXm_pInAwiew353edSqB1fLKxqlXYN70cIJhnRS_U5OdIyOm0wxD1cZp_4YnXp9hps0elHS2-M03nX94aqNQYFdNWtAdu2mjBMEAfXgn5LKd-NiT8S9zdCUq_e",
+              "start_index": 2906,
+              "end_index": 3033
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

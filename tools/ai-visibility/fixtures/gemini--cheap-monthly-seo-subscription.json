@@ -1,0 +1,140 @@
+{
+  "_meta": {
+    "captured": "2026-08-30T12:03:06Z",
+    "llm_type": "gemini",
+    "model_name": "gemini-2.5-flash",
+    "web_search": true,
+    "temperature": 0.1,
+    "cost_usd": 0.03747,
+    "prompt_id": "cheap-monthly-seo-subscription",
+    "note": "Real DataForSEO ai_optimization_llm_response payload (tasks[0].result[0]). Annotation `text` fields dropped — the parser does not read them. Gemini returns every citation as a vertexaisearch grounding redirect; the real domain appears only in `title`."
+  },
+  "model_name": "gemini-2.5-flash",
+  "input_tokens": 116,
+  "output_tokens": 734,
+  "reasoning_tokens": 0,
+  "web_search": true,
+  "money_spent": 0.0368698,
+  "datetime": "2026-08-30 12:03:06 +00:00",
+  "fan_out_queries": [
+    "SEO providers fixed monthly subscription under $150",
+    "affordable SEO services under $150 per month",
+    "SEO packages under $150 monthly",
+    "cheap SEO services no retainer"
+  ],
+  "items": [
+    {
+      "type": "message",
+      "sections": [
+        {
+          "type": "text",
+          "text": "Many SEO providers offer fixed monthly subscriptions under $150, catering to small businesses and startups. These services often focus on specific aspects of SEO rather than comprehensive, full-service retainers.\n\nHere are some providers and options that offer affordable monthly SEO services:\n\n**Providers with Plans Under $150/month:**\n*   **Ranked.ai:** Offers fixed monthly subscription plans starting at $99 per month. Their services include weekly content creation, on-page and technical optimization, and backlink acquisition.\n*   **Mainstreethost:** Provides affordable SEO and web services with pricing starting at $99/month.\n*   **A specific offer mentioned on Reddit:** One provider advertised a complete SEO service for $149/month, including a technical audit, keyword research (20 keywords), on-page SEO, Google Business Profile optimization, content, and backlinks.\n*   **An unnamed provider mentioned by SEO.com (WebFX):** Many agencies offer SEO services starting at around $99 per month, making it accessible for small businesses and startups.\n*   **Another unnamed provider:** Offers SEO services starting at $100/month, with a \"SEO Standard\" plan at $150/month that includes up to 10 key phrases, keyword research, Google Analytics, Google Search Console, on-page optimization, traffic and ranking reports, and more.\n\n**Other Affordable Options and Considerations:**\n*   **Local SEO Services:** These are often more affordable, with average costs starting around $500 per location. They typically include Google Business Profile optimization, local citations, review management, and geo-targeted landing pages.\n*   **Specific Service Focus:** Some providers offer targeted services like link building or content support at reasonable prices, allowing businesses to choose what they need without a large retainer.\n*   **DIY SEO Tools:** Utilizing tools like Mangools, Keysearch, WriterZen, Google Keyword Planner, Screaming Frog, SEOptimer, SEO PowerSuite, SerpRobot, and BrightLocal can help manage SEO costs by handling some tasks in-house.\n*   **MarketKeep:** Offers focused support for improving search engine optimization and online visibility without a large monthly retainer. Their services often include keyword research, on-page SEO recommendations, content strategy guidance, local SEO optimization, and basic SEO performance tracking.\n*   **Pearl Lemon SEO:** Provides a range of services that can be tailored to your needs, such as keyword research support, on-page optimization, content strategy advice, link building coordination, and local SEO support, without requiring a high-cost agency retainer.\n*   **GrowthMate:** Focuses on link building and outreach services with accessible pricing, helping identify relevant link prospects, run manual outreach, and secure placements.\n*   **Stan Ventures:** Offers link building and SEO services that fit into an affordable plan, focusing on specific services like link building, content support, and outreach.\n\nIt's important to note that while affordable SEO services exist, anything promising full-service results for under $200/month should be carefully vetted, as it might indicate automated spam tactics or low-quality work that could harm your site. The key is to find a provider that offers transparency, measurable results, and support tailored to your specific needs and budget.",
+          "annotations": [
+            {
+              "title": "embarque.io",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVDjPFX_OGJyKXBlIpTMjk5fjaN1QK1nlTYMPu3t2rcNGTYxMiY0zz9xlBaFgdcNH_bZb28EIpo8cg--CAyint5GoKZQdVRzrS2jSSE-c4-YkWszzeL9Y59uIiXuwvIjeTRvb47oYthDbJ4oIZi5HCINdABA==",
+              "start_index": 424,
+              "end_index": 533
+            },
+            {
+              "title": "rankai.ai",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDUQRdJy8QpuxKXUcu_DyDYS2kFDXsjzKuEiwSBeiARtKHKwYob4oLEuyw0V0a0EPDI9ky5PXcHxgz3iKwobPuu6glUMnF9AyJn-9qAVdTsBFdxEEjX083ObEKkSk-f8MNlRHTwn8x0vG-_7R0WqcHrdI0LFL90SFAGRoa3Z1gjYSclcZFPtrK23ApXzJFbRhNCGNBtWGvqYkDGw==",
+              "start_index": 534,
+              "end_index": 634
+            },
+            {
+              "title": "link-assistant.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFEMU95M6LxADsDs50cdHEBOAdndFZ4042m9WjY7MRtrei2ldMmZdpckOmTvGOM7EEXozY-xXofpl5DkbuCkIGdrOgO-8uy2ODcHKVANsN_GlihgVVR1NVnZcvTjLGZyKj-be208vOr3mMelQ4NhiNJZRSx1eaDg_cdZ93BPqAIs9uX",
+              "start_index": 534,
+              "end_index": 634
+            },
+            {
+              "title": "reddit.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGVUMd1lX_lIYfkpnCAnbZxc_KVJwi7wE_IaWjGPtTKIU_wOLAim2I_28Mzr15-8n4Q5qt-W8F0nsv-65MdQ6mjh5itkrP3WrtQUIhl6w08PEiqf3Ydx45JQyYWaZw8uy1xiL9HA2UGSRDpJ4Sq2Te8pfQjzmyffDpAsFxgvxRvuoY58_WPnCXRCemHv2qmRddqbyb1QJuuhfNWRhJH0CZkvd7wKkll7w==",
+              "start_index": 635,
+              "end_index": 879
+            },
+            {
+              "title": "rankai.ai",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDUQRdJy8QpuxKXUcu_DyDYS2kFDXsjzKuEiwSBeiARtKHKwYob4oLEuyw0V0a0EPDI9ky5PXcHxgz3iKwobPuu6glUMnF9AyJn-9qAVdTsBFdxEEjX083ObEKkSk-f8MNlRHTwn8x0vG-_7R0WqcHrdI0LFL90SFAGRoa3Z1gjYSclcZFPtrK23ApXzJFbRhNCGNBtWGvqYkDGw==",
+              "start_index": 880,
+              "end_index": 1060
+            },
+            {
+              "title": "earnseo.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFPOAK1b1DGglEwHylaTAb81qXpdXuaMZ_w_2x3YBfWKO_wJkkN3p4dCOUh-Ue2pl2TPv1hc5YWZHIKwg2HsBPzWRabF36b5iCAesIp1bQyeWQg3SzzpsVZKQgTTOKqLClcc1d6JFazFaCtNw==",
+              "start_index": 1061,
+              "end_index": 1335
+            },
+            {
+              "title": "jasonpittock.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFP2h0vmTtZvZczxJXbwW-WcJzc4DQChHq8O8IZQFLIxRhX3f9jv1qizRZl4eNNG9evMFYRCGLX09HaFVFn2nqsZb8DHKvAtJop3c2DRVPDjoLWDwH0s6H5LBSA5FWBUBA7bRmJT_u_jVehc6DEJ0y3SZ6oeVUN",
+              "start_index": 1501,
+              "end_index": 1629
+            },
+            {
+              "title": "seoprofy.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEgoEzd1XTf-UJ-PParIpJwSptJ_GCMKfvlMQfWAof0mtyWvmD2g3J1Nm_mwcDn5TqpXvLkzdR9mrubyBMso96BHCSYisGHYV_bNp2bxv2nFn6_Kl3pKx3iN90KMXAsySfEu8Kw4Mh0rRP3G4w=",
+              "start_index": 1501,
+              "end_index": 1629
+            },
+            {
+              "title": "addlinker.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF9EnHY8HEsvO4pJPUHFdjw_OvQ3EVjK_-CLXSibhFJYJFiYdx8pkj3vFkEe7r9UHl0tjIBojswykdAGnKLvaYf5QKvcv4tD1PrAJ26w5KkqYfbidfNJIKggWymHLsbIbehKwt4bRSqQ1BaEz3OTWiRjM0j_Q9hPfvxjmbUL7g=",
+              "start_index": 1501,
+              "end_index": 1629
+            },
+            {
+              "title": "respona.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFxtjvKBCWgh24-gm5cJ_n5z-x1EYSruRD8dhIAyG_V-nbB8Cr_R6AFQQp-2i1C1TYEg6kNzbcSNdmUBICLsirzxKoErnViCXBoFU4Wq9AjmRmh6J8hUks34nEK-Y3tD68=",
+              "start_index": 1630,
+              "end_index": 1831
+            },
+            {
+              "title": "respona.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFxtjvKBCWgh24-gm5cJ_n5z-x1EYSruRD8dhIAyG_V-nbB8Cr_R6AFQQp-2i1C1TYEg6kNzbcSNdmUBICLsirzxKoErnViCXBoFU4Wq9AjmRmh6J8hUks34nEK-Y3tD68=",
+              "start_index": 1832,
+              "end_index": 2060
+            },
+            {
+              "title": "respona.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFxtjvKBCWgh24-gm5cJ_n5z-x1EYSruRD8dhIAyG_V-nbB8Cr_R6AFQQp-2i1C1TYEg6kNzbcSNdmUBICLsirzxKoErnViCXBoFU4Wq9AjmRmh6J8hUks34nEK-Y3tD68=",
+              "start_index": 2201,
+              "end_index": 2363
+            },
+            {
+              "title": "respona.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFxtjvKBCWgh24-gm5cJ_n5z-x1EYSruRD8dhIAyG_V-nbB8Cr_R6AFQQp-2i1C1TYEg6kNzbcSNdmUBICLsirzxKoErnViCXBoFU4Wq9AjmRmh6J8hUks34nEK-Y3tD68=",
+              "start_index": 2364,
+              "end_index": 2632
+            },
+            {
+              "title": "respona.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFxtjvKBCWgh24-gm5cJ_n5z-x1EYSruRD8dhIAyG_V-nbB8Cr_R6AFQQp-2i1C1TYEg6kNzbcSNdmUBICLsirzxKoErnViCXBoFU4Wq9AjmRmh6J8hUks34nEK-Y3tD68=",
+              "start_index": 2633,
+              "end_index": 2810
+            },
+            {
+              "title": "respona.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFxtjvKBCWgh24-gm5cJ_n5z-x1EYSruRD8dhIAyG_V-nbB8Cr_R6AFQQp-2i1C1TYEg6kNzbcSNdmUBICLsirzxKoErnViCXBoFU4Wq9AjmRmh6J8hUks34nEK-Y3tD68=",
+              "start_index": 2811,
+              "end_index": 2986
+            },
+            {
+              "title": "fzpdigital.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXWa3bgYRXOHhMSP_mCLQgu4-KQ7m9a99h5Lpf2xuBr5AOX1gD9WBu9HXBvOgbTEXqPYQ2pKFd1WMVcgrPxqUaEj7Eo7uDKWihwtJ947kErIXxKjapu-9M5Tdbc1w4qf7VU_H7BiF5IkK9OrIuA79TsEkD_Hi1yBDhPSIa6O-CUEYhdnIVqjYHCgoOJfSabj_WVZooQX6Zxwdl3g==",
+              "start_index": 2988,
+              "end_index": 3232
+            },
+            {
+              "title": "link-assistant.com",
+              "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFEMU95M6LxADsDs50cdHEBOAdndFZ4042m9WjY7MRtrei2ldMmZdpckOmTvGOM7EEXozY-xXofpl5DkbuCkIGdrOgO-8uy2ODcHKVANsN_GlihgVVR1NVnZcvTjLGZyKj-be208vOr3mMelQ4NhiNJZRSx1eaDg_cdZ93BPqAIs9uX",
+              "start_index": 3233,
+              "end_index": 3364
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
