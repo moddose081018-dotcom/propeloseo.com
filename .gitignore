@@ -1,0 +1,12 @@
+# Cloudflare / Wrangler local secret files. Secrets belong in encrypted Worker
+# secrets (`wrangler secret put NAME`), never in tracked files.
+# https://developers.cloudflare.com/workers/configuration/secrets/
+.dev.vars
+.dev.vars.*
+.env
+.env.*
+!.env.example
+.wrangler/
+
+# Local tooling
+node_modules/
