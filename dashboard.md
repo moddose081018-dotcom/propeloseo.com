@@ -9,7 +9,7 @@ on mid-size creators' empty shelves (no ebooks/Whop). Primary offer: Rainmakers 
 member). See `strategy.md`.
 
 ## Phase status
-- **Phase 1 — Prospects:** ✅ 50 qualified creators in `prospects/creators.csv`
+- **Phase 1 — Prospects:** ✅ 94 qualified creators in `prospects/creators.csv` (SEO + adjacent money-making niches; 50 with verified audience sizes)
 - **Phase 2 — Assets:** ✅ drafted in `assets/` (outreach, review + comparison pages, swipe kit, side agreement)
 - **Phase 3 — Daily routine:** ✅ SOP in `daily-routine.md`; scheduled task created (see below)
 - **Models:** ✅ `revenue-model.md`, `paid-advertising-model.md`, `blended-scenario.md`
@@ -17,7 +17,7 @@ member). See `strategy.md`.
 ## Pipeline funnel (live)
 | Stage | Count |
 |---|---|
-| Total prospects | 50 |
+| Total prospects | 94 |
 | Contacted | 0 |
 | Replied | 0 |
 | Interested | 0 |
