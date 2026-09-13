@@ -7,8 +7,7 @@ OUTSTANDING before publish (see assets/research-notes.md):
 - Citation Playbook price + member count (#2) — Shane to supply.
 - Entries 3-6 member counts/prices are [unverified] — pulled from WebSearch snippets in Phase 1
   (skool.com was blocked by network egress). Confirm on-platform before publishing.
-- Confirm Rainmakers "$289 founding, locked for life" claim (same discrepancy noted in the
-  review page — see research-notes.md).
+- Founding price CONFIRMED by Shane (2026-09-13): $289/mo locked for life, then $299+. Copy is correct as written.
 
 SEO note: "seo mastermind" = 40 searches/mo (KD 9), "best seo community" = 10/mo, both
 declining; "best ai seo community" has no measurable volume (DataForSEO, Sep 2026). Build this

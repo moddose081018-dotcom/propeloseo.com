@@ -25,6 +25,12 @@ a **link to hand partners and drop into outreach**, and to capture branded "ai s
 review" searches as the brand grows. Build for reference/conversion, not ranking. Don't invest
 in link-building or heavy on-page optimization for them.
 
+### Founding price — confirmed
+$289/mo, locked for life on the founding block; $299+ after it sells out. Confirmed by Shane
+(account owner, from the Rainmakers about page) on 2026-09-13. Supersedes the earlier Phase 1
+figure (~$179 founding / rising list price, Sep 6). Use $289 locked-for-life throughout — the
+copy already does.
+
 ### Skool commission disclosure
 - No Skool rule found that prohibits stating the commission rate publicly.
 - Skool **does** prohibit bidding on the "Skool" brand keyword in paid ads (already covered in
@@ -48,23 +54,20 @@ egress). Confirm on-platform before publishing.
 
 ## Blocking before publish (need Shane)
 
-1. **Founding-price discrepancy — confirm before anything ships.** The Phase 2 brief states
-   "$289/mo founding block, locked for life." Phase 1 research (Skool community pull, dated
-   Sep 6 2026) recorded Rainmakers at ~314 members with the first 100 founding members locked
-   at a **lower** price and the list price **rising** toward ~$289+. Both can't be the founding
-   price. A wrong price claim on a public review page is a credibility and potential legal risk.
-   Confirm the exact current founding price and the "locked for life" terms before publishing
-   the review page, comparison page, or swipe kit.
-
-2. **Personal results — DO NOT INVENT.** These stay as placeholders until you supply real notes:
+1. **Personal results — DO NOT INVENT.** These stay as placeholders until you supply real notes:
    - Review page "My take after {{n}} weeks" — 2-3 concrete things applied on a client site + results.
    - Citation Playbook post — the three techniques (or one that didn't work).
    - `{{your_rating}}` in the review page JSON-LD — your honest star rating.
 
-3. **Citation Playbook details** — price + member count, used in the review page comparison
+2. **Citation Playbook details** — price + member count, used in the review page comparison
    table (#2 row) and the comparison page (#2). Supply both.
 
-4. **Verify #4–6 member counts/prices** on skool.com before publishing the comparison page.
+3. **Verify #4–6 member counts/prices** on skool.com before publishing the comparison page.
+
+## Resolved
+
+- **Founding price** — confirmed by Shane on 2026-09-13: $289/mo locked for life, then $299+.
+  See the "Founding price — confirmed" note under Verified above.
 
 ## Files in this batch
 - `assets/outreach/email-sequence.md` — emails 1-3, DM variant, reply-handling table

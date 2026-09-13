@@ -8,7 +8,7 @@ All copy uses only the real founding-price scarcity — no fake urgency, no inve
 (hard rule). The "two weeks in" framing in posts 1-2 and the LinkedIn "Experience angle" assumes
 the poster is a member; a partner who hasn't joined should adjust to their own honest posture.
 Facts (351 members, 5.0/31 reviews, $289/mo founding, 7-day refund) per Shane's read of the
-about page — confirm the founding-price claim before distributing (see research-notes.md).
+about page. Founding price confirmed by Shane (2026-09-13): $289/mo locked for life, then $299+.
 -->
 
 Replace `{{link}}` with the partner's own affiliate link.

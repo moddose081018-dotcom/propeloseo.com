@@ -8,9 +8,7 @@ OUTSTANDING before publish (see assets/research-notes.md):
   DO NOT INVENT. Hard rule: no fabricated data, no invented testimonials.
 - {{your_rating}} in JSON-LD — Shane's honest star rating.
 - Citation Playbook price + member count in the comparison table — Shane to supply.
-- Confirm the "$289/mo founding, locked for life" claim — Phase 1 research (Sep 6) recorded
-  founding members locked at a LOWER price with a rising list price. Confirm which is correct
-  before this goes live; a wrong price claim on a review page is a credibility/legal risk.
+- Founding price CONFIRMED by Shane (2026-09-13): $289/mo locked for life, then $299+. Copy is correct as written.
 
 SEO note: target keywords have negligible search volume (DataForSEO, Sep 2026). This page's
 value is as a link for outreach/partners, not organic traffic. Don't over-invest in ranking it.
