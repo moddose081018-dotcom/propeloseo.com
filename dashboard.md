@@ -2,7 +2,11 @@
 
 *Updated by the daily routine (09:00 Bangkok / 02:00 UTC). Honest state only — no invented data.*
 
-**Last updated:** 2026-09-13 (initial, by setup — not yet a live daily run)
+**Last updated:** 2026-09-13 (realigned to the "empty shelf" model — see `strategy.md`)
+
+**Operating model:** creator-partnership "empty shelf" method — put the **Skool affiliate link**
+on mid-size creators' empty shelves (no ebooks/Whop). Primary offer: Rainmakers ($144.50/mo per
+member). See `strategy.md`.
 
 ## Phase status
 - **Phase 1 — Prospects:** ✅ 50 qualified creators in `prospects/creators.csv`
