@@ -27,9 +27,14 @@ in link-building or heavy on-page optimization for them.
 
 ### Founding price — confirmed
 $289/mo, locked for life on the founding block; $299+ after it sells out. Confirmed by Shane
-(account owner, from the Rainmakers about page) on 2026-09-13. Supersedes the earlier Phase 1
-figure (~$179 founding / rising list price, Sep 6). Use $289 locked-for-life throughout — the
-copy already does.
+(account owner, from the Rainmakers about page) on 2026-09-13. Use $289 locked-for-life in all
+public copy — the review page, comparison page and swipe kit already do.
+
+**Two different prices — don't conflate them:**
+- **$289/mo** = the current price a NEW member pays when they join through Shane's link. Shane's
+  commission = 50% × $289 = **$144.50/mo per referral** (revenue side — unchanged).
+- **$179/mo** = Shane's OWN membership, locked at his earlier founding rate (cost side). This is
+  the membership cost line in the models/dashboard, not the offer price.
 
 ### Skool commission disclosure
 - No Skool rule found that prohibits stating the commission rate publicly.

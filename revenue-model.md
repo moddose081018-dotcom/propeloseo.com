@@ -69,7 +69,7 @@ The brief has four revenue lines; the model above covers only line 1.
 
 This is an **organic** engine — near-zero cash outlay, time-dominated.
 
-- **Required cash:** $289/mo Rainmakers membership (needed to be a member-affiliate and to write an honest review). **Break-even = 2 referred members.** Each member repays the membership in ~2 months.
+- **Required cash:** $179/mo Rainmakers membership (Shane's locked founding rate; needed to be a member-affiliate and to write an honest review). **Break-even = 2 referred members** ($144.50 each). Each referred member more than repays the membership within its first month.
 - **Outreach:** ~$0. Optional email-finder tool ~$50/mo. No paid ads on the "Skool" keyword (banned by Skool).
 - **Real cost = time:** personalized outreach to 50 prospects, ongoing partner support, content upkeep. If a VA/time is valued, that's the dominant "budget" line, not cash.
 - **Effective CAC:** near-zero cash; the constraint is partner activation and their conversion, not spend.

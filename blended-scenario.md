@@ -6,9 +6,9 @@ recurring base. Updated for the expanded **94-prospect** list and now including 
 
 **Bottom line up front:** Base case reaches **~$21.6K/mo gross revenue at month 12**, and
 **net profit crosses $20K/mo around month 12**. The business is **cash-positive from month 2** —
-the only loss month is month 1 (–$238), because the $289 Rainmakers membership is paid before
-referrals kick in. Cumulative year-1 net ≈ **~$106K** on ~$9.8K of cash costs. Month 6 nets
-~$7.1K. The original 6-month goal remains the optimistic ceiling; month 12 is the expected path.
+the only loss month is month 1 (–$128), because Shane's $179/mo Rainmakers membership is paid
+before referrals kick in. Cumulative year-1 net ≈ **~$107.8K** on ~$8.4K of cash costs. Month 6
+nets ~$7.2K. The original 6-month goal remains the optimistic ceiling; month 12 is the expected path.
 
 ---
 
@@ -34,14 +34,14 @@ active partners rise from ~6 to ~8 over 6 months.
 ## Costs (the budget side)
 | Cost | Amount | When |
 |---|---|---|
-| Rainmakers membership (required to be a member-affiliate + write the review) | $289/mo | Every month |
+| Rainmakers membership (Shane's founding rate, locked; required to be a member-affiliate + write the review) | $179/mo | Every month |
 | Outreach tooling (email finder + sender for systematic 94-prospect outreach) | ~$80/mo | Every month |
 | Hosting / domain (review + comparison pages) | ~$20/mo | Every month |
 | Citation Playbook platform (Skool subscription) | ~$99/mo | Every month (supports the CP revenue line) |
 | Retargeting ad spend (optional; scales with traffic pool) | $0 → $300 → $500/mo | $0 mo 1–3, $300 mo 4–6, $500 mo 7–12 |
 
-- **Fixed cash floor:** ~$488/mo (membership + tooling + hosting + Skool).
-- **Break-even:** 2 referred Rainmakers members covers the entire fixed floor.
+- **Fixed cash floor:** ~$378/mo (membership + tooling + hosting + Skool).
+- **Break-even:** ~3 referred Rainmakers members cover the entire fixed floor (the $179 membership alone is covered by the 2nd).
 - **Ad spend is optional** — retargeting only. Skip it and costs drop to ~$488/mo with only a
   small revenue reduction (retargeting is a minor slice of members).
 - **Time is the real cost, not cash.** Shane is solo; outreach + partner support is the true input.
@@ -55,32 +55,32 @@ Rainmakers net-active = prior × 0.94 (6% churn) + gross adds. Adds ramp with pa
 
 | Mo | RM net active | RM MRR | Citation Playbook | Skool ref | Extra deals | **Revenue** | **Cost** | **Net** |
 |---|---|---|---|---|---|---|---|---|
-| 1 | 0 | $0 | $250 | $0 | $0 | $250 | $488 | **–$238** |
-| 2 | 3 | $434 | $500 | $0 | $0 | $934 | $488 | **$446** |
-| 3 | 9 | $1,275 | $800 | $40 | $0 | $2,115 | $488 | **$1,627** |
-| 4 | 17 | $2,499 | $1,100 | $79 | $0 | $3,678 | $788 | **$2,890** |
-| 5 | 27 | $3,938 | $1,400 | $119 | $300 | $5,757 | $788 | **$4,969** |
-| 6 | 38 | $5,436 | $1,700 | $158 | $600 | $7,894 | $788 | **$7,106** |
-| 7 | 49 | $7,133 | $2,000 | $198 | $900 | $10,231 | $988 | **$9,243** |
-| 8 | 61 | $8,872 | $2,250 | $238 | $1,200 | $12,560 | $988 | **$11,572** |
-| 9 | 74 | $10,653 | $2,500 | $277 | $1,400 | $14,830 | $988 | **$13,842** |
-| 10 | 86 | $12,470 | $2,700 | $317 | $1,600 | $17,087 | $988 | **$16,099** |
-| 11 | 99 | $14,323 | $2,850 | $356 | $1,800 | $19,329 | $988 | **$18,341** |
-| 12 | 112 | $16,209 | $3,000 | $396 | $2,000 | $21,605 | $988 | **$20,617** |
+| 1 | 0 | $0 | $250 | $0 | $0 | $250 | $378 | **–$128** |
+| 2 | 3 | $434 | $500 | $0 | $0 | $934 | $378 | **$556** |
+| 3 | 9 | $1,275 | $800 | $40 | $0 | $2,115 | $378 | **$1,737** |
+| 4 | 17 | $2,499 | $1,100 | $79 | $0 | $3,678 | $678 | **$3,000** |
+| 5 | 27 | $3,938 | $1,400 | $119 | $300 | $5,757 | $678 | **$5,079** |
+| 6 | 38 | $5,436 | $1,700 | $158 | $600 | $7,894 | $678 | **$7,216** |
+| 7 | 49 | $7,133 | $2,000 | $198 | $900 | $10,231 | $878 | **$9,353** |
+| 8 | 61 | $8,872 | $2,250 | $238 | $1,200 | $12,560 | $878 | **$11,682** |
+| 9 | 74 | $10,653 | $2,500 | $277 | $1,400 | $14,830 | $878 | **$13,952** |
+| 10 | 86 | $12,470 | $2,700 | $317 | $1,600 | $17,087 | $878 | **$16,209** |
+| 11 | 99 | $14,323 | $2,850 | $356 | $1,800 | $19,329 | $878 | **$18,451** |
+| 12 | 112 | $16,209 | $3,000 | $396 | $2,000 | $21,605 | $878 | **$20,727** |
 
-**Checkpoints (net):** Month 6 ~$7.1K · Month 9 ~$13.8K · Month 12 ~$20.6K.
+**Checkpoints (net):** Month 6 ~$7.2K · Month 9 ~$14.0K · Month 12 ~$20.7K.
 
 ### Year-1 totals
 - **Cumulative revenue:** ~$116K
-- **Cumulative cash cost:** ~$9.8K (fixed floor ×12 + ~$3.9K optional ad spend)
-- **Cumulative net:** ~$106K
-- **Blended cash margin:** ~92% (this is a near-zero-COGS affiliate model; cost is dominated by the $289 membership + time)
+- **Cumulative cash cost:** ~$8.4K (fixed floor ×12 + ~$3.9K optional ad spend)
+- **Cumulative net:** ~$107.8K
+- **Blended cash margin:** ~93% (this is a near-zero-COGS affiliate model; cost is dominated by the $179 membership + time)
 
 ---
 
 ## The Citation Playbook dependency
 Engine 5 uses **illustrative** numbers (60 members × $50 by month 12 = ~$3K/mo, on a $99/mo Skool
-cost). Strip it out and month-12 net drops ~$2.9K to ~**$17.7K**. It's the line Shane fully
+cost). Strip it out and month-12 net drops ~$2.9K to ~**$17.8K**. It's the line Shane fully
 controls and keeps 100% of — supplying its real price + member count is the single highest-value
 input to firm up this projection.
 
