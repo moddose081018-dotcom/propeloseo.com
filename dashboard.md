@@ -40,6 +40,8 @@ partner activation is fast and churn held to 4%. The original 6-month goal is th
 4. **Verify** the `[unverified]` audience sizes in `creators.csv` and comparison entries 3–6 before sending outreach or publishing.
 
 ## Scheduled task
-- **When:** daily 09:00 Bangkok (02:00 UTC).
+- **When:** daily 09:00 Bangkok (02:00 UTC). First run: 2026-09-14.
 - **What:** runs `daily-routine.md` in a fresh session; drafts to `outbox/`, updates CSV + this dashboard, logs, commits.
-- **Control:** pause/stop by disabling or deleting the Routine (ask Claude, or via the Routines list). Trigger ID recorded at setup.
+- **Trigger ID:** `trig_01Ge5JUT3baYHYQ233NpNYvh`
+- **Control:** pause/stop by disabling or deleting the Routine (ask Claude, or via the claude.ai Routines list).
+- **Note:** the Routine runs without MCP connectors (git push works via the environment proxy; no GitHub MCP / DataForSEO in the fired sessions). If the routine later needs those, recreate it from a session that holds the connectors or via the claude.ai Routines UI.
