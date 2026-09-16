@@ -1,0 +1,381 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<title>Revenue Engine Ledger</title>
+<style>
+  :root{
+    color-scheme: light;
+    --plane:#eef0ea; --surface:#fbfcf9; --surface-2:#f4f6f0;
+    --ink:#16201b; --ink-2:#59615b; --muted:#8a8f88;
+    --hair:#e0e3dc; --baseline:#c6cabf;
+    --rev:#2a78d6; --cost:#eb6834; --net:#1baf7a;
+    --mix1:#2a78d6; --mix2:#1baf7a; --mix3:#eda100; --mix4:#4a3aa7;
+    --net-soft:rgba(27,175,122,.14);
+    --shadow:0 1px 2px rgba(22,32,27,.06),0 8px 24px rgba(22,32,27,.05);
+  }
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+    color-scheme:dark;
+    --plane:#0c0e0d; --surface:#191b1a; --surface-2:#202320;
+    --ink:#f4f6f2; --ink-2:#b9bdb5; --muted:#8a8f88;
+    --hair:#2b2e2b; --baseline:#3a3e39;
+    --rev:#3987e5; --cost:#d95926; --net:#199e70;
+    --mix1:#3987e5; --mix2:#199e70; --mix3:#c98500; --mix4:#9085e9;
+    --net-soft:rgba(25,158,112,.18);
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
+  }}
+  :root[data-theme="dark"]{
+    color-scheme:dark;
+    --plane:#0c0e0d; --surface:#191b1a; --surface-2:#202320;
+    --ink:#f4f6f2; --ink-2:#b9bdb5; --muted:#8a8f88;
+    --hair:#2b2e2b; --baseline:#3a3e39;
+    --rev:#3987e5; --cost:#d95926; --net:#199e70;
+    --mix1:#3987e5; --mix2:#199e70; --mix3:#c98500; --mix4:#9085e9;
+    --net-soft:rgba(25,158,112,.18);
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  body{background:var(--plane);color:var(--ink);
+    font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+    line-height:1.5;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:1080px;margin:0 auto;padding:32px 20px 64px;}
+  .mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums;}
+  .serif{font-family:"Fraunces",Georgia,serif;}
+
+  header.top{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:flex-end;
+    border-bottom:1px solid var(--hair);padding-bottom:22px;margin-bottom:26px;}
+  .eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);
+    font-weight:600;margin:0 0 8px;}
+  h1{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(28px,4.5vw,42px);
+    line-height:1.04;margin:0;text-wrap:balance;letter-spacing:-.01em;}
+  .sub{color:var(--ink-2);font-size:14px;margin:10px 0 0;max-width:56ch;}
+
+  .controls{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-bottom:26px;}
+  .ctl-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-right:2px;}
+  .seg{display:inline-flex;background:var(--surface-2);border:1px solid var(--hair);border-radius:10px;padding:3px;gap:2px;}
+  .seg button{font:inherit;font-size:13px;font-weight:500;border:0;background:transparent;color:var(--ink-2);
+    padding:6px 13px;border-radius:7px;cursor:pointer;transition:background .12s,color .12s;}
+  .seg button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:var(--shadow);}
+  .seg button:focus-visible{outline:2px solid var(--net);outline-offset:2px;}
+  .toggle{display:inline-flex;align-items:center;gap:9px;font-size:13px;color:var(--ink-2);cursor:pointer;user-select:none;}
+  .toggle input{position:absolute;opacity:0;width:0;height:0;}
+  .track{width:38px;height:22px;border-radius:11px;background:var(--baseline);position:relative;transition:background .15s;flex:0 0 auto;}
+  .track::after{content:"";position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.3);transition:transform .15s;}
+  .toggle input:checked+.track{background:var(--net);}
+  .toggle input:checked+.track::after{transform:translateX(16px);}
+  .toggle input:focus-visible+.track{outline:2px solid var(--net);outline-offset:2px;}
+
+  .kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:26px;}
+  .kpi{background:var(--surface);border:1px solid var(--hair);border-radius:14px;padding:16px 16px 15px;box-shadow:var(--shadow);}
+  .kpi .k-label{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:0 0 10px;}
+  .kpi .k-val{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;font-weight:600;
+    font-size:clamp(20px,2.6vw,27px);line-height:1;color:var(--ink);}
+  .kpi .k-val.hero{color:var(--net);}
+  .kpi .k-note{font-size:11.5px;color:var(--ink-2);margin:8px 0 0;}
+
+  .panel{background:var(--surface);border:1px solid var(--hair);border-radius:16px;box-shadow:var(--shadow);padding:20px 20px 16px;margin-bottom:18px;}
+  .panel h2{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:19px;margin:0;letter-spacing:-.01em;}
+  .panel .p-sub{font-size:12.5px;color:var(--ink-2);margin:4px 0 0;}
+  .p-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;margin-bottom:6px;}
+  .legend{display:flex;gap:16px;flex-wrap:wrap;align-items:center;}
+  .lg{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-2);}
+  .sw{width:11px;height:11px;border-radius:3px;flex:0 0 auto;}
+  .sw.line{height:3px;border-radius:2px;width:16px;}
+
+  .chart-hold{position:relative;width:100%;}
+  svg{display:block;width:100%;height:auto;overflow:visible;}
+  .tt{position:absolute;pointer-events:none;background:var(--surface);border:1px solid var(--hair);
+    border-radius:10px;box-shadow:var(--shadow);padding:10px 12px;font-size:12px;min-width:150px;
+    opacity:0;transition:opacity .1s;z-index:5;}
+  .tt .tt-m{font-weight:600;font-size:12px;margin-bottom:7px;color:var(--ink);}
+  .tt-row{display:flex;justify-content:space-between;gap:16px;align-items:center;margin:3px 0;color:var(--ink-2);}
+  .tt-row .tt-v{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;color:var(--ink);font-weight:500;}
+  .tt-dot{display:inline-flex;align-items:center;gap:6px;}
+
+  .two{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;}
+  .mixbar{display:flex;height:30px;border-radius:8px;overflow:hidden;margin:16px 0 14px;gap:2px;background:var(--surface-2);}
+  .mixseg{height:100%;transition:width .25s;min-width:2px;}
+  .mixrows{display:flex;flex-direction:column;gap:9px;}
+  .mixrow{display:flex;align-items:center;gap:9px;font-size:13px;}
+  .mixrow .mx-name{color:var(--ink-2);flex:1;}
+  .mixrow .mx-val{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;font-weight:500;}
+  .costlist{display:flex;flex-direction:column;gap:2px;margin-top:14px;}
+  .costrow{display:flex;justify-content:space-between;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--hair);font-size:13px;}
+  .costrow:last-child{border-bottom:0;}
+  .costrow .c-name{color:var(--ink-2);}
+  .costrow .c-val{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;font-weight:500;}
+  .costrow.tot{border-top:2px solid var(--baseline);border-bottom:0;margin-top:4px;padding-top:11px;font-weight:600;}
+  .costrow.tot .c-name{color:var(--ink);}
+
+  table{width:100%;border-collapse:collapse;font-size:12.5px;}
+  .tbl-scroll{overflow-x:auto;}
+  th,td{padding:8px 10px;text-align:right;white-space:nowrap;}
+  th:first-child,td:first-child{text-align:left;}
+  thead th{font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:600;border-bottom:1px solid var(--hair);}
+  tbody td{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;border-bottom:1px solid var(--hair);color:var(--ink-2);}
+  tbody td:first-child{font-family:"IBM Plex Sans",sans-serif;color:var(--ink);}
+  tbody td.net-pos{color:var(--net);font-weight:500;}
+  tbody td.net-neg{color:var(--cost);font-weight:500;}
+  tbody tr.hl td{background:var(--surface-2);}
+
+  .foot{color:var(--muted);font-size:11.5px;margin-top:22px;line-height:1.6;max-width:80ch;}
+  .foot b{color:var(--ink-2);font-weight:600;}
+  @media (max-width:760px){
+    .kpis{grid-template-columns:repeat(2,1fr);}
+    .two{grid-template-columns:1fr;}
+  }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div>
+      <p class="eyebrow">Affiliate revenue engine &middot; base-case projection</p>
+      <h1>Revenue Engine Ledger</h1>
+      <p class="sub">12-month net P&amp;L for the creator-partnership model — Rainmakers referrals, Skool platform, additional deals and the Citation Playbook, against real operating costs. Adjust the levers to see the curve move.</p>
+    </div>
+  </header>
+
+  <div class="controls">
+    <span class="ctl-label">Monthly churn</span>
+    <div class="seg" id="churnSeg" role="group" aria-label="Monthly churn rate">
+      <button data-churn="0.04" aria-pressed="false">4% best</button>
+      <button data-churn="0.06" aria-pressed="true">6% base</button>
+      <button data-churn="0.08" aria-pressed="false">8% avg</button>
+    </div>
+    <label class="toggle">
+      <input type="checkbox" id="adToggle" checked>
+      <span class="track"></span>
+      <span>Retargeting ad spend</span>
+    </label>
+  </div>
+
+  <section class="kpis" id="kpis" aria-label="Key figures"></section>
+
+  <section class="panel">
+    <div class="p-head">
+      <div>
+        <h2>Revenue, cost &amp; net profit</h2>
+        <p class="p-sub">Monthly, USD. Net is revenue minus cost; the recurring base compounds under churn.</p>
+      </div>
+      <div class="legend">
+        <span class="lg"><span class="sw line" style="background:var(--rev)"></span>Revenue</span>
+        <span class="lg"><span class="sw line" style="background:var(--cost)"></span>Cost</span>
+        <span class="lg"><span class="sw" style="background:var(--net)"></span>Net profit</span>
+      </div>
+    </div>
+    <div class="chart-hold">
+      <svg id="chart" viewBox="0 0 720 340" role="img" aria-label="Line chart of monthly revenue, cost and net profit over 12 months"></svg>
+      <div class="tt" id="tt"></div>
+    </div>
+  </section>
+
+  <div class="two">
+    <section class="panel">
+      <h2>Revenue mix at month 12</h2>
+      <p class="p-sub">Which engine earns the month-12 revenue.</p>
+      <div class="mixbar" id="mixbar" aria-hidden="true"></div>
+      <div class="mixrows" id="mixrows"></div>
+    </section>
+    <section class="panel">
+      <h2>Where the money goes</h2>
+      <p class="p-sub">Monthly cash costs (steady state).</p>
+      <div class="costlist" id="costlist"></div>
+    </section>
+  </div>
+
+  <section class="panel">
+    <div class="p-head"><div><h2>Month by month</h2><p class="p-sub">Full ledger at the selected churn rate.</p></div></div>
+    <div class="tbl-scroll">
+      <table id="tbl">
+        <thead><tr>
+          <th>Month</th><th>RM members</th><th>Rainmakers</th><th>Citation PB</th><th>Skool ref</th><th>Extra deals</th><th>Revenue</th><th>Cost</th><th>Net</th>
+        </tr></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <p class="foot">
+    <b>Assumptions.</b> Base case, 94-prospect pool. Partner-activation ramp adds
+    0·3·6·9·11·12·14·15·16·17·18·19 Rainmakers members/month; commission $144.50/member (50% of $289).
+    Citation Playbook shown at illustrative ~$50/member (real price/members still needed).
+    Costs: $289 membership + ~$80 tooling + ~$20 hosting + ~$99 Skool = ~$488 fixed floor, plus optional
+    retargeting spend ($300/mo months 4–6, $500/mo months 7–12). Time is not priced in.
+    Churn compounds on the recurring base. Benchmark-derived estimates, not guarantees — replace with live data as it comes in.
+  </p>
+</div>
+
+<script>
+(function(){
+  const MONTHS=12;
+  const adds=[0,3,6,9,11,12,14,15,16,17,18,19];
+  const COMM=144.5;
+  const cp=[250,500,800,1100,1400,1700,2000,2250,2500,2700,2850,3000];
+  const skool=[0,0,40,79,119,158,198,238,277,317,356,396];
+  const extra=[0,0,0,0,300,600,900,1200,1400,1600,1800,2000];
+  const adSpend=[0,0,0,300,300,300,500,500,500,500,500,500];
+  const FIXED=378;
+
+  let churn=0.06, adOn=true;
+
+  const usd=n=>"$"+Math.round(n).toLocaleString("en-US");
+  const usdK=n=>"$"+(n/1000).toFixed(n>=100000?0:1)+"K";
+
+  function compute(){
+    const rmNet=[],rmMRR=[],rev=[],cost=[],net=[];
+    let prev=0;
+    for(let i=0;i<MONTHS;i++){
+      const active=prev*(1-churn)+adds[i];
+      rmNet.push(active); prev=active;
+      const mrr=active*COMM; rmMRR.push(mrr);
+      const r=mrr+cp[i]+skool[i]+extra[i]; rev.push(r);
+      const c=FIXED+(adOn?adSpend[i]:0); cost.push(c);
+      net.push(r-c);
+    }
+    return {rmNet,rmMRR,rev,cost,net};
+  }
+
+  function renderKPIs(d){
+    const cumNet=d.net.reduce((a,b)=>a+b,0);
+    const cumRev=d.rev.reduce((a,b)=>a+b,0);
+    let be=d.net.findIndex(v=>v>0); be=be<0?"—":"Month "+(be+1);
+    const margin=Math.round(cumNet/cumRev*100);
+    const monthlyCost=FIXED+(adOn?adSpend[MONTHS-1]:0);
+    const tiles=[
+      {l:"Net · month 12",v:usd(d.net[11]),note:"revenue "+usd(d.rev[11])+" − cost "+usd(d.cost[11]),hero:true},
+      {l:"Year-1 net",v:usdK(cumNet),note:"on "+usdK(cumRev)+" revenue"},
+      {l:"Cash margin",v:margin+"%",note:"near-zero-COGS model"},
+      {l:"Break-even",v:be,note:"first cash-positive month"},
+      {l:"Monthly cost",v:usd(monthlyCost),note:adOn?"incl. retargeting":"fixed floor only"},
+    ];
+    document.getElementById("kpis").innerHTML=tiles.map(t=>
+      `<div class="kpi"><p class="k-label">${t.l}</p><div class="k-val${t.hero?" hero":""}">${t.v}</div><p class="k-note">${t.note}</p></div>`
+    ).join("");
+  }
+
+  const NS="http://www.w3.org/2000/svg";
+  const W=720,H=340,mL=52,mR=16,mT=16,mB=34;
+  const plotW=W-mL-mR, plotH=H-mT-mB;
+
+  function el(n,a){const e=document.createElementNS(NS,n);for(const k in a)e.setAttribute(k,a[k]);return e;}
+  const cssv=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+
+  let geo=null;
+  function renderChart(d){
+    const svg=document.getElementById("chart");
+    svg.innerHTML="";
+    const ymax=24000, xs=i=>mL+(plotW*(i/(MONTHS-1))), y=v=>mT+plotH-(v/ymax)*plotH;
+
+    // gridlines + y labels
+    const inkMuted=cssv('--muted'), hair=cssv('--hair'), baseline=cssv('--baseline');
+    for(let g=0;g<=24000;g+=6000){
+      svg.appendChild(el("line",{x1:mL,y1:y(g),x2:W-mR,y2:y(g),stroke:g===0?baseline:hair,"stroke-width":1}));
+      const t=el("text",{x:mL-8,y:y(g)+4,"text-anchor":"end","font-size":11,fill:inkMuted,"font-family":"IBM Plex Mono, monospace"});
+      t.textContent = g===0?"$0":"$"+(g/1000)+"K"; svg.appendChild(t);
+    }
+    // x labels
+    for(let i=0;i<MONTHS;i++){
+      const t=el("text",{x:xs(i),y:H-12,"text-anchor":"middle","font-size":11,fill:inkMuted,"font-family":"IBM Plex Mono, monospace"});
+      t.textContent=i+1; svg.appendChild(t);
+    }
+
+    const rev=cssv('--rev'),cost=cssv('--cost'),netc=cssv('--net'),netsoft=cssv('--net-soft');
+    const path=(arr)=>arr.map((v,i)=>(i?"L":"M")+xs(i).toFixed(1)+" "+y(v).toFixed(1)).join(" ");
+
+    // net area
+    const area=path(d.net)+" L "+xs(MONTHS-1)+" "+y(0)+" L "+xs(0)+" "+y(0)+" Z";
+    svg.appendChild(el("path",{d:area,fill:netsoft,stroke:"none"}));
+    // lines
+    svg.appendChild(el("path",{d:path(d.rev),fill:"none",stroke:rev,"stroke-width":2,"stroke-linejoin":"round","stroke-linecap":"round"}));
+    svg.appendChild(el("path",{d:path(d.cost),fill:"none",stroke:cost,"stroke-width":2,"stroke-linejoin":"round","stroke-linecap":"round","stroke-dasharray":"3 4"}));
+    svg.appendChild(el("path",{d:path(d.net),fill:"none",stroke:netc,"stroke-width":2.6,"stroke-linejoin":"round","stroke-linecap":"round"}));
+
+    // endpoint marker + label for net
+    svg.appendChild(el("circle",{cx:xs(11),cy:y(d.net[11]),r:4,fill:netc,stroke:cssv('--surface'),"stroke-width":2}));
+    const lbl=el("text",{x:xs(11),y:y(d.net[11])-11,"text-anchor":"end","font-size":12.5,fill:netc,"font-weight":600,"font-family":"IBM Plex Mono, monospace"});
+    lbl.textContent=usd(d.net[11]); svg.appendChild(lbl);
+
+    // hover layer
+    const hoverLine=el("line",{y1:mT,y2:mT+plotH,stroke:baseline,"stroke-width":1,opacity:0});
+    svg.appendChild(hoverLine);
+    const dots=["rev","cost","net"].map(()=>{const c=el("circle",{r:4,opacity:0,stroke:cssv('--surface'),"stroke-width":2});svg.appendChild(c);return c;});
+    geo={xs,y,hoverLine,dots,d,colors:[rev,cost,netc]};
+    svg.appendChild(el("rect",{x:mL,y:mT,width:plotW,height:plotH,fill:"transparent",id:"hitrect"}));
+  }
+
+  function bindHover(){
+    const svg=document.getElementById("chart"), tt=document.getElementById("tt");
+    function move(ev){
+      if(!geo)return;
+      const r=svg.getBoundingClientRect(), sx=(ev.touches?ev.touches[0].clientX:ev.clientX)-r.left;
+      const px=sx/r.width*W;
+      let i=Math.round((px-mL)/(plotW/(MONTHS-1)));
+      i=Math.max(0,Math.min(MONTHS-1,i));
+      const xpix=geo.xs(i);
+      geo.hoverLine.setAttribute("x1",xpix); geo.hoverLine.setAttribute("x2",xpix); geo.hoverLine.setAttribute("opacity",1);
+      const vals=[geo.d.rev[i],geo.d.cost[i],geo.d.net[i]];
+      geo.dots.forEach((c,k)=>{c.setAttribute("cx",xpix);c.setAttribute("cy",geo.y(vals[k]));c.setAttribute("fill",geo.colors[k]);c.setAttribute("opacity",1);});
+      tt.innerHTML=`<div class="tt-m">Month ${i+1}</div>`+
+        [["Revenue",geo.d.rev[i],"--rev"],["Cost",geo.d.cost[i],"--cost"],["Net",geo.d.net[i],"--net"]].map(row=>
+          `<div class="tt-row"><span class="tt-dot"><span class="sw" style="width:9px;height:9px;border-radius:2px;background:var(${row[2]})"></span>${row[0]}</span><span class="tt-v">${usd(row[1])}</span></div>`
+        ).join("");
+      tt.style.opacity=1;
+      const hostW=svg.parentElement.clientWidth, ttx=xpix/W*hostW;
+      tt.style.left=Math.min(Math.max(ttx+14,0),hostW-170)+"px";
+      tt.style.top=(geo.y(Math.max(...vals))/H*svg.getBoundingClientRect().height-10)+"px";
+    }
+    function leave(){if(!geo)return;geo.hoverLine.setAttribute("opacity",0);geo.dots.forEach(c=>c.setAttribute("opacity",0));tt.style.opacity=0;}
+    svg.addEventListener("mousemove",move); svg.addEventListener("mouseleave",leave);
+    svg.addEventListener("touchmove",move,{passive:true}); svg.addEventListener("touchend",leave);
+  }
+
+  function renderMix(d){
+    const i=11, parts=[
+      {n:"Rainmakers referrals",v:d.rmMRR[i],c:"--mix1"},
+      {n:"Citation Playbook",v:cp[i],c:"--mix2"},
+      {n:"Additional deals",v:extra[i],c:"--mix3"},
+      {n:"Skool platform",v:skool[i],c:"--mix4"},
+    ];
+    const tot=parts.reduce((a,b)=>a+b.v,0);
+    document.getElementById("mixbar").innerHTML=parts.map(p=>
+      `<div class="mixseg" style="width:${p.v/tot*100}%;background:var(${p.c})"></div>`).join("");
+    document.getElementById("mixrows").innerHTML=parts.map(p=>
+      `<div class="mixrow"><span class="sw" style="background:var(${p.c})"></span><span class="mx-name">${p.n}</span><span class="mx-val">${usd(p.v)}</span><span class="mx-val" style="color:var(--muted);min-width:38px;text-align:right">${Math.round(p.v/tot*100)}%</span></div>`
+    ).join("");
+  }
+
+  function renderCosts(){
+    const rows=[
+      ["Rainmakers membership",179],
+      ["Outreach tooling",80],
+      ["Hosting / domain",20],
+      ["Skool (Citation Playbook)",99],
+    ];
+    if(adOn) rows.push(["Retargeting ad spend (mo 7–12)",500]);
+    const tot=rows.reduce((a,b)=>a+b[1],0);
+    document.getElementById("costlist").innerHTML=
+      rows.map(r=>`<div class="costrow"><span class="c-name">${r[0]}</span><span class="c-val">${usd(r[1])}</span></div>`).join("")+
+      `<div class="costrow tot"><span class="c-name">Total / month</span><span class="c-val">${usd(tot)}</span></div>`;
+  }
+
+  function renderTable(d){
+    document.getElementById("tbody").innerHTML=d.net.map((n,i)=>
+      `<tr${i===11?' class="hl"':''}><td>${i+1}</td><td>${Math.round(d.rmNet[i])}</td><td>${usd(d.rmMRR[i])}</td><td>${usd(cp[i])}</td><td>${usd(skool[i])}</td><td>${usd(extra[i])}</td><td>${usd(d.rev[i])}</td><td>${usd(d.cost[i])}</td><td class="${n>=0?'net-pos':'net-neg'}">${usd(n)}</td></tr>`
+    ).join("");
+  }
+
+  function renderAll(){
+    const d=compute();
+    renderKPIs(d); renderChart(d); renderMix(d); renderCosts(); renderTable(d);
+  }
+
+  document.getElementById("churnSeg").addEventListener("click",e=>{
+    const b=e.target.closest("button"); if(!b)return;
+    churn=parseFloat(b.dataset.churn);
+    [...e.currentTarget.children].forEach(x=>x.setAttribute("aria-pressed",x===b));
+    renderAll();
+  });
+  document.getElementById("adToggle").addEventListener("change",e=>{adOn=e.target.checked;renderAll();});
+
+  renderAll(); bindHover();
+  // redraw chart geometry on resize (labels/positions are viewBox-scaled, but recompute hover geo)
+  let rt; window.addEventListener("resize",()=>{clearTimeout(rt);rt=setTimeout(()=>renderChart(compute()),150);});
+})();
+</script>
