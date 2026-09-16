@@ -9,7 +9,7 @@ on mid-size creators' empty shelves (no ebooks/Whop). Primary offer: Rainmakers 
 member). See `strategy.md`.
 
 ## Phase status
-- **Phase 1 — Prospects:** ✅ 94 qualified creators in `prospects/creators.csv` (SEO + adjacent money-making niches; 50 with verified audience sizes)
+- **Phase 1 — Prospects:** ✅ 94 qualified creators in `prospects/creators.csv` (SEO + adjacent money-making niches; 79 with verified audience sizes, 15 still unverified — non-YouTube platforms blocked in this environment)
 - **Phase 2 — Assets:** ✅ drafted in `assets/` (outreach, review + comparison pages, swipe kit, side agreement)
 - **Phase 3 — Daily routine:** ✅ SOP in `daily-routine.md`; scheduled task created (see below)
 - **Models:** ✅ `revenue-model.md`, `paid-advertising-model.md`, `blended-scenario.md`
