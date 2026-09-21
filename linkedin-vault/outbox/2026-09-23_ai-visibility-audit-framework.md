@@ -68,6 +68,10 @@ What would you add to this framework? Running it differently?
 #SEO #AISearch #SearchEngineOptimization #GEO #DigitalMarketing
 
 ---
+## First comment (post within 5 minutes)
+We built a free version of the prompt set we use for Step 1 — 20 category-specific prompts covering unbranded, comparison, and solution-aware queries. Happy to share if useful. Also, the source data: brands cited in AI responses see a 38% lift in organic clicks (Ahrefs) and AI referral traffic converts at 23x traditional search.
+
+---
 ## Alternate hooks (not used)
 1. "Your brand ranks #1 on Google and gets zero mentions in AI answers. Here's how to find out — and fix it."
 2. "The audit framework we built after finding out 73% of page-one brands are invisible to AI search."

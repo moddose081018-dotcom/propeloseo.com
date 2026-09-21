@@ -43,6 +43,10 @@ If you're still leading client reports with DA, what's the argument for keeping 
 #SEO #AISearch #DomainAuthority #GEO #DigitalMarketing
 
 ---
+## First comment (post within 5 minutes)
+Sources: Surfer's 5M citation study (20K prompts, 3 months of AI Tracker data), Ahrefs' 75K-brand analysis on mentions vs backlinks, and Wellows' E-E-A-T correlation study. Links below. To be fair — the 129K-domain SE Ranking dataset does show sites with 350K+ referring domains getting more ChatGPT citations. But that's raw domain size, not DA as a predictive metric. Different thing entirely.
+
+---
 ## Alternate hooks (not used)
 1. "We've been optimizing for the wrong metric. Domain authority correlates close to zero with AI citation probability."
 2. "DA 90 sites getting zero AI citations while DA 30 sites get cited constantly. The data explains why."

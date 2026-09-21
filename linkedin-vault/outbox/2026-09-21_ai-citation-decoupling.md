@@ -37,6 +37,10 @@ What are you seeing in your AI visibility data? Are your top-ranking pages getti
 #SEO #AISearch #SearchEngineOptimization #GEO #DigitalMarketing
 
 ---
+## First comment (post within 5 minutes)
+For context — the Ahrefs study covered 863K keywords. The 5W Research report tracked the overlap collapsing from 70% to under 20%. And the cross-platform data comes from a 680M citation analysis across six independent studies. Links to each in the comments if you want the raw data.
+
+---
 ## Alternate hooks (not used)
 1. "In July 2025, 76% of AI Overview citations came from Google's top 10. That number just hit 38%."
 2. "We pulled citation data across 863,000 keywords. Your Google rankings predict almost nothing about your AI visibility."
