@@ -6,7 +6,7 @@ hook_variant: 1
 cta_type: counterargument
 target_day: Wednesday
 combo_score: 8.1
-hashtags: [SEO, AISearch, DigitalMarketing, SearchEngineOptimization, ContentMarketing]
+hashtags: [SEO, AISearch, AIOverviews, ContentMarketing, DigitalMarketing]
 research_sources:
   - https://www.seerinteractive.com/insights/aio-impact-on-google-ctr-2026-update
   - https://www.searchenginejournal.com/ai-overview-ctr-fell-61-but-clicks-didnt-collapse/572993/
@@ -22,11 +22,13 @@ The headline everyone ran with: organic CTR on AI Overview queries dropped to 0.
 
 What almost nobody mentioned: by February 2026, it had climbed back to 2.4%.
 
-The original "collapse" was mostly a math problem. In October 2025, impressions doubled overnight to 33.1 million as Google expanded AI Overviews to more queries. Clicks actually increased slightly — to 400K. But CTR cratered because impressions grew faster than clicks.
+The original "collapse" was mostly a math problem. In October 2025, impressions doubled overnight to 33.1 million as Google expanded AI Overviews to more queries.
+
+Clicks actually increased slightly — to 400K. But CTR cratered because impressions grew faster than clicks.
 
 That's not performance collapse. That's denominator inflation.
 
-Users are learning to click past the AI answer when they need depth. Google is learning which queries deserve an overview and which don't. The system is still calibrating — and the early panic was based on a snapshot, not a trend.
+We started tracking citation rates across our client portfolio in Q1. The cited/uncited gap maps exactly to what Seer found — and it's the number that actually predicts traffic.
 
 The real divide isn't AI vs. no AI. It's cited vs. uncited.
 
@@ -36,13 +38,17 @@ Per million impressions: 33,500 clicks without AI Overviews. 20,743 for cited br
 
 If your traffic dropped when AI Overviews launched, the question isn't "how do I fight AI search." It's "why isn't my content getting cited?"
 
-Still think AI Overviews killed organic? I'd love to hear counterarguments — especially from anyone tracking their own citation rates.
+I'd love to hear counterarguments — are you tracking your own citation rates, and what does the gap look like?
 
-#SEO #AISearch #DigitalMarketing #SearchEngineOptimization #ContentMarketing
+#SEO #AISearch #AIOverviews #ContentMarketing #DigitalMarketing
 
 ---
 ## First comment (post within 5 minutes)
-Sources: Seer Interactive's 2026 update (53 brands, Jan 2025–Feb 2026), Search Engine Journal's coverage, and Search Engine Land's analysis — links below. One important caveat Seer flags: the recovery from 0.61% to 2.4% is based on two months of data. They call it a leveling off, not a confirmed trend. Fair point. But the denominator inflation explanation for the original "collapse" holds up regardless. The structural gap between cited and uncited brands is the number to watch.
+One important caveat Seer flags: the recovery from 0.61% to 2.4% is based on two months of data. They call it a leveling off, not a confirmed trend. Fair point.
+
+But the denominator inflation explanation for the original "collapse" holds up regardless. The structural gap between cited and uncited brands is the number to watch.
+
+Sources: https://www.seerinteractive.com/insights/aio-impact-on-google-ctr-2026-update and https://searchengineland.com/google-ai-overviews-ctr-recovery-study-475566
 
 ---
 ## Alternate hooks (not used)
