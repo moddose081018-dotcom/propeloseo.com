@@ -7,3 +7,4 @@ Format: `YYYY-MM-DD | [topic slug] | [format]`
 ---
 
 <!-- Add entries below. Newest first. -->
+2026-09-21 | ai-citation-decoupling | text
