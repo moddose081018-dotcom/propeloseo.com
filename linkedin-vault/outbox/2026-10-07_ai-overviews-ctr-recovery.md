@@ -1,5 +1,5 @@
 ---
-date: 2026-10-08
+date: 2026-10-07
 topic: ai-overviews-ctr-recovery
 format: text
 hook_variant: 1

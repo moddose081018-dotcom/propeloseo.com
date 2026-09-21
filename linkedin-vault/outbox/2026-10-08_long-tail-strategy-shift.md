@@ -1,5 +1,5 @@
 ---
-date: 2026-10-09
+date: 2026-10-08
 topic: long-tail-strategy-shift
 format: text
 hook_variant: 2

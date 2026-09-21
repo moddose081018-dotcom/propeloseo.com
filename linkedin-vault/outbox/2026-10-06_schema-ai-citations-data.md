@@ -1,5 +1,5 @@
 ---
-date: 2026-10-07
+date: 2026-10-06
 topic: schema-ai-citations-data
 format: document
 hook_variant: 3
