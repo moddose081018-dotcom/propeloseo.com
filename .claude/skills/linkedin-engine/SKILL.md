@@ -16,6 +16,7 @@ A self-improving content system that writes LinkedIn posts optimized for comment
 - **No engagement bait.** LinkedIn penalizes "Type 1 if you agree" patterns by −60% reach. Use genuine conversation starters only.
 - **No generic AI voice.** Every post must sound like Shane — direct, honest, willing to say what doesn't work. Read `linkedin-vault/voice.md` before writing.
 - **Keep all state in the repo.** Performance data, posted content, and learnings live in `linkedin-vault/`.
+- **Mandatory two-agent review.** Every draft must pass through a writer → reviewer → revision loop before being saved to outbox. The reviewer agent checks every playbook rule. No draft ships without this. See "Two-Agent Review Gate" below.
 
 ---
 
@@ -81,7 +82,10 @@ Run the complete pipeline: topic → research → write → quality gate → dra
    - Is it the right length for the format?
    If anything fails, fix it before presenting.
 
-7. **Save draft.**
+7. **Two-agent review gate.**
+   Spawn a reviewer agent (see "Two-Agent Review Gate" below). The reviewer audits the draft against every playbook rule and returns a verdict with specific fixes. The writer revises and resubmits. This loop continues until the reviewer returns APPROVED. Minimum 1 review round, no maximum.
+
+8. **Save draft.**
    Write the approved post to `linkedin-vault/outbox/YYYY-MM-DD_topic-slug.md` with metadata header.
    Append the topic to `topics-used.md`.
 
@@ -214,6 +218,85 @@ These updates are written directly into the vault files — the system literally
 | Thursday | 10 AM–12 PM | Case study / story | High |
 
 Personal profile posts generate 5x more engagement than company page posts. Always post from Shane's personal profile.
+
+---
+
+## Two-Agent Review Gate (non-negotiable)
+
+Every post must pass through a writer–reviewer loop before being saved to outbox. No exceptions.
+
+### How it works
+
+1. **Writer** generates the full draft (hook, body, CTA, first comment, hashtags, metadata).
+2. **Writer spawns a Reviewer agent** with the draft text and the playbook rules below.
+3. **Reviewer** audits the draft and returns one of:
+   - `APPROVED` — draft passes all checks. Include one sentence on what makes this post strong.
+   - `REVISE` — draft fails one or more checks. Return a numbered list of specific fixes required.
+4. If `REVISE`: Writer applies every fix, then sends the revised draft back to the Reviewer.
+5. Loop continues until Reviewer returns `APPROVED`.
+6. Only an `APPROVED` draft gets saved to `outbox/`.
+
+### Reviewer Checklist (check every item)
+
+**Playbook compliance:**
+- [ ] Format matches the target day (Tue=document, Wed=text, Thu=story)
+- [ ] Uses a Top 15 combo from `engagement-playbook.md` with score 7.0+
+- [ ] Text post is 1,300–1,900 characters (count it)
+- [ ] Carousel has 6–10 slides, one idea per slide
+- [ ] CTA ends with a direct question (+77% comments rule)
+- [ ] CTA is genuine conversation, NOT engagement bait (−60% reach penalty)
+- [ ] First-comment section is present and substantive
+- [ ] No external links in post body (links go in first comment only)
+- [ ] 3–5 hashtags: 1 broad, 1 mid, 1 topic-specific
+- [ ] Hook is under 200 characters
+- [ ] 3 hook variations provided
+
+**Voice compliance (read `linkedin-vault/voice.md`):**
+- [ ] Sounds like Shane, not generic AI
+- [ ] No banned phrases: "game-changer," "revolutionary," "In today's landscape," "Let me share," "I'm excited to announce," "Hot take:"
+- [ ] No emoji in body text
+- [ ] Short paragraphs (1–3 sentences max per block)
+- [ ] Operator tone — writing from inside the work, not above it
+- [ ] Uses "I" and "we," never "one should consider"
+
+**Data integrity:**
+- [ ] Every statistic is sourced (URL in research_sources)
+- [ ] No fabricated data — all claims verifiable or marked `[unverified]`
+- [ ] At least 2 hard statistics from web research
+
+**Scroll-stop test:**
+- [ ] Would YOU stop scrolling for this hook? (If no, fail it.)
+- [ ] Does the hook create an information gap?
+- [ ] Is the post saying something the audience hasn't heard this week?
+
+**Differentiation:**
+- [ ] Topic not in `topics-used.md` within the last 30 days
+- [ ] Hook is not a copy of `hooks-that-worked.md` (riff on them, don't repeat)
+- [ ] Post adds a perspective or data point not in the obvious first-page Google results
+
+### Reviewer Agent Prompt Template
+
+When spawning the reviewer, use this prompt structure:
+
+```
+You are the PropeloSEO LinkedIn Editor. Your job is to ruthlessly audit this draft against the playbook. You are NOT the writer — you are the quality gate. Be specific and demanding. Vague "looks good" approvals are a failure of your role.
+
+Read these files first:
+- linkedin-vault/voice.md
+- linkedin-vault/engagement-playbook.md
+- linkedin-vault/hooks-that-worked.md
+- linkedin-vault/topics-used.md
+
+Then audit this draft against every item on the Reviewer Checklist in the linkedin-engine skill.
+
+Return either:
+APPROVED — [one sentence on what makes this strong]
+or
+REVISE — [numbered list of every specific fix required, with the exact playbook rule each violates]
+
+Draft to review:
+[PASTE FULL DRAFT HERE]
+```
 
 ---
 
