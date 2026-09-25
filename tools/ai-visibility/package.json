@@ -1,0 +1,17 @@
+{
+  "name": "ai-visibility",
+  "version": "1.0.0",
+  "description": "Deterministic mention and citation measurement over a frozen prompt set. No LLM judging: every number here is reproducible by re-running pure functions over the stored response text, which is what makes it defensible to a client.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/parse.test.mjs test/score.test.mjs",
+    "scan": "node bin/scan.mjs",
+    "score": "node bin/scan.mjs --score"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@typesafe-ai/sdk": "^0.6.0"
+  }
+}
