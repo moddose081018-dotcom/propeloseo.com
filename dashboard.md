@@ -18,12 +18,15 @@ member). See `strategy.md`.
 | Stage | Count |
 |---|---|
 | Total prospects | 94 |
-| Contacted | 0 |
+| Outreach drafted (awaiting Shane to send) | 10 |
+| Contacted (sent) | 0 |
 | Replied | 0 |
 | Interested | 0 |
 | Active partners | 0 |
 | Members referred | 0 |
 | Dead / declined | 0 |
+
+*Batch 1 drafts (top 10 by fit) are in `outbox/2026-09-25/` — nothing sent yet. "Contacted" moves once Shane sends and logs it in `inbox/replies.md`.*
 
 ## Revenue (live vs model)
 | | Live | Model target (base) |
