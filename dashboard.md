@@ -18,7 +18,7 @@ member). See `strategy.md`.
 | Stage | Count |
 |---|---|
 | Total prospects | 94 |
-| Outreach drafted (awaiting Shane to send) | 10 |
+| Outreach drafted (awaiting Shane to send) | 20 |
 | Contacted (sent) | 0 |
 | Replied | 0 |
 | Interested | 0 |
@@ -26,7 +26,7 @@ member). See `strategy.md`.
 | Members referred | 0 |
 | Dead / declined | 0 |
 
-*Batch 1 drafts (top 10 by fit) are in `outbox/2026-09-25/` — nothing sent yet. "Contacted" moves once Shane sends and logs it in `inbox/replies.md`.*
+*Batch 1 (top 10 by fit) in `outbox/2026-09-25/`; batch 2 (prospects 11–20) in `outbox/2026-09-25-batch2/` — nothing sent yet. "Contacted" moves once Shane sends and logs it in `inbox/replies.md`.*
 
 ## Revenue (live vs model)
 | | Live | Model target (base) |
