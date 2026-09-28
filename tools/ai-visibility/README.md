@@ -19,9 +19,12 @@ tools/ai-visibility/
 ## Run
 
 ```bash
-node --test tools/ai-visibility/test/     # 9 tests, no dependencies
-node tools/ai-visibility/bin/scan.mjs     # report
-node tools/ai-visibility/bin/scan.mjs --json > report.json
+cd tools/ai-visibility
+npm ci                              # installs @typesafe-ai/sdk (needed by score tests)
+npm test                            # parse + score tests
+node bin/scan.mjs                   # stage-one report
+node bin/scan.mjs --json > report.json
+TYPESAFE_API_KEY=... node bin/scan.mjs --score   # adds stage-two scoring
 ```
 
 ## Fetch and parse are separate on purpose

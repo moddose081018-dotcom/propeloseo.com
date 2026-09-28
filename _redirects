@@ -1,0 +1,9 @@
+# Old capitalised page URLs -> lowercase (301)
+/Contact          /contact/  301
+/Contact/         /contact/  301
+/Privacy          /privacy/  301
+/Privacy/         /privacy/  301
+/Refunds          /refunds/  301
+/Refunds/         /refunds/  301
+/Termsofservice   /terms/    301
+/Termsofservice/  /terms/    301

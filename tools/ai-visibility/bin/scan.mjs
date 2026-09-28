@@ -40,6 +40,10 @@ const runs = files.map((f) => {
 const summary = rollup(runs)
 
 if (withScore) {
+  if (!process.env.TYPESAFE_API_KEY?.trim()) {
+    console.error('--score needs TYPESAFE_API_KEY set in the environment.')
+    process.exit(1)
+  }
   const { scoreAll, scoreSummary } = await import('../src/score.mjs')
   console.error('Scoring with TypeSafe Jev...')
   const scored = await scoreAll(runs, brand)
