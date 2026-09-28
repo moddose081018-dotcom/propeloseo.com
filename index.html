@@ -235,7 +235,7 @@
         .price .btn { margin-top: auto; }
         .price-note { max-width: 1200px; margin: 24px auto 0; text-align: center; font-size: 14px; color: var(--text-light); }
 
-        /* ── Guarantee + founding ── */
+        /* ── Guarantee ── */
         .assure { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; max-width: 1300px; margin: 0 auto; }
         .assure-card { border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 30px; display: flex; flex-direction: column; gap: 12px; }
         .assure-card h3 { display: flex; align-items: center; gap: 11px; font-size: 19px; font-weight: 700; letter-spacing: -0.02em; }
@@ -243,9 +243,6 @@
         .assure-card.dark { background: var(--bg-dark); border-color: var(--bg-dark); }
         .assure-card.dark h3 { color: var(--text-inv); font-size: 21px; }
         .assure-card.dark p { color: var(--text-inv-mid); }
-        .founding-tags { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-        .founding-tags .k { font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; color: var(--gold-light); }
-        .founding-tags .seats { padding: 3px 10px; border-radius: 999px; background: rgba(251,191,36,0.14); border: 1px solid rgba(251,191,36,0.3); font-size: 11px; font-weight: 600; color: var(--gold-light); }
 
         /* ── FAQ ── */
         .faq-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 40px; max-width: 1280px; margin: 0 auto; }
@@ -340,7 +337,6 @@
         }
     }
     </script>
-    <!-- TODO(pricing $3,000/mo): JSON-LD FAQ: says agencies start at $2,000/mo; Sprint now costs more. Rewrite answer. -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -357,7 +353,7 @@
             { "@type": "Question", "name": "How do Growth Credits work?", "acceptedAnswer": { "@type": "Answer", "text": "You receive one Growth Credit per month. Each credit redeems for one Growth Pack. You can hold a maximum of three credits at a time, and each credit expires individually 90 days after issue." } },
             { "@type": "Question", "name": "Can I cancel at any time?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. There is no minimum commitment and no cancellation friction. You keep everything delivered to date and have 30 days to redeem any remaining Growth Credits." } },
             { "@type": "Question", "name": "Do you guarantee rankings or traffic?", "acceptedAnswer": { "@type": "Answer", "text": "No. Rankings, traffic and revenue depend on variables outside any SEO provider's control. We guarantee the delivery of your Growth Pack on time and as specified." } },
-            { "@type": "Question", "name": "How is this different from AI SEO agencies?", "acceptedAnswer": { "@type": "Answer", "text": "Most AI SEO agencies start at $2,000 per month for managed digital marketing. This service is productized: a fixed monthly fee, one deliverable, published limits." } }
+            { "@type": "Question", "name": "How is this different from AI SEO agencies?", "acceptedAnswer": { "@type": "Answer", "text": "Most AI SEO agencies sell open-ended retainers with vague deliverables. The Sprint is productized: a fixed monthly fee, scoped deliverables, published limits, and a written progress report at day 90." } }
         ]
     }
     </script>
@@ -393,8 +389,7 @@
             <div class="hero-meta">
                 <span class="ok"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Cancel anytime</span>
                 <span class="sep"></span>
-                <!-- TODO(pricing $3,000/mo): At $3,000/mo this reads as a retainer. Rewrite. -->
-                <span class="note">A subscription, not a retainer</span>
+                <span class="note">Cancel anytime, no lock-in</span>
             </div>
             <div class="hero-cta">
                 <a class="btn btn-primary" href="#pricing">Start the 90-Day Sprint</a>
@@ -510,9 +505,8 @@
             </div>
             <div class="card">
                 <span class="icon-box"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6.5c0-1.9-2.2-3-5-3s-5 1.1-5 3 2.2 2.7 5 3.3 5 1.4 5 3.4-2.2 3.3-5 3.3-5-1.4-5-3.3"/></svg></span>
-                <!-- TODO(pricing $3,000/mo): Argues against $2,000+ retainers; Sprint now costs $3,000/mo. Rewrite this card. -->
-                <h3>Managed SEO starts at $2,000+</h3>
-                <p>Full-service retainers are right for some businesses and overkill for many. A small business should be able to buy real SEO work without a five-figure commitment to a digital marketing agency.</p>
+                <h3>Retainers hide what you pay for</h3>
+                <p>Open-ended retainers bundle hours, meetings and reports into one number. You should know exactly what each month buys, what gets delivered, and when.</p>
             </div>
             <div class="card">
                 <span class="icon-box blue"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a14 14 0 0 0 0 18M12 3a14 14 0 0 1 0 18M3.5 9h17M3.5 15h17"/></svg></span>
@@ -630,8 +624,7 @@
         <div class="section-head">
             <span class="kicker">The Propelo Evidence Engine</span>
             <h2>Professional data in. Publish-ready asset out.</h2>
-            <!-- TODO(pricing $3,000/mo): "Ten times more" no longer true at $3,000/mo. -->
-            <p>Every Growth Pack is built from the same professional SEO tools used by agencies charging ten times more.</p>
+            <p>Every Growth Pack is built from the same professional SEO tools used by the largest SEO agencies.</p>
         </div>
         <div class="engine">
             <div class="engine-in">
@@ -711,8 +704,7 @@
                 <span class="guide-num">04</span>
                 <div>
                     <h3>Is the scope honest about what it excludes?</h3>
-                    <!-- TODO(pricing $3,000/mo): References $97; rewrite for new price. -->
-                    <p>We do not do link building, pay-per-click, or full-service digital marketing. Those are separate disciplines with separate budgets, and a provider claiming all of them for $97 is not being straight with you.</p>
+                    <p>We do not do link building, pay-per-click, or full-service digital marketing. Those are separate disciplines with separate budgets, and a provider claiming to do all of them under one fee is not being straight with you.</p>
                 </div>
             </div>
             <div class="guide-row">
@@ -770,7 +762,7 @@
                     <li><svg class="tick" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>One website, 500-URL crawl, 50 keywords</li>
                 </ul>
                 <!-- TODO(pricing $3,000/mo): Point to Stripe payment link for $3,000/mo subscription. -->
-                <a class="btn btn-primary btn-block" href="#founding">Start the Sprint</a>
+                <a class="btn btn-primary btn-block" href="/contact/">Start the Sprint</a>
             </div>
             <div class="price" id="audit">
                 <div>
@@ -789,12 +781,10 @@
                 <a class="btn btn-ghost btn-block" href="/contact/">Request Your Audit</a>
             </div>
         </div>
-        <!-- TODO(pricing $3,000/mo): Retainer ($2,000+) is now cheaper than the Sprint. Reprice, drop or reword. -->
-        <p class="price-note">Need managed implementation? Managed SEO retainers start at $2,000/mo with a separate qualification process.</p>
-    </div>
+            </div>
 </section>
 
-<section class="section" id="founding" style="padding-top: 0;">
+<section class="section" id="guarantee" style="padding-top: 0;">
     <div class="wrap">
         <div class="assure">
             <div class="assure-card">
@@ -802,14 +792,10 @@
                 <p>Your first Quick-Win Pack &mdash; including one eligible fix, implemented &mdash; arrives within five business days of completed onboarding, required access and your written approval. If it is late or materially incomplete, your first month is refunded. Rankings, traffic and revenue depend on variables outside our control and are never guaranteed.</p>
             </div>
             <div class="assure-card dark">
-                <div class="founding-tags">
-                    <span class="k">Founding cohort</span>
-                    <span class="seats">10 seats</span>
-                </div>
-                <h3>Limited to ten members</h3>
-                <!-- TODO(pricing $3,000/mo): Founding cohort promised $97 lock. Decide what happens to existing/future founding members. -->
-                <p>I personally QA every Growth Pack before it reaches you. The founding cohort locks in the $97 price for as long as you stay subscribed. This is capacity-true scarcity, not a countdown timer.</p>
-                <a class="btn btn-primary btn-block" href="/contact/">Apply for a Founding Spot</a>
+                <h3>Personally reviewed</h3>
+                <p>I personally QA every Growth Pack before it reaches you. Nothing ships unreviewed, and every recommendation is traceable to the data behind it.</p>
+                <!-- TODO(pricing $3,000/mo): Point to Stripe payment link for $3,000/mo subscription. -->
+                <a class="btn btn-primary btn-block" href="/contact/">Start the Sprint</a>
             </div>
         </div>
     </div>
@@ -833,8 +819,7 @@
             <div class="faq-item"><h3>How do Growth Credits work?</h3><p>You receive one Growth Credit per month. Each credit redeems for one Growth Pack. You can hold a maximum of three credits at a time, and each credit expires individually 90 days after issue. Normal redemption is one per month; additional redemptions are subject to capacity. If you cancel, you have 30 days to redeem any remaining credits.</p></div>
             <div class="faq-item"><h3>Can I cancel at any time?</h3><p>Yes. There is no minimum commitment and no cancellation friction. If you cancel, you keep everything delivered to date and have 30 days to redeem any remaining Growth Credits. We earn your continued membership through visible, accumulating value.</p></div>
             <div class="faq-item"><h3>Do you guarantee rankings or traffic?</h3><p>No. Rankings, traffic and revenue depend on variables outside any SEO provider's control. We guarantee the delivery of your Growth Pack on time and as specified. The 90-Day Progress Report shows your baseline, work delivered, observed movement, and &mdash; critically &mdash; what can and cannot reasonably be attributed to the work.</p></div>
-            <!-- TODO(pricing $3,000/mo): FAQ: agencies-start-at-$2,000 comparison no longer works. Rewrite. -->
-            <div class="faq-item"><h3>How is this different from AI SEO agencies?</h3><p>Most AI SEO agencies start at $2,000 per month for managed digital marketing. This service is productized: a fixed monthly fee, one deliverable, published limits. Choosing the right AI SEO agency is a different decision from choosing a subscription &mdash; and if you need full-service implementation, managed SEO is a separate engagement with a separate qualification process.</p></div>
+            <div class="faq-item"><h3>How is this different from AI SEO agencies?</h3><p>Most AI SEO agencies sell open-ended retainers with vague deliverables. The Sprint is productized: a fixed monthly fee, scoped deliverables, published limits, and a written 90-Day Progress Report that separates what the work caused from what it did not.</p></div>
         </div>
     </div>
 </section>
@@ -845,10 +830,10 @@
         <p>Start the 90-Day Visibility Sprint at $3,000/mo. Real data, a real fix in month one, and clear progress you can measure across both traditional search and modern AI search.</p>
         <div class="final-cta">
             <!-- TODO(pricing $3,000/mo): Point to Stripe payment link. -->
-            <a class="btn btn-primary" href="#founding">Start the Sprint &mdash; $3,000/mo</a>
+            <a class="btn btn-primary" href="/contact/">Start the Sprint &mdash; $3,000/mo</a>
             <a class="btn btn-ghost-inv" href="#audit">$197 AI Visibility Audit</a>
         </div>
-        <small>Founding cohort: limited to ten members. Every pack personally QA'd before delivery.</small>
+        <small>Every pack personally QA'd before delivery.</small>
     </div>
 </section>
 
