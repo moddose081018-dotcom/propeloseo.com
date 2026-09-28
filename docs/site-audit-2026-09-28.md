@@ -59,7 +59,7 @@ Early signs that this works:
 | 1 | Backlink profile is 100% spam anchors | 91/91 referring domains use 2 PBN-sale anchors, spam score 51–64, first seen Aug–Sep 2026 | Submit a domain-level disavow for all 91 domains. Export the backlink list monthly. Record it as suspected negative SEO. | sitewide | P0 | 1 | 0.85 | Shane |
 | 2 | AI reference page lists retired offers and prices | `/ai-instructions/`: "Site Health from $97/mo", "Natural Linking $599", "AI Visibility Audit $197", "Deep Dive $1,497" | Rewrite the offer section to: Free Check → $1,497 Blueprint → $3,000/mo Sprint → Retainer. Update `/llms.txt` the same way. | /ai-instructions/, /llms.txt | P0 | 1 | 0.95 | Dev |
 | 3 | Ketamine page sells the old retainer ladder | `/ketamine-clinic-seo/`: "Growth Retainer ($2,000/mo)", "Authority Retainer ($4,997/mo)", "$197 AI Visibility Audit" | Replace its offer block with the shared four-step block that the other hubs use | /ketamine-clinic-seo/ | P0 | 1 | 0.95 | Dev |
-| 4 | Retainer price is inconsistent | "from $3,000" in the homepage FAQ and titles, but "$4,000 to $5,000 plus" on /services/ and /authority-retainer/ | Pick one statement, for example "from $3,000; most scopes $4,000–$5,000", and use it everywhere | /, /services/, /authority-retainer/ | P1 | 1 | 0.9 | Shane |
+| 4 | ~~Retainer price is inconsistent~~ **Withdrawn 2026-09-28** | On a full read, every page says the same thing: "from $3,000 a month", with larger brands scoping to "$4,000 to $5,000 plus" (/services/, /authority-retainer/, llms.txt). The crawl had matched the $4,000–$5,000 figure without its context. | No change needed | — | — | — | — | — |
 | 5 | Legacy offers still indexed and linked sitewide | /site-health/ (164 words), /natural-linking/ (165 words), and "free Free" in /site-health/'s meta | Remove them from the footer "Other services". If existing clients still use them, add `noindex`. Keep the URLs live (reversible). | /site-health/, /natural-linking/ | P1 | 1 | 0.8 | Dev |
 | 6 | No terms or refund page for a $9,000 service | /terms/ and /refunds/ return 404. Only /privacy-policy/ exists. | Publish Terms of Service and a Refund policy that match the 30-Day Implementation Guarantee. Link them in the footer and on /services/. | new | P1 | 2 | 0.8 | Shane (legal) |
 | 7 | Links point to a redirected URL | /psilocybin-seo/, /psilocybin-service-centers/ and /integration-therapists/ link to `/psilocybin-seo/ketamine-clinics/`, which 301s | Change those links to `/ketamine-clinic-seo/` | 3 pages | P1 | 1 | 1.0 | Dev |
@@ -262,7 +262,7 @@ No other collisions were found. Titles and H1s are distinct.
 | /psilocybin-seo/integration-therapists/ | 200 | spoke | Links to a 301 | Fix the ketamine link | P1 |
 | /psilocybin-seo/psychedelic-marketing-agency/ | 200 | spoke | Broken meta description; no brand suffix | Rewrite the description; add "\| PropeloSEO" | P2 |
 | /psilocybin-seo/psilocybin-seo-challenges/ | 200 | guide / support | Ranks #2 for "psilocybin seo" | Link to the hub (§7) | P1 |
-| /services/ | 200 | pricing / money | Retainer "$4,000–$5,000 plus" vs "from $3,000" | Unify the retainer wording | P1 |
+| /services/ | 200 | pricing / money | Retainer wording consistent (finding 4 withdrawn) | NO MATERIAL CHANGE | — |
 | /ai-search-optimization-services/ | 200 | service | 2 body links | Receive links from the AI guides | P2 |
 | /get-cited-by-llms/ | 200 | guide | 2 body links | Link to /ai-search-optimization-services/ | P1 |
 | /generative-engine-optimization-tools/ | 200 | guide | Ranks #89; 2 body links | Link to the service page | P2 |
@@ -273,7 +273,7 @@ No other collisions were found. Titles and H1s are distinct.
 | /intake/ | 200 | conversion | — | NO MATERIAL CHANGE | — |
 | /deep-dive-audit/ | 200 | offer | Product schema on a service | Change to Service + Offer | P2 |
 | /growth-retainer/ | 200 | offer (Sprint) | Slug doesn't match the offer | Leave (HYPOTHESIS: low value) | P3 |
-| /authority-retainer/ | 200 | offer (Retainer) | $4,000/$5,000 vs "from $3,000" | Unify | P1 |
+| /authority-retainer/ | 200 | offer (Retainer) | Consistent (finding 4 withdrawn) | NO MATERIAL CHANGE | — |
 | /contact/ | 200 | contact | — | NO MATERIAL CHANGE | — |
 | /privacy-policy/ | 200 | legal | No body links | NO MATERIAL CHANGE | — |
 | /med-spa-seo/ | 200 | off-niche service | — | Keep; review with GSC at 90 days | P3 |
@@ -313,7 +313,7 @@ No other collisions were found. Titles and H1s are distinct.
 
 ## 16. 30 / 60 / 90 day plan
 
-- **Days 1–30:** disavow; fix the prices on /ai-instructions/, /llms.txt and /ketamine-clinic-seo/; unify the retainer wording; noindex /site-health/ and /natural-linking/; publish terms and refunds; fix the redirected links and add the contextual links; fix /consulting/ metadata and the typos.
+- **Days 1–30:** disavow; fix the prices on /ai-instructions/, /llms.txt and /ketamine-clinic-seo/; noindex /site-health/ and /natural-linking/; publish terms and refunds; fix the redirected links and add the contextual links; fix /consulting/ metadata and the typos.
 - **Days 31–60:** add the peptide clinic vs RUO section; add `sameAs` and the location line; change the deep-dive schema; publish one anonymised case summary; collect the first reviews.
 - **Days 61–90:** pitch inclusion to Onely and other healthcare-GEO roundups; get podcast guest spots in psychedelic and longevity media; review the off-niche pages with GSC; re-run the AI test set to compare.
 
@@ -322,10 +322,9 @@ No other collisions were found. Titles and H1s are distinct.
 ## Final execution summary
 
 ### DO THESE FIRST
-1. Disavow the 91 spam domains.
+1. Disavow the 90 spam domains (done 2026-09-28).
 2. Correct the prices on /ai-instructions/, /llms.txt and /ketamine-clinic-seo/.
-3. Unify the retainer price wording.
-4. Publish Terms and Refund pages.
+3. Publish Terms and Refund pages.
 
 ### DO THESE NEXT
 5. Fix the 3 links to the redirected URL and add the §7 contextual links.
