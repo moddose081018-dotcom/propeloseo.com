@@ -38,7 +38,7 @@ For audit work that does not specifically need Frog, the Ahrefs and SE Ranking s
 | Licence | Paid (will not work on free version) |
 | Storage mode | Database (`File > Settings > Storage Mode`) |
 | Node.js | Required for Streamable HTTP mode; optional but recommended for STDIO |
-| Licence expiry | 31 Aug 2026 (username: `moddose`) |
+| Licence expiry | 9 Sep 2027 (username: `moddose`) |
 
 ## Architecture
 
