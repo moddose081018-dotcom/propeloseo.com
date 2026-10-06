@@ -6,7 +6,7 @@
 
 **By Shane Hellmrich · PropeloSEO**
 
-# A Client's Site Lost Half Its Clicks in Three Months. The Problem Wasn't Missing Content. It Was Data Nobody Had Read.
+# A Client's Site Lost More Than Half Its Google Clicks. The Problem Wasn't Missing Content. It Was Data Nobody Had Read.
 
 *The 11 prompts I now run before touching a single page.*
 

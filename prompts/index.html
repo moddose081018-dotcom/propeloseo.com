@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI SEO Prompt Playbook: 11 Prompts for Search Console Data - PropeloSEO</title>
+    <meta name="description" content="11 AI prompts that read your Google Search Console data before you rewrite anything. Built from a real client traffic recovery. $27.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- noindex until checkout is live; remove at launch and add to sitemap.xml -->
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://propeloseo.com/prompts/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+    <style>
+        :root {
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --bg-dark: #0f172a;
+            --text: #1e293b;
+            --text-mid: #475569;
+            --text-light: #64748b;
+            --text-inv: #f8fafc;
+            --text-inv-mid: #94a3b8;
+            --border: #e2e8f0;
+            --border-strong: #cbd5e1;
+            --action: #2563eb;
+            --action-hover: #1d4ed8;
+            --action-soft: #eff6ff;
+            --accent: #0ea5e9;
+            --accent-light: #38bdf8;
+            --success: #059669;
+            --gold: #d97706;
+            --radius-lg: 16px;
+            --radius-md: 10px;
+            --radius-sm: 6px;
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+            --measure: 780px;
+            --sans: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+            --mono: "IBM Plex Mono", "SF Mono", ui-monospace, monospace;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: var(--sans); background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        a { color: var(--action); text-decoration: none; transition: color 0.2s; }
+        a:hover { color: var(--action-hover); }
+        img { max-width: 100%; height: auto; display: block; }
+        h1, h2, h3 { line-height: 1.15; letter-spacing: -0.028em; }
+        .wrap { max-width: 1600px; margin: 0 auto; padding: 0 24px; }
+        .kicker { font-family: var(--mono); font-size: 11.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-light); }
+
+        /* ── Header ── */
+        .site-header { background: var(--bg-dark); border-bottom: 1px solid rgba(148,163,184,0.14); position: sticky; top: 0; z-index: 100; }
+        .site-header .wrap { display: flex; align-items: center; justify-content: space-between; height: 76px; }
+        .logo { display: flex; align-items: center; gap: 11px; font-size: 18px; font-weight: 700; letter-spacing: -0.025em; color: var(--text-inv); }
+        .logo:hover { color: #fff; }
+        .logo-mark { width: 32px; height: 32px; border-radius: 8px; background: var(--action); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .site-nav { display: flex; align-items: center; gap: 30px; }
+        .site-nav a { font-size: 14px; font-weight: 500; color: var(--text-inv-mid); }
+        .site-nav a:hover { color: var(--text-inv); }
+        .nav-cta { display: inline-flex; align-items: center; height: 40px; padding: 0 20px; border-radius: 7px; background: var(--action); color: #fff !important; font-size: 14px; font-weight: 600; }
+        .nav-cta:hover { background: var(--action-hover); }
+
+        /* ── Page hero ── */
+        .page-hero { background: var(--bg-dark); padding: 66px 0 58px; }
+        .page-hero .wrap { max-width: var(--measure); display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+        .page-hero h1 { font-size: clamp(30px, 4.4vw, 46px); font-weight: 700; letter-spacing: -0.035em; color: var(--text-inv); text-wrap: pretty; }
+        .page-hero p { font-size: clamp(15.5px, 1.8vw, 17px); line-height: 1.65; color: var(--text-inv-mid); text-wrap: pretty; }
+        .page-hero .updated { font-family: var(--mono); font-size: 12.5px; font-weight: 500; letter-spacing: 0.06em; color: var(--text-inv-mid); }
+
+        /* ── Document body ── */
+        .doc { max-width: var(--measure); margin: 0 auto; padding: 56px 24px 84px; }
+        .doc > h2 { font-size: clamp(21px, 2.6vw, 25px); font-weight: 700; margin: 44px 0 14px; padding-top: 30px; border-top: 1px solid var(--border); text-wrap: pretty; }
+        .doc > h2:first-child, .doc > .lede + h2 { margin-top: 0; padding-top: 0; border-top: none; }
+        .doc > .lede { font-size: 17px; line-height: 1.7; color: var(--text); margin-bottom: 36px; text-wrap: pretty; }
+        .doc h3 { font-size: 17.5px; font-weight: 600; letter-spacing: -0.02em; margin: 28px 0 10px; }
+        .doc p { font-size: 16px; line-height: 1.75; color: var(--text-mid); margin-bottom: 16px; }
+        .doc p:last-child { margin-bottom: 0; }
+        .doc strong { color: var(--text); font-weight: 600; }
+        .doc ul { list-style: none; display: flex; flex-direction: column; gap: 11px; margin: 0 0 22px; }
+        .doc li { position: relative; padding-left: 22px; font-size: 15.5px; line-height: 1.7; color: var(--text-mid); }
+        .doc li::before { content: ""; position: absolute; left: 3px; top: 10px; width: 6px; height: 6px; border-radius: 50%; background: var(--border-strong); }
+
+        /* ── Callouts ── */
+        .callout { background: var(--action-soft); border: 1px solid #dbeafe; border-left: 3px solid var(--action); border-radius: var(--radius-md); padding: 22px 24px; margin: 26px 0; }
+        .callout p { margin: 0; font-size: 15.5px; }
+        .callout.good { background: #ecfdf5; border-color: #bbf7d0; border-left-color: var(--success); }
+        .callout.good h3 { margin: 0 0 8px; font-size: 19px; font-weight: 700; color: #065f46; }
+
+        /* ── Card grid ── */
+        /* Cards are not prose, so above the reading measure they break out of the
+           column and use the room; the surrounding text stays at 780px. */
+        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; margin: 24px 0 28px; }
+        .card { border: 1px solid var(--border); border-radius: 14px; padding: 24px; background: var(--bg); }
+        .card h3 { font-size: 16.5px; font-weight: 600; letter-spacing: -0.015em; margin: 0 0 8px; }
+        .card p { font-size: 14.5px; line-height: 1.6; color: var(--text-light); margin: 0; }
+
+        /* ── Contact email ── */
+        .mailto { display: inline-block; max-width: 100%; font-family: var(--mono); font-size: clamp(15px, 4.2vw, 20px); font-weight: 600; color: var(--action); overflow-wrap: anywhere; }
+
+        /* ── Footer ── */
+        .site-footer { border-top: 1px solid var(--border); padding: 44px 0 32px; }
+        .footer-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 48px; flex-wrap: wrap; }
+        .footer-brand { display: flex; flex-direction: column; gap: 10px; max-width: 400px; }
+        .footer-brand .logo { color: var(--text); font-size: 16px; }
+        .footer-brand .logo:hover { color: var(--action); }
+        .footer-brand .logo-mark { width: 28px; height: 28px; border-radius: 7px; }
+        .footer-brand p { font-size: 14px; line-height: 1.6; color: var(--text-light); }
+        .footer-links { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; padding-top: 6px; }
+        .footer-links a { font-size: 14px; font-weight: 500; color: var(--text-light); }
+        .footer-links a:hover { color: var(--text); }
+        .footer-legal { border-top: 1px solid var(--border); margin-top: 28px; padding-top: 20px; font-size: 13px; color: #94a3b8; }
+
+        /* ── Responsive ── */
+        @media (min-width: 1180px) {
+            .cards { width: 1080px; margin-left: 50%; transform: translateX(-50%); }
+        }
+        @media (max-width: 900px) {
+            .site-nav a:not(.nav-cta) { display: none; }
+        }
+        @media (max-width: 760px) {
+            .page-hero { padding: 48px 0 42px; }
+            .doc { padding: 44px 24px 64px; }
+        }
+        @media (max-width: 560px) {
+            .wrap { padding: 0 20px; }
+            .doc { padding-left: 20px; padding-right: 20px; }
+        }
+    
+        .doc h1 { font-size: clamp(30px, 4.6vw, 48px); font-weight: 700; letter-spacing: -0.035em; color: var(--text-inv); }
+        .doc h2 { font-size: clamp(21px, 2.6vw, 26px); font-weight: 700; margin: 46px 0 14px; color: var(--text); text-wrap: pretty; }
+        .finding { border-left: 3px solid var(--action); padding: 4px 0 4px 18px; margin: 0 0 22px; }
+        .finding h3 { margin: 0 0 6px; }
+        .finding p { margin: 0; }
+        .stat { font-family: var(--mono); font-weight: 600; color: var(--text); }
+        .buy { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 28px; border-radius: 9px; background: var(--action); color: #fff !important; font-size: 17px; font-weight: 600; margin: 8px 0 28px; }
+        .buy:hover { background: var(--action-hover); }
+        .soft { display: inline-block; font-weight: 600; margin: 4px 0 24px; }
+        .tbl { width: 100%; border-collapse: collapse; margin: 18px 0 26px; font-size: 15px; }
+        .tbl th, .tbl td { text-align: left; vertical-align: top; padding: 11px 10px; border-bottom: 1px solid var(--border); }
+        .tbl th { font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-light); }
+        .tbl td:first-child { font-family: var(--mono); color: var(--text-light); width: 34px; }
+        .tbl td strong { display: block; color: var(--text); }
+        .tbl td span { color: var(--text-mid); }
+        .offer { border: 1px solid var(--border-strong); border-radius: var(--radius-lg); padding: 28px; margin: 34px 0; background: var(--bg-alt); }
+        .offer h2 { margin-top: 0; }
+        .price { font-size: 40px; font-weight: 700; color: var(--text); letter-spacing: -0.03em; }
+        .faq h3 { margin-top: 24px; }
+        .byline { font-family: var(--mono); font-size: 12.5px; color: var(--text-inv-mid); letter-spacing: 0.04em; }
+        .page-hero h1 { max-width: 900px; }
+        @media (max-width: 560px) { .tbl td:first-child { display: none; } .buy { width: 100%; } }
+    </style>
+</head>
+<body>
+<header class="site-header">
+    <div class="wrap">
+        <a class="logo" href="/">
+            <span class="logo-mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15l7-7 7 7"/></svg></span>
+            PropeloSEO
+        </a>
+        <nav class="site-nav">
+            <a href="/#how-it-works">How it works</a>
+            <a href="/#whats-included">What's included</a>
+            <a href="/#pricing">Pricing</a>
+            <a href="/#faq">FAQ</a>
+            <a href="/contact/">Contact</a>
+            <a class="nav-cta" href="/#pricing">Start your sprint</a>
+        </nav>
+    </div>
+</header>
+<section class="page-hero">
+    <div class="wrap">
+        <span class="kicker">AI SEO Prompt Playbook</span>
+        <h1>A Client&rsquo;s Site Lost More Than Half Its Google Clicks. The Problem Wasn&rsquo;t Missing Content. It Was Data Nobody Had Read.</h1>
+        <p>The 11 prompts I now run before touching a single page.</p>
+        <span class="byline">By Shane Hellmrich &middot; PropeloSEO</span>
+    </div>
+</section>
+<main class="doc">
+<p class="lede">I run an SEO agency. I don&rsquo;t usually publish my working files. But a client came to me after a bad summer. What I found when I sat down with their data changed how I work. So here it is, anonymised.</p>
+
+<h2>January was the best month the site ever had.</h2>
+<p><span class=stat>1,438</span> clicks from Google. Rankings climbing. The brand name sat at position 2.</p>
+<p>Then Google&rsquo;s May 2026 core update rolled out between 21 May and 2 June.</p>
+<p>Three days after it finished, clicks dropped. By August the site was at <span class=stat>622</span> a month. The best week of the year had <span class=stat>380</span> clicks. The last full week I measured had <span class=stat>111</span>.</p>
+<p><strong>That&rsquo;s a 71% fall.</strong></p>
+<a class="soft" href="#inside">See the 11 prompts &rarr;</a>
+
+<h2>The obvious fix would have made it worse.</h2>
+<p>The instinct after a drop is to publish more. New pages, longer pages, rewrites.</p>
+<p>So before writing anything, I exported 16 months of their Search Console data and went through it properly. Here&rsquo;s what was actually in it.</p>
+<div class="finding"><h3>1. The &ldquo;non-brand traffic&rdquo; they wanted to recover had never existed.</h3><p><span class=stat>764</span> generic queries. <span class=stat>98</span> clicks in sixteen months. A <span class=stat>0.18%</span> click-through rate. Their main money keyword sat at position <span class=stat>66</span>. You can&rsquo;t recover rankings a site never held. More content aimed at those terms would have been wasted.</p></div><div class="finding"><h3>2. One of their best pages was switched off.</h3><p>A page sitting at position <span class=stat>9.3</span> with <span class=stat>4,201</span> impressions was set to <code>noindex</code>. It had been hidden as a &ldquo;duplicate&rdquo; of another page. That other page was never even built.</p></div><div class="finding"><h3>3. robots.txt was blocking the site&rsquo;s own redirects.</h3><p>A comment in the file said the rules were there &ldquo;to consolidate link equity&rdquo;. They were doing the opposite. Google can&rsquo;t follow a redirect on a URL it isn&rsquo;t allowed to fetch, so <span class=stat>29+</span> redirects had never worked.</p></div><div class="finding"><h3>4. The pages defending the brand had almost no internal links.</h3><p>The page answering &ldquo;is this site legit?&rdquo; had <span class=stat>3</span> internal links. Meanwhile, boilerplate pages had over <span class=stat>250</span>. Same domain, same authority. The one page with <span class=stat>79</span> links held #1 on the same search.</p></div><div class="finding"><h3>5. Forty pages were on page one and nobody clicked.</h3><p><span class=stat>40</span> pages ranked at position 25 or better, with 800+ impressions and under 2% CTR. One sat at position <span class=stat>7.3</span> on <span class=stat>10,624</span> impressions and got <span class=stat>13</span> clicks. These pages didn&rsquo;t need rewriting. Most needed a better title.</p></div><div class="finding"><h3>6. Two pages with the same visibility had a 70x difference in clicks.</h3><p>Both had about 6,000 impressions. Both were on page one. One got <span class=stat>1,058</span> clicks and the other got <span class=stat>15</span>. The difference wasn&rsquo;t authority. Google&rsquo;s results already contradicted the losing page&rsquo;s premise, and no amount of rewording fixes that.</p></div><div class="finding"><h3>7. Most of the &ldquo;visibility loss&rdquo; wasn&rsquo;t real.</h3><p>On 18 August, impressions fell from <span class=stat>636</span> to <span class=stat>44</span> in a day. Clicks barely moved. The impressions that vanished were bots, not people. Chasing them would have burned a month.</p></div>
+<a class="soft" href="#inside">See the 11 prompts &rarr;</a>
+
+<h2>None of this was a content problem.</h2>
+<p>It was a <em>reading</em> problem. Each one was sitting in data the site already had, and the obvious plan would have spent weeks fixing the wrong thing.</p>
+<p>So I wrote down the exact checks I ran, as prompts. Each one tells the AI what to ask you for, what to look at, and what it&rsquo;s <strong>not</strong> allowed to make up.</p>
+<p>That last part matters. Most SEO prompts let the AI invent search volumes, competitor moves and &ldquo;best practices&rdquo;. These don&rsquo;t.</p>
+
+<h2 id="inside">What&rsquo;s inside: the AI SEO Prompt Playbook</h2>
+<p><strong>11 prompts. Each one is a full workflow, not a one-liner.</strong></p>
+<table class="tbl"><thead><tr><th>#</th><th>Prompt &amp; what it finds</th></tr></thead><tbody><tr><td>1</td><td><strong>GSC Money Query Miner</strong><span>Commercial searches Google already shows you for, but you&rsquo;re not capturing.</span></td></tr><tr><td>2</td><td><strong>Position 3&ndash;20 Refresh Engine</strong><span>The smallest change that could move a page you already rank with. Retitle before rewrite.</span></td></tr><tr><td>3</td><td><strong>Internal Link Capital Allocator</strong><span>Which pages should be sending links to your money pages.</span></td></tr><tr><td>4</td><td><strong>SERP Intent Splitter</strong><span>Whether two keywords need one page or two, judged from real search results, not guesswork.</span></td></tr><tr><td>5</td><td><strong>Compact BOFU Page Builder</strong><span>The shortest page that fully answers a buyer.</span></td></tr><tr><td>6</td><td><strong>Programmatic SEO Gatekeeper</strong><span>Whether a page-at-scale idea deserves to be built at all.</span></td></tr><tr><td>7</td><td><strong>Topical Ceiling Detector</strong><span>Whether you need more content, or more authority.</span></td></tr><tr><td>8</td><td><strong>Link Portfolio Gap Analyser</strong><span>Where your next link dollar does the most.</span></td></tr><tr><td>9</td><td><strong>AI Citation Source Mapper</strong><span>Where ChatGPT, Perplexity and AI Overviews get their answers in your niche.</span></td></tr><tr><td>10</td><td><strong>SEO Experiment Designer</strong><span>Turns a tactic you heard on a podcast into a cheap, safe test.</span></td></tr><tr><td>11</td><td><strong>SEO Operator Router</strong><span>Start here. It works out which of the other 10 you actually need.</span></td></tr></tbody></table>
+<h3>Built-in rules every prompt follows</h3>
+<ul>
+<li>Asks you the right questions first, then waits for your answers before analysing.</li>
+<li>Never invents search volume, difficulty, conversion rates or what competitors are doing.</li>
+<li>Flags anything that needs live search-result checking: <em>REQUIRES SERP VALIDATION</em>.</li>
+<li>Never claims a change will definitely improve rankings.</li>
+<li>Ends with a decision: <strong>DO, TEST, IGNORE, SCALE or KILL.</strong></li>
+</ul>
+<p>Works with ChatGPT, Claude, Gemini or any AI that accepts a long prompt and file uploads. Delivered as a PDF plus copy-paste text files.</p>
+<a class="buy" href="#buy" data-checkout="playbook">Get the Playbook &ndash; $27</a>
+
+<h2>Who it&rsquo;s for</h2>
+<ul>
+<li>Site owners who lost traffic and don&rsquo;t know whether to rewrite, publish or wait.</li>
+<li>Freelancers and agencies who want a repeatable diagnostic before quoting.</li>
+<li>In-house marketers with Search Console access and no time for a full audit.</li>
+</ul>
+<p><strong>Not for you if</strong> you want a &ldquo;rank #1 in 30 days&rdquo; trick. Nobody can promise that, and <a href="https://developers.google.com/search/docs/fundamentals/do-i-need-seo" rel="noopener">Google says so in its own guidance</a>. These prompts help you make better decisions about where to spend your time.</p>
+
+<h2>What I&rsquo;m not claiming</h2>
+<p>The prompts didn&rsquo;t &ldquo;fix&rdquo; the site. I&rsquo;m not going to show you a hockey-stick chart.</p>
+<p>What they did was stop weeks of work going to the wrong place, and point me at fixes I could make in an afternoon. Some of those fixes went live the same day. The recovery is still in progress, and I&rsquo;ll update this page with real numbers as they come in.</p>
+
+<section class="offer" id="buy">
+<h2>Get the AI SEO Prompt Playbook</h2>
+<div class="price">$27</div>
+<ul>
+<li>All 11 prompts, as a PDF and copy-paste text files</li>
+<li>Start with the Router: it picks the right workflow for your problem</li>
+<li>Instant download after checkout</li>
+</ul>
+<p><strong>Optional at checkout:</strong> add the <strong>Writing DNA Builder</strong> for $9. Teach any AI to write like you, from your own emails and posts.</p>
+<a class="buy" href="#buy" data-checkout="playbook">Get the Playbook &ndash; $27</a>
+<p style="font-size:14px">One-time payment. Refund terms: see our <a href="/refunds/">Refund Policy</a>. We never guarantee rankings, traffic or revenue.</p>
+</section>
+
+<h2>FAQ</h2>
+<div class="faq">
+<h3>Do I need paid SEO tools?</h3>
+<p>No. Most prompts work from a free Google Search Console export. Some get sharper with a crawl export or backlink data if you have them.</p>
+<h3>Which AI should I use?</h3>
+<p>Any recent model that accepts file uploads. They&rsquo;re written to work across ChatGPT, Claude and Gemini.</p>
+<h3>I&rsquo;m not technical. Will I understand the output?</h3>
+<p>Each prompt asks plain questions, and ends with a short list of what to do first.</p>
+<h3>Is this a course?</h3>
+<p>No. It&rsquo;s 11 working prompts you can use today.</p>
+</div>
+<a class="buy" href="#buy" data-checkout="playbook">Get the Playbook &ndash; $27</a>
+</main>
+<footer class="site-footer">
+    <div class="wrap">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a class="logo" href="/">
+                    <span class="logo-mark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15l7-7 7 7"/></svg></span>
+                    PropeloSEO
+                </a>
+                <p>AI SEO services and AI visibility monitoring for small businesses. Professional data in, publish-ready assets out.</p>
+            </div>
+            <nav class="footer-links">
+                <a href="/about/">About</a>
+                <a href="/contact/">Contact</a>
+                <a href="/privacy/">Privacy</a>
+                <a href="/terms/">Terms</a>
+                <a href="/refunds/">Refunds</a>
+            </nav>
+        </div>
+        <div class="footer-legal">&copy; 2026 PropeloSEO. All rights reserved. All prices are pilot assumptions subject to validation.</div>
+    </div>
+</footer>
+</body>
+</html>
