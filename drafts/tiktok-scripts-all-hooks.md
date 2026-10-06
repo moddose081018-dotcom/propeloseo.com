@@ -1,19 +1,19 @@
 # TikTok scripts: all ten hooks
-Spec (TikTok handover): 35–42 words, ≤15 words per line, hook first. Every line is verbatim or trimmed from `prompt-playbook-sales-page.md` or the approved hooks in `prompt-playbook-hooks.md`; nothing added. Client anonymised. Film all ten in the same setting and delivery so the hook is the only variable.
+Spec (TikTok handover): ≤42 words, ≤15 words per line, hook first, one first-person line. Revised 2026-10-06 after the red-team fact-check: every fact now matches the live sales page (`propeloseo-site/propelo-prompt-playbook.html`). Client anonymised. Film all ten in the same setting so the hook is the only variable.
 
 ---
 
 ## 01. Five lines in robots.txt (hook 1)
-**Length:** 42 words (~13.2 s)
+**Length:** 35 words (~11.0 s)
 
 ### VO
 The obvious fix for this client was more content.
 Part of the real problem was five lines in robots.txt.
-Google can't follow a redirect on a URL it isn't allowed to fetch.
-I wrote down the exact checks I ran, as prompts.
+They blocked 29+ of the site's own redirects.
+I read the data before writing a word.
 
 ### On-screen text (first 2 s)
-**5 lines. 29 broken redirects.**
+**29 redirects. Never processed.**
 
 ### Caption
 robots.txt was blocking the site's own redirects.
@@ -24,19 +24,19 @@ robots.txt was blocking the site's own redirects.
 ---
 
 ## 02. After the May core update (hook 2)
-**Length:** 36 words (~11.3 s)
+**Length:** 38 words (~12.0 s)
 
 ### VO
 If your traffic dropped after Google's May core update,
-don't write another word until you've checked these seven things.
-None of this was a content problem.
-I wrote down the exact checks I ran, as prompts.
+don't write another word until you've read your own data.
+On this client's site, the biggest cause was fewer brand searches.
+I read the data before writing a word.
 
 ### On-screen text (first 2 s)
 **Traffic dropped? Don't write yet.**
 
 ### Caption
-Check these seven things before you write another word.
+Read your data before you write another word.
 
 ### Hashtags
 `#seo #googlesearchconsole #digitalmarketing #aiprompts #smallbusiness`
@@ -47,39 +47,38 @@ Check these seven things before you write another word.
 **Length:** 42 words (~13.2 s)
 
 ### VO
-One of this site's best pages had been switched off.
-It sat at position 9.3.
-It had been hidden as a duplicate of another page.
-That other page was never even built.
-I wrote down the exact checks I ran, as prompts.
+A page with 4,201 impressions had been switched off.
+It sat at an average position of 9.3.
+It was hidden as a duplicate of another page.
+That other page was never built.
+I only found it because I read the data first.
 
 ### On-screen text (first 2 s)
-**Position 9. Switched off.**
+**4,201 impressions. Switched off.**
 
 ### Caption
-A page-one page, hidden as a duplicate of a page that didn't exist.
+Switched off as a duplicate of a page that didn't exist.
 
 ### Hashtags
 `#seo #googlesearchconsole #digitalmarketing #aiprompts #smallbusiness`
 
 ---
 
-## 04. Two pages (hook 4)
-**Length:** 40 words (~12.6 s)
+## 04. Two groups of searches (hook 4)
+**Length:** 37 words (~11.7 s)
 
 ### VO
-Two pages. Same visibility.
+Two groups of searches. Same impressions.
 One got 1,058 clicks. The other got 15.
-The difference wasn't authority.
-Google's results already contradicted the losing page's premise.
-No amount of rewording fixes that.
-I wrote down the exact checks I ran, as prompts.
+One sat at position 7.9, the other at 11.5.
+That's a 70x gap in clicks.
+I read the data before writing a word.
 
 ### On-screen text (first 2 s)
 **1,058 clicks vs 15**
 
 ### Caption
-Two pages, same rankings, a 70x click gap. 11 prompts that find it.
+Same impressions, a 70x click gap.
 
 ### Hashtags
 `#seo #googlesearchconsole #digitalmarketing #aiprompts #smallbusiness`
@@ -87,20 +86,19 @@ Two pages, same rankings, a 70x click gap. 11 prompts that find it.
 ---
 
 ## 05. Not a content problem (hook 5)
-**Length:** 41 words (~12.9 s)
+**Length:** 36 words (~11.3 s)
 
 ### VO
 A traffic drop isn't always a content problem.
-On this site, almost none of it was.
-It was a reading problem.
+On this site, the first fixes weren't content at all.
 Each one was sitting in data the site already had.
-I wrote down the exact checks I ran, as prompts.
+I read the data before writing a word.
 
 ### On-screen text (first 2 s)
 **Not a content problem.**
 
 ### Caption
-It wasn't a content problem. It was a reading problem.
+The first fix wasn't content. It was reading the data.
 
 ### Hashtags
 `#seo #googlesearchconsole #digitalmarketing #aiprompts #smallbusiness`
@@ -108,20 +106,20 @@ It wasn't a content problem. It was a reading problem.
 ---
 
 ## 06. 764 keywords (hook 6)
-**Length:** 42 words (~13.2 s)
+**Length:** 35 words (~11.0 s)
 
 ### VO
-764 keywords. 98 clicks in sixteen months.
-Here's why more content would never have fixed it.
-Their main money keyword sat at position 66.
-You can't recover rankings a site never held.
-I wrote down the exact checks I ran, as prompts.
+764 generic keywords.
+Together they brought about 1% of the site's clicks.
+Here's why more content wouldn't have fixed it.
+Their main money keyword averaged position 66.
+I read the data before writing a word.
 
 ### On-screen text (first 2 s)
-**764 keywords → 98 clicks**
+**764 keywords → ~1% of clicks**
 
 ### Caption
-More content wasn't the fix. Reading the data was.
+More content wasn't the first fix. Reading the data was.
 
 ### Hashtags
 `#seo #googlesearchconsole #digitalmarketing #aiprompts #smallbusiness`
@@ -129,13 +127,13 @@ More content wasn't the fix. Reading the data was.
 ---
 
 ## 07. The blank doc (hook 7)
-**Length:** 41 words (~12.9 s)
+**Length:** 42 words (~13.2 s)
 
 ### VO
 After a traffic drop, most of us open a blank doc and start rewriting.
-On this client's site, that would have been the wrong move.
+On this client's site, that would have been the wrong first move.
 I exported 16 months of their Search Console data.
-None of this was a content problem.
+The fixes were already sitting in it.
 
 ### On-screen text (first 2 s)
 **Stop rewriting.**
@@ -148,20 +146,20 @@ Before you rewrite anything, read sixteen months of data.
 
 ---
 
-## 08. Page one, no clicks (hook 8)
-**Length:** 39 words (~12.3 s)
+## 08. The legit pages (hook 8)
+**Length:** 35 words (~11.0 s)
 
 ### VO
-Forty of this site's pages were already on page one of Google.
-One sat at position 7.3 on 10,624 impressions and got 13 clicks.
-Most needed a better title.
-I wrote down the exact checks I ran, as prompts.
+The pages answering "is this site legit?" had 3 or 4 internal links.
+Boilerplate pages on the same site had over 250.
+Nobody had noticed.
+I only found it because I read the data first.
 
 ### On-screen text (first 2 s)
-**Page one. 13 clicks.**
+**3 links vs 250**
 
 ### Caption
-40 pages on page one. Almost no clicks. Most needed a better title.
+The pages that mattered most had the fewest links.
 
 ### Hashtags
 `#seo #googlesearchconsole #digitalmarketing #aiprompts #smallbusiness`
@@ -169,19 +167,19 @@ I wrote down the exact checks I ran, as prompts.
 ---
 
 ## 09. The bots (hook 9)
-**Length:** 37 words (~11.7 s)
+**Length:** 42 words (~13.2 s)
 
 ### VO
-Part of this site's visibility loss wasn't people at all.
-592 impressions vanished in a day, and clicks barely moved.
-Chasing them would have burned a month.
-I wrote down the exact checks I ran, as prompts.
+Part of this site's drop in impressions looked like bots, not people.
+On 18 August, impressions fell from 636 to 44 in a day.
+Clicks fell far less, from about 22 a day to 19.
+I read the data before chasing it.
 
 ### On-screen text (first 2 s)
-**592 impressions gone. Clicks fine.**
+**636 → 44 impressions. Clicks: 22 → 19.**
 
 ### Caption
-Not every visibility drop is real.
+Not every drop in impressions is people.
 
 ### Hashtags
 `#seo #googlesearchconsole #digitalmarketing #aiprompts #smallbusiness`
@@ -192,11 +190,11 @@ Not every visibility drop is real.
 **Length:** 42 words (~13.2 s)
 
 ### VO
-The usual advice is publish more.
+The usual advice after a drop is publish more.
 This client needed to read the data they already had.
-Forty pages were on page one and nobody clicked.
+A page with 4,201 impressions was switched off.
 robots.txt was blocking the site's own redirects.
-I wrote down the exact checks I ran, as prompts.
+I read the data before writing a word.
 
 ### On-screen text (first 2 s)
 **Don't publish more. Read.**
