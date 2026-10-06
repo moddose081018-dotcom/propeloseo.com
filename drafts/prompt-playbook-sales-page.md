@@ -6,7 +6,7 @@
 
 **By Shane Hellmrich · PropeloSEO**
 
-# A Client's Site Lost Half Its Clicks in Three Months. The Problem Wasn't Missing Content. It Was Data I Hadn't Read.
+# A Client's Site Lost Half Its Clicks in Three Months. The Problem Wasn't Missing Content. It Was Data Nobody Had Read.
 
 *The 11 prompts I now run before touching a single page.*
 
@@ -36,8 +36,8 @@ So before writing anything, I exported 16 months of their Search Console data an
 
 Here's what was actually in it.
 
-**1. The "non-brand traffic" I wanted to recover had never existed.**
-764 generic queries. 98 clicks in sixteen months. A 0.18% click-through rate. My main money keyword sat at position 66. You can't recover rankings a site never held. More content aimed at those terms would have been wasted.
+**1. The "non-brand traffic" they wanted to recover had never existed.**
+764 generic queries. 98 clicks in sixteen months. A 0.18% click-through rate. Their main money keyword sat at position 66. You can't recover rankings a site never held. More content aimed at those terms would have been wasted.
 
 **2. One of their best pages was switched off.**
 A page sitting at position 9.3 with 4,201 impressions was set to `noindex`. It had been hidden as a "duplicate" of another page. That other page was never even built.
