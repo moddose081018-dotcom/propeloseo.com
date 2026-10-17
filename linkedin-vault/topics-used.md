@@ -7,6 +7,9 @@ Format: `YYYY-MM-DD | [topic slug] | [format]`
 ---
 
 <!-- Add entries below. Newest first. -->
+2026-10-22 | content-pruning-traffic-gain | text
+2026-10-21 | zero-click-misleading-metric | text
+2026-10-20 | four-spam-updates-2026-data | document
 2026-10-08 | long-tail-strategy-shift | text
 2026-10-07 | ai-overviews-ctr-recovery | text
 2026-10-06 | schema-ai-citations-data | document
