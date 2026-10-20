@@ -14,13 +14,13 @@ research_sources:
   - https://madx.digital/learn/programmatic-seo-case-studies
 ---
 
-We analyzed 2.3 million programmatic SEO pages across 6 companies. Three are printing money. Three are bleeding traffic.
+We looked at 4 programmatic SEO programs — from 512 pages to 1.7 million. Three are winning. One lost almost everything.
 
-Here's the split — and what separates winners from losers in 2026.
+Here's what separates them in 2026.
 
 **Slide 1: Title**
-We studied 2.3M programmatic SEO pages.
-Winners vs. losers — the data.
+4 programmatic SEO programs studied.
+From 512 pages to 1.7M — winners vs. losers.
 
 **Slide 2: The winners**
 Wise: 1.7M+ pSEO pages → 54M monthly organic visits. 90% of all organic traffic comes from programmatic pages.
@@ -92,4 +92,4 @@ We're auditing all client pSEO programs against the "proprietary data" test righ
 ---
 ## Alternate hooks (not used)
 1. "90% of Wise's organic traffic comes from programmatic pages. G2 lost 80% of theirs. Same strategy — opposite results."
-2. "Programmatic SEO built a $54M/month traffic engine for Wise. It nearly killed G2. The difference is one thing."
+2. "Programmatic SEO drives 54M monthly visits for Wise. It nearly killed G2. We studied what separates them."
