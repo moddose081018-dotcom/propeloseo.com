@@ -7,6 +7,9 @@ Format: `YYYY-MM-DD | [topic slug] | [format]`
 ---
 
 <!-- Add entries below. Newest first. -->
+2026-10-29 | backlink-decay-link-building-reality | text
+2026-10-28 | parasite-seo-two-tier-enforcement | text
+2026-10-27 | reddit-serp-dominance-data | document
 2026-10-22 | content-pruning-traffic-gain | text
 2026-10-21 | zero-click-misleading-metric | text
 2026-10-20 | four-spam-updates-2026-data | document
