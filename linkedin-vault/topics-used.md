@@ -7,6 +7,9 @@ Format: `YYYY-MM-DD | [topic slug] | [format]`
 ---
 
 <!-- Add entries below. Newest first. -->
+2026-11-05 | march-2026-core-update-url-churn | text
+2026-11-04 | ai-overview-lawsuit-dismissed | text
+2026-11-03 | programmatic-seo-winners-losers | document
 2026-10-29 | backlink-decay-link-building-reality | text
 2026-10-28 | parasite-seo-two-tier-enforcement | text
 2026-10-27 | reddit-serp-dominance-data | document
