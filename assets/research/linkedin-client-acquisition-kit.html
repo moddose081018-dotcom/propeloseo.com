@@ -1,0 +1,683 @@
+<title>LinkedIn Client Acquisition Kit</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  :root {
+    --bg: #fafbfc;
+    --bg-card: #ffffff;
+    --bg-hero: #0f172a;
+    --bg-accent: #eff6ff;
+    --bg-accent-border: #bfdbfe;
+    --bg-warm: #fef3c7;
+    --bg-warm-border: #fcd34d;
+    --bg-green: #ecfdf5;
+    --bg-green-border: #6ee7b7;
+    --text: #1e293b;
+    --text-mid: #475569;
+    --text-light: #64748b;
+    --text-inv: #f1f5f9;
+    --border: #e2e8f0;
+    --border-strong: #cbd5e1;
+    --action: #2563eb;
+    --action-hover: #1d4ed8;
+    --accent: #7c3aed;
+    --green: #059669;
+    --amber: #d97706;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.07);
+    --sans: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f172a;
+      --bg-card: #1e293b;
+      --bg-hero: #020617;
+      --bg-accent: #1e1b4b;
+      --bg-accent-border: #3730a3;
+      --bg-warm: #451a03;
+      --bg-warm-border: #92400e;
+      --bg-green: #064e3b;
+      --bg-green-border: #047857;
+      --text: #f1f5f9;
+      --text-mid: #cbd5e1;
+      --text-light: #94a3b8;
+      --text-inv: #0f172a;
+      --border: #334155;
+      --border-strong: #475569;
+      --action: #60a5fa;
+      --action-hover: #93bbfd;
+      --accent: #a78bfa;
+      --green: #34d399;
+      --amber: #fbbf24;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f172a;
+    --bg-card: #1e293b;
+    --bg-hero: #020617;
+    --bg-accent: #1e1b4b;
+    --bg-accent-border: #3730a3;
+    --bg-warm: #451a03;
+    --bg-warm-border: #92400e;
+    --bg-green: #064e3b;
+    --bg-green-border: #047857;
+    --text: #f1f5f9;
+    --text-mid: #cbd5e1;
+    --text-light: #94a3b8;
+    --text-inv: #0f172a;
+    --border: #334155;
+    --border-strong: #475569;
+    --action: #60a5fa;
+    --action-hover: #93bbfd;
+    --accent: #a78bfa;
+    --green: #34d399;
+    --amber: #fbbf24;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+  }
+
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding-inline: 16px;
+  }
+
+  .wrap { max-width: 720px; margin: 0 auto; }
+
+  .hero {
+    background: var(--bg-hero);
+    color: var(--text-inv);
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    margin-block: 1.5rem;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.01em;
+  }
+  .hero p {
+    font-size: 0.95rem;
+    color: #94a3b8;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--action);
+    color: var(--text);
+  }
+
+  h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .callout {
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    border-left: 4px solid;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+  .callout-blue {
+    background: var(--bg-accent);
+    border-color: var(--action);
+  }
+  .callout-amber {
+    background: var(--bg-warm);
+    border-color: var(--amber);
+  }
+  .callout-green {
+    background: var(--bg-green);
+    border-color: var(--green);
+  }
+
+  .tag {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+  }
+  .tag-post { background: var(--bg-accent); color: var(--action); }
+  .tag-dm { background: #ede9fe; color: var(--accent); }
+  .tag-workflow { background: var(--bg-green); color: var(--green); }
+  .tag-day { background: var(--bg-warm); color: var(--amber); }
+
+  :root[data-theme="dark"] .tag-dm,
+  :root:not([data-theme="light"]) .tag-dm { background: #2e1065; }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .tag-dm { background: #2e1065; }
+  }
+
+  .post-draft {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+  }
+  .post-draft .post-meta {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--text-light);
+    margin-bottom: 0.75rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .post-draft .post-body {
+    font-size: 0.92rem;
+    white-space: pre-wrap;
+    line-height: 1.7;
+    color: var(--text);
+  }
+  .post-draft .post-body .hook {
+    font-weight: 700;
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  .dm-template {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  .dm-template .dm-label {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+  .dm-template .dm-text {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--text);
+    font-style: italic;
+    padding: 0.75rem;
+    background: var(--bg);
+    border-radius: 6px;
+    border: 1px solid var(--border);
+  }
+  .dm-template .dm-note {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-top: 0.5rem;
+  }
+
+  .checklist {
+    list-style: none;
+    padding: 0;
+  }
+  .checklist li {
+    padding: 0.5rem 0;
+    padding-left: 1.75rem;
+    position: relative;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist li::before {
+    content: "☐";
+    position: absolute;
+    left: 0;
+    font-size: 1rem;
+  }
+
+  .schedule-grid {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    gap: 0;
+    font-size: 0.85rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .schedule-grid > div {
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .schedule-grid > div:nth-child(-n+3) {
+    background: var(--bg-hero);
+    color: var(--text-inv);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .metric {
+    text-align: center;
+    padding: 1rem;
+  }
+  .metric .num {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--action);
+    font-family: var(--mono);
+  }
+  .metric .label {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-top: 0.25rem;
+  }
+
+  .metrics-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  .metrics-row .card { margin-bottom: 0; }
+
+  footer {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 0.8rem;
+    color: var(--text-light);
+  }
+
+  @media (max-width: 500px) {
+    .metrics-row { grid-template-columns: 1fr; }
+    .schedule-grid { font-size: 0.78rem; }
+  }
+</style>
+
+<div class="wrap">
+
+<div class="hero">
+  <h1>LinkedIn Client Acquisition Kit</h1>
+  <p>PropeloSEO — Replace $3k/mo in 30 days using the ROI system: Recognition, Outreach, Inbound</p>
+</div>
+
+<div class="metrics-row">
+  <div class="card metric">
+    <div class="num">$3k</div>
+    <div class="label">Monthly revenue to replace</div>
+  </div>
+  <div class="card metric">
+    <div class="num">5</div>
+    <div class="label">Posts per week</div>
+  </div>
+  <div class="card metric">
+    <div class="num">5</div>
+    <div class="label">Personalized DMs per day</div>
+  </div>
+</div>
+
+<!-- ====== DAILY WORKFLOW ====== -->
+<h2>Daily Workflow (30 min/day)</h2>
+
+<div class="callout callout-blue">
+  <strong>Setup required (one-time):</strong> Install Claude Chrome extension. Open LinkedIn in Chrome. Claude can now read profiles, draft DMs, and research prospects directly.
+</div>
+
+<div class="card">
+  <span class="tag tag-workflow">Daily Checklist</span>
+  <ul class="checklist">
+    <li><strong>Morning (10 min):</strong> Comment on 3 posts from prospects or SEO influencers. Add genuine insight, not "great post." Aim for 2+ sentences with a specific takeaway.</li>
+    <li><strong>Midday (10 min):</strong> Send 5 personalized DMs to prospects (use templates below). Have Claude scan each prospect's profile first for personalization hooks.</li>
+    <li><strong>Afternoon (10 min):</strong> Reply to every comment on your posts within 30 min of posting. Reply to every DM response. Flag hot leads for follow-up.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <span class="tag tag-workflow">Weekly Cadence</span>
+  <ul class="checklist">
+    <li><strong>Monday:</strong> Publish post (educational — SEO data insight)</li>
+    <li><strong>Tuesday:</strong> Engage-only day. Comment on 10 ICP posts. Send 5 DMs.</li>
+    <li><strong>Wednesday:</strong> Publish post (case study / result)</li>
+    <li><strong>Thursday:</strong> Engage-only day. Comment on 10 ICP posts. Send 5 DMs.</li>
+    <li><strong>Friday:</strong> Publish post (personal story / lesson learned)</li>
+    <li><strong>Weekend:</strong> Publish 1-2 lighter posts (industry observation, question to audience)</li>
+  </ul>
+</div>
+
+<!-- ====== PROSPECT IDENTIFICATION ====== -->
+<h2>Finding Prospects</h2>
+
+<div class="card">
+  <h3>Who to target on LinkedIn</h3>
+  <p style="font-size:0.9rem; color:var(--text-mid); margin-bottom:0.75rem;">
+    Your ICP: small business owners spending $0–2k/mo on SEO who need professional-grade work but can't afford $10k+ agency retainers. Look for:
+  </p>
+  <ul class="checklist">
+    <li>Business owners posting about marketing struggles or asking SEO questions</li>
+    <li>People engaging with SEO content (liking/commenting on posts from Ahrefs, Moz, Search Engine Journal)</li>
+    <li>Small business owners who recently launched or redesigned a website</li>
+    <li>E-commerce owners, local service businesses, SaaS founders with &lt;50 employees</li>
+    <li>People posting in Skool communities or LinkedIn groups about growth</li>
+  </ul>
+</div>
+
+<div class="callout callout-amber">
+  <strong>Claude Chrome workflow:</strong> Open a prospect's profile → ask Claude to summarize their business, recent posts, and identify a personalization hook → use one of the DM templates below with that hook inserted.
+</div>
+
+<!-- ====== LINKEDIN POSTS ====== -->
+<h2>Week 1 LinkedIn Posts (Ready to Use)</h2>
+
+<div class="post-draft">
+  <div class="post-meta">
+    <span class="tag tag-post">Post 1</span>
+    <span>Monday — Educational</span>
+    <span>Format: Text + data</span>
+  </div>
+  <div class="post-body"><span class="hook">I audited 30 small business websites last month. 27 of them had the same problem.</span>
+
+Their homepage wasn't targeting a single keyword.
+
+Not a competitive one. Not a long-tail one. Zero.
+
+They had a beautiful site. Good copy. Nice photos.
+But Google had no idea what to rank them for.
+
+Here's what I tell every business owner:
+
+Your homepage needs ONE clear target keyword.
+Not five. Not "we do everything." One.
+
+Then build your title tag, H1, and first paragraph around it.
+
+This alone won't get you to page 1.
+But without it, nothing else you do in SEO will work either.
+
+It's the foundation that most businesses skip
+because it feels too simple to matter.
+
+What's the one keyword your homepage should rank for?
+Drop it below — I'll tell you if it's the right one.
+
+#SEO #SmallBusiness #SearchVisibility</div>
+</div>
+
+<div class="post-draft">
+  <div class="post-meta">
+    <span class="tag tag-post">Post 2</span>
+    <span>Wednesday — Result / Insight</span>
+    <span>Format: Text + screenshot (optional)</span>
+  </div>
+  <div class="post-body"><span class="hook">$10,000/month for SEO is normal at agencies. Here's what that actually buys you.</span>
+
+I've seen the deliverables from dozens of agency retainers.
+
+Most of the time it's:
+→ A monthly PDF report pulled from Google Analytics
+→ 4 blog posts (often AI-generated with minimal editing)
+→ A "technical audit" that's actually a Screaming Frog export
+→ A call where they explain why results take 6-12 months
+
+The data and tools behind that? Maybe $300/month.
+
+The difference between a $10k retainer and doing it yourself
+isn't the tools. It's knowing what to do with the data.
+
+That's why I built PropeloSEO around $97/month Growth Packs.
+
+Same Ahrefs data. Same technical crawls. Same keyword research.
+But turned into publish-ready work you can actually use.
+
+No 12-month contracts. No mystery deliverables. Cancel anytime.
+
+The gap in SEO isn't access to tools.
+It's access to someone who turns the data into action.
+
+Who's been burned by an agency retainer? I'd love to hear the story.
+
+#SEOtransparency #SmallBusinessSEO #DataDrivenSEO</div>
+</div>
+
+<div class="post-draft">
+  <div class="post-meta">
+    <span class="tag tag-post">Post 3</span>
+    <span>Friday — Personal / Lesson</span>
+    <span>Format: Text (storytelling)</span>
+  </div>
+  <div class="post-body"><span class="hook">I lost a client this month. Here's what I learned.</span>
+
+Not because of bad work.
+Not because of a disagreement.
+
+They outgrew what they needed from us.
+
+And honestly? That's the goal.
+
+When I started PropeloSEO, I made a rule:
+Guarantee the deliverable, never the outcome.
+
+I don't promise rankings. I don't promise traffic.
+I promise you'll get professional-grade SEO work
+delivered every month, on time, that you can actually use.
+
+Sometimes that means a client gets to a point
+where they've built enough momentum to hire in-house.
+
+That's a win. Not a loss.
+
+But it's also a reminder:
+The pipeline never stops.
+The next client is always someone who needs help right now
+and doesn't know you exist yet.
+
+So I'm back to the work.
+Auditing sites. Writing content. Turning data into action.
+
+If your small business needs SEO that doesn't cost $10k/month,
+my DMs are open.
+
+#SEO #Transparency #SmallBusiness #LessonsLearned</div>
+</div>
+
+<div class="post-draft">
+  <div class="post-meta">
+    <span class="tag tag-post">Post 4</span>
+    <span>Saturday — Industry Observation</span>
+    <span>Format: Short text</span>
+  </div>
+  <div class="post-body"><span class="hook">LinkedIn's algorithm in 2026 rewards one thing above all else: comment threads.</span>
+
+Not likes. Not shares. Comment threads.
+
+A post with 10 likes and 5 deep comment threads
+will outperform a post with 200 likes and zero conversation.
+
+LinkedIn's Depth Score weights:
+• Saves ≈ 2× a comment
+• Comment threads > single comments
+• Dwell time (people actually reading)
+• Likes are the weakest signal
+
+So stop writing posts that end with "Agree?"
+
+Start writing posts that end with a real question
+that people actually want to answer.
+
+What's the best question you've ever ended a LinkedIn post with?
+
+#LinkedIn #ContentStrategy #Engagement</div>
+</div>
+
+<div class="post-draft">
+  <div class="post-meta">
+    <span class="tag tag-post">Post 5</span>
+    <span>Sunday — Question to Audience</span>
+    <span>Format: Short text</span>
+  </div>
+  <div class="post-body"><span class="hook">Business owners: what's the #1 thing confusing you about SEO right now?</span>
+
+I'm building something to help small businesses
+get agency-quality SEO without the agency price tag.
+
+But I want to make sure I'm solving real problems,
+not the ones I assume exist.
+
+So tell me:
+
+→ Is it technical stuff? (site speed, indexing, crawl errors)
+→ Is it content? (what to write, how often, for which keywords)
+→ Is it links? (how to get them without spamming)
+→ Is it measurement? (how to know if SEO is actually working)
+→ Something else entirely?
+
+Drop your answer below. I read every response.
+
+#SEO #SmallBusiness #AskTheAudience</div>
+</div>
+
+<!-- ====== DM TEMPLATES ====== -->
+<h2>DM Templates (Personalize Before Sending)</h2>
+
+<div class="callout callout-green">
+  <strong>Rule:</strong> Every DM must reference something specific about the prospect. Never send a template verbatim. Use Claude Chrome to scan their profile first and fill in the [brackets].
+</div>
+
+<div class="dm-template">
+  <div class="dm-label">Template 1 — After they engage with SEO content</div>
+  <div class="dm-text">Hey [Name] — saw you commented on [person]'s post about [topic]. Curious, is [their company] actively working on SEO right now or is it more on the back burner?</div>
+  <div class="dm-note">Why it works: References their real activity. Asks an open-ended question. No pitch.</div>
+</div>
+
+<div class="dm-template">
+  <div class="dm-label">Template 2 — Cold outreach to a business owner</div>
+  <div class="dm-text">Hey [Name] — I was looking at [their website] and noticed [specific observation: e.g., "your service pages aren't showing up for any keywords in Ahrefs"]. Not pitching anything, just thought it was worth flagging since [reason: e.g., "those pages look like they could rank with some small fixes"]. Happy to share what I found if you're interested.</div>
+  <div class="dm-note">Why it works: Leads with value. Specific observation proves you did homework. "Not pitching" lowers guard.</div>
+</div>
+
+<div class="dm-template">
+  <div class="dm-label">Template 3 — Warm follow-up (they accepted connection)</div>
+  <div class="dm-text">Thanks for connecting, [Name]. I noticed you're running [business type] — how's the organic traffic side going for you? I work with small businesses on SEO and always curious what's working (or not) for others in [their industry].</div>
+  <div class="dm-note">Why it works: Acknowledges the connection. Shows genuine curiosity. Opens conversation without asking for a meeting.</div>
+</div>
+
+<div class="dm-template">
+  <div class="dm-label">Template 4 — Pattern interrupt (voice note script)</div>
+  <div class="dm-text">"Hey [Name], this is Shane from PropeloSEO. I was checking out [their website] and honestly, I think you're leaving some traffic on the table with [specific thing]. Didn't want to type out a novel — just thought I'd say hey and see if you'd want to hear what I found. No pressure either way."</div>
+  <div class="dm-note">Why it works: Voice notes have 3× open rate of text DMs. Casual, not scripted-sounding. Send as LinkedIn voice message.</div>
+</div>
+
+<div class="dm-template">
+  <div class="dm-label">Template 5 — Referral ask to existing connection</div>
+  <div class="dm-text">Hey [Name] — quick question. Do you know any small business owners who've been frustrated with their SEO or getting burned by an agency? I help businesses get agency-grade SEO work for $97/mo and I'm looking to bring on a few more this month. Would mean a lot if anyone comes to mind.</div>
+  <div class="dm-note">Why it works: People love making introductions. Specific ask ("small business owners frustrated with SEO") makes it easy to think of someone.</div>
+</div>
+
+<!-- ====== PROFILE OPTIMIZATION ====== -->
+<h2>Profile Optimization Checklist</h2>
+
+<div class="card">
+  <span class="tag tag-workflow">Before you start outreach</span>
+  <ul class="checklist">
+    <li><strong>Headline:</strong> Replace job title with value proposition. e.g., "I help small businesses get agency-quality SEO for $97/month | Data-driven, no contracts"</li>
+    <li><strong>Banner:</strong> Create in Canva — include PropeloSEO branding, one clear CTA, what you help with</li>
+    <li><strong>About section:</strong> Lead with the problem you solve, not your resume. Include specific results and the $97/mo offer. End with a CTA.</li>
+    <li><strong>Featured section:</strong> Pin your best-performing post + a link to propeloseo.com</li>
+    <li><strong>Profile photo:</strong> Friendly, professional, face clearly visible. Use AI headshot tool if needed.</li>
+    <li><strong>Creator mode:</strong> Turn on. Add hashtags: #SEO #SmallBusiness #DataDrivenMarketing #ContentStrategy #SearchVisibility</li>
+  </ul>
+</div>
+
+<!-- ====== OBJECTION HANDLING ====== -->
+<h2>Common Objections &amp; Responses</h2>
+
+<div class="card">
+  <h3>"We already have an agency"</h3>
+  <p style="font-size:0.9rem; color:var(--text-mid);">"That's great — how are you finding the results so far? A lot of businesses I talk to are paying $5-10k/mo and aren't sure what they're actually getting. If you ever want a second pair of eyes on their work, I'm happy to do a quick audit. No charge, no obligation."</p>
+</div>
+
+<div class="card">
+  <h3>"SEO takes too long"</h3>
+  <p style="font-size:0.9rem; color:var(--text-mid);">"It can — which is why I focus on the highest-impact fixes first. Things like fixing your title tags, cleaning up technical errors, and targeting keywords you can actually win. Some of that shows movement in weeks, not months. The $97/mo Growth Pack is designed to prioritize quick wins."</p>
+</div>
+
+<div class="card">
+  <h3>"I can't afford it right now"</h3>
+  <p style="font-size:0.9rem; color:var(--text-mid);">"I get it. That's exactly why I built this at $97/mo instead of $2k+. It's less than most business software subscriptions, and you can cancel anytime. Most businesses recover the cost from one new customer that finds them through search."</p>
+</div>
+
+<div class="card">
+  <h3>"I'll just use ChatGPT / AI for SEO"</h3>
+  <p style="font-size:0.9rem; color:var(--text-mid);">"AI is great for generating drafts, but it can't pull your actual Ahrefs data, crawl your site for technical errors, or tell you which keywords you have a realistic shot at ranking for. The Growth Pack combines real data from professional tools with the analysis to make it actionable. AI is a tool — but someone still needs to point it at the right problem."</p>
+</div>
+
+<!-- ====== 30-DAY TARGETS ====== -->
+<h2>30-Day Revenue Recovery Targets</h2>
+
+<div class="card">
+  <div class="schedule-grid">
+    <div>Week</div><div>Activity</div><div>Target</div>
+    <div>1</div>
+    <div>Profile optimization + first 5 posts + 25 DMs</div>
+    <div>2-3 conversations started</div>
+    <div>2</div>
+    <div>5 posts + 25 DMs + comment engagement</div>
+    <div>5-8 conversations, 1-2 audit calls</div>
+    <div>3</div>
+    <div>5 posts + 25 DMs + follow-up on warm leads</div>
+    <div>2-3 audit calls, first close attempt</div>
+    <div>4</div>
+    <div>5 posts + 25 DMs + referral asks</div>
+    <div>1 retainer client ($2k+) or 10+ Growth Pack members</div>
+  </div>
+</div>
+
+<div class="callout callout-green">
+  <strong>Math:</strong> At 5 DMs/day × 20 working days = 100 personalized outreach messages. Industry average cold DM reply rate with personalization is 15-25%. That's 15-25 conversations. If 10% convert to a call, and 30% of calls close — that's roughly 1-2 new clients per month from DMs alone, before counting inbound from content.
+</div>
+
+<!-- ====== IMPORTANT CONSTRAINTS ====== -->
+<h2>Brand Rules (Non-Negotiable)</h2>
+
+<div class="callout callout-amber">
+  <ul style="list-style:none; padding:0; font-size:0.88rem;">
+    <li style="margin-bottom:0.4rem;">→ <strong>Guarantee the deliverable, never the outcome.</strong> Don't promise rankings, traffic, or revenue.</li>
+    <li style="margin-bottom:0.4rem;">→ <strong>No fabricated numbers.</strong> Every stat in a post must be real and sourced.</li>
+    <li style="margin-bottom:0.4rem;">→ <strong>No inflated value stacks.</strong> $97/mo is what it costs. Don't say "valued at $5,000."</li>
+    <li style="margin-bottom:0.4rem;">→ <strong>Student posture.</strong> You're learning alongside clients, not lecturing from above.</li>
+    <li style="margin-bottom:0.4rem;">→ <strong>FTC disclosure</strong> required near any affiliate recommendation (Rainmakers, Skool).</li>
+    <li>→ <strong>Honest economics.</strong> $289/mo is the new-member Rainmakers price, not yours.</li>
+  </ul>
+</div>
+
+<footer>
+  PropeloSEO LinkedIn Client Acquisition Kit · Built October 2026<br>
+  Based on playbook research (11 sources, 10M+ posts) + ROI system framework
+</footer>
+
+</div>
